@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Publications, Patents &amp; Research — Gregory Renard</title>
+<meta name="description" content="Three decades at the frontier of applied AI — space science, enterprise automation and responsible AI, with 15+ patents and peer-reviewed work.">
+<meta name="author" content="Gregory Renard">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gregory-renard.com/Publications.dc.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gregory Renard">
+<meta property="og:title" content="Publications, Patents &amp; Research — Gregory Renard">
+<meta property="og:description" content="Three decades at the frontier of applied AI — space science, enterprise automation and responsible AI, with 15+ patents and peer-reviewed work.">
+<meta property="og:url" content="https://gregory-renard.com/Publications.dc.html">
+<meta property="og:image" content="https://gregory-renard.com/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Publications, Patents &amp; Research — Gregory Renard">
+<meta name="twitter:description" content="Three decades at the frontier of applied AI — space science, enterprise automation and responsible AI, with 15+ patents and peer-reviewed work.">
+<meta name="twitter:image" content="https://gregory-renard.com/assets/og-cover.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:#070C1E;color:#EAEEF5;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:rgba(59,123,255,0.32);color:#fff}
+  @keyframes grx-pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+  [data-reveal]{opacity:1}
+  .grx-link{color:#8FB3FF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(143,179,255,0.45);transition:color .2s}
+  .grx-link:hover{color:#fff;text-decoration-color:#8FB3FF}
+  .grx-paper:hover{border-color:rgba(59,123,255,0.45) !important;transform:translateY(-3px)}
+  .grx-pat:hover{border-color:rgba(59,123,255,0.4) !important}
+  @media (max-width:900px){
+    .grx-navlink{display:none !important}
+    .grx-pad{padding-left:22px !important;padding-right:22px !important}
+    .grx-fdl{grid-template-columns:1fr !important}
+    .grx-paper{grid-template-columns:1fr !important;gap:14px !important}
+    .grx-patents{grid-template-columns:1fr !important}
+  }
+  @media (max-width:620px){
+    .grx-footer{grid-template-columns:1fr 1fr !important;gap:26px !important}
+  }
+  @media (max-width:400px){ .grx-footer{grid-template-columns:1fr !important} }
+  .grx-nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+  .grx-burger{display:none}
+  .grx-mobile-menu{display:none}
+  @media (max-width:900px){
+    .grx-burger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.05);color:#EAEEF5;font-size:20px;line-height:1;cursor:pointer}
+    .grx-mobile-menu{background:rgba(7,12,30,0.98);border-top:1px solid rgba(255,255,255,0.08);padding:8px 22px 16px}
+    .grx-nav-toggle:checked ~ .grx-mobile-menu{display:flex;flex-direction:column}
+    .grx-mobile-menu a{padding:14px 4px;font-size:16px;color:#CAD2E0;border-bottom:1px solid rgba(255,255,255,0.06)}
+    .grx-mobile-menu a:last-child{border-bottom:none}
+  }
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="position:relative;min-height:100vh;background:radial-gradient(1100px 700px at 80% -10%, rgba(59,123,255,0.10), transparent 60%), #070C1E;overflow-x:hidden">
+
+  <!-- NAV -->
+  <header style="position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(7,12,30,0.66);border-bottom:1px solid rgba(255,255,255,0.07)">
+    <nav class="grx-pad" style="max-width:1240px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;gap:24px">
+      <a href="Gregory%20Renard%20-%20Home.dc.html" style="display:flex;align-items:center;gap:11px;margin-right:auto">
+        <span style="width:34px;height:34px;border-radius:9px;background:linear-gradient(140deg,#3B7BFF,#1E4FD6);display:grid;place-items:center;font-weight:800;font-size:15px;color:#fff;box-shadow:0 0 22px rgba(59,123,255,0.45)">GR</span>
+        <span style="font-weight:700;font-size:15px;letter-spacing:-0.01em">Gregory Renard</span>
+      </a>
+      <a class="grx-navlink" href="Gregory%20Renard%20-%20Home.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_vision }}</a>
+      <a class="grx-navlink" href="AI-Transformation.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_transfo }}</a>
+      <a class="grx-navlink" href="Advisory-Execution.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_advisory }}</a>
+      <a class="grx-navlink" href="AI-Lab.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_lab }}</a>
+      <a class="grx-navlink" href="Why.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_why }}</a>
+      <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#fff;background:#3B7BFF;padding:9px 17px;border-radius:9px;box-shadow:0 6px 18px rgba(59,123,255,0.32)" style-hover="background:#5A92FF">{{ t.nav_cta }}</a>
+      <button onClick="{{ toggleLang }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:#fff;background:rgba(59,123,255,0.18);border:1px solid rgba(59,123,255,0.42);border-radius:100px;padding:7px 13px;cursor:pointer">{{ langLabel }}</button>
+      <label for="grx-nav-toggle" class="grx-burger" aria-label="Open menu">☰</label>
+    </nav>
+    <input type="checkbox" id="grx-nav-toggle" class="grx-nav-toggle" aria-hidden="true">
+    <div class="grx-mobile-menu">
+      <a href="Gregory%20Renard%20-%20Home.dc.html">{{ t.nav_vision }}</a>
+      <a href="AI-Transformation.dc.html">{{ t.nav_transfo }}</a>
+      <a href="Advisory-Execution.dc.html">{{ t.nav_advisory }}</a>
+      <a href="AI-Lab.dc.html">{{ t.nav_lab }}</a>
+      <a href="Why.dc.html">{{ t.nav_why }}</a>
+      <a href="Keynote-Speaker.dc.html">Keynote Speaker</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="grx-pad" style="max-width:1040px;margin:0 auto;padding:84px 32px 24px;text-align:center">
+    <div data-reveal style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#7FA8FF;border:1px solid rgba(59,123,255,0.28);background:rgba(59,123,255,0.06);padding:7px 13px;border-radius:100px;margin-bottom:24px">
+      <span style="width:7px;height:7px;border-radius:50%;background:#3B7BFF;box-shadow:0 0 10px #3B7BFF;animation:grx-pulse 2.4s ease-in-out infinite"></span>{{ t.eyebrow }}
+    </div>
+    <h1 data-reveal style="font-size:clamp(34px,4.2vw,58px);line-height:1.05;letter-spacing:-0.03em;font-weight:800;max-width:880px;margin:0 auto">{{ t.heroTitle }}</h1>
+    <p data-reveal style="margin:22px auto 0;font-size:clamp(16px,1.4vw,18px);line-height:1.62;color:#AAB3C4;max-width:760px">{{ t.heroSub }}</p>
+    <div data-reveal style="display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:30px">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="3">
+        <div style="text-align:center">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:clamp(20px,2vw,26px);font-weight:600;color:#7FA8FF">{{ s.k }}</div>
+          <div style="font-size:12.5px;color:#97A0B2;margin-top:4px">{{ s.v }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- NASA / FDL -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:64px 32px 20px">
+    <div data-reveal style="margin-bottom:28px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:12px">NASA · SETI · FDL.AI</div>
+      <h2 style="font-size:clamp(26px,3vw,40px);line-height:1.08;letter-spacing:-0.025em;font-weight:800">{{ t.fdlTitle }}</h2>
+      <p style="margin-top:14px;font-size:15.5px;line-height:1.66;color:#AEB6C6;max-width:880px">{{ t.fdlIntro }}</p>
+    </div>
+    <div class="grx-fdl" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+      <sc-for list="{{ fdl }}" as="p" hint-placeholder-count="3">
+        <a class="grx-paper" href="{{ p.url }}" target="_blank" rel="noopener noreferrer" style="display:block;border:1px solid rgba(255,255,255,0.09);border-radius:18px;overflow:hidden;background:rgba(255,255,255,0.02);transition:border-color .3s,transform .3s">
+          <div style="aspect-ratio:16/10;overflow:hidden;background:#0B0F1A;border-bottom:1px solid rgba(255,255,255,0.06)"><img src="{{ p.img }}" alt="{{ p.title }}" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="padding:22px 22px 24px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.05em;color:#7FA8FF;margin-bottom:9px">{{ p.year }}</div>
+            <h3 style="font-size:17px;font-weight:700;letter-spacing:-0.01em;line-height:1.25">{{ p.title }}</h3>
+            <p style="margin-top:10px;font-size:13.5px;line-height:1.55;color:#97A0B2">{{ p.desc }}</p>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- PAPERS -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:60px 32px 20px">
+    <div data-reveal style="margin-bottom:26px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:12px">{{ t.papersKicker }}</div>
+      <h2 style="font-size:clamp(26px,3vw,40px);line-height:1.08;letter-spacing:-0.025em;font-weight:800">{{ t.papersTitle }}</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <sc-for list="{{ papers }}" as="p" hint-placeholder-count="6">
+        <article class="grx-paper" data-reveal style="display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;border:1px solid rgba(255,255,255,0.09);border-radius:16px;background:rgba(255,255,255,0.02);padding:24px 26px;transition:border-color .3s,transform .3s">
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.05em;color:#7FA8FF;margin-bottom:8px">{{ p.venue }}</div>
+            <h3 style="font-size:17px;font-weight:700;letter-spacing:-0.01em;line-height:1.3">{{ p.title }}</h3>
+            <p style="margin-top:9px;font-size:14px;line-height:1.55;color:#97A0B2;max-width:760px">{{ p.desc }}</p>
+          </div>
+          <a class="grx-link" href="{{ p.url }}" target="_blank" rel="noopener noreferrer" style="flex:none;font-size:13.5px;font-weight:600;white-space:nowrap">{{ t.readPaper }} ↗</a>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- PATENTS -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:60px 32px 20px">
+    <div data-reveal style="margin-bottom:26px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:12px">{{ t.patentsKicker }}</div>
+      <h2 style="font-size:clamp(26px,3vw,40px);line-height:1.08;letter-spacing:-0.025em;font-weight:800">{{ t.patentsTitle }}</h2>
+      <p style="margin-top:14px;font-size:15.5px;line-height:1.66;color:#AEB6C6;max-width:880px">{{ t.patentsIntro }}</p>
+    </div>
+    <div class="grx-patents" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <sc-for list="{{ patents }}" as="p" hint-placeholder-count="8">
+        <a class="grx-pat" href="{{ p.url }}" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:16px;border:1px solid rgba(255,255,255,0.09);border-radius:14px;background:rgba(255,255,255,0.02);padding:18px 20px;transition:border-color .3s">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#3B7BFF;flex:none">{{ p.year }}</span>
+          <span style="font-size:14.5px;line-height:1.4;font-weight:500;color:#EAEEF5">{{ p.title }}</span>
+          <span style="margin-left:auto;color:#5E6678;flex:none">↗</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- FORESIGHT -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:56px 32px 20px">
+    <div data-reveal style="border:1px solid rgba(59,123,255,0.22);border-radius:22px;background:linear-gradient(120deg,rgba(59,123,255,0.08),rgba(255,255,255,0.015));padding:40px 42px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:14px">{{ t.foresightKicker }}</div>
+      <h2 style="font-size:clamp(22px,2.4vw,32px);line-height:1.12;letter-spacing:-0.02em;font-weight:800;max-width:760px">{{ t.foresightTitle }}</h2>
+      <p style="margin-top:14px;font-size:15.5px;line-height:1.66;color:#AEB6C6;max-width:820px">{{ t.foresightBody }}</p>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:70px 32px 90px;text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#7FA8FF;margin-bottom:16px">{{ t.contactLoc }}</div>
+    <h2 style="font-size:clamp(32px,4.4vw,58px);line-height:1.03;letter-spacing:-0.03em;font-weight:800;max-width:760px;margin:0 auto">{{ t.contactTitle }}</h2>
+    <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:10px;margin-top:30px;font-weight:600;font-size:16px;color:#fff;background:#3B7BFF;padding:16px 32px;border-radius:13px;box-shadow:0 14px 40px rgba(59,123,255,0.4)" style-hover="background:#5A92FF;transform:translateY(-2px)">{{ t.contactCta }} →</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="border-top:1px solid rgba(255,255,255,0.08);background:#070C1E">
+    <div class="grx-footer grx-pad" style="max-width:1240px;margin:0 auto;padding:52px 32px 30px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px">
+      <div>
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:16px">
+          <span style="width:32px;height:32px;border-radius:8px;background:linear-gradient(140deg,#3B7BFF,#1E4FD6);display:grid;place-items:center;font-weight:800;font-size:14px;color:#fff">GR</span>
+          <span style="font-weight:700;font-size:15px">Gregory Renard</span>
+        </div>
+        <p style="font-size:13.5px;line-height:1.6;color:#8893A6;max-width:280px">{{ t.footerBlurb }}</p>
+        <div style="display:flex;gap:14px;margin-top:18px">
+          <sc-for list="{{ socials }}" as="s" hint-placeholder-count="5"><a href="{{ s.url }}" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#97A0B2" style-hover="color:#7FA8FF">{{ s.name }}</a></sc-for>
+        </div>
+      </div>
+      <sc-for list="{{ footerCols }}" as="col" hint-placeholder-count="3">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#5E6678;margin-bottom:14px">{{ col.h }}</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <sc-for list="{{ col.items }}" as="it" hint-placeholder-count="4">
+              <a href="{{ it.url }}" target="{{ it.target }}" rel="noopener noreferrer" style="font-size:14px;color:#AEB6C6" style-hover="color:#fff">{{ it.label }}</a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.06)">
+      <div class="grx-pad" style="max-width:1240px;margin:0 auto;padding:18px 32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:12.5px;color:#6B7385">
+        <span>{{ t.copyright }}</span>
+        <span style="font-family:'JetBrains Mono',monospace">SF · Silicon Valley · Paris · Bruxelles</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'en' };
+  componentDidMount() { try { const l = localStorage.getItem('grx_lang'); if (l) this.setState({ lang: l }); try { document.documentElement.lang = l || 'en'; } catch (e) {} } catch (e) {} }
+  setLang(l) { try { localStorage.setItem('grx_lang', l); } catch (e) {} this.setState({ lang: l }); }
+
+  renderVals() {
+    const lang = this.state.lang;
+    const C = {
+      en: {
+        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Advisory & Execution', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
+        eyebrow: 'Publications · Patents · Research',
+        heroTitle: 'Pushing the boundaries of applied AI since 1996.',
+        heroSub: "Three decades at the frontier of artificial intelligence — across space science, enterprise automation and responsible AI. From NASA-backed semantic knowledge graphs to patented conversational-AI and decision-intelligence systems, each contribution reflects a commitment to scalable, real-world impact.",
+        readPaper: 'Read the paper',
+        fdlTitle: 'AI for science, for the benefit of humanity',
+        fdlIntro: "As a founding member of the FDL Technical Committee, Gregory has helped shape the AI research agenda at the intersection of science and space — mentoring interdisciplinary teams applying NLP, Knowledge Graphs and LLMs to some of NASA's hardest challenges.",
+        papersKicker: 'Peer-reviewed papers', papersTitle: 'Selected papers',
+        patentsKicker: 'Patents', patentsTitle: 'A portfolio of 15+ patents',
+        patentsIntro: 'A prolific inventor across conversational AI, contextual computing and enterprise automation — foundational technologies for NLP, Knowledge Graphs and LLM-based systems. A selection of granted and pending patents:',
+        foresightKicker: 'AI foresight essays',
+        foresightTitle: 'AI Visionary & Foresight Author — 2010–2015',
+        foresightBody: 'Over a decade ago, Gregory began publishing tech-foresight essays — including “The Proactive Web Era” (2011), which predicted the rise of intelligent, context-aware services. Written in a science-fiction style, they anticipated the societal and technological impact of AI with uncanny precision — and nearly all have since materialized within the forecast timelines.',
+        contactLoc: 'SAN FRANCISCO · PARIS · BRUSSELS',
+        contactTitle: 'Research that ships. Let’s build what’s next.',
+        contactCta: 'Connect with Gregory',
+        footerBlurb: 'Hands-on AI architect & Cognitive Orchestration since 1996. Building operational, AI-native organizations.',
+        copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
+      },
+      fr: {
+        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Conseil & Exécution', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
+        eyebrow: 'Publications · Brevets · Recherche',
+        heroTitle: "Repousser les frontières de l'IA appliquée depuis 1996.",
+        heroSub: "Trois décennies à la frontière de l'intelligence artificielle — sciences spatiales, automatisation d'entreprise et IA responsable. Des graphes de connaissances sémantiques soutenus par la NASA aux systèmes brevetés d'IA conversationnelle et de décision, chaque contribution vise un impact réel et scalable.",
+        readPaper: "Lire l'article",
+        fdlTitle: "L'IA au service de la science et de l'humanité",
+        fdlIntro: "Membre fondateur du comité technique du FDL, Gregory a contribué à façonner l'agenda de recherche IA à l'intersection de la science et de l'espace — encadrant des équipes pluridisciplinaires appliquant NLP, graphes de connaissances et LLM aux défis les plus complexes de la NASA.",
+        papersKicker: 'Articles évalués par les pairs', papersTitle: 'Articles sélectionnés',
+        patentsKicker: 'Brevets', patentsTitle: 'Un portefeuille de 15+ brevets',
+        patentsIntro: "Inventeur prolifique en IA conversationnelle, informatique contextuelle et automatisation d'entreprise — des technologies fondatrices pour le NLP, les graphes de connaissances et les systèmes à base de LLM. Une sélection de brevets délivrés ou en cours :",
+        foresightKicker: 'Essais de prospective',
+        foresightTitle: 'Auteur visionnaire & prospectiviste IA — 2010–2015',
+        foresightBody: "Il y a plus de dix ans, Gregory publiait des essais de prospective technologique — dont « The Proactive Web Era » (2011), qui prédisait l'essor des services intelligents et contextuels. Écrits dans un style science-fiction, ils ont anticipé l'impact sociétal et technologique de l'IA avec une précision troublante — et presque tous se sont réalisés dans les délais annoncés.",
+        contactLoc: 'SAN FRANCISCO · PARIS · BRUXELLES',
+        contactTitle: "De la recherche qui se déploie. Construisons la suite.",
+        contactCta: 'Échanger avec Gregory',
+        footerBlurb: "Architecte IA de terrain & Orchestration Cognitive depuis 1996. Construire des organisations opérationnelles, AI-native.",
+        copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
+      }
+    };
+    const t = C[lang];
+
+    const stats = lang === 'fr'
+      ? [{ k: '15+', v: 'brevets' }, { k: '6+', v: 'articles évalués' }, { k: 'NASA · FDL', v: 'recherche IA appliquée' }]
+      : [{ k: '15+', v: 'patents' }, { k: '6+', v: 'peer-reviewed papers' }, { k: 'NASA · FDL', v: 'applied-AI research' }];
+
+    const fdlImg = (id) => 'https://static.wixstatic.com/media/' + id;
+    const fdl = [
+      { year: 'FDL 2022', url: 'https://fdl.ai/fdl-2022',
+        img: fdlImg('758a70_1c014d9fc83b4900be52b6f0ac994b28~mv2.png/v1/fill/w_520,h_330,al_c,q_85,enc_auto/ENERGY.png'),
+        title: lang === 'fr' ? 'Energy Futures : moteur de découverte H₂' : 'Energy Futures: H₂ Discovery Engine',
+        desc: lang === 'fr' ? "Le H2 Golden Retriever — pipelines NLP + graphes de connaissances pour explorer la littérature sur l'hydrogène et recommander des pistes inédites." : 'The H2 Golden Retriever — NLP pipelines + Knowledge Graphs to intelligently explore hydrogen-energy literature and surface novel research directions.' },
+      { year: 'FDL 2022', url: 'https://fdl.ai/fdl-2022',
+        img: fdlImg('758a70_5b3e6e92ae3d4078946b0fff1c8fcff7~mv2.png/v1/fill/w_520,h_330,al_c,q_85,enc_auto/EARTH.png'),
+        title: 'SMD Knowledge Graph Discovery',
+        desc: lang === 'fr' ? "Un graphe de connaissances transversal couvrant tout le Science Mission Directorate de la NASA — reliant Terre, héliophysique, astrophysique et sciences planétaires." : "A cross-domain Knowledge Graph spanning NASA's entire Science Mission Directorate — linking Earth science, heliophysics, astrophysics and planetary science." },
+      { year: 'FDL 2020', url: 'https://fdl.ai/fdl-2020',
+        img: fdlImg('758a70_0fe2803d16a14777ab78e2e34015e2aa~mv2.png/v1/fill/w_520,h_330,al_c,q_85,enc_auto/CLIMATE.png'),
+        title: lang === 'fr' ? 'Foudre & météo extrême' : 'Lightning & Extreme Weather',
+        desc: lang === 'fr' ? "Modèles prédictifs pour les événements de foudre à fort impact, par fusion de données satellitaires — pour améliorer les systèmes d'alerte précoce." : 'Predictive models for high-impact lightning events via satellite data fusion — improving severe-storm forecasting and early-warning systems.' }
+    ];
+
+    const papers = [
+      { venue: 'arXiv · 2006.12497', url: 'https://arxiv.org/pdf/2006.12497',
+        title: 'Technology Readiness Levels for AI & ML',
+        desc: lang === 'fr' ? "Une approche d'ingénierie système (TRL4ML) pour développer et déployer des systèmes ML robustes, fiables et alignés — inspirée de l'ingénierie spatiale." : 'A systems-engineering approach (TRL4ML) for robust, reliable, well-aligned ML development and deployment — drawn from spacecraft engineering.' },
+      { venue: 'arXiv · 2211.08614', url: 'https://arxiv.org/abs/2211.08614',
+        title: 'H₂-Golden-Retriever: Evidence-Based Hydrogen Research Grantsmanship',
+        desc: lang === 'fr' ? "Découverte de connaissances sur l'hydrogène via NLP, graphes de connaissances et intelligence décisionnelle." : 'Hydrogen knowledge discovery via NLP, Knowledge Graphs and Decision Intelligence.' },
+      { venue: 'arXiv · 2303.10871', url: 'https://arxiv.org/abs/2303.10871',
+        title: 'NASA Science Mission Directorate Knowledge Graph Discovery',
+        desc: lang === 'fr' ? "Un pipeline pour générer des graphes de connaissances par domaine NASA, au cœur de moteurs de recherche de jeux de données." : 'A pipeline to generate knowledge graphs across NASA domains, powering dataset search engines for researchers.' },
+      { venue: 'Nature Machine Intelligence', url: 'https://www.nature.com/articles/s42256-023-00653-1',
+        title: 'Generative AI entails a credit–blame asymmetry',
+        desc: lang === 'fr' ? "Une asymétrie crédit-responsabilité émerge dans l'attribution de la responsabilité des productions de l'IA générative — enjeux éthiques et politiques." : 'A credit–blame asymmetry arises in assigning responsibility for generative-AI outputs — with urgent ethical and policy implications.' },
+      { venue: 'Sociological Methods & Research', url: 'https://journals.sagepub.com/doi/10.1177/00491241251326819',
+        title: 'The Insight-Inference Loop: Efficient Text Classification',
+        desc: lang === 'fr' ? "Analyse de texte à grande échelle avec peu de données annotées et sans expertise ML — via LLM pré-entraînés en inférence et threshold-tuning." : 'Large-scale text analysis with little labeled data and no ML expertise — using NLI-pretrained LLMs and threshold-tuning.' },
+      { venue: lang === 'fr' ? 'Essai · Alain Damasio' : 'Essay · Alain Damasio', url: 'https://www.gregory-renard.com/publications',
+        title: 'Vallée du silicium',
+        desc: lang === 'fr' ? "Gregory figure parmi les personnalités de la Silicon Valley rencontrées par Alain Damasio pour ses chroniques « Vallée du silicium »." : 'Gregory features among the Silicon Valley figures interviewed by Alain Damasio for his “Vallée du silicium” chronicles.' }
+    ];
+
+    const patents = [
+      { year: '2015', title: 'Voice and connection platform', url: 'https://patents.google.com/patent/US10235996B2/en' },
+      { year: '2018', title: 'Session Handling Using Conversation Ranking & Augmented Agents', url: 'https://patents.google.com/patent/US20190215249A1/en' },
+      { year: '2021', title: 'Image representation of a conversation for self-supervised learning', url: 'https://patents.google.com/patent/US20210012791A1/en' },
+      { year: '2021', title: 'Natural transfer of knowledge between human and AI', url: 'https://patents.google.com/patent/US10922491B2/en' },
+      { year: '2022', title: 'Alignment of values and opinions between two distinct entities', url: 'https://patents.google.com/patent/US20220358293A1/en' },
+      { year: '2023', title: 'Linking a product to external content', url: 'https://patents.google.com/patent/US20230196386A1/en' },
+      { year: '2023', title: 'ML of business operations → recommendations & insights', url: 'https://patents.google.com/patent/US20230196235A1/en' },
+      { year: '2023', title: 'Analyzing customer reviews', url: 'https://patents.google.com/patent/US20230214888A1/en' }
+    ];
+
+    const socials = [
+      { name: 'Scholar', url: 'https://scholar.google.com/citations?user=Khit-6kAAAAJ&hl=fr' },
+      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/gregoryrenard/' },
+      { name: 'GitHub', url: 'https://github.com/gregrenard/' },
+      { name: 'arXiv', url: 'https://arxiv.org/a/renard_g_1' },
+      { name: 'X', url: 'https://twitter.com/Redo' }
+    ];
+    const footerCols = lang === 'fr' ? [
+      { h: 'Naviguer', items: [
+        { label: 'Vision', url: 'Gregory%20Renard%20-%20Home.dc.html', target: '_self' },
+        { label: 'Transformation IA', url: 'AI-Transformation.dc.html', target: '_self' },
+        { label: 'Conseil & Exécution', url: 'Advisory-Execution.dc.html', target: '_self' },
+        { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
+        { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
+      ]},
+      { h: 'À propos', items: [
+        { label: 'Pourquoi', url: 'Why.dc.html', target: '_self' },
+        { label: 'Éthique', url: 'Ethics.dc.html', target: '_self' },
+        { label: 'Publications', url: 'Publications.dc.html', target: '_self' },
+        { label: 'Presse', url: 'Press.dc.html', target: '_self' }
+      ]},
+      { h: 'Contact', items: [
+        { label: 'Construisons', url: 'Contact.dc.html', target: '_self' },
+        { label: 'Freedom.AI', url: 'https://freedom.ai/', target: '_blank' },
+        { label: 'Everyone.AI', url: 'https://everyone.ai/', target: '_blank' }
+      ]}
+    ] : [
+      { h: 'Navigate', items: [
+        { label: 'Vision', url: 'Gregory%20Renard%20-%20Home.dc.html', target: '_self' },
+        { label: 'AI Transformation', url: 'AI-Transformation.dc.html', target: '_self' },
+        { label: 'Advisory & Execution', url: 'Advisory-Execution.dc.html', target: '_self' },
+        { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
+        { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
+      ]},
+      { h: 'About', items: [
+        { label: 'Why', url: 'Why.dc.html', target: '_self' },
+        { label: 'Ethics', url: 'Ethics.dc.html', target: '_self' },
+        { label: 'Publications', url: 'Publications.dc.html', target: '_self' },
+        { label: 'Press', url: 'Press.dc.html', target: '_self' }
+      ]},
+      { h: 'Contact', items: [
+        { label: "Let's Build", url: 'Contact.dc.html', target: '_self' },
+        { label: 'Freedom.AI', url: 'https://freedom.ai/', target: '_blank' },
+        { label: 'Everyone.AI', url: 'https://everyone.ai/', target: '_blank' }
+      ]}
+    ];
+
+    return {
+      rootRef: (el) => { this._root = el; },
+      lang, t, stats, fdl, papers, patents, socials, footerCols,
+      langLabel: lang === 'en' ? 'FR' : 'EN',
+      toggleLang: () => this.setLang(lang === 'en' ? 'fr' : 'en')
+    };
+  }
+}
+</script>
+</body>
+</html>

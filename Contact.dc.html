@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Contact — Gregory Renard</title>
+<meta name="description" content="Let's build. From strategy to production — if your organization is ready to move from experimentation to real results, get in touch.">
+<meta name="author" content="Gregory Renard">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gregory-renard.com/Contact.dc.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gregory Renard">
+<meta property="og:title" content="Contact — Gregory Renard">
+<meta property="og:description" content="Let's build. From strategy to production — if your organization is ready to move from experimentation to real results, get in touch.">
+<meta property="og:url" content="https://gregory-renard.com/Contact.dc.html">
+<meta property="og:image" content="https://gregory-renard.com/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — Gregory Renard">
+<meta name="twitter:description" content="Let's build. From strategy to production — if your organization is ready to move from experimentation to real results, get in touch.">
+<meta name="twitter:image" content="https://gregory-renard.com/assets/og-cover.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:#070C1E;color:#EAEEF5;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:rgba(59,123,255,0.32);color:#fff}
+  @keyframes grx-pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+  input,textarea{font-family:inherit}
+  input::placeholder,textarea::placeholder{color:#5E6678}
+  input:focus,textarea:focus{outline:none;border-color:#3B7BFF !important;background:rgba(59,123,255,0.05) !important}
+  @media (max-width:900px){
+    .grx-navlink{display:none !important}
+    .grx-contact{grid-template-columns:1fr !important}
+    .grx-pad{padding-left:22px !important;padding-right:22px !important}
+  }
+  @media (max-width:620px){
+    .grx-footer{grid-template-columns:1fr 1fr !important;gap:26px !important}
+    .grx-name{grid-template-columns:1fr !important}
+  }
+  @media (max-width:400px){ .grx-footer{grid-template-columns:1fr !important} }
+  .grx-nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+  .grx-burger{display:none}
+  .grx-mobile-menu{display:none}
+  @media (max-width:900px){
+    .grx-burger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.05);color:#EAEEF5;font-size:20px;line-height:1;cursor:pointer}
+    .grx-mobile-menu{background:rgba(7,12,30,0.98);border-top:1px solid rgba(255,255,255,0.08);padding:8px 22px 16px}
+    .grx-nav-toggle:checked ~ .grx-mobile-menu{display:flex;flex-direction:column}
+    .grx-mobile-menu a{padding:14px 4px;font-size:16px;color:#CAD2E0;border-bottom:1px solid rgba(255,255,255,0.06)}
+    .grx-mobile-menu a:last-child{border-bottom:none}
+  }
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="position:relative;min-height:100vh;background:radial-gradient(1100px 700px at 80% -10%, rgba(59,123,255,0.10), transparent 60%), #070C1E;overflow-x:hidden">
+
+  <!-- NAV -->
+  <header style="position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(7,12,30,0.66);border-bottom:1px solid rgba(255,255,255,0.07)">
+    <nav class="grx-pad" style="max-width:1240px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;gap:26px">
+      <a href="Gregory%20Renard%20-%20Home.dc.html" style="display:flex;align-items:center;gap:11px;margin-right:auto">
+        <span style="width:34px;height:34px;border-radius:9px;background:linear-gradient(140deg,#3B7BFF,#1E4FD6);display:grid;place-items:center;font-weight:800;font-size:15px;color:#fff;box-shadow:0 0 22px rgba(59,123,255,0.45)">GR</span>
+        <span style="font-weight:700;font-size:15px;letter-spacing:-0.01em">Gregory Renard</span>
+      </a>
+      <a class="grx-navlink" href="Gregory%20Renard%20-%20Home.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_vision }}</a>
+      <a class="grx-navlink" href="AI-Transformation.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_transfo }}</a>
+      <a class="grx-navlink" href="Advisory-Execution.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_advisory }}</a>
+      <a class="grx-navlink" href="AI-Lab.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_lab }}</a>
+      <a class="grx-navlink" href="Why.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_why }}</a>
+      <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#fff;background:#3B7BFF;padding:9px 17px;border-radius:9px;box-shadow:0 6px 18px rgba(59,123,255,0.32)" style-hover="background:#5A92FF">{{ t.nav_cta }}</a>
+      <button onClick="{{ toggleLang }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:#fff;background:rgba(59,123,255,0.18);border:1px solid rgba(59,123,255,0.42);border-radius:100px;padding:7px 13px;cursor:pointer">{{ langLabel }}</button>
+      <label for="grx-nav-toggle" class="grx-burger" aria-label="Open menu">☰</label>
+    </nav>
+    <input type="checkbox" id="grx-nav-toggle" class="grx-nav-toggle" aria-hidden="true">
+    <div class="grx-mobile-menu">
+      <a href="Gregory%20Renard%20-%20Home.dc.html">{{ t.nav_vision }}</a>
+      <a href="AI-Transformation.dc.html">{{ t.nav_transfo }}</a>
+      <a href="Advisory-Execution.dc.html">{{ t.nav_advisory }}</a>
+      <a href="AI-Lab.dc.html">{{ t.nav_lab }}</a>
+      <a href="Why.dc.html">{{ t.nav_why }}</a>
+      <a href="Keynote-Speaker.dc.html">Keynote Speaker</a>
+    </div>
+  </header>
+
+  <!-- HERO + FORM -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:80px 32px 60px">
+    <div class="grx-contact" style="display:grid;grid-template-columns:0.95fr 1.05fr;gap:56px;align-items:start">
+      <!-- LEFT -->
+      <div data-reveal>
+        <div style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#7FA8FF;border:1px solid rgba(59,123,255,0.28);background:rgba(59,123,255,0.06);padding:7px 13px;border-radius:100px;margin-bottom:24px">
+          <span style="width:7px;height:7px;border-radius:50%;background:#3B7BFF;box-shadow:0 0 10px #3B7BFF;animation:grx-pulse 2.4s ease-in-out infinite"></span>{{ t.eyebrow }}
+        </div>
+        <h1 style="font-size:clamp(40px,5vw,72px);line-height:0.98;letter-spacing:-0.035em;font-weight:800">{{ t.heroTitle }}</h1>
+        <p style="margin-top:22px;font-size:clamp(16px,1.4vw,19px);line-height:1.62;color:#AAB3C4;max-width:480px">{{ t.heroSub }}</p>
+
+        <div style="margin-top:34px;display:flex;flex-direction:column;gap:22px">
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#5E6678;margin-bottom:7px">{{ t.emailLabel }}</div>
+            <a onClick="{{ mailClick }}" style="display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:600;color:#8FB3FF;cursor:pointer;border-bottom:1px solid rgba(143,179,255,0.45);transition:color .2s" style-hover="color:#fff">{{ t.emailValue }} →</a>
+          </div>
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#5E6678;margin-bottom:9px">{{ t.locLabel }}</div>
+            <div style="display:flex;flex-wrap:wrap;gap:10px">
+              <sc-for list="{{ t.locations }}" as="loc" hint-placeholder-count="3">
+                <span style="font-size:14px;color:#C2CAD8;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.025);border-radius:100px;padding:8px 15px">{{ loc }}</span>
+              </sc-for>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#5E6678;margin-bottom:9px">{{ t.followLabel }}</div>
+            <div style="display:flex;gap:16px;flex-wrap:wrap">
+              <sc-for list="{{ socials }}" as="s" hint-placeholder-count="5"><a href="{{ s.url }}" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#97A0B2;border-bottom:1px solid transparent" style-hover="color:#fff;border-color:#3B7BFF">{{ s.name }}</a></sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <div data-reveal style="border:1px solid rgba(255,255,255,0.1);border-radius:22px;background:rgba(255,255,255,0.025);padding:34px 34px;box-shadow:0 30px 70px rgba(0,0,0,0.4)">
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div style="text-align:center;padding:40px 10px">
+            <div style="width:64px;height:64px;border-radius:50%;background:rgba(59,123,255,0.16);border:1px solid rgba(59,123,255,0.5);display:grid;place-items:center;margin:0 auto 22px;font-size:28px;color:#7FA8FF">✓</div>
+            <h3 style="font-size:24px;font-weight:800;letter-spacing:-0.02em">{{ t.sentTitle }}</h3>
+            <p style="margin-top:12px;font-size:15px;line-height:1.6;color:#AAB3C4;max-width:340px;margin-left:auto;margin-right:auto">{{ t.sentBody }}</p>
+            <button onClick="{{ reset }}" style="margin-top:24px;font-size:14px;font-weight:600;color:#7FA8FF;background:none;border:none;cursor:pointer;text-decoration:underline;text-underline-offset:3px">{{ t.sentAgain }}</button>
+          </div>
+        </sc-if>
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+          <div>
+            <h2 style="font-size:22px;font-weight:800;letter-spacing:-0.02em;margin-bottom:6px">{{ t.formTitle }}</h2>
+            <p style="font-size:14px;color:#97A0B2;margin-bottom:24px">{{ t.formSub }}</p>
+            <div class="grx-name" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+              <div>
+                <label style="display:block;font-size:12.5px;color:#AEB6C6;margin-bottom:7px">{{ t.fFirst }} *</label>
+                <input value="{{ firstName }}" onInput="{{ onFirst }}" placeholder="{{ t.phFirst }}" style="width:100%;padding:13px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.02);color:#EAEEF5;font-size:15px;transition:border-color .2s,background .2s">
+              </div>
+              <div>
+                <label style="display:block;font-size:12.5px;color:#AEB6C6;margin-bottom:7px">{{ t.fLast }}</label>
+                <input value="{{ lastName }}" onInput="{{ onLast }}" placeholder="{{ t.phLast }}" style="width:100%;padding:13px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.02);color:#EAEEF5;font-size:15px;transition:border-color .2s,background .2s">
+              </div>
+            </div>
+            <div style="margin-bottom:14px">
+              <label style="display:block;font-size:12.5px;color:#AEB6C6;margin-bottom:7px">{{ t.fEmail }} *</label>
+              <input value="{{ email }}" onInput="{{ onEmail }}" placeholder="{{ t.phEmail }}" style="width:100%;padding:13px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.02);color:#EAEEF5;font-size:15px;transition:border-color .2s,background .2s">
+            </div>
+            <div style="margin-bottom:8px">
+              <label style="display:block;font-size:12.5px;color:#AEB6C6;margin-bottom:7px">{{ t.fMsg }}</label>
+              <textarea value="{{ message }}" onInput="{{ onMsg }}" placeholder="{{ t.phMsg }}" rows="4" style="width:100%;padding:13px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.02);color:#EAEEF5;font-size:15px;line-height:1.5;resize:vertical;transition:border-color .2s,background .2s"></textarea>
+            </div>
+            <sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
+              <p style="font-size:13px;color:#FF8A7A;margin-bottom:12px">{{ t.errMsg }}</p>
+            </sc-if>
+            <button onClick="{{ submit }}" style="width:100%;margin-top:8px;font-weight:600;font-size:15px;color:#fff;background:#3B7BFF;padding:15px;border:none;border-radius:11px;cursor:pointer;box-shadow:0 10px 30px rgba(59,123,255,0.35);transition:background .2s" style-hover="background:#5A92FF">{{ t.submit }} →</button>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="border-top:1px solid rgba(255,255,255,0.08);background:#070C1E">
+    <div class="grx-footer grx-pad" style="max-width:1240px;margin:0 auto;padding:52px 32px 30px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px">
+      <div>
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:16px">
+          <span style="width:32px;height:32px;border-radius:8px;background:linear-gradient(140deg,#3B7BFF,#1E4FD6);display:grid;place-items:center;font-weight:800;font-size:14px;color:#fff">GR</span>
+          <span style="font-weight:700;font-size:15px">Gregory Renard</span>
+        </div>
+        <p style="font-size:13.5px;line-height:1.6;color:#8893A6;max-width:280px">{{ t.footerBlurb }}</p>
+        <div style="display:flex;gap:14px;margin-top:18px">
+          <sc-for list="{{ socials }}" as="s" hint-placeholder-count="5"><a href="{{ s.url }}" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#97A0B2" style-hover="color:#7FA8FF">{{ s.name }}</a></sc-for>
+        </div>
+      </div>
+      <sc-for list="{{ footerCols }}" as="col" hint-placeholder-count="3">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#5E6678;margin-bottom:14px">{{ col.h }}</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <sc-for list="{{ col.items }}" as="it" hint-placeholder-count="4">
+              <a href="{{ it.url }}" target="{{ it.target }}" rel="noopener noreferrer" style="font-size:14px;color:#AEB6C6" style-hover="color:#fff">{{ it.label }}</a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.06)">
+      <div class="grx-pad" style="max-width:1240px;margin:0 auto;padding:18px 32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:12.5px;color:#6B7385">
+        <span>{{ t.copyright }}</span>
+        <span style="font-family:'JetBrains Mono',monospace">SF · Silicon Valley · Paris · Bruxelles</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'en', firstName: '', lastName: '', email: '', message: '', sent: false, showError: false };
+  componentDidMount() { try { const l = localStorage.getItem('grx_lang'); if (l) this.setState({ lang: l }); try { document.documentElement.lang = l || 'en'; } catch (e) {} } catch (e) {} }
+  setLang(l) { try { localStorage.setItem('grx_lang', l); } catch (e) {} this.setState({ lang: l }); }
+
+  renderVals() {
+    const lang = this.state.lang;
+    const C = {
+      en: {
+        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Advisory & Execution', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
+        eyebrow: 'Let’s build',
+        heroTitle: 'Let’s build.',
+        heroSub: 'From strategy to production — from vision to impact. If your organization is ready to move from experimentation to real-world results, let’s talk.',
+        emailLabel: 'EMAIL', emailValue: 'Email Gregory directly', locLabel: 'LOCATIONS', followLabel: 'FIND ME',
+        locations: ['San Francisco · Silicon Valley', 'Paris', 'Bruxelles'],
+        formTitle: 'Connect with Gregory', formSub: 'Tell us a little about your project — we’ll get back to you shortly.',
+        fFirst: 'First name', fLast: 'Last name', fEmail: 'Email', fMsg: 'Message',
+        phFirst: 'Jane', phLast: 'Doe', phEmail: 'jane@company.com', phMsg: 'What would you like to build?',
+        submit: 'Submit', errMsg: 'Please enter your first name and a valid email.',
+        sentTitle: 'Message received.', sentBody: 'Thank you — Gregory’s team will get back to you shortly.', sentAgain: 'Send another message',
+        footerBlurb: 'Hands-on AI architect & Cognitive Orchestration since 1996. Building operational, AI-native organizations.',
+        copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
+      },
+      fr: {
+        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Conseil & Exécution', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
+        eyebrow: 'Construisons',
+        heroTitle: 'Construisons.',
+        heroSub: "De la stratégie à la production — de la vision à l'impact. Si votre organisation est prête à passer de l'expérimentation aux résultats concrets, parlons-en.",
+        emailLabel: 'EMAIL', emailValue: 'Écrire à Gregory', locLabel: 'LIEUX', followLabel: 'ME SUIVRE',
+        locations: ['San Francisco · Silicon Valley', 'Paris', 'Bruxelles'],
+        formTitle: 'Échanger avec Gregory', formSub: 'Dites-nous quelques mots sur votre projet — nous revenons vers vous rapidement.',
+        fFirst: 'Prénom', fLast: 'Nom', fEmail: 'Email', fMsg: 'Message',
+        phFirst: 'Jeanne', phLast: 'Dupont', phEmail: 'jeanne@entreprise.com', phMsg: 'Que souhaitez-vous construire ?',
+        submit: 'Envoyer', errMsg: 'Merci d\u2019indiquer votre prénom et un email valide.',
+        sentTitle: 'Message reçu.', sentBody: "Merci — l'équipe de Gregory revient vers vous très vite.", sentAgain: 'Envoyer un autre message',
+        footerBlurb: "Architecte IA de terrain & Orchestration Cognitive depuis 1996. Construire des organisations opérationnelles, AI-native.",
+        copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
+      }
+    };
+    const t = C[lang];
+
+    const socials = [
+      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/gregoryrenard/' },
+      { name: 'Wikipedia', url: 'https://fr.wikipedia.org/wiki/Gr%C3%A9gory_Renard' },
+      { name: 'Scholar', url: 'https://scholar.google.com/citations?user=Khit-6kAAAAJ&hl=fr' },
+      { name: 'GitHub', url: 'https://github.com/gregrenard/' },
+      { name: 'X', url: 'https://twitter.com/Redo' }
+    ];
+    const footerCols = lang === 'fr' ? [
+      { h: 'Naviguer', items: [
+        { label: 'Vision', url: 'Gregory%20Renard%20-%20Home.dc.html', target: '_self' },
+        { label: 'Transformation IA', url: 'AI-Transformation.dc.html', target: '_self' },
+        { label: 'Conseil & Exécution', url: 'Advisory-Execution.dc.html', target: '_self' },
+        { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
+        { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
+      ]},
+      { h: 'À propos', items: [
+        { label: 'Pourquoi', url: 'Why.dc.html', target: '_self' },
+        { label: 'Éthique', url: 'Ethics.dc.html', target: '_self' },
+        { label: 'Publications', url: 'Publications.dc.html', target: '_self' },
+        { label: 'Presse', url: 'Press.dc.html', target: '_self' }
+      ]},
+      { h: 'Contact', items: [
+        { label: 'Construisons', url: 'Contact.dc.html', target: '_self' },
+        { label: 'Freedom.AI', url: 'https://freedom.ai/', target: '_blank' },
+        { label: 'Everyone.AI', url: 'https://everyone.ai/', target: '_blank' }
+      ]}
+    ] : [
+      { h: 'Navigate', items: [
+        { label: 'Vision', url: 'Gregory%20Renard%20-%20Home.dc.html', target: '_self' },
+        { label: 'AI Transformation', url: 'AI-Transformation.dc.html', target: '_self' },
+        { label: 'Advisory & Execution', url: 'Advisory-Execution.dc.html', target: '_self' },
+        { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
+        { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
+      ]},
+      { h: 'About', items: [
+        { label: 'Why', url: 'Why.dc.html', target: '_self' },
+        { label: 'Ethics', url: 'Ethics.dc.html', target: '_self' },
+        { label: 'Publications', url: 'Publications.dc.html', target: '_self' },
+        { label: 'Press', url: 'Press.dc.html', target: '_self' }
+      ]},
+      { h: 'Contact', items: [
+        { label: "Let's Build", url: 'Contact.dc.html', target: '_self' },
+        { label: 'Freedom.AI', url: 'https://freedom.ai/', target: '_blank' },
+        { label: 'Everyone.AI', url: 'https://everyone.ai/', target: '_blank' }
+      ]}
+    ];
+
+    const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.state.email);
+    return {
+      rootRef: (el) => { this._root = el; },
+      mailRev: ('contact' + '@' + 'freedom.ai').split('').reverse().join(''),
+      mailClick: () => { window.location.href = 'mailto:' + 'contact' + '@' + 'freedom.ai'; },
+      lang, t, socials, footerCols,
+      langLabel: lang === 'en' ? 'FR' : 'EN',
+      toggleLang: () => this.setLang(lang === 'en' ? 'fr' : 'en'),
+      firstName: this.state.firstName, lastName: this.state.lastName, email: this.state.email, message: this.state.message,
+      sent: this.state.sent, notSent: !this.state.sent, showError: this.state.showError,
+      onFirst: (e) => this.setState({ firstName: e.target.value, showError: false }),
+      onLast: (e) => this.setState({ lastName: e.target.value }),
+      onEmail: (e) => this.setState({ email: e.target.value, showError: false }),
+      onMsg: (e) => this.setState({ message: e.target.value }),
+      submit: () => {
+        if (this.state.firstName.trim() && validEmail) this.setState({ sent: true, showError: false });
+        else this.setState({ showError: true });
+      },
+      reset: () => this.setState({ sent: false, firstName: '', lastName: '', email: '', message: '', showError: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

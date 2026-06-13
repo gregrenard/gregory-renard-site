@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>AI Ethics &amp; Responsibility — Gregory Renard</title>
+<meta name="description" content="AI must stay human-centered. Since 2016, Gregory Renard has publicly championed an ethical, responsible approach to artificial intelligence.">
+<meta name="author" content="Gregory Renard">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gregory-renard.com/Ethics.dc.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gregory Renard">
+<meta property="og:title" content="AI Ethics &amp; Responsibility — Gregory Renard">
+<meta property="og:description" content="AI must stay human-centered. Since 2016, Gregory Renard has publicly championed an ethical, responsible approach to artificial intelligence.">
+<meta property="og:url" content="https://gregory-renard.com/Ethics.dc.html">
+<meta property="og:image" content="https://gregory-renard.com/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Ethics &amp; Responsibility — Gregory Renard">
+<meta name="twitter:description" content="AI must stay human-centered. Since 2016, Gregory Renard has publicly championed an ethical, responsible approach to artificial intelligence.">
+<meta name="twitter:image" content="https://gregory-renard.com/assets/og-cover.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:#070C1E;color:#EAEEF5;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:rgba(59,123,255,0.32);color:#fff}
+  @keyframes grx-pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+  [data-reveal]{opacity:1}
+  .grx-link{color:#8FB3FF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(143,179,255,0.45);transition:color .2s}
+  .grx-link:hover{color:#fff;text-decoration-color:#8FB3FF}
+  .grx-pr:hover{border-color:rgba(59,123,255,0.4) !important;transform:translateY(-3px)}
+  @media (max-width:900px){
+    .grx-navlink{display:none !important}
+    .grx-pad{padding-left:22px !important;padding-right:22px !important}
+    .grx-hero,.grx-principles{grid-template-columns:1fr !important}
+    .grx-hero-img{min-height:300px !important;order:-1}
+  }
+  @media (max-width:620px){
+    .grx-footer{grid-template-columns:1fr 1fr !important;gap:26px !important}
+    .grx-principles{grid-template-columns:1fr !important}
+  }
+  @media (max-width:400px){ .grx-footer{grid-template-columns:1fr !important} }
+  .grx-gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:24px}
+  .grx-figure{transition:transform .3s}
+  .grx-figure:hover{transform:translateY(-4px)}
+  .grx-figure:hover .grx-circle{border-color:rgba(127,168,255,0.7) !important}
+  @media (max-width:980px){ .grx-gallery{grid-template-columns:repeat(3,1fr) !important;gap:22px !important} }
+  @media (max-width:520px){ .grx-gallery{grid-template-columns:repeat(2,1fr) !important;gap:18px !important} }
+  .grx-nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+  .grx-burger{display:none}
+  .grx-mobile-menu{display:none}
+  @media (max-width:900px){
+    .grx-burger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.05);color:#EAEEF5;font-size:20px;line-height:1;cursor:pointer}
+    .grx-mobile-menu{background:rgba(7,12,30,0.98);border-top:1px solid rgba(255,255,255,0.08);padding:8px 22px 16px}
+    .grx-nav-toggle:checked ~ .grx-mobile-menu{display:flex;flex-direction:column}
+    .grx-mobile-menu a{padding:14px 4px;font-size:16px;color:#CAD2E0;border-bottom:1px solid rgba(255,255,255,0.06)}
+    .grx-mobile-menu a:last-child{border-bottom:none}
+  }
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="position:relative;min-height:100vh;background:radial-gradient(1100px 700px at 80% -10%, rgba(59,123,255,0.10), transparent 60%), #070C1E;overflow-x:hidden">
+
+  <!-- NAV -->
+  <header style="position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(7,12,30,0.66);border-bottom:1px solid rgba(255,255,255,0.07)">
+    <nav class="grx-pad" style="max-width:1240px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;gap:24px">
+      <a href="Gregory%20Renard%20-%20Home.dc.html" style="display:flex;align-items:center;gap:11px;margin-right:auto">
+        <span style="width:34px;height:34px;border-radius:9px;background:linear-gradient(140deg,#3B7BFF,#1E4FD6);display:grid;place-items:center;font-weight:800;font-size:15px;color:#fff;box-shadow:0 0 22px rgba(59,123,255,0.45)">GR</span>
+        <span style="font-weight:700;font-size:15px;letter-spacing:-0.01em">Gregory Renard</span>
+      </a>
+      <a class="grx-navlink" href="Gregory%20Renard%20-%20Home.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_vision }}</a>
+      <a class="grx-navlink" href="AI-Transformation.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_transfo }}</a>
+      <a class="grx-navlink" href="Advisory-Execution.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_advisory }}</a>
+      <a class="grx-navlink" href="AI-Lab.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_lab }}</a>
+      <a class="grx-navlink" href="Why.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_why }}</a>
+      
+      <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#fff;background:#3B7BFF;padding:9px 17px;border-radius:9px;box-shadow:0 6px 18px rgba(59,123,255,0.32)" style-hover="background:#5A92FF">{{ t.nav_cta }}</a>
+      <button onClick="{{ toggleLang }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:#fff;background:rgba(59,123,255,0.18);border:1px solid rgba(59,123,255,0.42);border-radius:100px;padding:7px 13px;cursor:pointer">{{ langLabel }}</button>
+      <label for="grx-nav-toggle" class="grx-burger" aria-label="Open menu">☰</label>
+    </nav>
+    <input type="checkbox" id="grx-nav-toggle" class="grx-nav-toggle" aria-hidden="true">
+    <div class="grx-mobile-menu">
+      <a href="Gregory%20Renard%20-%20Home.dc.html">{{ t.nav_vision }}</a>
+      <a href="AI-Transformation.dc.html">{{ t.nav_transfo }}</a>
+      <a href="Advisory-Execution.dc.html">{{ t.nav_advisory }}</a>
+      <a href="AI-Lab.dc.html">{{ t.nav_lab }}</a>
+      <a href="Why.dc.html">{{ t.nav_why }}</a>
+      <a href="Keynote-Speaker.dc.html">Keynote Speaker</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:84px 32px 30px">
+    <div class="grx-hero" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center">
+      <div data-reveal>
+        <div style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#7FA8FF;border:1px solid rgba(59,123,255,0.28);background:rgba(59,123,255,0.06);padding:7px 13px;border-radius:100px;margin-bottom:24px">
+          <span style="width:7px;height:7px;border-radius:50%;background:#3B7BFF;box-shadow:0 0 10px #3B7BFF;animation:grx-pulse 2.4s ease-in-out infinite"></span>{{ t.eyebrow }}
+        </div>
+        <h1 style="font-size:clamp(36px,4.2vw,58px);line-height:1.05;letter-spacing:-0.032em;font-weight:800">{{ t.heroTitle }}</h1>
+        <p style="margin-top:22px;font-size:clamp(16px,1.4vw,19px);line-height:1.62;color:#AAB3C4;max-width:560px">{{ t.heroSub }}</p>
+      </div>
+      <div data-reveal class="grx-hero-img" style="position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.12);box-shadow:0 30px 70px rgba(0,0,0,0.5);min-height:380px">
+        <img src="{{ heroImg }}" alt="Gregory Renard — AI for Humanity, Élysée" style="width:100%;height:100%;object-fit:cover;display:block">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(7,12,30,0.65))"></div>
+        <div style="position:absolute;left:18px;bottom:16px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#C2CAD8">{{ t.heroCaption }}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="grx-pad" style="max-width:1100px;margin:0 auto;padding:40px 32px 20px">
+    <p data-reveal style="font-size:clamp(22px,2.6vw,34px);line-height:1.3;font-weight:700;letter-spacing:-0.02em;text-align:center">“{{ t.manifesto }}”</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:34px 32px 24px">
+    <div data-reveal style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#7FA8FF;margin-bottom:30px">{{ t.galleryKicker }}</div>
+    <div class="grx-gallery">
+      <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="6">
+        <figure class="grx-figure" data-reveal style="display:flex;flex-direction:column;align-items:center;gap:15px;margin:0">
+          <div class="grx-circle" style="position:relative;width:100%;aspect-ratio:1/1;border-radius:50%;overflow:hidden;border:1px solid rgba(127,168,255,0.32);box-shadow:0 16px 36px rgba(0,0,0,0.5);transition:border-color .3s">
+            <img src="{{ g.src }}" alt="{{ g.alt }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+          </div>
+          <figcaption style="font-size:12.5px;line-height:1.42;color:#AEB6C6;text-align:center;max-width:172px;text-wrap:pretty">{{ g.cap }}</figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- EVERYONE.AI -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:34px 32px 20px">
+    <div data-reveal style="border:1px solid rgba(255,255,255,0.09);border-radius:22px;background:rgba(255,255,255,0.02);padding:40px 42px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center">
+      <div style="flex:none;width:120px;display:grid;place-items:center"><img src="{{ everyoneLogo }}" alt="Everyone.AI" style="width:96px;height:auto"></div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:12px">{{ t.everyoneKicker }}</div>
+        <h2 style="font-size:clamp(20px,2.2vw,28px);font-weight:800;letter-spacing:-0.02em;line-height:1.18">{{ t.everyoneTitle }}</h2>
+        <p style="margin-top:12px;font-size:15px;line-height:1.62;color:#AEB6C6;max-width:680px">{{ t.everyoneBody }}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:18px;margin-top:16px">
+          <a class="grx-link" href="https://everyone.ai/" target="_blank" rel="noopener noreferrer" style="font-size:14px;font-weight:600">everyone.ai ↗</a>
+          <a class="grx-link" href="https://github.com/gregrenard/SRL4Children" target="_blank" rel="noopener noreferrer" style="font-size:14px;font-weight:600">SRL4Children · GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OATH -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:46px 32px 20px">
+    <div data-reveal style="border:1px solid rgba(59,123,255,0.22);border-radius:22px;background:linear-gradient(120deg,rgba(59,123,255,0.08),rgba(255,255,255,0.015));padding:42px 44px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:14px">{{ t.oathKicker }}</div>
+      <h2 style="font-size:clamp(24px,2.6vw,36px);line-height:1.1;letter-spacing:-0.02em;font-weight:800;max-width:780px">{{ t.oathTitle }}</h2>
+      <p style="margin-top:16px;font-size:16px;line-height:1.66;color:#AEB6C6;max-width:840px">{{ t.oathBody }}</p>
+      <a class="grx-link" href="https://www.holbertonturingoath.org/" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600">{{ t.oathLink }} ↗</a>
+    </div>
+  </section>
+
+  <!-- PRINCIPLES -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:56px 32px 20px">
+    <div data-reveal style="margin-bottom:30px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:12px">{{ t.principlesKicker }}</div>
+      <h2 style="font-size:clamp(26px,3vw,40px);line-height:1.08;letter-spacing:-0.025em;font-weight:800">{{ t.principlesTitle }}</h2>
+    </div>
+    <div class="grx-principles" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+      <sc-for list="{{ principles }}" as="p" hint-placeholder-count="6">
+        <article data-reveal style="border:1px solid rgba(255,255,255,0.09);border-radius:16px;background:rgba(255,255,255,0.02);padding:26px 24px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#3B7BFF;margin-bottom:14px">{{ p.n }}</div>
+          <h3 style="font-size:18px;font-weight:700;letter-spacing:-0.01em;line-height:1.2">{{ p.t }}</h3>
+          <p style="margin-top:10px;font-size:14px;line-height:1.58;color:#97A0B2">{{ p.d }}</p>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- POLICY ENGAGEMENTS -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:56px 32px 20px">
+    <div data-reveal style="margin-bottom:26px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:12px">{{ t.policyKicker }}</div>
+      <h2 style="font-size:clamp(26px,3vw,40px);line-height:1.08;letter-spacing:-0.025em;font-weight:800">{{ t.policyTitle }}</h2>
+    </div>
+    <article data-reveal class="grx-pr" style="display:flex;gap:22px;align-items:flex-start;border:1px solid rgba(59,123,255,0.35);border-radius:16px;background:rgba(255,255,255,0.02);padding:24px 26px;margin-bottom:14px;transition:border-color .3s,transform .3s">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#7FA8FF;flex:none;min-width:84px;padding-top:2px">2026</span>
+      <div style="flex:1">
+        <h3 style="font-size:17px;font-weight:700;letter-spacing:-0.01em">{{ t.iaKicker }}</h3>
+        <p style="margin-top:7px;font-size:14px;line-height:1.55;color:#97A0B2">{{ t.iaBody }}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:18px;margin-top:11px">
+          <a class="grx-link" href="https://ia-avecnous.fr/" target="_blank" rel="noopener noreferrer" style="font-size:13px;font-weight:600;color:#7FA8FF">ia-avecnous.fr ↗</a>
+          <a class="grx-link" href="https://www.linkedin.com/search/results/all/?keywords=%23iaavecnous&amp;origin=HASH_TAG_FROM_FEED" target="_blank" rel="noopener noreferrer" style="font-size:13px;font-weight:600;color:#7FA8FF">#iaavecnous · LinkedIn ↗</a>
+        </div>
+      </div>
+      <img src="{{ iaLogo }}" alt="L'IA avec NOUS — Lille, Hauts-de-France, 12 au 19 juin 2026" style="flex:none;width:132px;height:auto;border-radius:8px;margin-top:2px;align-self:center">
+    </article>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <sc-for list="{{ engagements }}" as="e" hint-placeholder-count="4">
+        <article class="grx-pr" data-reveal style="display:flex;gap:22px;align-items:flex-start;border:1px solid rgba(255,255,255,0.09);border-radius:16px;background:rgba(255,255,255,0.02);padding:24px 26px;transition:border-color .3s,transform .3s">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#7FA8FF;flex:none;min-width:84px;padding-top:2px">{{ e.year }}</span>
+          <div>
+            <h3 style="font-size:17px;font-weight:700;letter-spacing:-0.01em">{{ e.title }}</h3>
+            <p style="margin-top:7px;font-size:14px;line-height:1.55;color:#97A0B2"><sc-for list="{{ e.segs }}" as="seg" hint-placeholder-count="1"><sc-if value="{{ seg.isLink }}" hint-placeholder-val="{{ true }}"><a class="grx-link" href="{{ seg.url }}" target="_blank" rel="noopener noreferrer">{{ seg.t }}</a></sc-if><sc-if value="{{ seg.notLink }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:70px 32px 90px;text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#7FA8FF;margin-bottom:16px">{{ t.contactLoc }}</div>
+    <h2 style="font-size:clamp(32px,4.4vw,58px);line-height:1.03;letter-spacing:-0.03em;font-weight:800;max-width:780px;margin:0 auto">{{ t.contactTitle }}</h2>
+    <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:10px;margin-top:30px;font-weight:600;font-size:16px;color:#fff;background:#3B7BFF;padding:16px 32px;border-radius:13px;box-shadow:0 14px 40px rgba(59,123,255,0.4)" style-hover="background:#5A92FF;transform:translateY(-2px)">{{ t.contactCta }} →</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="border-top:1px solid rgba(255,255,255,0.08);background:#070C1E">
+    <div class="grx-footer grx-pad" style="max-width:1240px;margin:0 auto;padding:52px 32px 30px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px">
+      <div>
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:16px">
+          <span style="width:32px;height:32px;border-radius:8px;background:linear-gradient(140deg,#3B7BFF,#1E4FD6);display:grid;place-items:center;font-weight:800;font-size:14px;color:#fff">GR</span>
+          <span style="font-weight:700;font-size:15px">Gregory Renard</span>
+        </div>
+        <p style="font-size:13.5px;line-height:1.6;color:#8893A6;max-width:280px">{{ t.footerBlurb }}</p>
+        <div style="display:flex;gap:14px;margin-top:18px">
+          <sc-for list="{{ socials }}" as="s" hint-placeholder-count="5"><a href="{{ s.url }}" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#97A0B2" style-hover="color:#7FA8FF">{{ s.name }}</a></sc-for>
+        </div>
+      </div>
+      <sc-for list="{{ footerCols }}" as="col" hint-placeholder-count="3">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#5E6678;margin-bottom:14px">{{ col.h }}</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <sc-for list="{{ col.items }}" as="it" hint-placeholder-count="4">
+              <a href="{{ it.url }}" target="{{ it.target }}" rel="noopener noreferrer" style="font-size:14px;color:#AEB6C6" style-hover="color:#fff">{{ it.label }}</a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.06)">
+      <div class="grx-pad" style="max-width:1240px;margin:0 auto;padding:18px 32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:12.5px;color:#6B7385">
+        <span>{{ t.copyright }}</span>
+        <span style="font-family:'JetBrains Mono',monospace">SF · Silicon Valley · Paris · Bruxelles</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'en' };
+  componentDidMount() { try { const l = localStorage.getItem('grx_lang'); if (l) this.setState({ lang: l }); try { document.documentElement.lang = l || 'en'; } catch (e) {} } catch (e) {} }
+  setLang(l) { try { localStorage.setItem('grx_lang', l); } catch (e) {} this.setState({ lang: l }); }
+  parseLinks(str) {
+    if (!str) return [];
+    const out = []; const re = /\[([^\]]+)\]\(([^)]+)\)/g; let last = 0, m;
+    while ((m = re.exec(str))) {
+      if (m.index > last) out.push({ t: str.slice(last, m.index), notLink: true });
+      out.push({ t: m[1], url: m[2], isLink: true });
+      last = re.lastIndex;
+    }
+    if (last < str.length) out.push({ t: str.slice(last), notLink: true });
+    return out;
+  }
+
+  renderVals() {
+    const lang = this.state.lang;
+    const C = {
+      en: {
+        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Advisory & Execution', nav_lab: 'AI Lab', nav_why: 'Why', nav_ethics: 'Ethics', nav_cta: "Let's Build",
+        eyebrow: 'Ethics & Responsibility',
+        heroTitle: 'AI must remain centered on humanity.',
+        heroSub: 'Since 2016, Gregory Renard has been a public advocate for an ethical, responsible approach to AI — rooted in the conviction that every technological advance must serve people first, and that those who build AI carry a duty of care toward society.',
+        heroCaption: 'AI for Humanity · Élysée, Paris',
+        galleryKicker: 'AI for Humanity · Moments',
+        manifesto: 'Technology is never neutral. The question is not whether AI is powerful, but whether it is built — and used — for the benefit of humanity.',
+        oathKicker: 'The Holberton-Turing Oath',
+        oathTitle: 'Co-author of an ethical oath for AI practitioners',
+        oathBody: "Inspired by the Hippocratic Oath, the Holberton-Turing Oath sets out the ethical commitments of those who design and deploy AI. As co-author, Gregory helped establish early guard-rails for human-centric AI — developed and used responsibly, for the benefit of humanity.",
+        oathLink: 'Read the oath',
+        principlesKicker: 'Principles', principlesTitle: 'The commitments that guide the work',
+        policyKicker: 'Policy & public engagement', policyTitle: 'Shaping AI strategy for France & Europe',
+        iaKicker: "L'IA avec NOUS — organizing committee",
+        iaBody: "Under the high patronage of President Emmanuel Macron, with Xavier Bertrand (Hauts-de-France). Lille · 12–19 June 2026.",
+        everyoneKicker: 'Everyone.AI',
+        everyoneTitle: 'Protecting children in the age of AI',
+        everyoneBody: 'Co-founded in 2024, Everyone.AI is a nonprofit anticipating the opportunities and risks of AI for children — notably through “The Future of Child Development in the AI Era” (2024) and SRL4Children, an open-source agentic framework for safe, supportive learning.',
+        contactLoc: 'SAN FRANCISCO · PARIS · BRUSSELS',
+        contactTitle: 'Build AI that earns trust. Let’s do it right.',
+        contactCta: 'Connect with Gregory',
+        footerBlurb: 'Hands-on AI architect & Cognitive Orchestration since 1996. Building operational, AI-native organizations.',
+        copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
+      },
+      fr: {
+        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Conseil & Exécution', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_ethics: 'Éthique', nav_cta: 'Construisons',
+        eyebrow: 'Éthique & Responsabilité',
+        heroTitle: "L'IA doit rester centrée sur l'humain.",
+        heroSub: "Depuis 2016, Gregory Renard défend publiquement une approche éthique et responsable de l'IA — convaincu que chaque avancée technologique doit d'abord servir l'humain, et que ceux qui construisent l'IA portent un devoir de vigilance envers la société.",
+        heroCaption: 'AI for Humanity · Élysée, Paris',
+        galleryKicker: 'AI for Humanity · Instants',
+        manifesto: "La technologie n'est jamais neutre. La question n'est pas de savoir si l'IA est puissante, mais si elle est conçue — et utilisée — au bénéfice de l'humanité.",
+        oathKicker: 'Le Serment Holberton-Turing',
+        oathTitle: "Co-auteur d'un serment éthique pour les praticiens de l'IA",
+        oathBody: "Inspiré du serment d'Hippocrate, le Serment Holberton-Turing énonce les engagements éthiques de celles et ceux qui conçoivent et déploient l'IA. En tant que co-auteur, Gregory a contribué à poser des garde-fous précoces pour une IA centrée sur l'humain — développée et utilisée de façon responsable.",
+        oathLink: 'Lire le serment',
+        principlesKicker: 'Principes', principlesTitle: 'Les engagements qui guident le travail',
+        policyKicker: 'Politiques & engagement public', policyTitle: "Façonner la stratégie IA de la France & de l'Europe",
+        iaKicker: "L'IA avec NOUS — comité d'organisation",
+        iaBody: "Sous le haut patronage du Président Emmanuel Macron, avec Xavier Bertrand (Hauts-de-France). Lille · du 12 au 19 juin 2026.",
+        everyoneKicker: 'Everyone.AI',
+        everyoneTitle: "Protéger les enfants à l'ère de l'IA",
+        everyoneBody: "Co-fondée en 2024, Everyone.AI est une organisation à but non lucratif qui anticipe les opportunités et les risques de l'IA pour les enfants — notamment via « The Future of Child Development in the AI Era » (2024) et SRL4Children, un framework agentique open-source pour un apprentissage sûr et bienveillant.",
+        contactLoc: 'SAN FRANCISCO · PARIS · BRUXELLES',
+        contactTitle: "Construire une IA digne de confiance. Faisons-le bien.",
+        contactCta: 'Échanger avec Gregory',
+        footerBlurb: "Architecte IA de terrain & Orchestration Cognitive depuis 1996. Construire des organisations opérationnelles, AI-native.",
+        copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
+      }
+    };
+    const t = C[lang];
+
+    const principles = lang === 'fr' ? [
+      { n: '01', t: 'Humain d\u2019abord', d: "L'IA augmente l'humain, elle ne le remplace pas. Chaque système doit élargir les capacités et la dignité des personnes." },
+      { n: '02', t: 'Transparence', d: "Pas de boîte noire. Observabilité, traçabilité et explicabilité dès la conception — surtout pour les décisions critiques." },
+      { n: '03', t: 'Responsabilité', d: "Celui qui conçoit répond de ce qu'il déploie. Gouvernance claire, rôles définis, et alignement avec l'EU AI Act et le RGPD." },
+      { n: '04', t: 'Équité & inclusion', d: "Lutter contre les biais et rendre le savoir accessible à tous — l'IA pour le plus grand nombre, pas pour quelques-uns." },
+      { n: '05', t: 'Sûreté', d: "Anticiper les risques avant le déploiement : robustesse, sécurité, gestion de la dérive et garde-fous." },
+      { n: '06', t: 'Bien commun', d: "Mettre l'IA au service de la science, de l'éducation et de l'intérêt général — au bénéfice de l'humanité." }
+    ] : [
+      { n: '01', t: 'Human-first', d: 'AI augments people; it does not replace them. Every system should expand human capability and dignity.' },
+      { n: '02', t: 'Transparency', d: 'No black boxes. Observability, traceability and explainability by design — especially for decision-critical AI.' },
+      { n: '03', t: 'Accountability', d: 'Whoever builds it answers for what they ship. Clear governance, defined roles, alignment with the EU AI Act and GDPR.' },
+      { n: '04', t: 'Fairness & inclusion', d: 'Fight bias and make knowledge accessible to all — AI for the many, not the few.' },
+      { n: '05', t: 'Safety', d: 'Anticipate risk before deployment: robustness, security, drift management and guard-rails.' },
+      { n: '06', t: 'Public good', d: 'Direct AI toward science, education and the common interest — for the benefit of humanity.' }
+    ];
+
+    const engEN = [
+      { year: '2017–2018', title: 'France IA & Villani Report', body: 'Contributed to the France IA strategy (2017) and the [Villani report](https://www.aiforhumanity.fr/) (2018) that anchored France and Europe’s national AI strategy.' },
+      { year: '2018', title: 'AI4Humanity & EU expertise', body: 'Co-initiator of AI4Humanity; reserve member of the European Commission’s [High-Level Expert Group on AI](https://digital-strategy.ec.europa.eu/en/policies/expert-group-ai).' },
+      { year: '2018', title: 'AI & Ethics — IAS Princeton', body: 'Invited guest on AI & Ethics at the [Institute for Advanced Study](https://www.ias.edu/), Princeton.' },
+      { year: '2016+', title: 'Holberton-Turing Oath', body: 'Co-author of the [Holberton-Turing Oath](https://www.holbertonturingoath.org/) — an ethical oath for AI practitioners.' }
+    ];
+    const engFR = [
+      { year: '2017–2018', title: 'France IA & rapport Villani', body: 'Contribution au [rapport Villani sur l\u2019IA](https://www.aiforhumanity.fr/) qui a ancré la stratégie nationale IA de la France et de l\u2019Europe.' },
+      { year: '2018', title: 'AI4Humanity & expertise UE', body: 'Co-initiateur d\u2019AI4Humanity ; membre réserviste du [groupe d\u2019experts de haut niveau sur l\u2019IA](https://digital-strategy.ec.europa.eu/en/policies/expert-group-ai) de la Commission européenne.' },
+      { year: '2018', title: 'IA & Éthique — IAS Princeton', body: 'Invité sur l\u2019IA & l\u2019éthique à l\u2019[Institute for Advanced Study](https://www.ias.edu/), Princeton.' },
+      { year: '2016+', title: 'Serment Holberton-Turing', body: 'Co-auteur du [Serment Holberton-Turing](https://www.holbertonturingoath.org/) — un serment éthique pour les praticiens de l\u2019IA.' }
+    ];
+    const engagements = (lang === 'fr' ? engFR : engEN).map(e => ({ year: e.year, title: e.title, segs: this.parseLinks(e.body) }));
+
+    const galleryImg = (id, asset) => 'https://static.wixstatic.com/media/758a70_' + id + '~mv2.png/v1/fill/w_420,h_420,al_c,q_85,enc_auto/' + asset;
+    const galleryCaps = lang === 'fr' ? [
+      'Au Palais de l’Élysée avec Cédric Villani & Justine Cassell',
+      'Sur les marches de l’Élysée avec Laurence Devillers',
+      'Principe éthique : First Do No Harm',
+      'AI4Humanity avec Fei-Fei Li & Marie-Paule Cani',
+      'Avec le Président Emmanuel Macron',
+      'AI4Humanity avec Yann LeCun & Justine Cassell'
+    ] : [
+      'At the Élysée Palace with Cédric Villani & Justine Cassell',
+      'On the steps of the Élysée Palace with Laurence Devillers',
+      'Ethics principle: First Do No Harm',
+      'AI4Humanity with Fei-Fei Li & Marie-Paule Cani',
+      'With French President Emmanuel Macron',
+      'AI4Humanity with Yann LeCun & Justine Cassell'
+    ];
+    const gallerySrc = [
+      galleryImg('a5e4ba496d34416081de7cb48afaf4f0', 'Asset%204_4x.png'),
+      galleryImg('ec63f706f92e45d7b7d00e9ff2b9cc66', 'Asset%203_4x.png'),
+      galleryImg('be3b43ce714247f4a991581ae94a7eb1', 'Asset%202_4x.png'),
+      galleryImg('427482c7b54542b58f742740ccd5d3a8', 'Asset%201_4x.png'),
+      galleryImg('09d42f44c8764989b91fc2cc6bc8d223', 'Asset%205_4x.png'),
+      galleryImg('793a0a69c133460bba397226be2b7882', 'Asset%206_4x.png')
+    ];
+    const gallery = gallerySrc.map((src, i) => ({ src, cap: galleryCaps[i], alt: galleryCaps[i] }));
+
+    const socials = [
+      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/gregoryrenard/' },
+      { name: 'Wikipedia', url: 'https://fr.wikipedia.org/wiki/Gr%C3%A9gory_Renard' },
+      { name: 'Everyone.AI', url: 'https://everyone.ai/' },
+      { name: 'GitHub', url: 'https://github.com/gregrenard/' },
+      { name: 'X', url: 'https://twitter.com/Redo' }
+    ];
+    const footerCols = lang === 'fr' ? [
+      { h: 'Naviguer', items: [
+        { label: 'Vision', url: 'Gregory%20Renard%20-%20Home.dc.html', target: '_self' },
+        { label: 'Transformation IA', url: 'AI-Transformation.dc.html', target: '_self' },
+        { label: 'Conseil & Exécution', url: 'Advisory-Execution.dc.html', target: '_self' },
+        { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
+        { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
+      ]},
+      { h: 'À propos', items: [
+        { label: 'Pourquoi', url: 'Why.dc.html', target: '_self' },
+        { label: 'Éthique', url: 'Ethics.dc.html', target: '_self' },
+        { label: 'Publications', url: 'Publications.dc.html', target: '_self' },
+        { label: 'Presse', url: 'Press.dc.html', target: '_self' }
+      ]},
+      { h: 'Contact', items: [
+        { label: 'Construisons', url: 'Contact.dc.html', target: '_self' },
+        { label: 'Freedom.AI', url: 'https://freedom.ai/', target: '_blank' },
+        { label: 'Everyone.AI', url: 'https://everyone.ai/', target: '_blank' }
+      ]}
+    ] : [
+      { h: 'Navigate', items: [
+        { label: 'Vision', url: 'Gregory%20Renard%20-%20Home.dc.html', target: '_self' },
+        { label: 'AI Transformation', url: 'AI-Transformation.dc.html', target: '_self' },
+        { label: 'Advisory & Execution', url: 'Advisory-Execution.dc.html', target: '_self' },
+        { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
+        { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
+      ]},
+      { h: 'About', items: [
+        { label: 'Why', url: 'Why.dc.html', target: '_self' },
+        { label: 'Ethics', url: 'Ethics.dc.html', target: '_self' },
+        { label: 'Publications', url: 'Publications.dc.html', target: '_self' },
+        { label: 'Press', url: 'Press.dc.html', target: '_self' }
+      ]},
+      { h: 'Contact', items: [
+        { label: "Let's Build", url: 'Contact.dc.html', target: '_self' },
+        { label: 'Freedom.AI', url: 'https://freedom.ai/', target: '_blank' },
+        { label: 'Everyone.AI', url: 'https://everyone.ai/', target: '_blank' }
+      ]}
+    ];
+
+    return {
+      rootRef: (el) => { this._root = el; },
+      lang, t, principles, engagements, socials, footerCols, gallery,
+      langLabel: lang === 'en' ? 'FR' : 'EN',
+      toggleLang: () => this.setLang(lang === 'en' ? 'fr' : 'en'),
+      heroImg: 'https://static.wixstatic.com/media/fa93f3_404df62abb0d465d8e4da2d94e10e3ba~mv2.png/v1/fill/w_720,h_660,al_c,q_85,enc_auto/greg.png',
+      everyoneLogo: 'https://static.wixstatic.com/media/758a70_bcd5c592084e492fb02f32943ddb4d55~mv2.webp/v1/fill/w_108,h_118,al_c,q_85,enc_auto/AI.webp',
+      iaLogo: 'assets/ia-avec-nous.png'
+    };
+  }
+}
+</script>
+</body>
+</html>

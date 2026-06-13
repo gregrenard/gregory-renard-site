@@ -1,0 +1,38 @@
+# Gregory Renard
+
+> AI architect and Cognitive Orchestration pioneer. Since 1996, Gregory Renard has built real-world AI systems — from the first French conversational assistant to industrial-scale agentic architectures — helping global enterprises move from AI ambition to AI in production. He advises governments and Fortune 500 boards, founded the applied AI lab Freedom.AI, and is a recognized keynote speaker on applied and responsible AI.
+
+## Who he is
+
+- Field AI architect with 30+ years of experience across conversational AI, knowledge graphs, NLP, LLMs and agentic systems.
+- Creator of "Angie", an early French conversational assistant ("the French Siri").
+- Recipient of the 2022 NASA FDL AI Merit Award (Space & Earth Science) and member of the programme's AI Technical Committee since 2016.
+- Recipient of the 2025 Walloon Merit distinction (Belgium).
+- Co-initiator of the AI4Humanity public-policy effort (2018).
+- Founder of Freedom.AI, an applied AI lab building production-grade GenAI across cloud, on-premise and edge.
+
+## Method
+
+Gregory Renard's "Applied AI" approach is a proven three-phase method that takes organizations from strategy to production at scale — no hype, no endless proofs-of-concept — turning AI ambition into measurable operational impact for large enterprises.
+
+## Pages
+
+- [Home / Vision](https://gregory-renard.com/): AI as the execution layer of modern organizations — overview, biography and recognitions.
+- [AI Transformation](https://gregory-renard.com/AI-Transformation.dc.html): From AI ambition to operational reality — the three-phase Applied AI method.
+- [Advisory & Execution](https://gregory-renard.com/Advisory-Execution.dc.html): Advisory and hands-on execution for leaders and boards architecting AI-native organizations.
+- [AI Lab](https://gregory-renard.com/AI-Lab.dc.html): Inside Freedom.AI — prototyping and shipping cutting-edge GenAI to production.
+- [Why](https://gregory-renard.com/Why.dc.html): Who is Gregory Renard — career timeline, vision and values.
+- [Keynote Speaker](https://gregory-renard.com/Keynote-Speaker.dc.html): AI keynotes for executive decision-makers, with topics and references.
+- [Ethics](https://gregory-renard.com/Ethics.dc.html): A human-centered, responsible approach to artificial intelligence.
+- [Publications](https://gregory-renard.com/Publications.dc.html): Patents, peer-reviewed research and applied-AI work spanning three decades.
+- [Press](https://gregory-renard.com/Press.dc.html): Awards, distinctions and media coverage.
+- [Contact](https://gregory-renard.com/Contact.dc.html): Get in touch to move from experimentation to real results.
+
+## Elsewhere
+
+- [LinkedIn](https://www.linkedin.com/in/gregoryrenard/)
+- [Wikipedia](https://fr.wikipedia.org/wiki/Gr%C3%A9gory_Renard)
+- [Google Scholar](https://scholar.google.com/citations?user=Khit-6kAAAAJ&hl=fr)
+- [GitHub](https://github.com/gregrenard/)
+- [X](https://twitter.com/Redo)
+- [YouTube](https://www.youtube.com/@GregoryRenard)

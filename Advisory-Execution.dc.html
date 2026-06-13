@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>AI Advisory &amp; Execution — Gregory Renard</title>
+<meta name="description" content="Advisory and hands-on execution for leaders and boards, architecting the next generation of AI-native organizations. No hype, no endless POCs.">
+<meta name="author" content="Gregory Renard">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gregory-renard.com/Advisory-Execution.dc.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gregory Renard">
+<meta property="og:title" content="AI Advisory &amp; Execution — Gregory Renard">
+<meta property="og:description" content="Advisory and hands-on execution for leaders and boards, architecting the next generation of AI-native organizations. No hype, no endless POCs.">
+<meta property="og:url" content="https://gregory-renard.com/Advisory-Execution.dc.html">
+<meta property="og:image" content="https://gregory-renard.com/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Advisory &amp; Execution — Gregory Renard">
+<meta name="twitter:description" content="Advisory and hands-on execution for leaders and boards, architecting the next generation of AI-native organizations. No hype, no endless POCs.">
+<meta name="twitter:image" content="https://gregory-renard.com/assets/og-cover.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:#070C1E;color:#EAEEF5;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:rgba(59,123,255,0.32);color:#fff}
+  @keyframes grx-pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+  [data-reveal]{opacity:1}
+  .grx-link{color:#8FB3FF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(143,179,255,0.45);transition:color .2s}
+  .grx-link:hover{color:#fff;text-decoration-color:#8FB3FF}
+  @media (max-width:900px){
+    .grx-navlink{display:none !important}
+    .grx-hero,.grx-2,.grx-paths{grid-template-columns:1fr !important}
+    .grx-hero-img{min-height:280px !important;order:-1}
+    .grx-pad{padding-left:22px !important;padding-right:22px !important}
+    .grx-who{grid-template-columns:1fr 1fr !important}
+  }
+  @media (max-width:620px){
+    .grx-footer{grid-template-columns:1fr 1fr !important;gap:26px !important}
+    .grx-who,.grx-metrics{grid-template-columns:1fr !important}
+  }
+  @media (max-width:400px){ .grx-footer{grid-template-columns:1fr !important} }
+  .grx-nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+  .grx-burger{display:none}
+  .grx-mobile-menu{display:none}
+  @media (max-width:900px){
+    .grx-burger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.05);color:#EAEEF5;font-size:20px;line-height:1;cursor:pointer}
+    .grx-mobile-menu{background:rgba(7,12,30,0.98);border-top:1px solid rgba(255,255,255,0.08);padding:8px 22px 16px}
+    .grx-nav-toggle:checked ~ .grx-mobile-menu{display:flex;flex-direction:column}
+    .grx-mobile-menu a{padding:14px 4px;font-size:16px;color:#CAD2E0;border-bottom:1px solid rgba(255,255,255,0.06)}
+    .grx-mobile-menu a:last-child{border-bottom:none}
+  }
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="position:relative;min-height:100vh;background:radial-gradient(1100px 700px at 80% -10%, rgba(59,123,255,0.10), transparent 60%), #070C1E;overflow-x:hidden">
+
+  <!-- NAV -->
+  <header style="position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(7,12,30,0.66);border-bottom:1px solid rgba(255,255,255,0.07)">
+    <nav class="grx-pad" style="max-width:1240px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;gap:26px">
+      <a href="Gregory%20Renard%20-%20Home.dc.html" style="display:flex;align-items:center;gap:11px;margin-right:auto">
+        <span style="width:34px;height:34px;border-radius:9px;background:linear-gradient(140deg,#3B7BFF,#1E4FD6);display:grid;place-items:center;font-weight:800;font-size:15px;color:#fff;box-shadow:0 0 22px rgba(59,123,255,0.45)">GR</span>
+        <span style="font-weight:700;font-size:15px;letter-spacing:-0.01em">Gregory Renard</span>
+      </a>
+      <a class="grx-navlink" href="Gregory%20Renard%20-%20Home.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_vision }}</a>
+      <a class="grx-navlink" href="AI-Transformation.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_transfo }}</a>
+      <a class="grx-navlink" href="Advisory-Execution.dc.html" style="font-size:14px;color:#fff;font-weight:600">{{ t.nav_advisory }}</a>
+      <a class="grx-navlink" href="AI-Lab.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_lab }}</a>
+      <a class="grx-navlink" href="Why.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_why }}</a>
+      <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#fff;background:#3B7BFF;padding:9px 17px;border-radius:9px;box-shadow:0 6px 18px rgba(59,123,255,0.32)" style-hover="background:#5A92FF">{{ t.nav_cta }}</a>
+      <button onClick="{{ toggleLang }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:#fff;background:rgba(59,123,255,0.18);border:1px solid rgba(59,123,255,0.42);border-radius:100px;padding:7px 13px;cursor:pointer">{{ langLabel }}</button>
+      <label for="grx-nav-toggle" class="grx-burger" aria-label="Open menu">☰</label>
+    </nav>
+    <input type="checkbox" id="grx-nav-toggle" class="grx-nav-toggle" aria-hidden="true">
+    <div class="grx-mobile-menu">
+      <a href="Gregory%20Renard%20-%20Home.dc.html">{{ t.nav_vision }}</a>
+      <a href="AI-Transformation.dc.html">{{ t.nav_transfo }}</a>
+      <a href="Advisory-Execution.dc.html">{{ t.nav_advisory }}</a>
+      <a href="AI-Lab.dc.html">{{ t.nav_lab }}</a>
+      <a href="Why.dc.html">{{ t.nav_why }}</a>
+      <a href="Keynote-Speaker.dc.html">Keynote Speaker</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:84px 32px 44px">
+    <div class="grx-hero" style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center">
+      <div data-reveal>
+        <div style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#7FA8FF;border:1px solid rgba(59,123,255,0.28);background:rgba(59,123,255,0.06);padding:7px 13px;border-radius:100px;margin-bottom:24px">
+          <span style="width:7px;height:7px;border-radius:50%;background:#3B7BFF;box-shadow:0 0 10px #3B7BFF;animation:grx-pulse 2.4s ease-in-out infinite"></span>{{ t.eyebrow }}
+        </div>
+        <h1 style="font-size:clamp(36px,4.2vw,58px);line-height:1.05;letter-spacing:-0.03em;font-weight:800">{{ t.heroTitle }} <span style="background:linear-gradient(100deg,#5A92FF,#9EC0FF);-webkit-background-clip:text;background-clip:text;color:transparent">{{ t.heroTitleEm }}</span></h1>
+        <p style="margin-top:22px;font-size:clamp(16px,1.4vw,19px);line-height:1.62;color:#AAB3C4;max-width:560px">{{ t.heroSub }}</p>
+        <p style="margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#7FA8FF">{{ t.heroTag }}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:13px;margin-top:30px">
+          <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:#fff;background:#3B7BFF;padding:14px 24px;border-radius:11px;box-shadow:0 10px 30px rgba(59,123,255,0.35)" style-hover="background:#5A92FF;transform:translateY(-1px)">{{ t.ctaPrimary }} →</a>
+          <a href="AI-Transformation.dc.html" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:#EAEEF5;border:1px solid rgba(255,255,255,0.16);padding:14px 24px;border-radius:11px" style-hover="border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.04)">{{ t.ctaSecondary }}</a>
+        </div>
+      </div>
+      <div data-reveal class="grx-hero-img" style="position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.12);box-shadow:0 30px 70px rgba(0,0,0,0.5);min-height:380px">
+        <img src="{{ heroImg }}" alt="Gregory Renard — advisory & execution" style="width:100%;height:100%;object-fit:cover;display:block">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(7,12,30,0.6))"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PULL QUOTE -->
+  <section class="grx-pad" style="max-width:1100px;margin:0 auto;padding:34px 32px">
+    <p data-reveal style="font-size:clamp(22px,2.6vw,34px);line-height:1.32;font-weight:700;letter-spacing:-0.02em;text-align:center;color:#EAEEF5">“{{ t.pullQuote }}”</p>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:40px 32px 20px">
+    <div data-reveal style="margin-bottom:26px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:12px">{{ t.whoKicker }}</div>
+      <h2 style="font-size:clamp(24px,2.6vw,36px);line-height:1.1;letter-spacing:-0.025em;font-weight:800">{{ t.whoTitle }}</h2>
+    </div>
+    <div class="grx-who" data-reveal style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
+      <sc-for list="{{ t.who }}" as="w" hint-placeholder-count="4">
+        <div style="border:1px solid rgba(255,255,255,0.09);border-radius:14px;background:rgba(255,255,255,0.02);padding:22px 20px;font-size:15px;line-height:1.45;color:#EAEEF5;font-weight:500">{{ w }}</div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- CASE STUDY -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:50px 32px 20px">
+    <div data-reveal style="text-align:center;margin-bottom:34px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:14px">{{ t.caseKicker }}</div>
+      <h2 style="font-size:clamp(26px,3vw,42px);line-height:1.08;letter-spacing:-0.025em;font-weight:800">{{ t.caseTitle }}</h2>
+      <p style="margin:16px auto 0;font-size:16px;line-height:1.6;color:#AEB6C6;max-width:760px">{{ t.caseIntro }}</p>
+    </div>
+    <div data-reveal>
+      <article style="border:1px solid rgba(59,123,255,0.22);border-radius:22px;background:linear-gradient(120deg,rgba(59,123,255,0.07),rgba(255,255,255,0.015));padding:36px 38px">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap">
+          <h3 style="font-size:clamp(20px,2.1vw,28px);font-weight:800;letter-spacing:-0.015em">{{ activeCase.name }}</h3>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.05em;color:#7FA8FF;border:1px solid rgba(59,123,255,0.3);border-radius:100px;padding:5px 12px;flex:none">{{ activeCase.sector }}</span>
+        </div>
+        <div class="grx-metrics" style="display:grid;grid-template-columns:{{ activeCase.metricCols }};gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;margin:22px 0 26px">
+          <sc-for list="{{ activeCase.metrics }}" as="m" hint-placeholder-count="2">
+            <div style="background:#0E1736;padding:18px 18px">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:clamp(18px,1.8vw,24px);font-weight:600;color:#7FA8FF">{{ m.k }}</div>
+              <div style="margin-top:5px;font-size:12.5px;line-height:1.4;color:#97A0B2">{{ m.v }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr;gap:10px">
+          <sc-for list="{{ activeCase.bullets }}" as="b" hint-placeholder-count="6">
+            <li style="display:flex;gap:10px;font-size:14.5px;line-height:1.5;color:#C2CAD8"><span style="color:#3B7BFF;flex:none">▸</span>{{ b }}</li>
+          </sc-for>
+        </ul>
+        <p style="margin-top:20px;font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#7FA8FF;border-top:1px solid rgba(255,255,255,0.08);padding-top:18px">{{ activeCase.playbook }}</p>
+      </article>
+      <div style="display:flex;align-items:center;justify-content:center;gap:20px;margin-top:24px">
+        <button onClick="{{ prevCase }}" aria-label="Previous case" style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.03);color:#EAEEF5;font-size:16px;cursor:pointer;display:grid;place-items:center;transition:all .2s" style-hover="border-color:#3B7BFF;background:rgba(59,123,255,0.12)">←</button>
+        <div style="display:flex;gap:11px;align-items:center">
+          <sc-for list="{{ dots }}" as="d" hint-placeholder-count="4">
+            <button onClick="{{ d.go }}" aria-label="{{ d.label }}" style="{{ d.style }}"></button>
+          </sc-for>
+        </div>
+        <button onClick="{{ nextCase }}" aria-label="Next case" style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.03);color:#EAEEF5;font-size:16px;cursor:pointer;display:grid;place-items:center;transition:all .2s" style-hover="border-color:#3B7BFF;background:rgba(59,123,255,0.12)">→</button>
+      </div>
+      <div style="text-align:center;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B7385">{{ caseCounter }}</div>
+    </div>
+    <div data-reveal style="text-align:center;margin-top:28px">
+      <p style="font-size:15.5px;line-height:1.6;color:#AEB6C6;max-width:720px;margin:0 auto 20px">{{ t.caseUrgency }}</p>
+      <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:#fff;background:#3B7BFF;padding:14px 26px;border-radius:11px;box-shadow:0 10px 30px rgba(59,123,255,0.35)" style-hover="background:#5A92FF;transform:translateY(-1px)">{{ t.caseCta }} →</a>
+    </div>
+  </section>
+
+  <!-- TWO PATHWAYS -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:60px 32px 20px">
+    <div data-reveal style="text-align:center;margin-bottom:34px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:14px">{{ t.pathsKicker }}</div>
+      <h2 style="font-size:clamp(26px,3vw,42px);line-height:1.08;letter-spacing:-0.025em;font-weight:800">{{ t.pathsTitle }}</h2>
+    </div>
+    <div class="grx-paths" style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+      <article data-reveal style="border:1px solid rgba(255,255,255,0.09);border-radius:20px;overflow:hidden;background:rgba(255,255,255,0.02)">
+        <div style="height:200px;overflow:hidden;position:relative"><img src="{{ keynoteImg }}" alt="Gregory Renard keynote" style="width:100%;height:100%;object-fit:cover"><div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(7,12,30,0.85))"></div></div>
+        <div style="padding:26px 26px 28px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#7FA8FF;margin-bottom:9px">{{ t.path1Tag }}</div>
+          <h3 style="font-size:21px;font-weight:700;letter-spacing:-0.015em">{{ t.path1Title }}</h3>
+          <p style="margin-top:11px;font-size:14.5px;line-height:1.58;color:#AAB3C4">{{ t.path1Body }}</p>
+          <a class="grx-link" href="Keynote-Speaker.dc.html" style="display:inline-block;margin-top:16px;font-size:14px;font-weight:600">{{ t.path1Link }} →</a>
+        </div>
+      </article>
+      <article data-reveal style="border:1px solid rgba(255,255,255,0.09);border-radius:20px;overflow:hidden;background:rgba(255,255,255,0.02)">
+        <div style="height:200px;overflow:hidden;position:relative"><img src="{{ playbookImg }}" alt="Cognitive Orchestration method" style="width:100%;height:100%;object-fit:cover"><div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(7,12,30,0.85))"></div></div>
+        <div style="padding:26px 26px 28px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#7FA8FF;margin-bottom:9px">{{ t.path2Tag }}</div>
+          <h3 style="font-size:21px;font-weight:700;letter-spacing:-0.015em">{{ t.path2Title }}</h3>
+          <p style="margin-top:11px;font-size:14.5px;line-height:1.58;color:#AAB3C4">{{ t.path2Body }}</p>
+          <a class="grx-link" href="AI-Transformation.dc.html" style="display:inline-block;margin-top:16px;font-size:14px;font-weight:600">{{ t.path2Link }} →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:70px 32px 90px;text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#7FA8FF;margin-bottom:16px">{{ t.contactLoc }}</div>
+    <h2 style="font-size:clamp(36px,5vw,68px);line-height:1.0;letter-spacing:-0.03em;font-weight:800">{{ t.contactTitle }}</h2>
+    <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:10px;margin-top:30px;font-weight:600;font-size:16px;color:#fff;background:#3B7BFF;padding:16px 32px;border-radius:13px;box-shadow:0 14px 40px rgba(59,123,255,0.4)" style-hover="background:#5A92FF;transform:translateY(-2px)">{{ t.contactCta }} →</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="border-top:1px solid rgba(255,255,255,0.08);background:#070C1E">
+    <div class="grx-footer grx-pad" style="max-width:1240px;margin:0 auto;padding:52px 32px 30px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px">
+      <div>
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:16px">
+          <span style="width:32px;height:32px;border-radius:8px;background:linear-gradient(140deg,#3B7BFF,#1E4FD6);display:grid;place-items:center;font-weight:800;font-size:14px;color:#fff">GR</span>
+          <span style="font-weight:700;font-size:15px">Gregory Renard</span>
+        </div>
+        <p style="font-size:13.5px;line-height:1.6;color:#8893A6;max-width:280px">{{ t.footerBlurb }}</p>
+        <div style="display:flex;gap:14px;margin-top:18px">
+          <sc-for list="{{ socials }}" as="s" hint-placeholder-count="5"><a href="{{ s.url }}" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#97A0B2" style-hover="color:#7FA8FF">{{ s.name }}</a></sc-for>
+        </div>
+      </div>
+      <sc-for list="{{ footerCols }}" as="col" hint-placeholder-count="3">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#5E6678;margin-bottom:14px">{{ col.h }}</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <sc-for list="{{ col.items }}" as="it" hint-placeholder-count="4">
+              <a href="{{ it.url }}" target="{{ it.target }}" rel="noopener noreferrer" style="font-size:14px;color:#AEB6C6" style-hover="color:#fff">{{ it.label }}</a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.06)">
+      <div class="grx-pad" style="max-width:1240px;margin:0 auto;padding:18px 32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:12.5px;color:#6B7385">
+        <span>{{ t.copyright }}</span>
+        <span style="font-family:'JetBrains Mono',monospace">SF · Silicon Valley · Paris · Bruxelles</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'en', caseIdx: 0 };
+  componentDidMount() { try { const l = localStorage.getItem('grx_lang'); if (l) this.setState({ lang: l }); try { document.documentElement.lang = l || 'en'; } catch (e) {} } catch (e) {} }
+  setLang(l) { try { localStorage.setItem('grx_lang', l); } catch (e) {} this.setState({ lang: l }); }
+  setCase(i, n) { const idx = ((i % n) + n) % n; this.setState({ caseIdx: idx }); }
+
+  renderVals() {
+    const lang = this.state.lang;
+    const C = {
+      en: {
+        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Advisory & Execution', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
+        eyebrow: 'Advisory & Execution',
+        heroTitle: 'Architecting the next generation of', heroTitleEm: 'AI-native organizations.',
+        heroSub: "For over 30 years, Gregory Renard has helped executives and boards turn AI ambition into real, controlled and scalable results. He doesn't just talk about AI breakthroughs — he turns them into real-world impact for global enterprises, with a proven 3-phase Applied AI Playbook.",
+        heroTag: 'From strategy to production. No hype. No endless POCs.',
+        ctaPrimary: 'Connect with Gregory', ctaSecondary: 'See the method',
+        pullQuote: 'AI will not replace leaders. But leaders who fail to adopt it will be replaced.',
+        whoKicker: 'Who this is for', whoTitle: 'For leaders who need decisions, execution and measurable outcomes.',
+        who: ['CEOs · Boards · Executive Committees', 'Business · IT · Data leaders', 'Organizations & public institutions', 'Investors & transformation programs'],
+        caseKicker: 'Case studies', caseTitle: 'Direct, measurable impact',
+        caseIntro: 'Gregory has advised global industrial groups on large-scale AI deployment — from executive strategy to enterprise-wide adoption.',
+        caseName: 'Global Construction & Concessions Group',
+        metrics: [{k:'€23B+',v:'annual revenue'},{k:'84,000+',v:'employees'},{k:'8,000+',v:'onboarded to GenAI'},{k:'12 mo',v:'with productivity gains'}],
+        caseBullets: [
+          'Designed and deployed a secure enterprise AI chat with RAG — full observability, zero black box.',
+          'Advised Board and Executive Committee on AI governance and risk control.',
+          'Defined a “System 1 vs System 2” AI strategy, separating productivity copilots from decision-critical AI.',
+          'Built and rolled out a GenAI onboarding program for 8,000+ employees.',
+          'Launched a champions program driving real adoption across business units.',
+          'Continuous AI deployment with ROI measured at every cycle.'
+        ],
+        casePlaybook: 'Cognitive Orchestration™ — Phases 1 & 2 completed · Phase 3 renewed.',
+        caseUrgency: 'AI advantage compounds fast. Organizations that delay lose strategic optionality — this is a decision window, not a trend. Every day you wait is a day your competition gains an advantage.',
+        caseCta: 'Book a 30-minute session',
+        pathsKicker: 'How to work together', pathsTitle: 'Two pathways to proven AI vision & execution',
+        path1Tag: 'KEYNOTE SPEAKER', path1Title: 'Conviction to Action',
+        path1Body: 'Book Gregory for your next event. He turns decades of AI breakthroughs into keynote moments that move executive teams and employees — from curiosity to conviction, from ideas to action.',
+        path1Link: 'Explore the keynotes',
+        path2Tag: 'COGNITIVE ORCHESTRATION™', path2Title: 'A 3-step implementation method',
+        path2Body: 'Your method for scale — ensuring your business can adapt to growth and scale without chaos. Accessible via the book, training, or full supervision with Gregory’s team.',
+        path2Link: 'Explore the method',
+        contactLoc: 'SAN FRANCISCO · PARIS · BRUSSELS',
+        contactTitle: 'Decisions. Execution. Measurable outcomes.',
+        contactCta: 'Connect with Gregory',
+        footerBlurb: 'Hands-on AI architect & Cognitive Orchestration since 1996. Building operational, AI-native organizations.',
+        copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
+      },
+      fr: {
+        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Conseil & Exécution', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
+        eyebrow: 'Conseil & Exécution',
+        heroTitle: 'Architecturer la prochaine génération d\u2019', heroTitleEm: 'organisations AI-native.',
+        heroSub: "Depuis plus de 30 ans, Gregory Renard aide dirigeants et conseils d'administration à transformer l'ambition IA en résultats réels, maîtrisés et scalables. Il ne se contente pas de parler des avancées de l'IA — il les transforme en impact concret pour les grandes entreprises, avec une méthode Applied AI éprouvée en 3 phases.",
+        heroTag: 'De la stratégie à la production. Sans hype. Sans POC sans fin.',
+        ctaPrimary: 'Échanger avec Gregory', ctaSecondary: 'Voir la méthode',
+        pullQuote: "L'IA ne remplacera pas les dirigeants. Mais les dirigeants qui ne l'adoptent pas seront remplacés.",
+        whoKicker: 'Pour qui', whoTitle: 'Pour les dirigeants qui veulent des décisions, de l\u2019exécution et des résultats mesurables.',
+        who: ['CEO · Conseils · Comités exécutifs', 'Directions Métier · IT · Data', 'Organisations & institutions publiques', 'Investisseurs & programmes de transformation'],
+        caseKicker: 'Études de cas', caseTitle: 'Un impact direct et mesurable',
+        caseIntro: "Gregory a conseillé des groupes industriels mondiaux sur le déploiement de l'IA à grande échelle — de la stratégie exécutive à l'adoption à l'échelle de l'entreprise.",
+        caseName: 'Groupe mondial de Construction & Concessions',
+        metrics: [{k:'23 Mds€+',v:'de chiffre d\u2019affaires'},{k:'84 000+',v:'collaborateurs'},{k:'8 000+',v:'formés à la GenAI'},{k:'12 mois',v:'avec gains de productivité'}],
+        caseBullets: [
+          'Conception et déploiement d\u2019un chat IA d\u2019entreprise sécurisé avec RAG — observabilité totale, zéro boîte noire.',
+          'Conseil du Conseil et du Comité exécutif sur la gouvernance et la maîtrise des risques IA.',
+          'Définition d\u2019une stratégie « Système 1 vs Système 2 », séparant copilotes de productivité et IA critiques pour la décision.',
+          'Conception et déploiement d\u2019un programme d\u2019onboarding GenAI pour 8 000+ collaborateurs.',
+          'Lancement d\u2019un programme de champions générant une adoption réelle dans les business units.',
+          'Déploiement IA continu, avec ROI mesuré à chaque cycle.'
+        ],
+        casePlaybook: 'Cognitive Orchestration™ — Phases 1 & 2 terminées · Phase 3 renouvelée.',
+        caseUrgency: "L'avantage IA se capitalise vite. Les organisations qui tardent perdent leur marge de manœuvre stratégique — c'est une fenêtre de décision, pas une tendance. Chaque jour d'attente est un jour gagné par vos concurrents.",
+        caseCta: 'Réserver une session de 30 min',
+        pathsKicker: 'Comment travailler ensemble', pathsTitle: 'Deux parcours vers une vision & une exécution IA éprouvées',
+        path1Tag: 'KEYNOTE SPEAKER', path1Title: 'De la conviction à l\u2019action',
+        path1Body: "Réservez Gregory pour votre prochain événement. Il transforme des décennies d'avancées en moments de keynote qui font bouger dirigeants et équipes — de la curiosité à la conviction, des idées à l'action.",
+        path1Link: 'Découvrir les keynotes',
+        path2Tag: 'COGNITIVE ORCHESTRATION™', path2Title: 'Une méthode d\u2019implémentation en 3 étapes',
+        path2Body: "Votre méthode pour passer à l'échelle — pour que votre entreprise s'adapte à la croissance sans chaos. Accessible via le livre, la formation ou la supervision complète par l'équipe de Gregory.",
+        path2Link: 'Découvrir la méthode',
+        contactLoc: 'SAN FRANCISCO · PARIS · BRUXELLES',
+        contactTitle: 'Des décisions. De l\u2019exécution. Des résultats mesurables.',
+        contactCta: 'Échanger avec Gregory',
+        footerBlurb: "Architecte IA de terrain & Orchestration Cognitive depuis 1996. Construire des organisations opérationnelles, AI-native.",
+        copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
+      }
+    };
+    const t = C[lang];
+
+    const casesEN = [
+      { name: 'Global Construction & Concessions Group', sector: 'CONSTRUCTION · CONCESSIONS',
+        metrics: [{k:'€23B+',v:'annual revenue'},{k:'84,000+',v:'employees'},{k:'8,000+',v:'onboarded to GenAI'},{k:'12 mo',v:'with productivity gains'}],
+        bullets: [
+          'Designed and deployed a secure enterprise AI chat with RAG — full observability, zero black box.',
+          'Advised Board and Executive Committee on AI governance and risk control.',
+          'Defined a “System 1 vs System 2” AI strategy, separating productivity copilots from decision-critical AI.',
+          'Built and rolled out a GenAI onboarding program for 8,000+ employees.',
+          'Launched a champions program driving real adoption across business units.',
+          'Continuous AI deployment with ROI measured at every cycle.'
+        ],
+        playbook: 'Cognitive Orchestration™ — Phases 1 & 2 completed · Phase 3 renewed.' },
+      { name: 'Global Automotive Manufacturer', sector: 'AUTOMOTIVE',
+        metrics: [{k:'€52B+',v:'revenue'},{k:'98,000+',v:'employees'}],
+        bullets: [
+          'Direct mandate from the CSO and Core AI Team.',
+          'Designed the long-term AI architecture and operating model.',
+          'Hands-on pair coding with senior AI engineers — no slideware.',
+          'Trained and mentored next-generation AI tech leads.',
+          'Took AI systems from advanced prototypes to industrial scale.'
+        ],
+        playbook: 'Cognitive Orchestration™ — Phase 3 renewed.' },
+      { name: 'European Agri-Food Market Leader', sector: 'AGRI-FOOD',
+        metrics: [{k:'€575M',v:'revenue'},{k:'2,800',v:'employees'}],
+        bullets: [
+          'Reset CEO and Board control over group-wide AI strategy.',
+          'Identified and delivered high-impact quick wins with immediate ROI.',
+          'Built an AI roadmap and structured the internal AI team.',
+          'Led the CTO to CTO+AI role transition.',
+          'Established data and AI cost governance.',
+          'Extended AI deployment into supply chain and quality operations.'
+        ],
+        playbook: 'Cognitive Orchestration™ — Phases 1 & 2 completed · Phase 3 renewed.' },
+      { name: 'European HR & Employment Services Group', sector: 'HR · EMPLOYMENT SERVICES',
+        metrics: [{k:'€1.6B',v:'revenue'},{k:'4,000',v:'employees'}],
+        bullets: [
+          'End-to-end AI transformation, from strategy to full industrialization.',
+          'Embedded AI at the core of their internal platform and services.',
+          'Implemented automated scoring and augmented reporting.',
+          'Supported their investment fund with AI-driven due diligence and decision support.',
+          'Delivered a fully governed, production-grade AI capability.'
+        ],
+        playbook: 'Cognitive Orchestration™ — Phases 1 to 3 completed.' }
+    ];
+    const casesFR = [
+      { name: 'Groupe mondial de Construction & Concessions', sector: 'CONSTRUCTION · CONCESSIONS',
+        metrics: [{k:'23 Mds€+',v:'de chiffre d\u2019affaires'},{k:'84 000+',v:'collaborateurs'},{k:'8 000+',v:'formés à la GenAI'},{k:'12 mois',v:'avec gains de productivité'}],
+        bullets: [
+          'Conception et déploiement d\u2019un chat IA d\u2019entreprise sécurisé avec RAG — observabilité totale, zéro boîte noire.',
+          'Conseil du Conseil et du Comité exécutif sur la gouvernance et la maîtrise des risques IA.',
+          'Définition d\u2019une stratégie « Système 1 vs Système 2 », séparant copilotes de productivité et IA critiques pour la décision.',
+          'Conception et déploiement d\u2019un programme d\u2019onboarding GenAI pour 8 000+ collaborateurs.',
+          'Lancement d\u2019un programme de champions générant une adoption réelle dans les business units.',
+          'Déploiement IA continu, avec ROI mesuré à chaque cycle.'
+        ],
+        playbook: 'Cognitive Orchestration™ — Phases 1 & 2 terminées · Phase 3 renouvelée.' },
+      { name: 'Constructeur automobile mondial', sector: 'AUTOMOBILE',
+        metrics: [{k:'52 Mds€+',v:'de chiffre d\u2019affaires'},{k:'98 000+',v:'collaborateurs'}],
+        bullets: [
+          'Mandat direct du CSO et de l\u2019équipe IA centrale.',
+          'Conception de l\u2019architecture IA long terme et du modèle opérationnel.',
+          'Pair coding hands-on avec les ingénieurs IA seniors — sans slideware.',
+          'Formation et mentorat des tech leads IA de nouvelle génération.',
+          'Passage des systèmes IA du prototype avancé à l\u2019échelle industrielle.'
+        ],
+        playbook: 'Cognitive Orchestration™ — Phase 3 renouvelée.' },
+      { name: 'Leader européen de l\u2019Agro-alimentaire', sector: 'AGRO-ALIMENTAIRE',
+        metrics: [{k:'575 M€',v:'de chiffre d\u2019affaires'},{k:'2 800',v:'collaborateurs'}],
+        bullets: [
+          'Reprise du contrôle CEO & Conseil sur la stratégie IA du groupe.',
+          'Identification et livraison de quick wins à fort impact, ROI immédiat.',
+          'Construction d\u2019une roadmap IA et structuration de l\u2019équipe IA interne.',
+          'Pilotage de la transition du CTO vers un rôle CTO+IA.',
+          'Mise en place d\u2019une gouvernance des coûts data & IA.',
+          'Extension du déploiement IA à la supply chain et aux opérations qualité.'
+        ],
+        playbook: 'Cognitive Orchestration™ — Phases 1 & 2 terminées · Phase 3 renouvelée.' },
+      { name: 'Groupe européen RH & Services à l\u2019emploi', sector: 'RH · SERVICES À L\u2019EMPLOI',
+        metrics: [{k:'1,6 Md€',v:'de chiffre d\u2019affaires'},{k:'4 000',v:'collaborateurs'}],
+        bullets: [
+          'Transformation IA de bout en bout, de la stratégie à l\u2019industrialisation complète.',
+          'Intégration de l\u2019IA au cœur de leur plateforme et services internes.',
+          'Mise en place du scoring automatisé et du reporting augmenté.',
+          'Soutien de leur fonds d\u2019investissement par due diligence et aide à la décision pilotées par l\u2019IA.',
+          'Livraison d\u2019une capacité IA pleinement gouvernée, de niveau production.'
+        ],
+        playbook: 'Cognitive Orchestration™ — Phases 1 à 3 terminées.' }
+    ];
+    const casesArr = lang === 'fr' ? casesFR : casesEN;
+    const n = casesArr.length;
+    const idx = Math.min(this.state.caseIdx, n - 1);
+    const activeCase = { ...casesArr[idx], metricCols: 'repeat(' + casesArr[idx].metrics.length + ',1fr)' };
+    const pad2 = (x) => (x < 10 ? '0' + x : '' + x);
+    const caseCounter = pad2(idx + 1) + ' / ' + pad2(n);
+    const dots = casesArr.map((c, i) => ({
+      label: c.name,
+      go: () => this.setCase(i, n),
+      style: i === idx
+        ? 'width:26px;height:8px;border-radius:100px;border:none;cursor:pointer;background:#3B7BFF;box-shadow:0 0 10px rgba(59,123,255,0.7);transition:all .25s;padding:0'
+        : 'width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;background:rgba(255,255,255,0.22);transition:all .25s;padding:0'
+    }));
+
+    const socials = [
+      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/gregoryrenard/' },
+      { name: 'Wikipedia', url: 'https://fr.wikipedia.org/wiki/Gr%C3%A9gory_Renard' },
+      { name: 'Scholar', url: 'https://scholar.google.com/citations?user=Khit-6kAAAAJ&hl=fr' },
+      { name: 'GitHub', url: 'https://github.com/gregrenard/' },
+      { name: 'X', url: 'https://twitter.com/Redo' }
+    ];
+    const footerCols = lang === 'fr' ? [
+      { h: 'Naviguer', items: [
+        { label: 'Vision', url: 'Gregory%20Renard%20-%20Home.dc.html', target: '_self' },
+        { label: 'Transformation IA', url: 'AI-Transformation.dc.html', target: '_self' },
+        { label: 'Conseil & Exécution', url: 'Advisory-Execution.dc.html', target: '_self' },
+        { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
+        { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
+      ]},
+      { h: 'À propos', items: [
+        { label: 'Pourquoi', url: 'Why.dc.html', target: '_self' },
+        { label: 'Éthique', url: 'Ethics.dc.html', target: '_self' },
+        { label: 'Publications', url: 'Publications.dc.html', target: '_self' },
+        { label: 'Presse', url: 'Press.dc.html', target: '_self' }
+      ]},
+      { h: 'Contact', items: [
+        { label: 'Construisons', url: 'Contact.dc.html', target: '_self' },
+        { label: 'Freedom.AI', url: 'https://freedom.ai/', target: '_blank' },
+        { label: 'Everyone.AI', url: 'https://everyone.ai/', target: '_blank' }
+      ]}
+    ] : [
+      { h: 'Navigate', items: [
+        { label: 'Vision', url: 'Gregory%20Renard%20-%20Home.dc.html', target: '_self' },
+        { label: 'AI Transformation', url: 'AI-Transformation.dc.html', target: '_self' },
+        { label: 'Advisory & Execution', url: 'Advisory-Execution.dc.html', target: '_self' },
+        { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
+        { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
+      ]},
+      { h: 'About', items: [
+        { label: 'Why', url: 'Why.dc.html', target: '_self' },
+        { label: 'Ethics', url: 'Ethics.dc.html', target: '_self' },
+        { label: 'Publications', url: 'Publications.dc.html', target: '_self' },
+        { label: 'Press', url: 'Press.dc.html', target: '_self' }
+      ]},
+      { h: 'Contact', items: [
+        { label: "Let's Build", url: 'Contact.dc.html', target: '_self' },
+        { label: 'Freedom.AI', url: 'https://freedom.ai/', target: '_blank' },
+        { label: 'Everyone.AI', url: 'https://everyone.ai/', target: '_blank' }
+      ]}
+    ];
+
+    return {
+      rootRef: (el) => { this._root = el; },
+      lang, t, socials, footerCols,
+      activeCase, dots, caseCounter,
+      prevCase: () => this.setCase(idx - 1, n),
+      nextCase: () => this.setCase(idx + 1, n),
+      langLabel: lang === 'en' ? 'FR' : 'EN',
+      toggleLang: () => this.setLang(lang === 'en' ? 'fr' : 'en'),
+      heroImg: 'https://static.wixstatic.com/media/fa93f3_404df62abb0d465d8e4da2d94e10e3ba~mv2.png/v1/fill/w_720,h_660,al_c,q_85,enc_auto/greg.png',
+      keynoteImg: 'https://static.wixstatic.com/media/758a70_6f0aedcf78c44ff2a7881e87b7274495~mv2.png/v1/fill/w_980,h_441,al_c,q_90,enc_auto/banner.png',
+      playbookImg: 'https://static.wixstatic.com/media/fa93f3_061a48cfa40847a9886631c09f5f32c8~mv2.png/v1/fill/w_980,h_441,al_c,q_90,enc_auto/playbook.png'
+    };
+  }
+}
+</script>
+</body>
+</html>
