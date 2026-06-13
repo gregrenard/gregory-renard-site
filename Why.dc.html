@@ -10,6 +10,9 @@
 <helmet>
 <title>Why — Who is Gregory Renard?</title>
 <meta name="description" content="A proven track record of being early — from semantic search in 1996 to agentic systems today. The vision and values behind Gregory Renard's work.">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
 <meta name="author" content="Gregory Renard">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://gregory-renard.com/Why.dc.html">
@@ -97,8 +100,8 @@
       </a>
       <a class="grx-navlink" href="./" style="font-size:14px;color:#AEB6C6">{{ t.nav_vision }}</a>
       <a class="grx-navlink" href="AI-Transformation.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_transfo }}</a>
-      <a class="grx-navlink" href="Advisory-Execution.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_advisory }}</a>
       <a class="grx-navlink" href="AI-Lab.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_lab }}</a>
+      <a class="grx-navlink" href="Advisory-Execution.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_advisory }}</a>
       <a class="grx-navlink" href="Why.dc.html" style="font-size:14px;color:#fff;font-weight:600">{{ t.nav_why }}</a>
       <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#fff;background:#3B7BFF;padding:9px 17px;border-radius:9px;box-shadow:0 6px 18px rgba(59,123,255,0.32)" style-hover="background:#5A92FF">{{ t.nav_cta }}</a>
       <button onClick="{{ toggleLang }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:#fff;background:rgba(59,123,255,0.18);border:1px solid rgba(59,123,255,0.42);border-radius:100px;padding:7px 13px;cursor:pointer">{{ langLabel }}</button>
@@ -108,8 +111,8 @@
     <div class="grx-mobile-menu">
       <a href="./">{{ t.nav_vision }}</a>
       <a href="AI-Transformation.dc.html">{{ t.nav_transfo }}</a>
-      <a href="Advisory-Execution.dc.html">{{ t.nav_advisory }}</a>
       <a href="AI-Lab.dc.html">{{ t.nav_lab }}</a>
+      <a href="Advisory-Execution.dc.html">{{ t.nav_advisory }}</a>
       <a href="Why.dc.html">{{ t.nav_why }}</a>
       <a href="Keynote-Speaker.dc.html">Keynote Speaker</a>
     </div>
@@ -122,7 +125,7 @@
         <div style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#7FA8FF;border:1px solid rgba(59,123,255,0.28);background:rgba(59,123,255,0.06);padding:7px 13px;border-radius:100px;margin-bottom:24px">
           <span style="width:7px;height:7px;border-radius:50%;background:#3B7BFF;box-shadow:0 0 10px #3B7BFF;animation:grx-pulse 2.4s ease-in-out infinite"></span>{{ t.eyebrow }}
         </div>
-        <h1 style="font-size:clamp(38px,4.4vw,62px);line-height:1.04;letter-spacing:-0.032em;font-weight:800">{{ t.heroTitle }}</h1>
+        <h1 style="font-size:clamp(30px,4vw,54px);line-height:1.04;letter-spacing:-0.032em;font-weight:800;white-space:nowrap">{{ t.heroTitle }}</h1>
         <p style="margin-top:22px;font-size:clamp(16px,1.4vw,19px);line-height:1.62;color:#AAB3C4;max-width:560px">{{ t.heroSub }}</p>
         <p style="margin-top:18px;font-size:16px;line-height:1.62;color:#C2CAD8;max-width:560px">{{ t.heroBio }}</p>
       </div>
@@ -185,10 +188,10 @@
 
   <!-- ETHICS TEASER -->
   <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:40px 32px 20px">
-    <div data-reveal="" style="border:1px solid rgba(59,123,255,0.22);border-radius:22px;background:linear-gradient(120deg,rgba(59,123,255,0.08),rgba(255,255,255,0.015));padding:40px 42px">
+    <div data-reveal="" style="border:1px solid rgba(59,123,255,0.22);border-radius:22px;background:linear-gradient(120deg,rgba(59,123,255,0.08),rgba(255,255,255,0.015));padding:40px 42px" data-comment-anchor="9732ac46dc-div">
       <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:14px">{{ t.ethicsKicker }}</div>
       
-      <p style="font-size: clamp(17px,1.7vw,22px); line-height: 1.45; font-weight: 600; letter-spacing: -0.01em; max-width: 820px; width: 876px; height: 103px"><sc-for list="{{ rich.ethics }}" as="seg" hint-placeholder-count="2"><sc-if value="{{ seg.isLink }}" hint-placeholder-val="{{ true }}"><a class="grx-link" href="{{ seg.url }}" target="_blank" rel="noopener noreferrer">{{ seg.t }}</a></sc-if><sc-if value="{{ seg.notLink }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p><a class="grx-link" href="Ethics.dc.html" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600">{{ t.ethicsLink }} →</a>
+      <p style="font-size:clamp(17px,1.7vw,22px);line-height:1.5;font-weight:600;letter-spacing:-0.01em"><sc-for list="{{ rich.ethics }}" as="seg" hint-placeholder-count="2"><sc-if value="{{ seg.isLink }}" hint-placeholder-val="{{ true }}"><a class="grx-link" href="{{ seg.url }}" target="_blank" rel="noopener noreferrer">{{ seg.t }}</a></sc-if><sc-if value="{{ seg.notLink }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p><a class="grx-link" href="Ethics.dc.html" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600">{{ t.ethicsLink }} →</a>
     </div>
   </section>
 
@@ -279,13 +282,13 @@ class Component extends DCLogic {
     const lang = this.state.lang;
     const C = {
       en: {
-        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Advisory & Execution', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
+        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Work together', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
         eyebrow: 'Why I do this',
         heroTitle: 'Who is Gregory Renard?',
         heroSub: 'A proven track record of being early — and setting the template for major technology trends, from semantic search in 1996 to agentic systems today.',
         heroBio: 'A former math teacher and sociologist of NLP, Gregory believes in a connected world where universal access to information and knowledge frees people to reach their full potential. Since 1996 he has worked on data pipelines and orchestrators at scale, unsupervised ML, deep learning for NLP, spoken dialogue systems, conversational platforms, Emotional AI and Multimodal AI.',
         mission: "My life's goal is to positively impact more than one billion people — focusing on applied AI for good.",
-        personalKicker: 'A bit more personal', personalText: 'Beyond the work: a former math teacher, and a volunteer firefighter honored with a National Decoration. Also a Guest Expert at the Institute for Advanced Study in Princeton — where Einstein once worked.',
+        personalKicker: 'A bit more personal', personalText: 'Beyond the work: a former math teacher, and a volunteer firefighter — holder of two National Decorations, one for his firefighting service and one for his work on ethical AI. Also a Guest AI Expert at the Institute for Advanced Study in Princeton — once home to Einstein, Gödel and Oppenheimer — invited for his fine-grained understanding of bias in language models.',
         tlKicker: 'Track record', tlTitle: 'Early, and setting the template',
         tlLegendDown: '1996 → 2013  ·  down the left', tlLegendUp: '2014 → 2026  ·  up the right',
         ethicsKicker: 'Ethics',
@@ -299,13 +302,13 @@ class Component extends DCLogic {
         copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
       },
       fr: {
-        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Conseil & Exécution', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
+        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Travailler ensemble', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
         eyebrow: 'Pourquoi je fais cela',
         heroTitle: 'Qui est Gregory Renard ?',
         heroSub: "Une trajectoire d'avance — poser le modèle des grandes tendances technologiques, de la recherche sémantique en 1996 aux systèmes agentiques d'aujourd'hui.",
         heroBio: "Ancien professeur de mathématiques et sociologue du NLP, Gregory croit en un monde connecté où l'accès universel à l'information et au savoir libère le potentiel de chacun. Depuis 1996, il travaille sur les pipelines de données à l'échelle, le ML non supervisé, le deep learning pour le NLP, les systèmes de dialogue, les plateformes conversationnelles, l'IA émotionnelle et l'IA multimodale.",
         mission: "L'objectif de ma vie : impacter positivement plus d'un milliard de personnes — avec une IA appliquée au service du bien.",
-        personalKicker: 'Plus personnel', personalText: "Au-delà du travail : ancien professeur de mathématiques, et pompier volontaire décoré d'une Distinction nationale. Également expert invité à l'Institute for Advanced Study de Princeton — là où travaillait Einstein.",
+        personalKicker: 'Plus personnel', personalText: "Au-delà du travail : ancien professeur de mathématiques, et pompier volontaire — titulaire de deux Distinctions nationales, l'une pour son engagement de pompier, l'autre pour son travail sur l'IA éthique. Également Guest AI Expert à l'Institute for Advanced Study de Princeton — là où travaillaient Einstein, Gödel et Oppenheimer — invité pour sa compréhension fine des biais des modèles de langage.",
         tlKicker: 'Parcours', tlTitle: 'En avance, et poseur de modèles',
         tlLegendDown: '1996 → 2013  ·  descente à gauche', tlLegendUp: '2014 → 2026  ·  montée à droite',
         ethicsKicker: 'Éthique',
@@ -386,7 +389,7 @@ class Component extends DCLogic {
     ];
     const industries = (lang === 'fr' ? indFR : indEN).map(i => ({ name: i.name, segs: this.parseLinks(i.body) }));
 
-    const ventures = ['Docugami', 'Renault Group', 'Eiffage Group', 'Sodebo', 'Alygne.me', 'AAICO.ai', 'Social Science Matrix · UC Berkeley', 'Holberton School', 'YouROK Corp', 'NASA Frontier Development Lab', 'Actual', 'IDEA'];
+    const ventures = ['Docugami', 'Eiffage Group', 'Sodebo', 'Alygne.me', 'AAICO.ai', 'Social Science Matrix · UC Berkeley', 'Holberton School', 'YouROK Corp', 'NASA Frontier Development Lab', 'Renault Group', 'Actual', 'IDEA'];
 
     const rich = { ethics: this.parseLinks(ethicsStr) };
 
@@ -401,7 +404,7 @@ class Component extends DCLogic {
       { h: 'Naviguer', items: [
         { label: 'Vision', url: './', target: '_self' },
         { label: 'Transformation IA', url: 'AI-Transformation.dc.html', target: '_self' },
-        { label: 'Conseil & Exécution', url: 'Advisory-Execution.dc.html', target: '_self' },
+        { label: 'Travailler ensemble', url: 'Advisory-Execution.dc.html', target: '_self' },
         { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
         { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
       ]},
@@ -420,7 +423,7 @@ class Component extends DCLogic {
       { h: 'Navigate', items: [
         { label: 'Vision', url: './', target: '_self' },
         { label: 'AI Transformation', url: 'AI-Transformation.dc.html', target: '_self' },
-        { label: 'Advisory & Execution', url: 'Advisory-Execution.dc.html', target: '_self' },
+        { label: 'Work together', url: 'Advisory-Execution.dc.html', target: '_self' },
         { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
         { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
       ]},

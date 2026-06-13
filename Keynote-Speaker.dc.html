@@ -10,6 +10,9 @@
 <helmet>
 <title>AI Keynote Speaker — Gregory Renard</title>
 <meta name="description" content="AI keynotes for executive decision-makers. No hype, no theory for theory's sake — clear signals and field experience for critical decisions.">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
 <meta name="author" content="Gregory Renard">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://gregory-renard.com/Keynote-Speaker.dc.html">
@@ -78,8 +81,8 @@
       </a>
       <a class="grx-navlink" href="./" style="font-size:14px;color:#AEB6C6">{{ t.nav_vision }}</a>
       <a class="grx-navlink" href="AI-Transformation.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_transfo }}</a>
-      <a class="grx-navlink" href="Advisory-Execution.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_advisory }}</a>
       <a class="grx-navlink" href="AI-Lab.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_lab }}</a>
+      <a class="grx-navlink" href="Advisory-Execution.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_advisory }}</a>
       <a class="grx-navlink" href="Why.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_why }}</a>
       <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#fff;background:#3B7BFF;padding:9px 17px;border-radius:9px;box-shadow:0 6px 18px rgba(59,123,255,0.32)" style-hover="background:#5A92FF">{{ t.nav_cta }}</a>
       <button onClick="{{ toggleLang }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:#fff;background:rgba(59,123,255,0.18);border:1px solid rgba(59,123,255,0.42);border-radius:100px;padding:7px 13px;cursor:pointer">{{ langLabel }}</button>
@@ -89,8 +92,8 @@
     <div class="grx-mobile-menu">
       <a href="./">{{ t.nav_vision }}</a>
       <a href="AI-Transformation.dc.html">{{ t.nav_transfo }}</a>
-      <a href="Advisory-Execution.dc.html">{{ t.nav_advisory }}</a>
       <a href="AI-Lab.dc.html">{{ t.nav_lab }}</a>
+      <a href="Advisory-Execution.dc.html">{{ t.nav_advisory }}</a>
       <a href="Why.dc.html">{{ t.nav_why }}</a>
       <a href="Keynote-Speaker.dc.html">Keynote Speaker</a>
     </div>
@@ -119,11 +122,14 @@
   </section>
 
   <!-- TEDX BAND -->
-  <section class="grx-pad" style="max-width:1100px;margin:0 auto;padding:44px 32px 8px">
-    <figure data-reveal style="margin:0;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);box-shadow:0 30px 70px rgba(0,0,0,0.5);position:relative">
-      <img src="{{ tedxImg }}" alt="Gregory Renard on the TEDx stage" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover">
+  <section class="grx-pad" style="max-width:560px;margin:0 auto;padding:44px 32px 8px">
+    <a href="https://www.youtube.com/watch?v=G_LsluS2pIw" target="_blank" rel="noopener noreferrer" style="display:block;text-decoration:none">
+    <figure data-reveal style="margin:0;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);box-shadow:0 30px 70px rgba(0,0,0,0.5);position:relative;transition:transform .3s" style-hover="transform:translateY(-4px)">
+      <img src="{{ tedxImg }}" alt="Gregory Renard on the TEDx stage" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;object-position:center 42%">
+      <span style="position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;background:rgba(59,123,255,0.9);display:grid;place-items:center;color:#fff;font-size:15px">▶</span>
       <figcaption style="position:absolute;left:0;right:0;bottom:0;padding:22px 24px;background:linear-gradient(transparent,rgba(5,8,18,0.88));font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:0.04em;color:#EAEEF5">{{ tedxCaption }}</figcaption>
     </figure>
+    </a>
     <div data-reveal style="margin-top:18px;text-align:center;font-size:13.5px;line-height:1.6;color:#97A0B2"><span style="font-family:'JetBrains Mono',monospace;color:#7FA8FF">{{ venuesLabel }}</span>&nbsp;&nbsp;{{ venues }}</div>
   </section>
 
@@ -237,7 +243,7 @@ class Component extends DCLogic {
     const lang = this.state.lang;
     const C = {
       en: {
-        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Advisory & Execution', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
+        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Work together', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
         eyebrow: 'Keynote Speaker',
         heroTitle: 'AI keynotes for executive decision-makers.',
         heroSub: 'No hype. No theory for theory’s sake. Clear signals, grounded insights, and real-world experience to support critical business decisions — at the right moment.',
@@ -258,7 +264,7 @@ class Component extends DCLogic {
         copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
       },
       fr: {
-        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Conseil & Exécution', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
+        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Travailler ensemble', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
         eyebrow: 'Keynote Speaker',
         heroTitle: 'Des keynotes IA pour les décideurs exécutifs.',
         heroSub: "Sans hype. Sans théorie pour la théorie. Des signaux clairs, des analyses solides et une expérience de terrain pour appuyer les décisions critiques — au bon moment.",
@@ -305,7 +311,7 @@ class Component extends DCLogic {
       { h: 'Naviguer', items: [
         { label: 'Vision', url: './', target: '_self' },
         { label: 'Transformation IA', url: 'AI-Transformation.dc.html', target: '_self' },
-        { label: 'Conseil & Exécution', url: 'Advisory-Execution.dc.html', target: '_self' },
+        { label: 'Travailler ensemble', url: 'Advisory-Execution.dc.html', target: '_self' },
         { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
         { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
       ]},
@@ -324,7 +330,7 @@ class Component extends DCLogic {
       { h: 'Navigate', items: [
         { label: 'Vision', url: './', target: '_self' },
         { label: 'AI Transformation', url: 'AI-Transformation.dc.html', target: '_self' },
-        { label: 'Advisory & Execution', url: 'Advisory-Execution.dc.html', target: '_self' },
+        { label: 'Work together', url: 'Advisory-Execution.dc.html', target: '_self' },
         { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
         { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
       ]},
@@ -346,7 +352,7 @@ class Component extends DCLogic {
       lang, t, talks, socials, footerCols,
       langLabel: lang === 'en' ? 'FR' : 'EN',
       toggleLang: () => this.setLang(lang === 'en' ? 'fr' : 'en'),
-      heroBanner: 'https://static.wixstatic.com/media/758a70_6f0aedcf78c44ff2a7881e87b7274495~mv2.png/v1/fill/w_1600,h_720,al_c,q_90,enc_auto/banner.png',
+      heroBanner: 'assets/greg-keynote-mic.jpg',
       tedxImg: 'assets/greg-tedx.png',
       tedxCaption: 'TEDx Lille · ' + (lang === 'fr' ? 'L’IA, la liberté et la continuité de l’humain' : 'AI, freedom & the continuity of man'),
       venuesLabel: lang === 'fr' ? 'Sur scène à' : 'On stage at',
@@ -354,7 +360,7 @@ class Component extends DCLogic {
       encountersKicker: lang === 'fr' ? 'Rencontres' : 'Notable encounters',
       encountersTitle: lang === 'fr' ? 'Aux côtés de celles et ceux qui façonnent la technologie' : 'Alongside those who shape technology',
       encounters: [
-        { img: 'assets/greg-macron.png', name: 'Emmanuel Macron', role: lang === 'fr' ? 'Président de la République · Élysée' : 'President of France · Élysée Palace' },
+        { img: 'assets/greg-lecun-monier.jpg', name: 'Yann LeCun & Louis Monier', role: lang === 'fr' ? 'Pionniers de l’IA & d’AltaVista · World Economic Forum' : 'AI & AltaVista pioneers · World Economic Forum' },
         { img: 'assets/greg-vintcerf.png', name: 'Vint Cerf', role: lang === 'fr' ? 'Un des pères d’Internet · Google' : 'A father of the Internet · Google' },
         { img: 'assets/greg-tbl.png', name: 'Tim Berners-Lee', role: lang === 'fr' ? 'Inventeur du World Wide Web' : 'Inventor of the World Wide Web' }
       ]

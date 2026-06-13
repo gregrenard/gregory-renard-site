@@ -10,6 +10,9 @@
 <helmet>
 <title>AI Advisory &amp; Execution — Gregory Renard</title>
 <meta name="description" content="Advisory and hands-on execution for leaders and boards, architecting the next generation of AI-native organizations. No hype, no endless POCs.">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
 <meta name="author" content="Gregory Renard">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://gregory-renard.com/Advisory-Execution.dc.html">
@@ -76,8 +79,8 @@
       </a>
       <a class="grx-navlink" href="./" style="font-size:14px;color:#AEB6C6">{{ t.nav_vision }}</a>
       <a class="grx-navlink" href="AI-Transformation.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_transfo }}</a>
-      <a class="grx-navlink" href="Advisory-Execution.dc.html" style="font-size:14px;color:#fff;font-weight:600">{{ t.nav_advisory }}</a>
       <a class="grx-navlink" href="AI-Lab.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_lab }}</a>
+      <a class="grx-navlink" href="Advisory-Execution.dc.html" style="font-size:14px;color:#fff;font-weight:600">{{ t.nav_advisory }}</a>
       <a class="grx-navlink" href="Why.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_why }}</a>
       <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#fff;background:#3B7BFF;padding:9px 17px;border-radius:9px;box-shadow:0 6px 18px rgba(59,123,255,0.32)" style-hover="background:#5A92FF">{{ t.nav_cta }}</a>
       <button onClick="{{ toggleLang }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:#fff;background:rgba(59,123,255,0.18);border:1px solid rgba(59,123,255,0.42);border-radius:100px;padding:7px 13px;cursor:pointer">{{ langLabel }}</button>
@@ -87,38 +90,83 @@
     <div class="grx-mobile-menu">
       <a href="./">{{ t.nav_vision }}</a>
       <a href="AI-Transformation.dc.html">{{ t.nav_transfo }}</a>
-      <a href="Advisory-Execution.dc.html">{{ t.nav_advisory }}</a>
       <a href="AI-Lab.dc.html">{{ t.nav_lab }}</a>
+      <a href="Advisory-Execution.dc.html">{{ t.nav_advisory }}</a>
       <a href="Why.dc.html">{{ t.nav_why }}</a>
       <a href="Keynote-Speaker.dc.html">Keynote Speaker</a>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:84px 32px 44px">
-    <div class="grx-hero" style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center">
+  <section class="grx-pad" style="max-width:980px;margin:0 auto;padding:72px 32px 36px;text-align:center">
+    <div class="grx-hero" style="display:block">
       <div data-reveal>
         <div style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#7FA8FF;border:1px solid rgba(59,123,255,0.28);background:rgba(59,123,255,0.06);padding:7px 13px;border-radius:100px;margin-bottom:24px">
           <span style="width:7px;height:7px;border-radius:50%;background:#3B7BFF;box-shadow:0 0 10px #3B7BFF;animation:grx-pulse 2.4s ease-in-out infinite"></span>{{ t.eyebrow }}
         </div>
         <h1 style="font-size:clamp(36px,4.2vw,58px);line-height:1.05;letter-spacing:-0.03em;font-weight:800">{{ t.heroTitle }} <span style="background:linear-gradient(100deg,#5A92FF,#9EC0FF);-webkit-background-clip:text;background-clip:text;color:transparent">{{ t.heroTitleEm }}</span></h1>
-        <p style="margin-top:22px;font-size:clamp(16px,1.4vw,19px);line-height:1.62;color:#AAB3C4;max-width:560px">{{ t.heroSub }}</p>
+        <p style="margin-top:22px;font-size:clamp(16px,1.4vw,19px);line-height:1.6;color:#AAB3C4;max-width:840px;margin-left:auto;margin-right:auto">{{ t.heroSub }}</p>
         <p style="margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#7FA8FF">{{ t.heroTag }}</p>
-        <div style="display:flex;flex-wrap:wrap;gap:13px;margin-top:30px">
+        <div style="display:flex;flex-wrap:wrap;gap:13px;margin-top:30px;justify-content:center">
           <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:#fff;background:#3B7BFF;padding:14px 24px;border-radius:11px;box-shadow:0 10px 30px rgba(59,123,255,0.35)" style-hover="background:#5A92FF;transform:translateY(-1px)">{{ t.ctaPrimary }} →</a>
           <a href="AI-Transformation.dc.html" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:#EAEEF5;border:1px solid rgba(255,255,255,0.16);padding:14px 24px;border-radius:11px" style-hover="border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.04)">{{ t.ctaSecondary }}</a>
         </div>
-      </div>
-      <div data-reveal class="grx-hero-img" style="position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.12);box-shadow:0 30px 70px rgba(0,0,0,0.5);min-height:380px">
-        <img src="{{ heroImg }}" alt="Gregory Renard — advisory & execution" style="width:100%;height:100%;object-fit:cover;display:block">
-        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(7,12,30,0.6))"></div>
+        <div style="margin-top:22px;display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:center;align-items:center">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#6B7385">{{ t.reachLabel }}</span>
+          <a class="grx-link" onClick="{{ mailClick }}" style="cursor:pointer;font-size:14px;font-weight:600">{{ email }}</a>
+          <a class="grx-link" href="https://www.linkedin.com/in/gregoryrenard/" target="_blank" rel="noopener noreferrer" style="font-size:14px;font-weight:600">LinkedIn ↗</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- PULL QUOTE -->
-  <section class="grx-pad" style="max-width:1100px;margin:0 auto;padding:34px 32px">
-    <p data-reveal style="font-size:clamp(22px,2.6vw,34px);line-height:1.32;font-weight:700;letter-spacing:-0.02em;text-align:center;color:#EAEEF5">“{{ t.pullQuote }}”</p>
+  <!-- CLIENTS -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:6px 32px 6px">
+    <p data-reveal style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#6B7385;margin-bottom:18px">{{ t.clientsLabel }}</p>
+    <div data-reveal style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center">
+      <sc-for list="{{ clients }}" as="c" hint-placeholder-count="10">
+        <a href="{{ c.url }}" target="{{ c.target }}" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#C2CAD8;border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:6px 11px;white-space:nowrap;transition:all .2s" style-hover="border-color:rgba(59,123,255,0.5);color:#fff;background:rgba(59,123,255,0.08)">{{ c.name }}</a>
+      </sc-for>
+    </div>
+    <div data-reveal style="text-align:center;margin-top:18px"><a class="grx-link" href="AI-Lab.dc.html" style="font-size:13.5px;font-weight:600">{{ t.clientsMore }} →</a></div>
+  </section>
+
+  <!-- WAYS TO WORK -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:54px 32px 10px">
+    <div data-reveal style="text-align:center;margin-bottom:34px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:14px">{{ t.waysKicker }}</div>
+      <h2 style="font-size:clamp(26px,3vw,42px);line-height:1.08;letter-spacing:-0.025em;font-weight:800">{{ t.waysTitle }}</h2>
+    </div>
+    <div class="grx-paths" style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+      <sc-for list="{{ t.ways }}" as="w" hint-placeholder-count="2">
+        <article data-reveal style="border:1px solid rgba(255,255,255,0.09);border-radius:20px;overflow:hidden;background:rgba(255,255,255,0.02);display:flex;flex-direction:column;transition:border-color .3s,transform .3s" style-hover="border-color:rgba(59,123,255,0.45);transform:translateY(-4px)">
+          <div style="height:6px;background:linear-gradient(90deg,#3B7BFF,#9EC0FF)"></div>
+          <div style="padding:30px 28px 30px;display:flex;flex-direction:column;flex:1">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#7FA8FF;margin-bottom:12px">{{ w.tag }}</div>
+            <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.015em">{{ w.title }}</h3>
+            <p style="margin-top:12px;font-size:14.5px;line-height:1.58;color:#AAB3C4;flex:1">{{ w.body }}</p>
+            <a class="grx-link" href="{{ w.url }}" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600">{{ w.link }} →</a>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- IDEAL JOURNEY -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:38px 32px 10px">
+    <div data-reveal style="text-align:center;margin-bottom:30px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:14px">{{ t.journeyKicker }}</div>
+      <h2 style="font-size:clamp(24px,2.6vw,36px);line-height:1.1;letter-spacing:-0.025em;font-weight:800">{{ t.journeyTitle }}</h2>
+    </div>
+    <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px">
+      <sc-for list="{{ t.journey }}" as="j" hint-placeholder-count="4">
+        <div style="border:1px solid rgba(255,255,255,0.09);border-radius:16px;background:rgba(255,255,255,0.02);padding:24px 22px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:600;color:#3B7BFF;margin-bottom:12px">{{ j.n }}</div>
+          <div style="font-size:16px;font-weight:700;letter-spacing:-0.01em">{{ j.t }}</div>
+          <p style="margin-top:8px;font-size:13.5px;line-height:1.5;color:#97A0B2">{{ j.d }}</p>
+        </div>
+      </sc-for>
+    </div>
   </section>
 
   <!-- WHO THIS IS FOR -->
@@ -179,34 +227,6 @@
     </div>
   </section>
 
-  <!-- TWO PATHWAYS -->
-  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:60px 32px 20px">
-    <div data-reveal style="text-align:center;margin-bottom:34px">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:14px">{{ t.pathsKicker }}</div>
-      <h2 style="font-size:clamp(26px,3vw,42px);line-height:1.08;letter-spacing:-0.025em;font-weight:800">{{ t.pathsTitle }}</h2>
-    </div>
-    <div class="grx-paths" style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
-      <article data-reveal style="border:1px solid rgba(255,255,255,0.09);border-radius:20px;overflow:hidden;background:rgba(255,255,255,0.02)">
-        <div style="height:200px;overflow:hidden;position:relative"><img src="{{ keynoteImg }}" alt="Gregory Renard keynote" style="width:100%;height:100%;object-fit:cover"><div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(7,12,30,0.85))"></div></div>
-        <div style="padding:26px 26px 28px">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#7FA8FF;margin-bottom:9px">{{ t.path1Tag }}</div>
-          <h3 style="font-size:21px;font-weight:700;letter-spacing:-0.015em">{{ t.path1Title }}</h3>
-          <p style="margin-top:11px;font-size:14.5px;line-height:1.58;color:#AAB3C4">{{ t.path1Body }}</p>
-          <a class="grx-link" href="Keynote-Speaker.dc.html" style="display:inline-block;margin-top:16px;font-size:14px;font-weight:600">{{ t.path1Link }} →</a>
-        </div>
-      </article>
-      <article data-reveal style="border:1px solid rgba(255,255,255,0.09);border-radius:20px;overflow:hidden;background:rgba(255,255,255,0.02)">
-        <div style="height:200px;overflow:hidden;position:relative"><img src="{{ playbookImg }}" alt="Cognitive Orchestration method" style="width:100%;height:100%;object-fit:cover"><div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(7,12,30,0.85))"></div></div>
-        <div style="padding:26px 26px 28px">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#7FA8FF;margin-bottom:9px">{{ t.path2Tag }}</div>
-          <h3 style="font-size:21px;font-weight:700;letter-spacing:-0.015em">{{ t.path2Title }}</h3>
-          <p style="margin-top:11px;font-size:14.5px;line-height:1.58;color:#AAB3C4">{{ t.path2Body }}</p>
-          <a class="grx-link" href="AI-Transformation.dc.html" style="display:inline-block;margin-top:16px;font-size:14px;font-weight:600">{{ t.path2Link }} →</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
   <!-- CONTACT CTA -->
   <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:70px 32px 90px;text-align:center">
     <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#7FA8FF;margin-bottom:16px">{{ t.contactLoc }}</div>
@@ -258,18 +278,33 @@ class Component extends DCLogic {
     const lang = this.state.lang;
     const C = {
       en: {
-        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Advisory & Execution', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
-        eyebrow: 'Advisory & Execution',
+        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Work together', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
+        eyebrow: 'Work together',
         heroTitle: 'Architecting the next generation of', heroTitleEm: 'AI-native organizations.',
-        heroSub: "For over 30 years, Gregory Renard has helped executives and boards turn AI ambition into real, controlled and scalable results. He doesn't just talk about AI breakthroughs — he turns them into real-world impact for global enterprises, with a proven 3-phase Applied AI Playbook.",
+        heroSub: "I've spent 30 years making AI actually work — from France's first conversational assistant to industrial AI co-workers running at global scale. But what I care about most isn't the technology — it's the people living through this shift with you. I'll sit on your side of the table, cut through the noise, and walk with you from “I'm not sure where AI fits” to “it's live, at scale, and quietly making everything better.” If that's the partner you've been looking for, let's talk.",
         heroTag: 'From strategy to production. No hype. No endless POCs.',
         ctaPrimary: 'Connect with Gregory', ctaSecondary: 'See the method',
+        reachLabel: 'Reach me directly',
+        clientsLabel: 'Trusted to execute — from global groups to Silicon Valley deep-tech',
+        clientsMore: 'See detailed engagements in the AI Lab',
+        waysKicker: 'How we work together', waysTitle: 'Two ways to work together',
+        ways: [
+          { tag: 'CONTRACTOR · ON-DEMAND', title: 'Fractional CAIO or Senior Applied AI Fellow', body: 'Bring Gregory in as your on-demand Chief AI Officer or Senior Applied AI Fellow — driving the proven 3-phase Cognitive Orchestration™ method from strategy to production.', link: 'See the 3-phase method', url: 'AI-Transformation.dc.html' },
+          { tag: 'KEYNOTE SPEAKER', title: 'Move teams from curiosity to conviction', body: 'Book Gregory for your next event — decades of AI breakthroughs turned into keynote moments that move executive teams and employees, from ideas to action.', link: 'Explore the keynotes', url: 'Keynote-Speaker.dc.html' }
+        ],
+        journeyKicker: 'The ideal journey', journeyTitle: 'How the best collaborations start',
+        journey: [
+          { n: '01', t: 'Keynote', d: 'It often starts on stage — a keynote that turns curiosity into conviction.' },
+          { n: '02', t: 'Get in touch', d: 'We connect and frame your real AI challenge together.' },
+          { n: '03', t: 'Learn to work together', d: 'A first focused engagement to build trust and a shared rhythm.' },
+          { n: '04', t: 'Start Phase 1', d: 'We launch Phase 1 of the method — in CAIO or SAAIF mode.' }
+        ],
         pullQuote: 'AI will not replace leaders. But leaders who fail to adopt it will be replaced.',
         whoKicker: 'Who this is for', whoTitle: 'For leaders who need decisions, execution and measurable outcomes.',
         who: ['CEOs · Boards · Executive Committees', 'Business · IT · Data leaders', 'Organizations & public institutions', 'Investors & transformation programs'],
         caseKicker: 'Case studies', caseTitle: 'Direct, measurable impact',
         caseIntro: 'Gregory has advised global industrial groups on large-scale AI deployment — from executive strategy to enterprise-wide adoption.',
-        caseName: 'Global Construction & Concessions Group',
+        caseName: 'Global Civil Engineering & Concessions Group',
         metrics: [{k:'€23B+',v:'annual revenue'},{k:'84,000+',v:'employees'},{k:'8,000+',v:'onboarded to GenAI'},{k:'12 mo',v:'with productivity gains'}],
         caseBullets: [
           'Designed and deployed a secure enterprise AI chat with RAG — full observability, zero black box.',
@@ -296,18 +331,33 @@ class Component extends DCLogic {
         copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
       },
       fr: {
-        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Conseil & Exécution', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
-        eyebrow: 'Conseil & Exécution',
+        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Travailler ensemble', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
+        eyebrow: 'Travailler ensemble',
         heroTitle: 'Architecturer la prochaine génération d\u2019', heroTitleEm: 'organisations AI-native.',
-        heroSub: "Depuis plus de 30 ans, Gregory Renard aide dirigeants et conseils d'administration à transformer l'ambition IA en résultats réels, maîtrisés et scalables. Il ne se contente pas de parler des avancées de l'IA — il les transforme en impact concret pour les grandes entreprises, avec une méthode Applied AI éprouvée en 3 phases.",
+        heroSub: "Depuis 30 ans, je fais en sorte que l'IA fonctionne vraiment — du premier assistant conversationnel français aux IA-collègues industriels déployés à l'échelle mondiale. Mais ce qui compte le plus pour moi, ce n'est pas la technologie : ce sont les femmes et les hommes qui vivent ce basculement avec vous. Je m'assois de votre côté de la table, je coupe court au bruit, et je vous accompagne de « je ne sais pas vraiment où l'IA a sa place » jusqu'à « elle est en production, à l'échelle, et améliore tout, sans bruit ». Si c'est le partenaire que vous cherchiez, parlons-en.",
         heroTag: 'De la stratégie à la production. Sans hype. Sans POC sans fin.',
         ctaPrimary: 'Échanger avec Gregory', ctaSecondary: 'Voir la méthode',
+        reachLabel: 'Me contacter directement',
+        clientsLabel: 'Ils nous font confiance pour exécuter — des grands groupes aux deep-tech de la Silicon Valley',
+        clientsMore: 'Voir les engagements détaillés dans l’AI Lab',
+        waysKicker: 'Comment on travaille ensemble', waysTitle: 'Deux façons de travailler ensemble',
+        ways: [
+          { tag: 'CONTRACTOR · À LA DEMANDE', title: 'CAIO à temps partagé ou Senior Applied AI Fellow', body: 'Faites intervenir Gregory comme Chief AI Officer à la demande ou Senior Applied AI Fellow — il pilote la méthode éprouvée en 3 temps (Cognitive Orchestration™), de la stratégie à la production.', link: 'Voir la méthode en 3 temps', url: 'AI-Transformation.dc.html' },
+          { tag: 'KEYNOTE SPEAKER', title: 'De la curiosité à la conviction', body: 'Réservez Gregory pour votre prochain événement — des décennies de percées IA transformées en moments de keynote qui font passer dirigeants et équipes des idées à l’action.', link: 'Découvrir les keynotes', url: 'Keynote-Speaker.dc.html' }
+        ],
+        journeyKicker: 'Le parcours idéal', journeyTitle: 'Comment démarrent les meilleures collaborations',
+        journey: [
+          { n: '01', t: 'Keynote', d: 'Tout commence souvent sur scène — une keynote qui transforme la curiosité en conviction.' },
+          { n: '02', t: 'Prise de contact', d: 'On échange et on cadre ensemble votre vrai enjeu IA.' },
+          { n: '03', t: 'Apprendre à travailler ensemble', d: 'Une première mission ciblée pour bâtir la confiance et un rythme commun.' },
+          { n: '04', t: 'Démarrer la Phase 1', d: 'On lance la Phase 1 de la méthode — en mode CAIO ou SAAIF.' }
+        ],
         pullQuote: "L'IA ne remplacera pas les dirigeants. Mais les dirigeants qui ne l'adoptent pas seront remplacés.",
         whoKicker: 'Pour qui', whoTitle: 'Pour les dirigeants qui veulent des décisions, de l\u2019exécution et des résultats mesurables.',
         who: ['CEO · Conseils · Comités exécutifs', 'Directions Métier · IT · Data', 'Organisations & institutions publiques', 'Investisseurs & programmes de transformation'],
         caseKicker: 'Études de cas', caseTitle: 'Un impact direct et mesurable',
         caseIntro: "Gregory a conseillé des groupes industriels mondiaux sur le déploiement de l'IA à grande échelle — de la stratégie exécutive à l'adoption à l'échelle de l'entreprise.",
-        caseName: 'Groupe mondial de Construction & Concessions',
+        caseName: 'Groupe mondial de Génie civil & Concessions',
         metrics: [{k:'23 Mds€+',v:'de chiffre d\u2019affaires'},{k:'84 000+',v:'collaborateurs'},{k:'8 000+',v:'formés à la GenAI'},{k:'12 mois',v:'avec gains de productivité'}],
         caseBullets: [
           'Conception et déploiement d\u2019un chat IA d\u2019entreprise sécurisé avec RAG — observabilité totale, zéro boîte noire.',
@@ -337,7 +387,7 @@ class Component extends DCLogic {
     const t = C[lang];
 
     const casesEN = [
-      { name: 'Global Construction & Concessions Group', sector: 'CONSTRUCTION · CONCESSIONS',
+      { name: 'Global Civil Engineering & Concessions Group', sector: 'CIVIL ENGINEERING · CONCESSIONS',
         metrics: [{k:'€23B+',v:'annual revenue'},{k:'84,000+',v:'employees'},{k:'8,000+',v:'onboarded to GenAI'},{k:'12 mo',v:'with productivity gains'}],
         bullets: [
           'Designed and deployed a secure enterprise AI chat with RAG — full observability, zero black box.',
@@ -381,7 +431,7 @@ class Component extends DCLogic {
         playbook: 'Cognitive Orchestration™ — Phases 1 to 3 completed.' }
     ];
     const casesFR = [
-      { name: 'Groupe mondial de Construction & Concessions', sector: 'CONSTRUCTION · CONCESSIONS',
+      { name: 'Groupe mondial de Génie civil & Concessions', sector: 'CIVIL ENGINEERING · CONCESSIONS',
         metrics: [{k:'23 Mds€+',v:'de chiffre d\u2019affaires'},{k:'84 000+',v:'collaborateurs'},{k:'8 000+',v:'formés à la GenAI'},{k:'12 mois',v:'avec gains de productivité'}],
         bullets: [
           'Conception et déploiement d\u2019un chat IA d\u2019entreprise sécurisé avec RAG — observabilité totale, zéro boîte noire.',
@@ -449,7 +499,7 @@ class Component extends DCLogic {
       { h: 'Naviguer', items: [
         { label: 'Vision', url: './', target: '_self' },
         { label: 'Transformation IA', url: 'AI-Transformation.dc.html', target: '_self' },
-        { label: 'Conseil & Exécution', url: 'Advisory-Execution.dc.html', target: '_self' },
+        { label: 'Travailler ensemble', url: 'Advisory-Execution.dc.html', target: '_self' },
         { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
         { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
       ]},
@@ -468,7 +518,7 @@ class Component extends DCLogic {
       { h: 'Navigate', items: [
         { label: 'Vision', url: './', target: '_self' },
         { label: 'AI Transformation', url: 'AI-Transformation.dc.html', target: '_self' },
-        { label: 'Advisory & Execution', url: 'Advisory-Execution.dc.html', target: '_self' },
+        { label: 'Work together', url: 'Advisory-Execution.dc.html', target: '_self' },
         { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
         { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
       ]},
@@ -485,17 +535,29 @@ class Component extends DCLogic {
       ]}
     ];
 
+    const clients = [
+      { name: 'Bright.AI', url: 'https://www.bright.ai/' },
+      { name: 'NASA · FDL', url: 'https://frontierdevelopmentlab.org/' },
+      { name: 'Injectsense', url: 'https://www.injectsense.com' },
+      { name: 'Docugami', url: 'https://www.docugami.com/' },
+      { name: 'ConsentPlace', url: 'https://consentplace.com/' },
+      { name: 'Eiffage Group', url: 'https://www.eiffage.com/' },
+      { name: 'Renault Group', url: 'https://www.renaultgroup.com/en/news-on-air/news/artificial-intelligence-renault-group-accelerates/' },
+      { name: 'Sodebo', url: '' },
+      { name: 'Actual', url: '' },
+      { name: 'Groupe IDEA', url: '' }
+    ].map(c => ({ name: c.name, url: c.url || 'AI-Lab.dc.html', target: c.url ? '_blank' : '_self' }));
+
     return {
       rootRef: (el) => { this._root = el; },
-      lang, t, socials, footerCols,
+      lang, t, socials, footerCols, clients,
       activeCase, dots, caseCounter,
       prevCase: () => this.setCase(idx - 1, n),
       nextCase: () => this.setCase(idx + 1, n),
       langLabel: lang === 'en' ? 'FR' : 'EN',
-      toggleLang: () => this.setLang(lang === 'en' ? 'fr' : 'en'),
-      heroImg: 'https://static.wixstatic.com/media/fa93f3_404df62abb0d465d8e4da2d94e10e3ba~mv2.png/v1/fill/w_720,h_660,al_c,q_85,enc_auto/greg.png',
-      keynoteImg: 'https://static.wixstatic.com/media/758a70_6f0aedcf78c44ff2a7881e87b7274495~mv2.png/v1/fill/w_980,h_441,al_c,q_90,enc_auto/banner.png',
-      playbookImg: 'https://static.wixstatic.com/media/fa93f3_061a48cfa40847a9886631c09f5f32c8~mv2.png/v1/fill/w_980,h_441,al_c,q_90,enc_auto/playbook.png'
+      email: 'contact' + '@' + 'freedom.ai',
+      mailClick: (e) => { if (e) e.preventDefault(); window.location.href = 'mailto:' + 'contact' + '@' + 'freedom.ai'; },
+      toggleLang: () => this.setLang(lang === 'en' ? 'fr' : 'en')
     };
   }
 }
