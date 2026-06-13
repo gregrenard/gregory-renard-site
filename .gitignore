@@ -26,3 +26,6 @@ Desktop.ini
 
 # Dépendances (au cas où un build serait ajouté plus tard)
 node_modules/
+
+# Claude Code — réglages locaux (le skill .claude/skills/ reste versionné)
+.claude/settings.local.json

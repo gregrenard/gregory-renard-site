@@ -73,11 +73,11 @@
   <!-- NAV -->
   <header style="position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(7,12,30,0.66);border-bottom:1px solid rgba(255,255,255,0.07)">
     <nav class="grx-pad" style="max-width:1240px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;gap:24px">
-      <a href="Gregory%20Renard%20-%20Home.dc.html" style="display:flex;align-items:center;gap:11px;margin-right:auto">
+      <a href="./" style="display:flex;align-items:center;gap:11px;margin-right:auto">
         <span style="width:34px;height:34px;border-radius:9px;background:linear-gradient(140deg,#3B7BFF,#1E4FD6);display:grid;place-items:center;font-weight:800;font-size:15px;color:#fff;box-shadow:0 0 22px rgba(59,123,255,0.45)">GR</span>
         <span style="font-weight:700;font-size:15px;letter-spacing:-0.01em">Gregory Renard</span>
       </a>
-      <a class="grx-navlink" href="Gregory%20Renard%20-%20Home.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_vision }}</a>
+      <a class="grx-navlink" href="./" style="font-size:14px;color:#AEB6C6">{{ t.nav_vision }}</a>
       <a class="grx-navlink" href="AI-Transformation.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_transfo }}</a>
       <a class="grx-navlink" href="Advisory-Execution.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_advisory }}</a>
       <a class="grx-navlink" href="AI-Lab.dc.html" style="font-size:14px;color:#fff;font-weight:600">{{ t.nav_lab }}</a>
@@ -88,7 +88,7 @@
     </nav>
     <input type="checkbox" id="grx-nav-toggle" class="grx-nav-toggle" aria-hidden="true">
     <div class="grx-mobile-menu">
-      <a href="Gregory%20Renard%20-%20Home.dc.html">{{ t.nav_vision }}</a>
+      <a href="./">{{ t.nav_vision }}</a>
       <a href="AI-Transformation.dc.html">{{ t.nav_transfo }}</a>
       <a href="Advisory-Execution.dc.html">{{ t.nav_advisory }}</a>
       <a href="AI-Lab.dc.html">{{ t.nav_lab }}</a>
@@ -358,7 +358,7 @@ class Component extends DCLogic {
     ];
     const footerCols = lang === 'fr' ? [
       { h: 'Naviguer', items: [
-        { label: 'Vision', url: 'Gregory%20Renard%20-%20Home.dc.html', target: '_self' },
+        { label: 'Vision', url: './', target: '_self' },
         { label: 'Transformation IA', url: 'AI-Transformation.dc.html', target: '_self' },
         { label: 'Conseil & Exécution', url: 'Advisory-Execution.dc.html', target: '_self' },
         { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
@@ -377,7 +377,7 @@ class Component extends DCLogic {
       ]}
     ] : [
       { h: 'Navigate', items: [
-        { label: 'Vision', url: 'Gregory%20Renard%20-%20Home.dc.html', target: '_self' },
+        { label: 'Vision', url: './', target: '_self' },
         { label: 'AI Transformation', url: 'AI-Transformation.dc.html', target: '_self' },
         { label: 'Advisory & Execution', url: 'Advisory-Execution.dc.html', target: '_self' },
         { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
