@@ -10,7 +10,7 @@ Pull the latest **text** content from the user's Claude Design project, **re-app
 ## Project facts
 - **Source of truth:** Claude Design project **"gregory-renard.com"**, projectId `25751aee-ab2f-4af9-a3b3-66cf466244c4`. The user edits the **root-level** components there.
 - **Repo / remote:** `origin/main` → `github.com/gregrenard/gregory-renard-site` (this working directory).
-- **Live site:** https://gregrenard.github.io/gregory-renard-site (custom domain target: gregory-renard.com).
+- **Live site:** https://gregory-renard.com (custom domain, HTTPS; also reachable at https://gregrenard.github.io/gregory-renard-site).
 - **DesignSync is READ-ONLY for this project** (type `PROJECT_TYPE_PROJECT`). NEVER call `write_files`/`finalize_plan`/`delete_files` against it — only `list_files` and `get_file`.
 
 ## Syncable files (TEXT only)
@@ -58,31 +58,47 @@ Claude Design's `index.html` is a redirect and its pages link to the home as `Gr
    ```
    (Posts firstName/lastName/email/message via `fetch(..., {mode:'no-cors'})` to a Google Apps Script `/exec` that appends a row to the contacts sheet. Endpoint lives in that script; update it there if the deployment changes.)
 
-Scope stays **root-only**: sub-pages keep their `.dc.html` URLs. Do NOT attempt per-page clean URLs (e.g. `/contact/`) — that needs a directory + `index.html` restructure that breaks every `./support.js` / `./assets/` relative path and only works once the custom domain is on root. `sitemap.xml` and `llms.txt` already list the home as `https://gregory-renard.com/` (the clean root) — leave them; just don't let any `…/Gregory%20…Home.dc.html` URL appear in them.
+4. **Clean URLs + static SEO** — run on every `*.dc.html` + `index.html`, AFTER the home-link rewrite and the contact-form patch, BEFORE renaming:
+   ```bash
+   python3 .claude/skills/sync-site/seo-clean-urls.py
+   ```
+   Strips the `.dc.html` extension from all links/canonical/og:url, copies each page's `<helmet>` into the real `<head>` (so non-JS crawlers + social/AI scrapers get title/description/canonical/og/twitter/JSON-LD), and adds `lang="en"`. Idempotent.
+5. **Rename to extensionless `.html`** + drop the redundant home source:
+   ```bash
+   for f in AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Press Publications Why; do mv "$f.dc.html" "$f.html"; done
+   rm -f "Gregory Renard - Home.dc.html"   # index.html is the deployed home
+   ```
+   GitHub Pages serves `X.html` at `/X` (verified live — `/AI-Transformation` → 200). `index.html` stays the root. Bump `sitemap.xml`'s `<lastmod>` to today (it already lists the extensionless URLs).
+
+**Pipeline order (critical):** cp Home→index → home-link `./` → `patch-contact-form.py` → `seo-clean-urls.py` → rename `*.dc.html`→`*.html` (+ rm Home) → bump sitemap. The contact-form patch must run while the file is still `Contact.dc.html`; the SEO/clean-URL transform must run before the rename.
 
 ## Verify ("tout nickel")
 After the transforms, confirm no broken internal links AND no missing assets:
+Run AFTER the rename, on the final `*.html` set:
 ```bash
-# (a) no encoded home link or accidental .// remains
-grep -rn "Gregory%20Renard%20-%20Home.dc.html" *.dc.html index.html   # expect: nothing
-grep -rn '\.//' *.dc.html index.html                                  # expect: nothing
-# (b) index.html is the homepage, not a redirect
+# (a) extension fully gone, no accidental .//
+grep -rl "\.dc\.html" *.html && echo "BAD: .dc.html remains" || echo "ok: extensionless"
+grep -rn '\.//' *.html || echo "ok: no .//"
+# (b) index.html is the homepage (not a redirect) and renders
 grep -c 'http-equiv="refresh"' index.html   # expect 0
 grep -c '<x-dc>' index.html                 # expect 1
-# (c) every literal .dc.html reference resolves to a file that exists
-for t in $(grep -rhoE "[A-Za-z0-9%][A-Za-z0-9%_.-]*\.dc\.html" *.dc.html index.html | sort -u); do
-  dec=$(printf '%s' "$t" | sed 's/%20/ /g'); [ -f "$dec" ] && echo "OK $t" || echo "MISS $t"
-done   # expect all OK
-# (d) every local asset reference resolves (catches newly-referenced images you couldn't fetch)
-for t in $(grep -rhoE "assets/[A-Za-z0-9%@_.-]+\.(png|jpg|jpeg|webp|gif|svg|mp4|pdf)" *.dc.html index.html | sort -u); do
+# (c) static SEO present: each page has <title> + og:title inside <head>
+for f in *.html; do h=$(awk 'BEGIN{p=1}/<body/{p=0}{if(p)print}' "$f"); echo "$h" | grep -q "<title>" && echo "$h" | grep -q "og:title" && echo "OK seo-head $f" || echo "MISS seo-head $f"; done
+# (d) every internal page link (extensionless) resolves to a .html file
+for n in AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Press Publications Why; do
+  grep -qhoE "href=\"$n\"|url: '$n'" *.html && { [ -f "$n.html" ] && echo "OK link $n" || echo "MISS $n.html"; }
+done
+# (e) every local asset reference resolves
+for t in $(grep -rhoE "assets/[A-Za-z0-9%@_.-]+\.(png|jpg|jpeg|webp|gif|svg|mp4|pdf)" *.html | sort -u); do
   [ -f "$t" ] && echo "OK $t" || echo "MISS $t"
-done   # any MISS = an asset the user added in Design; flag it for manual upload
+done
 ```
-A MISS in (d) is the signal to either fetch the binary (step 5) or flag it. Template placeholders like `{{ it.url }}` are NOT broken links — they're bound at runtime from the JS arrays (whose literal values check (c) already covers).
+A MISS in (e) = an asset the user added in Design; fetch the binary (step 5) or flag it. Template `{{ … }}` placeholders are NOT broken links (bound at runtime from the JS arrays).
 
-## Known deferred assets (re-check each sync)
-- **`assets/greg-home-orange.png`** — Why-page portrait, >256 KiB, un-fetchable via DesignSync. Until the user uploads it, the Why `portrait:` is reverted to the working Wix URL `https://static.wixstatic.com/media/fa93f3_4f90b2e23b654a648fc38930da34dc17~mv2.png/v1/fill/w_560,h_540,al_c,q_85,enc_auto/greg.png`. Once the file is in `assets/`, restore `portrait: 'assets/greg-home-orange.png'`.
-- **`assets/favicon.png` + `assets/favicon-64.png`** — referenced by every page's `<link rel="icon">` but not present in the Design project. Harmless 404 (no tab icon) until the user provides them.
+## Assets (all resolved — keep present in `assets/`)
+- **`assets/greg-home-orange.png`** (Why portrait, 870 KiB) — user-provided manually; >256 KiB so un-fetchable via DesignSync. The fresh Design `Why` already references `assets/greg-home-orange.png`, so just keep the file in `assets/` (don't let it get deleted). No revert needed anymore.
+- **`assets/favicon.png` (256) + `assets/favicon-64.png` (64)** — generated GR logo (blue gradient + white "GR", via Pillow). Keep them; referenced site-wide.
+- Every `assets/*` reference in the pages must resolve to a file — the Verify step (d) catches anything new the user adds in Design.
 
 ## Notes
 - Filenames with spaces (`Gregory Renard - Home.dc.html`) are fine for git, sed globs, and DesignSync — pass them verbatim.
