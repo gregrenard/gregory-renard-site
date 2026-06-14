@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Page not found — Gregory Renard</title>
+<script>
+/* Migration redirect: map old Wix URLs (lowercase / renamed slugs) to the new
+   case-sensitive GitHub Pages URLs. Known slug renames first, then a generic
+   case-insensitive match to a real page. Unknown paths fall through to the 404 UI.
+   Guard: never redirect to the same path (avoids loops if a real page momentarily 404s). */
+(function () {
+  var MAP = { 'services': '/Advisory-Execution', 'keynotes-speaker': '/Keynote-Speaker' };
+  var PAGES = ['Why','Contact','Ethics','Press','Publications','Keynote-Speaker','AI-Transformation','AI-Lab','Advisory-Execution'];
+  var raw = location.pathname.replace(/^\/+/, '').replace(/\/+$/, '').replace(/\.html$/i, '');
+  var key = raw.toLowerCase();
+  var dest = MAP[key] || null;
+  if (!dest) {
+    for (var i = 0; i < PAGES.length; i++) {
+      if (PAGES[i].toLowerCase() === key) { dest = '/' + PAGES[i]; break; }
+    }
+  }
+  if (dest && dest !== location.pathname) { location.replace(dest); }
+})();
+</script>
+<style>
+  :root { --bg:#0b1020; --fg:#e9ecf5; --muted:#9aa3b8; --accent:#ff7a45; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; height:100%; }
+  body { background:var(--bg); color:var(--fg); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+         display:flex; align-items:center; justify-content:center; padding:2rem; text-align:center; line-height:1.6; }
+  .wrap { max-width:560px; }
+  .code { font-size:.85rem; letter-spacing:.25em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; }
+  h1 { font-size:1.9rem; margin:0 0 .75rem; font-weight:600; }
+  p { color:var(--muted); margin:0 0 1.75rem; }
+  nav a { color:var(--fg); text-decoration:none; border:1px solid rgba(255,255,255,.18); border-radius:999px;
+          padding:.5rem 1rem; margin:.25rem; display:inline-block; font-size:.95rem; transition:.15s; }
+  nav a:hover { border-color:var(--accent); color:var(--accent); }
+  .home { margin-top:1.75rem; }
+  .home a { color:var(--accent); text-decoration:none; font-weight:600; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="code">404 — Page not found</div>
+    <h1>This page has moved or doesn't exist</h1>
+    <p>The site has been redesigned. If you followed an old link, try one of the sections below.</p>
+    <nav>
+      <a href="/AI-Transformation">AI Transformation</a>
+      <a href="/Advisory-Execution">Advisory &amp; Execution</a>
+      <a href="/AI-Lab">AI Lab</a>
+      <a href="/Why">Why</a>
+      <a href="/Keynote-Speaker">Keynote Speaker</a>
+      <a href="/Publications">Publications</a>
+      <a href="/Press">Press</a>
+      <a href="/Contact">Let's Build</a>
+    </nav>
+    <div class="home"><a href="/">← Back to gregory-renard.com</a></div>
+  </div>
+</body>
+</html>

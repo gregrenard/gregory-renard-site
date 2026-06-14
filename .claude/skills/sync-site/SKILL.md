@@ -100,6 +100,11 @@ A MISS in (e) = an asset the user added in Design; fetch the binary (step 5) or 
 - **`assets/favicon.png` (256) + `assets/favicon-64.png` (64)** — generated GR logo (blue gradient + white "GR", via Pillow). Keep them; referenced site-wide.
 - Every `assets/*` reference in the pages must resolve to a file — the Verify step (d) catches anything new the user adds in Design.
 
+## Permanent repo files (NOT from Design — never delete/clobber on sync)
+These live only in the repo (Claude Design doesn't know about them). A sync pulls/overwrites only the Design-sourced files above, so these survive — just don't `rm` them or let a transform touch them:
+- `CNAME` (custom domain), `404.html` (migration catch-all + branded 404), `services.html` + `keynotes-speaker.html` (200 redirect stubs: old Wix slugs → `/Advisory-Execution` and `/Keynote-Speaker`).
+- ⚠️ **macOS case-insensitivity trap:** never create a flat redirect stub whose name collides case-insensitively with a real page (e.g. `why.html` would overwrite `Why.html` on APFS). Only slugs with NO capitalized twin are safe as flat files (`services`, `keynotes-speaker`); all case-only old slugs (`/why`, `/contact`, …) are handled by `404.html`'s JS redirect instead.
+
 ## Notes
 - Filenames with spaces (`Gregory Renard - Home.dc.html`) are fine for git, sed globs, and DesignSync — pass them verbatim.
 - Don't re-fetch files outside the user's scope; it wastes time and context.
