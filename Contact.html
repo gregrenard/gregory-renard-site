@@ -1,9 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<title>Contact — Gregory Renard</title>
+<meta name="description" content="Let's build. From strategy to production — if your organization is ready to move from experimentation to real results, get in touch.">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<meta name="author" content="Gregory Renard">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gregory-renard.com/Contact">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gregory Renard">
+<meta property="og:title" content="Contact — Gregory Renard">
+<meta property="og:description" content="Let's build. From strategy to production — if your organization is ready to move from experimentation to real results, get in touch.">
+<meta property="og:url" content="https://gregory-renard.com/Contact">
+<meta property="og:image" content="https://gregory-renard.com/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — Gregory Renard">
+<meta name="twitter:description" content="Let's build. From strategy to production — if your organization is ready to move from experimentation to real results, get in touch.">
+<meta name="twitter:image" content="https://gregory-renard.com/assets/og-cover.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:#070C1E;color:#EAEEF5;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:rgba(59,123,255,0.32);color:#fff}
+  @keyframes grx-pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+  input,textarea{font-family:inherit}
+  input::placeholder,textarea::placeholder{color:#5E6678}
+  input:focus,textarea:focus{outline:none;border-color:#3B7BFF !important;background:rgba(59,123,255,0.05) !important}
+  @media (max-width:900px){
+    .grx-navlink{display:none !important}
+    .grx-contact{grid-template-columns:1fr !important}
+    .grx-pad{padding-left:22px !important;padding-right:22px !important}
+  }
+  @media (max-width:620px){
+    .grx-footer{grid-template-columns:1fr 1fr !important;gap:26px !important}
+    .grx-name{grid-template-columns:1fr !important}
+  }
+  @media (max-width:400px){ .grx-footer{grid-template-columns:1fr !important} }
+  .grx-nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+  .grx-burger{display:none}
+  .grx-mobile-menu{display:none}
+  @media (max-width:900px){
+    .grx-burger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.05);color:#EAEEF5;font-size:20px;line-height:1;cursor:pointer}
+    .grx-mobile-menu{background:rgba(7,12,30,0.98);border-top:1px solid rgba(255,255,255,0.08);padding:8px 22px 16px}
+    .grx-nav-toggle:checked ~ .grx-mobile-menu{display:flex;flex-direction:column}
+    .grx-mobile-menu a{padding:14px 4px;font-size:16px;color:#CAD2E0;border-bottom:1px solid rgba(255,255,255,0.06)}
+    .grx-mobile-menu a:last-child{border-bottom:none}
+  }
+</style>
 </head>
 <body>
 <x-dc>
@@ -15,12 +71,12 @@
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <meta name="author" content="Gregory Renard">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://gregory-renard.com/Contact.dc.html">
+<link rel="canonical" href="https://gregory-renard.com/Contact">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Gregory Renard">
 <meta property="og:title" content="Contact — Gregory Renard">
 <meta property="og:description" content="Let's build. From strategy to production — if your organization is ready to move from experimentation to real results, get in touch.">
-<meta property="og:url" content="https://gregory-renard.com/Contact.dc.html">
+<meta property="og:url" content="https://gregory-renard.com/Contact">
 <meta property="og:image" content="https://gregory-renard.com/assets/og-cover.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -76,22 +132,22 @@
         <span style="font-weight:700;font-size:15px;letter-spacing:-0.01em">Gregory Renard</span>
       </a>
       <a class="grx-navlink" href="./" style="font-size:14px;color:#AEB6C6">{{ t.nav_vision }}</a>
-      <a class="grx-navlink" href="AI-Transformation.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_transfo }}</a>
-      <a class="grx-navlink" href="AI-Lab.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_lab }}</a>
-      <a class="grx-navlink" href="Advisory-Execution.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_advisory }}</a>
-      <a class="grx-navlink" href="Why.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_why }}</a>
-      <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#fff;background:#3B7BFF;padding:9px 17px;border-radius:9px;box-shadow:0 6px 18px rgba(59,123,255,0.32)" style-hover="background:#5A92FF">{{ t.nav_cta }}</a>
+      <a class="grx-navlink" href="AI-Transformation" style="font-size:14px;color:#AEB6C6">{{ t.nav_transfo }}</a>
+      <a class="grx-navlink" href="AI-Lab" style="font-size:14px;color:#AEB6C6">{{ t.nav_lab }}</a>
+      <a class="grx-navlink" href="Advisory-Execution" style="font-size:14px;color:#AEB6C6">{{ t.nav_advisory }}</a>
+      <a class="grx-navlink" href="Why" style="font-size:14px;color:#AEB6C6">{{ t.nav_why }}</a>
+      <a href="Contact" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#fff;background:#3B7BFF;padding:9px 17px;border-radius:9px;box-shadow:0 6px 18px rgba(59,123,255,0.32)" style-hover="background:#5A92FF">{{ t.nav_cta }}</a>
       <button onClick="{{ toggleLang }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:#fff;background:rgba(59,123,255,0.18);border:1px solid rgba(59,123,255,0.42);border-radius:100px;padding:7px 13px;cursor:pointer">{{ langLabel }}</button>
       <label for="grx-nav-toggle" class="grx-burger" aria-label="Open menu">☰</label>
     </nav>
     <input type="checkbox" id="grx-nav-toggle" class="grx-nav-toggle" aria-hidden="true">
     <div class="grx-mobile-menu">
       <a href="./">{{ t.nav_vision }}</a>
-      <a href="AI-Transformation.dc.html">{{ t.nav_transfo }}</a>
-      <a href="AI-Lab.dc.html">{{ t.nav_lab }}</a>
-      <a href="Advisory-Execution.dc.html">{{ t.nav_advisory }}</a>
-      <a href="Why.dc.html">{{ t.nav_why }}</a>
-      <a href="Keynote-Speaker.dc.html">Keynote Speaker</a>
+      <a href="AI-Transformation">{{ t.nav_transfo }}</a>
+      <a href="AI-Lab">{{ t.nav_lab }}</a>
+      <a href="Advisory-Execution">{{ t.nav_advisory }}</a>
+      <a href="Why">{{ t.nav_why }}</a>
+      <a href="Keynote-Speaker">Keynote Speaker</a>
     </div>
   </header>
 
@@ -256,38 +312,38 @@ class Component extends DCLogic {
     const footerCols = lang === 'fr' ? [
       { h: 'Naviguer', items: [
         { label: 'Vision', url: './', target: '_self' },
-        { label: 'Transformation IA', url: 'AI-Transformation.dc.html', target: '_self' },
-        { label: 'Travailler ensemble', url: 'Advisory-Execution.dc.html', target: '_self' },
-        { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
-        { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
+        { label: 'Transformation IA', url: 'AI-Transformation', target: '_self' },
+        { label: 'Travailler ensemble', url: 'Advisory-Execution', target: '_self' },
+        { label: 'AI Lab', url: 'AI-Lab', target: '_self' },
+        { label: 'Keynote Speaker', url: 'Keynote-Speaker', target: '_self' }
       ]},
       { h: 'À propos', items: [
-        { label: 'Pourquoi', url: 'Why.dc.html', target: '_self' },
-        { label: 'Éthique', url: 'Ethics.dc.html', target: '_self' },
-        { label: 'Publications', url: 'Publications.dc.html', target: '_self' },
-        { label: 'Presse', url: 'Press.dc.html', target: '_self' }
+        { label: 'Pourquoi', url: 'Why', target: '_self' },
+        { label: 'Éthique', url: 'Ethics', target: '_self' },
+        { label: 'Publications', url: 'Publications', target: '_self' },
+        { label: 'Presse', url: 'Press', target: '_self' }
       ]},
       { h: 'Contact', items: [
-        { label: 'Construisons', url: 'Contact.dc.html', target: '_self' },
+        { label: 'Construisons', url: 'Contact', target: '_self' },
         { label: 'Freedom.AI', url: 'https://freedom.ai/', target: '_blank' },
         { label: 'Everyone.AI', url: 'https://everyone.ai/', target: '_blank' }
       ]}
     ] : [
       { h: 'Navigate', items: [
         { label: 'Vision', url: './', target: '_self' },
-        { label: 'AI Transformation', url: 'AI-Transformation.dc.html', target: '_self' },
-        { label: 'Work together', url: 'Advisory-Execution.dc.html', target: '_self' },
-        { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
-        { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
+        { label: 'AI Transformation', url: 'AI-Transformation', target: '_self' },
+        { label: 'Work together', url: 'Advisory-Execution', target: '_self' },
+        { label: 'AI Lab', url: 'AI-Lab', target: '_self' },
+        { label: 'Keynote Speaker', url: 'Keynote-Speaker', target: '_self' }
       ]},
       { h: 'About', items: [
-        { label: 'Why', url: 'Why.dc.html', target: '_self' },
-        { label: 'Ethics', url: 'Ethics.dc.html', target: '_self' },
-        { label: 'Publications', url: 'Publications.dc.html', target: '_self' },
-        { label: 'Press', url: 'Press.dc.html', target: '_self' }
+        { label: 'Why', url: 'Why', target: '_self' },
+        { label: 'Ethics', url: 'Ethics', target: '_self' },
+        { label: 'Publications', url: 'Publications', target: '_self' },
+        { label: 'Press', url: 'Press', target: '_self' }
       ]},
       { h: 'Contact', items: [
-        { label: "Let's Build", url: 'Contact.dc.html', target: '_self' },
+        { label: "Let's Build", url: 'Contact', target: '_self' },
         { label: 'Freedom.AI', url: 'https://freedom.ai/', target: '_blank' },
         { label: 'Everyone.AI', url: 'https://everyone.ai/', target: '_blank' }
       ]}

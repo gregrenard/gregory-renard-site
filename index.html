@@ -1,9 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<title>Gregory Renard — AI Architect &amp; Cognitive Orchestration</title>
+<meta name="description" content="AI architect since 1996. Gregory Renard builds operational AI systems, agentic workflows and AI-native organizations for global enterprises.">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<meta name="author" content="Gregory Renard">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gregory-renard.com/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Gregory Renard">
+<meta property="og:title" content="Gregory Renard — AI Architect &amp; Cognitive Orchestration">
+<meta property="og:description" content="AI architect since 1996. Gregory Renard builds operational AI systems, agentic workflows and AI-native organizations for global enterprises.">
+<meta property="og:url" content="https://gregory-renard.com/">
+<meta property="og:image" content="https://gregory-renard.com/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gregory Renard — AI Architect &amp; Cognitive Orchestration">
+<meta name="twitter:description" content="AI architect since 1996. Gregory Renard builds operational AI systems, agentic workflows and AI-native organizations for global enterprises.">
+<meta name="twitter:image" content="https://gregory-renard.com/assets/og-cover.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Gregory Renard","jobTitle":"AI Architect","url":"https://gregory-renard.com/","image":"https://gregory-renard.com/assets/og-cover.png","description":"AI architect since 1996, building operational AI systems, agentic workflows and AI-native organizations for global enterprises.","sameAs":["https://www.linkedin.com/in/gregoryrenard/","https://fr.wikipedia.org/wiki/Gr%C3%A9gory_Renard","https://scholar.google.com/citations?user=Khit-6kAAAAJ&hl=fr","https://github.com/gregrenard/","https://twitter.com/Redo","https://www.youtube.com/@GregoryRenard"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:#070C1E;color:#EAEEF5;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:rgba(59,123,255,0.32);color:#fff}
+  @keyframes grx-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @keyframes grx-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+  @keyframes grx-floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @keyframes grx-sheen{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+  @keyframes grx-pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+  [data-reveal]{opacity:1}
+  .grx-track{display:flex;width:max-content;animation:grx-marquee 42s linear infinite}
+  .grx-marq:hover .grx-track{animation-play-state:paused}
+  @media (max-width:900px){
+    .grx-navlink{display:none !important}
+    .grx-hero-a,.grx-intro,.grx-ethics{grid-template-columns:1fr !important}
+    .grx-hero-c{grid-template-columns:1fr !important;min-height:0 !important}
+    .grx-hero-c-img{min-height:300px !important;max-height:380px !important}
+    .grx-hero-c-content{padding:34px 26px 38px !important}
+    .grx-awards{grid-template-columns:1fr !important}
+    .grx-ethics{padding:30px 26px !important;gap:26px !important}
+    .grx-ethics-logo{border-left:none !important;border-top:1px solid rgba(255,255,255,0.1) !important;width:100% !important;padding:20px 0 0 !important;justify-items:center !important}
+    .grx-pad{padding-left:22px !important;padding-right:22px !important}
+  }
+  @media (max-width:620px){
+    .grx-stats,.grx-services{grid-template-columns:repeat(2,1fr) !important}
+    .grx-footer{grid-template-columns:1fr 1fr !important;gap:26px !important}
+    .grx-switch{left:10px !important;right:10px !important;transform:none !important;flex-wrap:wrap !important;justify-content:center !important;border-radius:18px !important;padding:9px 10px !important}
+    .grx-switch-label{display:none !important}
+  }
+  @media (max-width:400px){
+    .grx-footer{grid-template-columns:1fr !important}
+  }
+  .grx-nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+  .grx-burger{display:none}
+  .grx-mobile-menu{display:none}
+  @media (max-width:900px){
+    .grx-burger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.05);color:#EAEEF5;font-size:20px;line-height:1;cursor:pointer}
+    .grx-mobile-menu{background:rgba(7,12,30,0.98);border-top:1px solid rgba(255,255,255,0.08);padding:8px 22px 16px}
+    .grx-nav-toggle:checked ~ .grx-mobile-menu{display:flex;flex-direction:column}
+    .grx-mobile-menu a{padding:14px 4px;font-size:16px;color:#CAD2E0;border-bottom:1px solid rgba(255,255,255,0.06)}
+    .grx-mobile-menu a:last-child{border-bottom:none}
+  }
+</style>
 </head>
 <body>
 <x-dc>
@@ -91,22 +162,22 @@
         <span style="font-weight:700;font-size:15px;letter-spacing:-0.01em">Gregory Renard</span>
       </a>
       <a class="grx-navlink" href="./" style="font-size:14px;color:#fff;font-weight:600">{{ t.nav_vision }}</a>
-      <a class="grx-navlink" href="AI-Transformation.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_transfo }}</a>
-      <a class="grx-navlink" href="AI-Lab.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_lab }}</a>
-      <a class="grx-navlink" href="Advisory-Execution.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_advisory }}</a>
-      <a class="grx-navlink" href="Why.dc.html" style="font-size:14px;color:#AEB6C6">{{ t.nav_why }}</a>
-      <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#fff;background:#3B7BFF;padding:9px 17px;border-radius:9px;box-shadow:0 6px 18px rgba(59,123,255,0.32)" style-hover="background:#5A92FF">{{ t.nav_cta }}</a>
+      <a class="grx-navlink" href="AI-Transformation" style="font-size:14px;color:#AEB6C6">{{ t.nav_transfo }}</a>
+      <a class="grx-navlink" href="AI-Lab" style="font-size:14px;color:#AEB6C6">{{ t.nav_lab }}</a>
+      <a class="grx-navlink" href="Advisory-Execution" style="font-size:14px;color:#AEB6C6">{{ t.nav_advisory }}</a>
+      <a class="grx-navlink" href="Why" style="font-size:14px;color:#AEB6C6">{{ t.nav_why }}</a>
+      <a href="Contact" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#fff;background:#3B7BFF;padding:9px 17px;border-radius:9px;box-shadow:0 6px 18px rgba(59,123,255,0.32)" style-hover="background:#5A92FF">{{ t.nav_cta }}</a>
       <button onClick="{{ toggleLang }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:#fff;background:rgba(59,123,255,0.18);border:1px solid rgba(59,123,255,0.42);border-radius:100px;padding:7px 13px;cursor:pointer">{{ langLabel }}</button>
       <label for="grx-nav-toggle" class="grx-burger" aria-label="Open menu">☰</label>
     </nav>
     <input type="checkbox" id="grx-nav-toggle" class="grx-nav-toggle" aria-hidden="true">
     <div class="grx-mobile-menu">
       <a href="./">{{ t.nav_vision }}</a>
-      <a href="AI-Transformation.dc.html">{{ t.nav_transfo }}</a>
-      <a href="AI-Lab.dc.html">{{ t.nav_lab }}</a>
-      <a href="Advisory-Execution.dc.html">{{ t.nav_advisory }}</a>
-      <a href="Why.dc.html">{{ t.nav_why }}</a>
-      <a href="Keynote-Speaker.dc.html">Keynote Speaker</a>
+      <a href="AI-Transformation">{{ t.nav_transfo }}</a>
+      <a href="AI-Lab">{{ t.nav_lab }}</a>
+      <a href="Advisory-Execution">{{ t.nav_advisory }}</a>
+      <a href="Why">{{ t.nav_why }}</a>
+      <a href="Keynote-Speaker">Keynote Speaker</a>
     </div>
   </header>
 
@@ -121,8 +192,8 @@
         <h1 style="font-size:clamp(36px,4.3vw,60px);line-height:1.14;letter-spacing:-0.02em;font-weight:800;text-wrap:balance">{{ t.heroPre }}<span style="background:linear-gradient(100deg,#7FA8FF,#AECBFF);-webkit-background-clip:text;background-clip:text;color:transparent">{{ t.heroEm }}</span>{{ t.heroPost }}</h1>
         <p style="margin-top:24px;font-size:clamp(16px,1.4vw,19px);line-height:1.6;color:#AAB3C4;max-width:560px">{{ t.heroSub }}</p>
         <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:34px">
-          <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:#fff;background:#3B7BFF;padding:14px 24px;border-radius:11px;box-shadow:0 10px 30px rgba(59,123,255,0.35)" style-hover="background:#5A92FF;transform:translateY(-1px)">{{ t.ctaPrimary }} →</a>
-          <a href="AI-Transformation.dc.html" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:#EAEEF5;border:1px solid rgba(255,255,255,0.16);padding:14px 24px;border-radius:11px" style-hover="border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.04)">{{ t.ctaSecondary }}</a>
+          <a href="Contact" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:#fff;background:#3B7BFF;padding:14px 24px;border-radius:11px;box-shadow:0 10px 30px rgba(59,123,255,0.35)" style-hover="background:#5A92FF;transform:translateY(-1px)">{{ t.ctaPrimary }} →</a>
+          <a href="AI-Transformation" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:#EAEEF5;border:1px solid rgba(255,255,255,0.16);padding:14px 24px;border-radius:11px" style-hover="border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.04)">{{ t.ctaSecondary }}</a>
         </div>
         <div style="display:flex;gap:18px;margin-top:34px;align-items:center">
           <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6B7385;letter-spacing:0.06em">{{ t.findMe }}</span>
@@ -248,7 +319,7 @@
         <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:14px">{{ t.servicesSub }}</div>
         <h2 style="font-size:clamp(28px,3vw,42px);line-height:1.08;letter-spacing:-0.025em;font-weight:800">{{ t.servicesTitle }}</h2>
       </div>
-      <a href="Advisory-Execution.dc.html" style="font-size:14px;font-weight:600;color:#7FA8FF;border-bottom:1px solid rgba(127,168,255,0.4);padding-bottom:3px" style-hover="color:#fff">{{ t.servicesLink }} →</a>
+      <a href="Advisory-Execution" style="font-size:14px;font-weight:600;color:#7FA8FF;border-bottom:1px solid rgba(127,168,255,0.4);padding-bottom:3px" style-hover="color:#fff">{{ t.servicesLink }} →</a>
     </div>
     <div class="grx-services" style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px">
       <sc-for list="{{ services }}" as="sv" hint-placeholder-count="4">
@@ -278,7 +349,7 @@
         <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:16px">{{ t.ethicsKicker }}</div>
         <p style="font-size:clamp(18px,1.8vw,24px);line-height:1.45;font-weight:600;letter-spacing:-0.01em;color:#EAEEF5"><sc-for list="{{ rich.ethics }}" as="seg" hint-placeholder-count="3"><sc-if value="{{ seg.isLink }}" hint-placeholder-val="{{ true }}"><a href="{{ seg.url }}" target="_blank" rel="noopener noreferrer" style="color:#8FB3FF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(143,179,255,0.45)" style-hover="color:#fff;text-decoration-color:#8FB3FF">{{ seg.t }}</a></sc-if><sc-if value="{{ seg.notLink }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p>
         <p style="margin-top:16px;font-size:15px;line-height:1.6;color:#AEB6C6;max-width:620px"><sc-for list="{{ rich.everyone }}" as="seg" hint-placeholder-count="2"><sc-if value="{{ seg.isLink }}" hint-placeholder-val="{{ true }}"><a href="{{ seg.url }}" target="_blank" rel="noopener noreferrer" style="color:#8FB3FF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(143,179,255,0.45)" style-hover="color:#fff;text-decoration-color:#8FB3FF">{{ seg.t }}</a></sc-if><sc-if value="{{ seg.notLink }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p>
-        <a href="Ethics.dc.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-size:14px;font-weight:600;color:#fff;background:rgba(59,123,255,0.18);border:1px solid rgba(59,123,255,0.4);padding:11px 20px;border-radius:10px" style-hover="background:rgba(59,123,255,0.3)">{{ t.ethicsLink }} →</a>
+        <a href="Ethics" style="display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-size:14px;font-weight:600;color:#fff;background:rgba(59,123,255,0.18);border:1px solid rgba(59,123,255,0.4);padding:11px 20px;border-radius:10px" style-hover="background:rgba(59,123,255,0.3)">{{ t.ethicsLink }} →</a>
       </div>
       <div class="grx-ethics-logo" style="flex:none;width:150px;display:grid;place-items:center;padding:18px;border-left:1px solid rgba(255,255,255,0.1)">
         <img src="{{ everyoneLogo }}" alt="Everyone.AI" style="width:96px;height:auto;display:block;animation:grx-floaty 5s ease-in-out infinite">
@@ -291,7 +362,7 @@
     <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#7FA8FF;margin-bottom:18px">{{ t.contactLoc }}</div>
     <h2 style="font-size:clamp(40px,5.5vw,76px);line-height:1;letter-spacing:-0.035em;font-weight:800">{{ t.contactTitle }}</h2>
     <p style="margin:22px auto 0;font-size:18px;line-height:1.55;color:#AEB6C6;max-width:560px">{{ t.contactSub }}</p>
-    <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:10px;margin-top:34px;font-weight:600;font-size:16px;color:#fff;background:#3B7BFF;padding:16px 32px;border-radius:13px;box-shadow:0 14px 40px rgba(59,123,255,0.4)" style-hover="background:#5A92FF;transform:translateY(-2px)">{{ t.contactCta }} →</a>
+    <a href="Contact" style="display:inline-flex;align-items:center;gap:10px;margin-top:34px;font-weight:600;font-size:16px;color:#fff;background:#3B7BFF;padding:16px 32px;border-radius:13px;box-shadow:0 14px 40px rgba(59,123,255,0.4)" style-hover="background:#5A92FF;transform:translateY(-2px)">{{ t.contactCta }} →</a>
   </section>
 
   <!-- ============ FOOTER ============ -->
@@ -448,15 +519,15 @@ class Component extends DCLogic {
     };
 
     const services = lang === 'fr' ? [
-      { n: '01', t: 'Transformation IA Exécutive', d: "Aider les comités de direction à opérationnaliser l'IA de façon stratégique et responsable.", url: 'AI-Transformation.dc.html' },
-      { n: '02', t: 'Systèmes IA Opérationnels', d: "Concevoir et déployer workflows AI-native, copilotes et systèmes d'exécution agentiques.", url: 'AI-Lab.dc.html' },
-      { n: '03', t: 'Conseil IA Appliquée', d: "Relier les architectures IA avancées à un impact opérationnel mesurable.", url: 'Advisory-Execution.dc.html' },
-      { n: '04', t: 'Keynotes Stratégiques', d: "Sessions exécutives sur le futur opérationnel des organisations pilotées par l'IA.", url: 'Keynote-Speaker.dc.html' }
+      { n: '01', t: 'Transformation IA Exécutive', d: "Aider les comités de direction à opérationnaliser l'IA de façon stratégique et responsable.", url: 'AI-Transformation' },
+      { n: '02', t: 'Systèmes IA Opérationnels', d: "Concevoir et déployer workflows AI-native, copilotes et systèmes d'exécution agentiques.", url: 'AI-Lab' },
+      { n: '03', t: 'Conseil IA Appliquée', d: "Relier les architectures IA avancées à un impact opérationnel mesurable.", url: 'Advisory-Execution' },
+      { n: '04', t: 'Keynotes Stratégiques', d: "Sessions exécutives sur le futur opérationnel des organisations pilotées par l'IA.", url: 'Keynote-Speaker' }
     ] : [
-      { n: '01', t: 'Executive AI Transformation', d: 'Helping leadership teams operationalize AI strategically and responsibly.', url: 'AI-Transformation.dc.html' },
-      { n: '02', t: 'Operational AI Systems', d: 'Designing and deploying AI-native workflows, copilots, and agentic execution systems.', url: 'AI-Lab.dc.html' },
-      { n: '03', t: 'Applied AI Advisory', d: 'Bridging advanced AI architectures with measurable operational impact.', url: 'Advisory-Execution.dc.html' },
-      { n: '04', t: 'Strategic Keynotes', d: 'Executive sessions on the operational future of AI-driven organizations.', url: 'Keynote-Speaker.dc.html' }
+      { n: '01', t: 'Executive AI Transformation', d: 'Helping leadership teams operationalize AI strategically and responsibly.', url: 'AI-Transformation' },
+      { n: '02', t: 'Operational AI Systems', d: 'Designing and deploying AI-native workflows, copilots, and agentic execution systems.', url: 'AI-Lab' },
+      { n: '03', t: 'Applied AI Advisory', d: 'Bridging advanced AI architectures with measurable operational impact.', url: 'Advisory-Execution' },
+      { n: '04', t: 'Strategic Keynotes', d: 'Executive sessions on the operational future of AI-driven organizations.', url: 'Keynote-Speaker' }
     ];
 
     const sectorsRaw = lang === 'fr' ? [
@@ -492,38 +563,38 @@ class Component extends DCLogic {
     const footerCols = lang === 'fr' ? [
       { h: 'Naviguer', items: [
         { label: 'Vision', url: './', target: '_self' },
-        { label: 'Transformation IA', url: 'AI-Transformation.dc.html', target: '_self' },
-        { label: 'Travailler ensemble', url: 'Advisory-Execution.dc.html', target: '_self' },
-        { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
-        { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
+        { label: 'Transformation IA', url: 'AI-Transformation', target: '_self' },
+        { label: 'Travailler ensemble', url: 'Advisory-Execution', target: '_self' },
+        { label: 'AI Lab', url: 'AI-Lab', target: '_self' },
+        { label: 'Keynote Speaker', url: 'Keynote-Speaker', target: '_self' }
       ]},
       { h: 'À propos', items: [
-        { label: 'Pourquoi', url: 'Why.dc.html', target: '_self' },
-        { label: 'Éthique', url: 'Ethics.dc.html', target: '_self' },
-        { label: 'Publications', url: 'Publications.dc.html', target: '_self' },
-        { label: 'Presse', url: 'Press.dc.html', target: '_self' }
+        { label: 'Pourquoi', url: 'Why', target: '_self' },
+        { label: 'Éthique', url: 'Ethics', target: '_self' },
+        { label: 'Publications', url: 'Publications', target: '_self' },
+        { label: 'Presse', url: 'Press', target: '_self' }
       ]},
       { h: 'Contact', items: [
-        { label: 'Construisons', url: 'Contact.dc.html', target: '_self' },
+        { label: 'Construisons', url: 'Contact', target: '_self' },
         { label: 'Freedom.AI', url: 'https://freedom.ai/', target: '_blank' },
         { label: 'Everyone.AI', url: 'https://everyone.ai/', target: '_blank' }
       ]}
     ] : [
       { h: 'Navigate', items: [
         { label: 'Vision', url: './', target: '_self' },
-        { label: 'AI Transformation', url: 'AI-Transformation.dc.html', target: '_self' },
-        { label: 'Work together', url: 'Advisory-Execution.dc.html', target: '_self' },
-        { label: 'AI Lab', url: 'AI-Lab.dc.html', target: '_self' },
-        { label: 'Keynote Speaker', url: 'Keynote-Speaker.dc.html', target: '_self' }
+        { label: 'AI Transformation', url: 'AI-Transformation', target: '_self' },
+        { label: 'Work together', url: 'Advisory-Execution', target: '_self' },
+        { label: 'AI Lab', url: 'AI-Lab', target: '_self' },
+        { label: 'Keynote Speaker', url: 'Keynote-Speaker', target: '_self' }
       ]},
       { h: 'About', items: [
-        { label: 'Why', url: 'Why.dc.html', target: '_self' },
-        { label: 'Ethics', url: 'Ethics.dc.html', target: '_self' },
-        { label: 'Publications', url: 'Publications.dc.html', target: '_self' },
-        { label: 'Press', url: 'Press.dc.html', target: '_self' }
+        { label: 'Why', url: 'Why', target: '_self' },
+        { label: 'Ethics', url: 'Ethics', target: '_self' },
+        { label: 'Publications', url: 'Publications', target: '_self' },
+        { label: 'Press', url: 'Press', target: '_self' }
       ]},
       { h: 'Contact', items: [
-        { label: "Let's Build", url: 'Contact.dc.html', target: '_self' },
+        { label: "Let's Build", url: 'Contact', target: '_self' },
         { label: 'Freedom.AI', url: 'https://freedom.ai/', target: '_blank' },
         { label: 'Everyone.AI', url: 'https://everyone.ai/', target: '_blank' }
       ]}
