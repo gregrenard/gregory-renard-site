@@ -112,14 +112,13 @@ A MISS in (e) = an asset the user added in Design; fetch the binary (step 5) or 
 - Every `assets/*` reference in the pages must resolve to a file — the Verify step (d) catches anything new the user adds in Design.
 
 ## Pending Claude Design fixes (temporary transforms — verify each future sync)
-Things the user will fix in Claude Design *later*; until then a deploy step keeps the live
-site correct. Each is **idempotent** (no-op once Design is updated) — when a sync's `git diff`
-shows the step no longer changes anything, delete it from `deploy.sh` and this list.
+Convention: when the user will fix something in Claude Design *later*, add an idempotent
+deploy step that keeps the live site correct meanwhile, list it here with a removal
+condition, then delete both once a sync's `git diff` shows the step is a no-op.
 
-- **Footer label** (added 2026-06-14): the top nav says `Advisory & Execution` / `Conseil & Exécution`,
-  but Claude Design's **footer** "Navigate" column still says `Work together` / `Travailler ensemble`.
-  `deploy.sh` step **2b** rewrites the footer `label:` to match. `verify.sh` check **(g)** warns if the
-  old label reappears. **Remove step 2b once the footer is updated in Claude Design.**
+- _None currently._ (Resolved 2026-06-14: the footer "Navigate" label was fixed in Claude
+  Design — `deploy.sh` step 2b removed; `verify.sh` check **(g)** kept as a permanent
+  consistency guard that warns if the footer label ever drifts from the top nav again.)
 
 ## Permanent repo files (NOT from Design — never delete/clobber on sync)
 These live only in the repo (Claude Design doesn't know about them). A sync pulls/overwrites only the Design-sourced files above, so these survive — just don't `rm` them or let a transform touch them:

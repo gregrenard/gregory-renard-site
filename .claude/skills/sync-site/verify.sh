@@ -44,13 +44,12 @@ done
 # 404.html must still carry its migration redirect logic
 grep -q "location.replace" 404.html 2>/dev/null && echo "  ok: 404.html redirect logic present" || { echo "  BAD: 404.html redirect logic gone"; fail=1; }
 
-echo "--- (g) footer label reconciled with top nav (temp transform, see SKILL.md) ---"
+echo "--- (g) footer label consistent with top nav ---"
 if grep -rq "label: 'Work together'\|label: 'Travailler ensemble'" *.html 2>/dev/null; then
-  echo "  WARN: footer still says 'Work together'/'Travailler ensemble' while the top nav"
-  echo "        says 'Advisory & Execution'. The deploy.sh reconcile step should fix this."
-  echo "        (If Claude Design's footer has been updated, this is fine — remove the step.)"
+  echo "  WARN: footer says 'Work together'/'Travailler ensemble' but the top nav says"
+  echo "        'Advisory & Execution' — fix the footer label in Claude Design."
 else
-  echo "  ok: footer label matches top nav (or already fixed in Design)"
+  echo "  ok: footer label matches top nav"
 fi
 
 echo
