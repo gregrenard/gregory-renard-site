@@ -209,7 +209,7 @@
         <p style="margin-top:18px;font-size:16px;line-height:1.62;color:#C2CAD8;max-width:560px">{{ t.heroBio }}</p>
       </div>
       <div data-reveal="" class="grx-hero-img" style="position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.12);box-shadow:0 30px 70px rgba(0,0,0,0.5);min-height:380px">
-        <img src="{{ portrait }}" alt="Gregory Renard" style="width:100%;height:100%;object-fit:cover;display:block">
+        <img src="{{ portrait }}" alt="Gregory Renard" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
         <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(7,12,30,0.6))"></div>
       </div>
     </div>
@@ -361,7 +361,7 @@ class Component extends DCLogic {
     const lang = this.state.lang;
     const C = {
       en: {
-        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Work together', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
+        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Advisory & Execution', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
         eyebrow: 'Why I do this',
         heroTitle: 'Who is Gregory Renard?',
         heroSub: 'A proven track record of being early — and setting the template for major technology trends, from semantic search in 1996 to agentic systems today.',
@@ -381,7 +381,7 @@ class Component extends DCLogic {
         copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
       },
       fr: {
-        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Travailler ensemble', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
+        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Conseil & Exécution', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
         eyebrow: 'Pourquoi je fais cela',
         heroTitle: 'Qui est Gregory Renard ?',
         heroSub: "Une trajectoire d'avance — poser le modèle des grandes tendances technologiques, de la recherche sémantique en 1996 aux systèmes agentiques d'aujourd'hui.",
@@ -524,7 +524,7 @@ class Component extends DCLogic {
       lang, t, timeline, leftCol, rightCol, industries, ventures, rich, socials, footerCols,
       langLabel: lang === 'en' ? 'FR' : 'EN',
       toggleLang: () => this.setLang(lang === 'en' ? 'fr' : 'en'),
-      portrait: 'assets/greg-home-orange.png'
+      portrait: 'assets/greg-home-orange.jpg'
     };
   }
 }

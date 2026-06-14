@@ -164,14 +164,10 @@
         </div>
         <h1 style="font-size:clamp(19px,4vw,46px);line-height:1.05;letter-spacing:-0.032em;font-weight:800;white-space:nowrap">{{ t.heroTitle }} <span style="background:linear-gradient(100deg,#5A92FF,#9EC0FF);-webkit-background-clip:text;background-clip:text;color:transparent">{{ t.heroTitleEm }}</span></h1>
         <p style="margin-top:22px;font-size:clamp(16px,1.4vw,19px);line-height:1.6;color:#AAB3C4;max-width:880px;margin-left:auto;margin-right:auto">{{ t.heroSub }}</p>
-        <div style="display:flex;flex-wrap:wrap;gap:13px;margin-top:30px;justify-content:center">
-          <a href="Contact" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:#fff;background:#3B7BFF;padding:14px 24px;border-radius:11px;box-shadow:0 10px 30px rgba(59,123,255,0.35)" style-hover="background:#5A92FF;transform:translateY(-1px)">{{ t.ctaPrimary }} →</a>
-          <a href="#essay" onClick="{{ scrollToEssay }}" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:#EAEEF5;border:1px solid rgba(255,255,255,0.16);padding:14px 24px;border-radius:11px" style-hover="border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.04)">{{ t.ctaSecondary }}</a>
-        </div>
-        <p data-reveal style="margin-top:20px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#6B7385">{{ t.proofLine }}</p>
-        <div data-reveal style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px">
+        <p data-reveal style="margin-top:30px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#6B7385">{{ t.proofLine }}</p>
+        <div data-reveal style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:38px">
           <sc-for list="{{ toc }}" as="tc" hint-placeholder-count="3">
-            <a href="{{ tc.href }}" onClick="{{ jumpTo }}" style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#C2CAD8;border:1px solid rgba(255,255,255,0.14);border-radius:100px;padding:9px 16px;transition:all .2s" style-hover="border-color:rgba(59,123,255,0.5);color:#fff;background:rgba(59,123,255,0.08)">{{ tc.label }} ↓</a>
+            <a href="{{ tc.href }}" onClick="{{ jumpTo }}" style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14.5px;font-weight:600;letter-spacing:0.01em;color:#EAF1FF;border:1px solid rgba(59,123,255,0.55);border-radius:100px;padding:13px 24px;background:rgba(59,123,255,0.14);box-shadow:0 6px 22px rgba(59,123,255,0.18);transition:all .2s" style-hover="border-color:#3B7BFF;color:#fff;background:rgba(59,123,255,0.32);transform:translateY(-2px);box-shadow:0 12px 32px rgba(59,123,255,0.32)">{{ tc.label }} <span style="font-size:17px">↓</span></a>
           </sc-for>
         </div>
       </div>
@@ -376,7 +372,7 @@ class Component extends DCLogic {
     const lang = this.state.lang;
     const C = {
       en: {
-        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Work together', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
+        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Advisory & Execution', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
         eyebrow: 'Cognitive Orchestration™',
         heroTitle: 'From AI ambition to', heroTitleEm: 'operational reality.',
         heroSub: "Most organizations stall at the same place: pilots multiply, budgets grow, yet AI never reaches production with real ROI. After 30 years building applied AI at global scale, I turned that recurring failure into a method — Cognitive Orchestration™ — a proven three-phase path from AI ambition to systems live in production, with measurable impact and governance built in.",
@@ -429,7 +425,7 @@ class Component extends DCLogic {
         copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
       },
       fr: {
-        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Travailler ensemble', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
+        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Conseil & Exécution', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
         eyebrow: 'Cognitive Orchestration™',
         heroTitle: "De l'ambition IA à la", heroTitleEm: 'réalité opérationnelle.',
         heroSub: "La plupart des organisations bloquent au même endroit : les pilotes se multiplient, les budgets gonflent, mais l'IA n'atteint jamais la production avec un vrai ROI. Après 30 ans à construire de l'IA appliquée à l'échelle mondiale, j'ai transformé cet échec récurrent en méthode — Cognitive Orchestration™ — un chemin éprouvé en trois phases, de l'ambition IA à des systèmes en production, avec impact mesurable et gouvernance intégrée.",

@@ -7,6 +7,17 @@ description: Sync the gregory-renard.com site from Claude Design to GitHub so th
 
 Pull the latest **text** content from the user's Claude Design project, **re-apply the deploy-only transforms** Claude Design can't do (clean root URL), verify all internal links, then push to GitHub. GitHub Pages redeploys the live site automatically (~1 min).
 
+## Automated flow (do this — 3 scripts + the DesignSync pulls)
+Once the user confirms editing is **finished**:
+1. **Detect structure changes:** `DesignSync list_files` → confirm the 10 page filenames are unchanged. A renamed/added/removed page changes a URL (SEO + redirect impact) — handle that before continuing.
+2. **Pull pages:** `DesignSync get_file` for each of the 10 root pages (full resync) or just the edited ones. Pull first so results flush to the transcript.
+3. **Write them byte-exact:** `python3 .claude/skills/sync-site/extract-pulled.py`  (reads the transcript: inline + persisted .txt, freshest wins).
+4. **Transform + verify in one shot:** `bash .claude/skills/sync-site/deploy.sh`  (full pipeline → then `verify.sh`).
+   - If verify flags a **MISSING asset** (image changed/added in Design, ≤256 KiB): `DesignSync get_file assets/<file>` → `python3 .claude/skills/sync-site/pull-asset.py assets/<file>` → re-run `bash .claude/skills/sync-site/verify.sh`. (>256 KiB → ask the user to send the file.)
+5. **Review + ship:** `git diff -U0 -- '*.html'` to eyeball the real content delta, then `git add -A && git commit && git push origin main`. Remind the user to open `/` in a browser to confirm the dc-runtime renders.
+
+Everything below is the reference for what those scripts do.
+
 ## Project facts
 - **Source of truth:** Claude Design project **"gregory-renard.com"**, projectId `25751aee-ab2f-4af9-a3b3-66cf466244c4`. The user edits the **root-level** components there.
 - **Repo / remote:** `origin/main` → `github.com/gregrenard/gregory-renard-site` (this working directory).

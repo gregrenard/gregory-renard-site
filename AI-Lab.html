@@ -180,7 +180,7 @@
     <div data-reveal style="border:1px solid rgba(255,255,255,0.09);border-radius:22px;background:linear-gradient(120deg,rgba(59,123,255,0.07),rgba(255,255,255,0.012));padding:42px 42px">
       <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:16px">{{ t.rangeKicker }}</div>
       <h2 style="font-size:clamp(26px,3.4vw,46px);line-height:1.05;letter-spacing:-0.03em;font-weight:800">{{ t.rangeTitle }}</h2>
-      <p style="margin-top:16px;font-size:16px;line-height:1.66;color:#AEB6C6;max-width:840px">{{ t.rangeSub }}</p>
+      <p style="margin-top:16px;font-size:16px;line-height:1.66;color:#AEB6C6">{{ t.rangeSub }}</p>
       <div class="grx-range" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);border-radius:16px;overflow:hidden;margin-top:30px">
         <sc-for list="{{ range }}" as="r" hint-placeholder-count="3">
           <div style="background:#0A0E18;padding:26px 24px">
@@ -285,7 +285,7 @@ class Component extends DCLogic {
     const lang = this.state.lang;
     const C = {
       en: {
-        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Work together', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
+        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Advisory & Execution', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
         eyebrow: 'AI Lab · Work in progress',
         heroPre: 'Where the next systems ', heroEm: 'get built.',
         heroSub: "This is where I explore, discover and create. Through Freedom.AI, my applied-AI lab, I push frontier GenAI to its edge — agentic systems, on-device SLMs, embedded orchestration — and turn what works into production-grade reality across cloud, on-premise, edge and fully-local infrastructure. Mastery of the technology, pursued with elegance.",
@@ -303,7 +303,7 @@ class Component extends DCLogic {
         copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
       },
       fr: {
-        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Travailler ensemble', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
+        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Conseil & Exécution', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
         eyebrow: 'AI Lab · Travaux en cours',
         heroPre: 'Là où se construisent ', heroEm: 'les prochains systèmes.',
         heroSub: "C'est ici que j'explore, je découvre et je crée. Via Freedom.AI, mon lab d'IA appliquée, je pousse la GenAI de pointe dans ses retranchements — systèmes agentiques, SLM on-device, orchestration embarquée — et je transforme ce qui fonctionne en réalité de production : cloud, on-premise, edge et infrastructure 100% locale. La maîtrise de la technologie, avec élégance.",

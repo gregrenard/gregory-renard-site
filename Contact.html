@@ -164,10 +164,6 @@
 
         <div style="margin-top:34px;display:flex;flex-direction:column;gap:22px">
           <div>
-            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#5E6678;margin-bottom:7px">{{ t.emailLabel }}</div>
-            <a onClick="{{ mailClick }}" style="display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:600;color:#8FB3FF;cursor:pointer;border-bottom:1px solid rgba(143,179,255,0.45);transition:color .2s" style-hover="color:#fff">{{ t.emailValue }} →</a>
-          </div>
-          <div>
             <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#5E6678;margin-bottom:9px">{{ t.locLabel }}</div>
             <div style="display:flex;flex-wrap:wrap;gap:10px">
               <sc-for list="{{ t.locations }}" as="loc" hint-placeholder-count="3">
@@ -270,7 +266,7 @@ class Component extends DCLogic {
     const lang = this.state.lang;
     const C = {
       en: {
-        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Work together', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
+        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Advisory & Execution', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
         eyebrow: 'Let’s build',
         heroTitle: 'Let’s build.',
         heroSub: 'From strategy to production — from vision to impact. If your organization is ready to move from experimentation to real-world results, let’s talk.',
@@ -285,7 +281,7 @@ class Component extends DCLogic {
         copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
       },
       fr: {
-        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Travailler ensemble', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
+        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Conseil & Exécution', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
         eyebrow: 'Construisons',
         heroTitle: 'Construisons.',
         heroSub: "De la stratégie à la production — de la vision à l'impact. Si votre organisation est prête à passer de l'expérimentation aux résultats concrets, parlons-en.",
