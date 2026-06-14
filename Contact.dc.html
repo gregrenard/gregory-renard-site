@@ -307,8 +307,9 @@ class Component extends DCLogic {
       onEmail: (e) => this.setState({ email: e.target.value, showError: false }),
       onMsg: (e) => this.setState({ message: e.target.value }),
       submit: () => {
-        if (this.state.firstName.trim() && validEmail) this.setState({ sent: true, showError: false });
-        else this.setState({ showError: true });
+        if (!(this.state.firstName.trim() && validEmail)) { this.setState({ showError: true }); return; }
+        try { fetch('https://script.google.com/macros/s/AKfycbzBYfeq7nwrDsd9ZSwAmr_KSrgl8TDz3Hau1GD3YNcF17-AKDKpfR5tga3HJHBCXGVi/exec', { method: 'POST', mode: 'no-cors', body: new URLSearchParams({ firstName: this.state.firstName, lastName: this.state.lastName, email: this.state.email, message: this.state.message }) }); } catch (e) {}
+        this.setState({ sent: true, showError: false });
       },
       reset: () => this.setState({ sent: false, firstName: '', lastName: '', email: '', message: '', showError: false })
     };

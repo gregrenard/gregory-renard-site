@@ -52,6 +52,11 @@ Claude Design's `index.html` is a redirect and its pages link to the home as `Gr
    sed -i '' 's|"Gregory%20Renard%20-%20Home\.dc\.html"|"./"|g' *.dc.html index.html
    sed -i '' "s|'Gregory%20Renard%20-%20Home\.dc\.html'|'./'|g" *.dc.html index.html
    ```
+3. **Wire the Contact form to the Google Sheet endpoint.** Claude Design's "Let's Build" form does nothing on submit (just shows "Message received") — re-apply the idempotent patch that POSTs it to the Apps Script Web App:
+   ```bash
+   python3 .claude/skills/sync-site/patch-contact-form.py
+   ```
+   (Posts firstName/lastName/email/message via `fetch(..., {mode:'no-cors'})` to a Google Apps Script `/exec` that appends a row to the contacts sheet. Endpoint lives in that script; update it there if the deployment changes.)
 
 Scope stays **root-only**: sub-pages keep their `.dc.html` URLs. Do NOT attempt per-page clean URLs (e.g. `/contact/`) — that needs a directory + `index.html` restructure that breaks every `./support.js` / `./assets/` relative path and only works once the custom domain is on root. `sitemap.xml` and `llms.txt` already list the home as `https://gregory-renard.com/` (the clean root) — leave them; just don't let any `…/Gregory%20…Home.dc.html` URL appear in them.
 
