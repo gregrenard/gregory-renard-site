@@ -29,3 +29,6 @@ node_modules/
 
 # Claude Code — réglages locaux (le skill .claude/skills/ reste versionné)
 .claude/settings.local.json
+
+# Dossiers de travail locaux (non déployés : changelogs, notes, brouillons)
+.works/
