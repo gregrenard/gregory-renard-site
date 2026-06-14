@@ -29,6 +29,16 @@ echo "==> 2/6  rewrite home link -> ./  (href + JS url forms, quote-anchored)"
 sed -i '' 's|"Gregory%20Renard%20-%20Home\.dc\.html"|"./"|g' *.dc.html index.html
 sed -i '' "s|'Gregory%20Renard%20-%20Home\.dc\.html'|'./'|g" *.dc.html index.html
 
+echo "==> 2b/6 reconcile footer label (TEMPORARY — remove once fixed in Claude Design)"
+# Claude Design's footer 'Navigate' column still labels the Advisory-Execution page
+# 'Work together' / 'Travailler ensemble', but the user reconciled the TOP nav to
+# 'Advisory & Execution' / 'Conseil & Exécution'. Keep them consistent until the
+# footer is updated in Claude Design too. Anchored to "label: '...'" so it only
+# touches the footer items. Idempotent -> becomes a no-op once Design is fixed;
+# DELETE this step then. (Tracked in SKILL.md "Pending Claude Design fixes".)
+sed -i '' "s/label: 'Work together'/label: 'Advisory \& Execution'/g" *.dc.html index.html
+sed -i '' "s/label: 'Travailler ensemble'/label: 'Conseil \& Exécution'/g" *.dc.html index.html
+
 echo "==> 3/6  wire contact form -> Google Sheet (+ honeypot)"
 python3 "$SKILL_DIR/patch-contact-form.py"
 
