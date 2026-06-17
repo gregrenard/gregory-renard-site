@@ -35,6 +35,9 @@ python3 "$SKILL_DIR/patch-contact-form.py"
 echo "==> 4/6  clean URLs + static SEO head"
 python3 "$SKILL_DIR/seo-clean-urls.py"
 
+echo "==> 4b/6 mobile hero-wrap fix (let hero titles wrap < 900px instead of shrinking)"
+python3 "$SKILL_DIR/hero-wrap-fix.py"
+
 echo "==> 5/6  rename *.dc.html -> *.html (+ drop redundant home source)"
 for f in $SUBPAGES; do [ -f "$f.dc.html" ] && mv "$f.dc.html" "$f.html"; done
 rm -f "$HOME_SRC"
