@@ -15,6 +15,7 @@ Once the user confirms editing is **finished**:
 4. **Transform + verify in one shot:** `bash .claude/skills/sync-site/deploy.sh`  (full pipeline → then `verify.sh`).
    - If verify flags a **MISSING asset** (image changed/added in Design, ≤256 KiB): `DesignSync get_file assets/<file>` → `python3 .claude/skills/sync-site/pull-asset.py assets/<file>` → re-run `bash .claude/skills/sync-site/verify.sh`. (>256 KiB → ask the user to send the file.)
 5. **Review + ship:** `git diff -U0 -- '*.html'` to eyeball the real content delta, then `git add -A && git commit && git push origin main`. Remind the user to open `/` in a browser to confirm the dc-runtime renders.
+   - ⚠️ **Push auth:** this repo MUST be pushed with the **`gregrenard`** gh account (the `gh` CLI also has `gregoryrenard-ai`, which gets a 403). If push is denied: `gh auth switch --user gregrenard` then `git -c credential.helper= -c credential.helper='!gh auth git-credential' push origin main`. See memory `github-account-for-push`.
 
 Everything below is the reference for what those scripts do.
 
