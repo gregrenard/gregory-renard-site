@@ -181,7 +181,7 @@
 </style>
 </helmet>
 
-<div ref="{{ rootRef }}" style="position:relative;min-height:100vh;background:radial-gradient(1100px 700px at 78% -8%, var(--hero-glow), transparent 60%), var(--bg);overflow-x:hidden">
+<div ref="{{ rootRef }}" style="position:relative;min-height:100vh;background:radial-gradient(1100px 700px at 78% -8%, var(--hero-glow), transparent 60%), var(--bg);overflow-x:clip">
 
   <!-- ============ NAV ============ -->
   <header style="position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:var(--header-bg);border-bottom:1px solid rgba(var(--line-rgb),0.07)">
@@ -527,16 +527,16 @@ class Component extends DCLogic {
     };
 
     const clients = [
-      { name: 'Eiffage Group', url: 'https://www.eiffage.com/' },
-      { name: 'Renault Group', url: 'https://www.renaultgroup.com/en/news-on-air/news/artificial-intelligence-renault-group-accelerates/' },
-      { name: 'Sodebo', url: '' },
       { name: 'Actual', url: '' },
-      { name: 'Groupe IDEA', url: '' },
-      { name: 'NASA · FDL', url: 'https://frontierdevelopmentlab.org/' },
-      { name: 'Docugami', url: 'https://www.docugami.com/' },
       { name: 'Bright.AI', url: 'https://www.bright.ai/' },
+      { name: 'ConsentPlace', url: 'https://consentplace.com/' },
+      { name: 'Docugami', url: 'https://www.docugami.com/' },
+      { name: 'Eiffage Group', url: 'https://www.eiffage.com/' },
+      { name: 'IDEA Group', url: '' },
       { name: 'Injectsense', url: 'https://www.injectsense.com' },
-      { name: 'ConsentPlace', url: 'https://consentplace.com/' }
+      { name: 'NASA · FDL', url: 'https://frontierdevelopmentlab.org/' },
+      { name: 'Renault Group', url: 'https://www.renaultgroup.com/en/news-on-air/news/artificial-intelligence-renault-group-accelerates/' },
+      { name: 'Sodebo', url: '' }
     ].map(c => ({ name: c.name, url: c.url, hasUrl: !!c.url, noUrl: !c.url, target: c.url ? '_blank' : '_self' }));
 
     const metrics = lang === 'fr'

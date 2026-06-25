@@ -133,7 +133,7 @@
 </style>
 </helmet>
 
-<div ref="{{ rootRef }}" style="position:relative;min-height:100vh;background:#F1ECE1;overflow-x:hidden">
+<div ref="{{ rootRef }}" style="position:relative;min-height:100vh;background:#F1ECE1;overflow-x:clip">
 
   <!-- NAV -->
   <header style="position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(241,236,225,0.66);border-bottom:1px solid rgba(23,33,57,0.07)">
@@ -386,7 +386,9 @@ class Component extends DCLogic {
       { thumb: thumb('758a70_b24e1e838a7f46c89224c30ac4d9b9c4~mv2.png'), url: 'https://www.youtube.com/watch?v=G_LsluS2pIw', meta: 'TEDxLILLE', title: 'AI, freedom & the continuity of man', en: 'A personal, cosmic journey on how humans invent ways to transcend their limits — and our duty to make knowledge accessible to all.', fr: "Un parcours personnel et cosmique : comment l'humain invente pour dépasser ses limites — et notre devoir de rendre le savoir accessible à tous." },
       { thumb: thumb('758a70_a9fcb38889fe4e43b28798502f8b6687~mv2.png'), url: 'https://www.youtube.com/live/Ws6KKXz3kzs?si=xz_pppUxv5XDqYfE', meta: 'BELGIAN AI WEEK', title: 'AI as a turning point for civilization', en: 'AI reframed as an information supply chain — from raw data to collective wisdom — designed to amplify human cognition with intent.', fr: "L'IA repensée comme une chaîne d'approvisionnement de l'information — de la donnée brute à la sagesse collective — pour augmenter la cognition humaine." },
       { thumb: thumb('758a70_d98c1a08055a4cec94f0236d18c8361a~mv2.png'), url: 'https://www.youtube.com/watch?v=BQwXh2Zkkg4&t=8s', meta: 'FIRESIDE CHAT', title: 'Unsupervised language modeling', en: 'Conversational AI that learns from scratch — with limited data, no labels and real-world complexity, scaling across support domains.', fr: "De l'IA conversationnelle qui apprend de zéro — avec peu de données, sans labels, dans la complexité réelle, et qui passe à l'échelle." },
-      { thumb: thumb('758a70_23bd6ca165e8462e86384ef6262d86b8~mv2.png'), url: 'https://www.youtube.com/watch?v=13AI80VzXSc', meta: 'LIVESTREAM', title: 'From People2Vec to Emotional AI', en: 'First public mention of Everyone.AI (2016) — from representation learning to emotionally-aware AI.', fr: "Première mention publique d'Everyone.AI (2016) — de l'apprentissage de représentations à une IA sensible aux émotions." }
+      { thumb: thumb('758a70_23bd6ca165e8462e86384ef6262d86b8~mv2.png'), url: 'https://www.youtube.com/watch?v=13AI80VzXSc', meta: 'LIVESTREAM', title: 'From People2Vec to Emotional AI', en: 'First public mention of Everyone.AI (2016) — from representation learning to emotionally-aware AI.', fr: "Première mention publique d'Everyone.AI (2016) — de l'apprentissage de représentations à une IA sensible aux émotions." },
+      { thumb: 'https://img.youtube.com/vi/RPZ0iRVAq7I/hqdefault.jpg', url: 'https://www.youtube.com/watch?v=RPZ0iRVAq7I', meta: 'EXPERT TALK · 2017', title: 'Inside xBrain & applied AI', en: 'An expert conversation on xBrain — the AI platform built to bring conversational and applied intelligence to business.', fr: "Une parole d'expert sur xBrain — la plateforme d'IA pensée pour amener l'intelligence conversationnelle et appliquée à l'entreprise." },
+      { thumb: 'https://img.youtube.com/vi/1c7RdToHHuU/hqdefault.jpg', url: 'https://www.youtube.com/watch?v=1c7RdToHHuU', meta: 'PODCAST · 2023', title: 'A decade building in Silicon Valley', en: 'A candid podcast on 10+ years living and building in Silicon Valley — culture, mindset and a life in applied AI.', fr: "Un podcast à cœur ouvert sur 10+ ans à vivre et construire dans la Silicon Valley — culture, état d'esprit et une vie en IA appliquée." }
     ];
     const talks = talksData.map(tk => ({ thumb: tk.thumb, url: tk.url, meta: tk.meta, title: tk.title, desc: lang === 'fr' ? tk.fr : tk.en }));
 
@@ -395,7 +397,8 @@ class Component extends DCLogic {
       { name: 'Wikipedia', url: 'https://fr.wikipedia.org/wiki/Gr%C3%A9gory_Renard' },
       { name: 'Scholar', url: 'https://scholar.google.com/citations?user=Khit-6kAAAAJ&hl=fr' },
       { name: 'GitHub', url: 'https://github.com/gregrenard/' },
-      { name: 'X', url: 'https://twitter.com/Redo' }
+      { name: 'X', url: 'https://twitter.com/Redo' },
+      { name: 'YouTube', url: 'https://www.youtube.com/@GregoryRenard' }
     ];
     const footerCols = lang === 'fr' ? [
       { h: 'Naviguer', items: [

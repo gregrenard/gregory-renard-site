@@ -127,7 +127,7 @@
 </style>
 </helmet>
 
-<div ref="{{ rootRef }}" style="position:relative;min-height:100vh;background:#F1ECE1;overflow-x:hidden">
+<div ref="{{ rootRef }}" style="position:relative;min-height:100vh;background:#F1ECE1;overflow-x:clip">
 
   <!-- NAV -->
   <header style="position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(241,236,225,0.66);border-bottom:1px solid rgba(23,33,57,0.07)">
@@ -335,7 +335,8 @@ class Component extends DCLogic {
       { name: 'Wikipedia', url: 'https://fr.wikipedia.org/wiki/Gr%C3%A9gory_Renard' },
       { name: 'Scholar', url: 'https://scholar.google.com/citations?user=Khit-6kAAAAJ&hl=fr' },
       { name: 'GitHub', url: 'https://github.com/gregrenard/' },
-      { name: 'X', url: 'https://twitter.com/Redo' }
+      { name: 'X', url: 'https://twitter.com/Redo' },
+      { name: 'YouTube', url: 'https://www.youtube.com/@GregoryRenard' }
     ];
     const footerCols = lang === 'fr' ? [
       { h: 'Naviguer', items: [
