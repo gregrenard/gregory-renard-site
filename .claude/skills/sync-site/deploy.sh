@@ -35,6 +35,9 @@ sed -i '' "s|'Gregory%20Renard%20-%20Home\.dc\.html'|'./'|g" *.dc.html index.htm
 echo "==> 3/6  wire contact form -> Google Sheet (+ honeypot)"
 python3 "$SKILL_DIR/patch-contact-form.py"
 
+echo "==> 3b/6 enrich SEO: 'AI pioneer' title/description + rich Person JSON-LD (home + Why)"
+python3 "$SKILL_DIR/enrich-seo.py"
+
 echo "==> 4/6  clean URLs + static SEO head"
 python3 "$SKILL_DIR/seo-clean-urls.py"
 
