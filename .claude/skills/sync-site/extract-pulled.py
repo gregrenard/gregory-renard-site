@@ -17,9 +17,10 @@ import os, sys, json, glob, re
 
 REPO = os.getcwd()
 PAGES = [
-    "Gregory Renard - Home.dc.html", "AI-Transformation.dc.html", "AI-Lab.dc.html",
-    "Advisory-Execution.dc.html", "Contact.dc.html", "Ethics.dc.html",
-    "Keynote-Speaker.dc.html", "Press.dc.html", "Publications.dc.html", "Why.dc.html",
+    "Gregory Renard - Home v2.dc.html", "Method.dc.html",
+    "AI-Transformation.dc.html", "AI-Lab.dc.html", "Advisory-Execution.dc.html",
+    "Contact.dc.html", "Ethics.dc.html", "Keynote-Speaker.dc.html",
+    "Press.dc.html", "Publications.dc.html", "Why.dc.html",
 ]
 
 

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<title>AI Transformation Method — Gregory Renard</title>
+<meta name="description" content="From AI ambition to operational reality — a proven three-phase Applied AI method that takes enterprises from idea to production at scale.">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<meta name="author" content="Gregory Renard">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gregory-renard.com/Method">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gregory Renard">
+<meta property="og:title" content="AI Transformation Method — Gregory Renard">
+<meta property="og:description" content="From AI ambition to operational reality — a proven three-phase Applied AI method that takes enterprises from idea to production at scale.">
+<meta property="og:url" content="https://gregory-renard.com/Method">
+<meta property="og:image" content="https://gregory-renard.com/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Transformation Method — Gregory Renard">
+<meta name="twitter:description" content="From AI ambition to operational reality — a proven three-phase Applied AI method that takes enterprises from idea to production at scale.">
+<meta name="twitter:image" content="https://gregory-renard.com/assets/og-cover.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400..700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:#F1ECE1;color:#172139;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  h1,h2,h3,blockquote{font-family:'Newsreader', Georgia, 'Times New Roman', serif;font-optical-sizing:auto}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:rgba(148,115,27,0.26);color:#172139}
+  @keyframes grx-floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+  @keyframes grx-pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+  [data-reveal]{opacity:1}
+  .grx-link{color:#94731B;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(148,115,27,0.45);transition:color .2s}
+  .grx-link:hover{color:#172139;text-decoration-color:#94731B}
+  @media (max-width:900px){
+    .grx-navlink{display:none !important}
+    .grx-hero,.grx-2,.grx-essay{grid-template-columns:1fr !important}
+    .grx-hero-img{min-height:280px !important;order:-1}
+    .grx-pad{padding-left:22px !important;padding-right:22px !important}
+  }
+  @media (max-width:620px){
+    .grx-footer{grid-template-columns:1fr 1fr !important;gap:26px !important}
+    .grx-goal{flex-direction:column !important;align-items:flex-start !important}
+  }
+  @media (max-width:400px){ .grx-footer{grid-template-columns:1fr !important} }
+  .grx-nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+  .grx-burger{display:none}
+  .grx-mobile-menu{display:none}
+  @media (max-width:900px){
+    .grx-burger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border-radius:10px;border:1px solid rgba(23,33,57,0.14);background:rgba(23,33,57,0.05);color:#172139;font-size:20px;line-height:1;cursor:pointer}
+    .grx-mobile-menu{background:rgba(241,236,225,0.98);border-top:1px solid rgba(23,33,57,0.08);padding:8px 22px 16px}
+    .grx-nav-toggle:checked ~ .grx-mobile-menu{display:flex;flex-direction:column}
+    .grx-mobile-menu a{padding:14px 4px;font-size:16px;color:#3E4557;border-bottom:1px solid rgba(23,33,57,0.06)}
+    .grx-mobile-menu a:last-child{border-bottom:none}
+  }
+</style>
+<style id="grx-hero-wrap-fix">@media (max-width:900px){h1[style*="nowrap"],.grx-hero-h1{white-space:normal!important}}</style>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>AI Transformation Method — Gregory Renard</title>
+<meta name="description" content="From AI ambition to operational reality — a proven three-phase Applied AI method that takes enterprises from idea to production at scale.">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<meta name="author" content="Gregory Renard">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gregory-renard.com/Method">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gregory Renard">
+<meta property="og:title" content="AI Transformation Method — Gregory Renard">
+<meta property="og:description" content="From AI ambition to operational reality — a proven three-phase Applied AI method that takes enterprises from idea to production at scale.">
+<meta property="og:url" content="https://gregory-renard.com/Method">
+<meta property="og:image" content="https://gregory-renard.com/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Transformation Method — Gregory Renard">
+<meta name="twitter:description" content="From AI ambition to operational reality — a proven three-phase Applied AI method that takes enterprises from idea to production at scale.">
+<meta name="twitter:image" content="https://gregory-renard.com/assets/og-cover.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400..700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:#F1ECE1;color:#172139;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  h1,h2,h3,blockquote{font-family:'Newsreader', Georgia, 'Times New Roman', serif;font-optical-sizing:auto}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:rgba(148,115,27,0.26);color:#172139}
+  @keyframes grx-floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+  @keyframes grx-pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+  [data-reveal]{opacity:1}
+  .grx-link{color:#94731B;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(148,115,27,0.45);transition:color .2s}
+  .grx-link:hover{color:#172139;text-decoration-color:#94731B}
+  @media (max-width:900px){
+    .grx-navlink{display:none !important}
+    .grx-hero,.grx-2,.grx-essay{grid-template-columns:1fr !important}
+    .grx-hero-img{min-height:280px !important;order:-1}
+    .grx-pad{padding-left:22px !important;padding-right:22px !important}
+  }
+  @media (max-width:620px){
+    .grx-footer{grid-template-columns:1fr 1fr !important;gap:26px !important}
+    .grx-goal{flex-direction:column !important;align-items:flex-start !important}
+  }
+  @media (max-width:400px){ .grx-footer{grid-template-columns:1fr !important} }
+  .grx-nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+  .grx-burger{display:none}
+  .grx-mobile-menu{display:none}
+  @media (max-width:900px){
+    .grx-burger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border-radius:10px;border:1px solid rgba(23,33,57,0.14);background:rgba(23,33,57,0.05);color:#172139;font-size:20px;line-height:1;cursor:pointer}
+    .grx-mobile-menu{background:rgba(241,236,225,0.98);border-top:1px solid rgba(23,33,57,0.08);padding:8px 22px 16px}
+    .grx-nav-toggle:checked ~ .grx-mobile-menu{display:flex;flex-direction:column}
+    .grx-mobile-menu a{padding:14px 4px;font-size:16px;color:#3E4557;border-bottom:1px solid rgba(23,33,57,0.06)}
+    .grx-mobile-menu a:last-child{border-bottom:none}
+  }
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="position:relative;min-height:100vh;background:#F1ECE1;overflow-x:hidden">
+
+  <!-- NAV -->
+  <header style="position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(241,236,225,0.66);border-bottom:1px solid rgba(23,33,57,0.07)">
+    <nav class="grx-pad" style="max-width:1240px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;gap:26px">
+      <a href="./" style="display:flex;align-items:center;gap:11px;margin-right:auto">
+        <img src="assets/freedom-tree.png" alt="Freedom.AI" style="width:34px;height:34px;object-fit:contain;flex:none">
+        <span style="display:flex;flex-direction:column;gap:1px;line-height:1.1;white-space:nowrap"><span style="font-weight:700;font-size:15px;letter-spacing:-0.01em">Gregory Renard</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.13em;text-transform:uppercase;color:#94731B">Applied AI Architect · Since 1996</span></span>
+      </a>
+      <a class="grx-navlink" href="Method" style="font-size:14px;color:#172139;font-weight:600">{{ t.nav_method }}</a>
+      <a class="grx-navlink" href="Why" style="font-size:14px;color:#3E4557">{{ t.nav_why }}</a>
+      <a class="grx-navlink" href="Ethics" style="font-size:14px;color:#3E4557">{{ t.nav_ethics }}</a>
+      <a class="grx-navlink" href="Keynote-Speaker" style="font-size:14px;color:#3E4557">{{ t.nav_speaking }}</a>
+      <a class="grx-navlink" href="Publications" style="font-size:14px;color:#3E4557">{{ t.nav_writing }}</a>
+      <a href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#F4EFE3;background:#172139;padding:9px 17px;border-radius:3px;box-shadow:0 6px 18px rgba(23,33,57,0.20)" style-hover="background:#28344F">{{ t.nav_cta }} ↗</a>
+      <button onClick="{{ toggleLang }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:#172139;background:rgba(148,115,27,0.16);border:1px solid rgba(148,115,27,0.42);border-radius:100px;padding:7px 13px;cursor:pointer">{{ langLabel }}</button>
+      <label for="grx-nav-toggle" class="grx-burger" aria-label="Open menu">☰</label>
+    </nav>
+    <input type="checkbox" id="grx-nav-toggle" class="grx-nav-toggle" aria-hidden="true">
+    <div class="grx-mobile-menu">
+      <a href="Method">{{ t.nav_method }}</a>
+      <a href="Why">{{ t.nav_why }}</a>
+      <a href="Ethics">{{ t.nav_ethics }}</a>
+      <a href="Keynote-Speaker">{{ t.nav_speaking }}</a>
+      <a href="Publications">{{ t.nav_writing }}</a>
+      <a href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer">{{ t.nav_cta }} ↗</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="grx-pad" style="max-width:1000px;margin:0 auto;padding:96px 32px 52px;text-align:center">
+    <div class="grx-hero" style="display:block">
+      <div data-reveal>
+        <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#94731B;margin-bottom:24px">
+          <span style="width:36px;height:1px;background:#94731B;display:inline-block"></span>{{ t.eyebrow }}
+        </div>
+        <h1 style="font-size:clamp(19px,4vw,46px);line-height:1.05;letter-spacing:-0.032em;font-weight:600;white-space:nowrap">{{ t.heroTitle }} <span style="color:#94731B;font-style:italic">{{ t.heroTitleEm }}</span></h1>
+        <p style="margin-top:22px;font-size:clamp(16px,1.4vw,19px);line-height:1.6;color:#3E4557;max-width:880px;margin-left:auto;margin-right:auto">{{ t.heroSub }}</p>
+        <p data-reveal style="margin-top:30px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#9A9282">{{ t.proofLine }}</p>
+        <div data-reveal style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:38px">
+          <sc-for list="{{ toc }}" as="tc" hint-placeholder-count="3">
+            <a href="{{ tc.href }}" onClick="{{ jumpTo }}" style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14.5px;font-weight:600;letter-spacing:0.01em;color:#172139;border:1px solid rgba(148,115,27,0.55);border-radius:100px;padding:13px 24px;background:rgba(148,115,27,0.14);box-shadow:0 6px 22px rgba(148,115,27,0.18);transition:all .2s" style-hover="border-color:#94731B;color:#172139;background:rgba(148,115,27,0.32);transform:translateY(-2px);box-shadow:0 12px 32px rgba(148,115,27,0.32)">{{ tc.label }} <span style="font-size:17px">↓</span></a>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE SHIFT -->
+  <section class="grx-pad" style="max-width:1100px;margin:0 auto;padding:8px 32px 22px">
+    <div data-reveal="" style="border-top:1px solid rgba(23,33,57,0.1);padding-top:34px">
+      <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#94731B;margin-bottom:14px"><span style="width:36px;height:1px;background:#94731B;display:inline-block"></span>{{ t.introKicker }}</div>
+      <h2 style="font-size:clamp(26px,3vw,40px);line-height:1.1;letter-spacing:-0.025em;font-weight:600;max-width:760px">{{ t.introHeading }}</h2>
+      <p style="margin-top:16px;font-size:17px;line-height:1.68;color:#3E4557;max-width:900px">{{ t.introBody }}</p>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM -->
+  <section id="problem" class="grx-pad" style="max-width:1240px;margin:0 auto;padding:14px 32px 16px;scroll-margin-top:90px">
+    <div data-reveal style="text-align:center;max-width:820px;margin:0 auto 34px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#94731B;margin-bottom:14px">{{ t.problemKicker }}</div>
+      <h2 style="font-size:clamp(26px,3vw,42px);line-height:1.08;letter-spacing:-0.025em;font-weight:600">{{ t.problemTitle }}</h2>
+      <p style="margin-top:16px;font-size:16px;line-height:1.62;color:#3E4557">{{ t.problemBody }}</p>
+    </div>
+    <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+      <sc-for list="{{ t.problems }}" as="pr" hint-placeholder-count="3">
+        <div style="border:1px solid rgba(23,33,57,0.09);border-radius:4px;background:rgba(23,33,57,0.02);padding:24px 22px">
+          <div style="font-size:16px;font-weight:700;letter-spacing:-0.01em;color:#172139">{{ pr.t }}</div>
+          <p style="margin-top:8px;font-size:14px;line-height:1.5;color:#6C7180">{{ pr.d }}</p>
+        </div>
+      </sc-for>
+    </div>
+    <p data-reveal style="text-align:center;margin-top:30px;font-size:15px;line-height:1.6;color:#3E4557;max-width:780px;margin-left:auto;margin-right:auto">{{ t.problemBridge }} <a class="grx-link" href="#essay" onClick="{{ scrollToEssay }}" style="font-weight:600">{{ t.problemBridgeCta }} →</a></p>
+  </section>
+
+  <!-- PLAYBOOK PHASES -->
+  <section id="method" class="grx-pad" style="max-width:1240px;margin:0 auto;padding:50px 32px 30px;scroll-margin-top:90px">
+    <div data-reveal style="text-align:center;margin-bottom:40px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#94731B;margin-bottom:14px">{{ t.playbookKicker }}</div>
+      <h2 style="font-size:clamp(28px,3vw,44px);line-height:1.08;letter-spacing:-0.025em;font-weight:600">{{ t.playbookTitle }}</h2>
+      <p style="margin:16px auto 0;font-size:16px;line-height:1.6;color:#3E4557;max-width:760px">{{ t.methodIntro }}</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <sc-for list="{{ phases }}" as="ph" hint-placeholder-count="3">
+        <article data-reveal style="border:1px solid rgba(23,33,57,0.09);border-radius:4px;background:rgba(23,33,57,0.02);padding:32px 34px;overflow:hidden">
+          <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap">
+            <div style="flex:none;min-width:96px;text-align:center">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#94731B;border:1px solid rgba(148,115,27,0.35);border-radius:3px;padding:12px 16px">{{ ph.tag }}</div>
+              <div style="margin-top:9px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.04em;color:#94731B">{{ ph.when }}</div>
+            </div>
+            <div style="flex:1;min-width:260px">
+              <h3 style="font-size:clamp(20px,2vw,26px);font-weight:700;letter-spacing:-0.015em;line-height:1.15">{{ ph.title }}</h3>
+              <p style="margin-top:12px;font-size:15px;line-height:1.6;color:#3E4557;max-width:760px">{{ ph.body }}</p>
+              <sc-if value="{{ ph.hasBullets }}" hint-placeholder-val="{{ true }}">
+                <ul style="margin:16px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:1fr;gap:9px">
+                  <sc-for list="{{ ph.bullets }}" as="b" hint-placeholder-count="4">
+                    <li style="display:flex;gap:10px;font-size:14px;line-height:1.5;color:#3E4557"><span style="color:#94731B;flex:none">▸</span>{{ b }}</li>
+                  </sc-for>
+                </ul>
+              </sc-if>
+              <div class="grx-goal" style="display:flex;align-items:center;gap:12px;margin-top:20px;padding:14px 18px;border-radius:3px;background:rgba(148,115,27,0.08);border:1px solid rgba(148,115,27,0.22)">
+                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#94731B;flex:none">{{ t.goalLabel }}</span>
+                <span style="font-size:14.5px;line-height:1.5;color:#172139;font-weight:500">{{ ph.goal }}</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- PROVEN RESULTS -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:30px 32px 8px">
+    <div data-reveal style="border:1px solid rgba(148,115,27,0.22);border-radius:4px;background:linear-gradient(120deg,rgba(148,115,27,0.08),rgba(23,33,57,0.015));padding:40px 40px">
+      <div style="text-align:center;margin-bottom:28px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#94731B;margin-bottom:12px">{{ t.resultsKicker }}</div>
+        <h2 style="font-size:clamp(24px,2.6vw,36px);line-height:1.1;letter-spacing:-0.025em;font-weight:600">{{ t.resultsTitle }}</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:rgba(23,33,57,0.08);border:1px solid rgba(23,33,57,0.08);border-radius:4px;overflow:hidden">
+        <sc-for list="{{ t.results }}" as="r" hint-placeholder-count="4">
+          <div style="background:#FAF7EF;padding:24px 20px;text-align:center">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:clamp(22px,2.4vw,30px);font-weight:600;color:#94731B">{{ r.k }}</div>
+            <div style="margin-top:6px;font-size:13px;line-height:1.4;color:#6C7180">{{ r.v }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <p style="text-align:center;margin-top:22px;font-size:14.5px;line-height:1.6;color:#3E4557">{{ t.resultsNote }} <a class="grx-link" href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer" style="font-weight:600">{{ t.resultsCta }} ↗</a></p>
+    </div>
+  </section>
+
+  <!-- GO DEEPER -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:50px 32px 0;text-align:center">
+    <div data-reveal>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#94731B;margin-bottom:12px">{{ t.deeperKicker }}</div>
+      <h2 style="font-size:clamp(24px,2.8vw,38px);line-height:1.1;letter-spacing:-0.025em;font-weight:600">{{ t.deeperTitle }}</h2>
+    </div>
+  </section>
+
+  <!-- ESSAY -->
+  <section id="essay" class="grx-pad" style="max-width:1240px;margin:0 auto;padding:20px 32px 20px;scroll-margin-top:90px">
+    <div data-reveal style="border:1px solid rgba(148,115,27,0.28);border-radius:4px;background:linear-gradient(120deg,rgba(148,115,27,0.08),rgba(23,33,57,0.015));padding:30px 32px;margin-bottom:22px">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.06em;color:#94731B;margin-bottom:8px">{{ t.essayWatchKicker }}</div>
+      <h3 style="font-size:clamp(19px,1.9vw,24px);font-weight:600;letter-spacing:-0.01em;line-height:1.18">{{ t.audioTitle }}</h3>
+      <p style="margin-top:11px;margin-bottom:18px;font-size:14.5px;line-height:1.62;color:#3E4557;max-width:780px">{{ t.essayWatchNote }}</p>
+      <video src="{{ audioSrc }}" controls="{{ true }}" playsinline preload="metadata" style="width:100%;max-width:560px;border-radius:3px;border:1px solid rgba(148,115,27,0.25);background:#0E1736;display:block;margin:0 auto;box-shadow:0 16px 36px rgba(23,33,57,0.16)"></video>
+      <a class="grx-link" href="https://notebooklm.google.com/notebook/e808a360-1b9e-49a3-a7c4-fae49f4032c3" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:13px;font-size:12.5px">{{ audioNotebookLink }}</a>
+    </div>
+
+    <div class="grx-essay" data-reveal style="display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;border:1px solid rgba(23,33,57,0.09);border-radius:4px;background:rgba(23,33,57,0.02);padding:36px 38px">
+      <div style="display:flex;gap:16px;flex:none">
+        <a href="https://docs.google.com/document/d/10ne6XzLIRMr2H3XNg67xB8pn5kArSaiEfNI3n0T8Qho/edit?usp=sharing" target="_blank" rel="noopener noreferrer" style="display:block;transition:transform .3s" style-hover="transform:translateY(-4px)"><img src="{{ essay1 }}" alt="Essay cover — Work in the Age of AI, Part 1" style="width:160px;height:auto;border-radius:8px;box-shadow:0 16px 36px rgba(23,33,57,0.16)"></a>
+        <a href="https://docs.google.com/document/d/18CTvuogtTzfLazCSEopB_GmkoQSpIF1JprJJcTeKRJQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer" style="display:block;transition:transform .3s" style-hover="transform:translateY(-4px)"><img src="{{ essay2 }}" alt="Essay cover — Work in the Age of AI, Part 2" style="width:160px;height:auto;border-radius:8px;box-shadow:0 16px 36px rgba(23,33,57,0.16)"></a>
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.06em;color:#94731B;margin-bottom:12px">{{ t.essayMeta }}</div>
+        <h3 style="font-size:clamp(22px,2.2vw,30px);font-weight:600;letter-spacing:-0.02em;line-height:1.12">{{ t.essayTitle }}</h3>
+        <p style="margin-top:14px;font-size:15.5px;line-height:1.62;color:#3E4557">“{{ t.essayQuote }}”</p>
+        <div style="display:flex;flex-wrap:wrap;gap:18px;margin-top:20px;font-size:14px">
+          <a class="grx-link" href="https://docs.google.com/document/d/10ne6XzLIRMr2H3XNg67xB8pn5kArSaiEfNI3n0T8Qho/edit?usp=sharing" target="_blank" rel="noopener noreferrer">{{ t.essayP1 }}</a>
+          <a class="grx-link" href="https://docs.google.com/document/d/18CTvuogtTzfLazCSEopB_GmkoQSpIF1JprJJcTeKRJQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer">{{ t.essayP2 }}</a>
+          <a class="grx-link" href="https://notebooklm.google.com/notebook/ee09e85a-09b8-46dc-aea1-b99a4d210f45/artifact/52320ea0-6881-4612-881f-81db59d3cd0b" target="_blank" rel="noopener noreferrer">{{ t.essayPodcast }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:30px 32px 20px">
+    <div class="grx-2" data-reveal style="display:grid;grid-template-columns:0.9fr 1.1fr;gap:40px;align-items:center;border:1px solid rgba(148,115,27,0.22);border-radius:4px;background:linear-gradient(120deg,rgba(148,115,27,0.08),rgba(23,33,57,0.015));padding:40px 40px">
+      <div style="display:flex;justify-content:center"><img src="{{ bookImg }}" alt="Otium of Work — the book" style="width:300px;height:auto;border-radius:4px;box-shadow:0 24px 50px rgba(23,33,57,0.16);animation:grx-floaty 6s ease-in-out infinite"></div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.06em;color:#94731B;margin-bottom:12px">{{ t.bookMeta }}</div>
+        <h3 style="font-size:clamp(24px,2.4vw,34px);font-weight:600;letter-spacing:-0.02em;line-height:1.1">{{ t.bookTitle }}</h3>
+        <p style="margin-top:8px;font-size:13px;line-height:1.5;color:#6C7180;font-style:italic">{{ t.bookWorkingTitle }} <a class="grx-link" href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer" style="font-style:normal;font-weight:600">{{ t.bookWorkingTitleLink }} →</a></p>
+        <p style="margin-top:14px;font-size:15.5px;line-height:1.62;color:#3E4557;max-width:560px">{{ t.bookBody }}</p>
+        <div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap">
+          <sc-for list="{{ t.bookParts }}" as="p" hint-placeholder-count="3">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#3E4557;border:1px solid rgba(23,33,57,0.14);border-radius:100px;padding:7px 14px">{{ p }}</span>
+          </sc-for>
+        </div>
+        <p style="margin-top:18px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#94731B">{{ t.bookRelease }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNER -->
+  <section class="grx-pad" style="max-width:1100px;margin:0 auto;padding:46px 32px 20px;text-align:center">
+    <p data-reveal style="font-size:16px;line-height:1.66;color:#3E4557;max-width:820px;margin:0 auto"><sc-for list="{{ rich.partner }}" as="seg" hint-placeholder-count="2"><sc-if value="{{ seg.isLink }}" hint-placeholder-val="{{ true }}"><a class="grx-link" href="{{ seg.url }}" target="_blank" rel="noopener noreferrer">{{ seg.t }}</a></sc-if><sc-if value="{{ seg.notLink }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p>
+    <div data-reveal style="display:flex;gap:44px;justify-content:center;align-items:center;margin-top:24px;flex-wrap:wrap">
+      <a href="https://freedom.ai/" target="_blank" rel="noopener noreferrer" style="display:inline-flex" style-hover="opacity:1"><img src="{{ freedomLogo }}" alt="Freedom.AI Consulting LLC" style="height:84px;width:auto;display:block;filter:brightness(0);opacity:0.88"></a>
+      <a href="https://www.realchange.com" target="_blank" rel="noopener noreferrer" style="display:inline-flex" style-hover="opacity:1"><img src="{{ realchangeLogo }}" alt="RealChange" style="height:30px;width:auto;display:block;filter:brightness(0);opacity:0.88"></a>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:70px 32px 90px;text-align:center">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#94731B;margin-bottom:16px">{{ t.contactLoc }}</div>
+    <h2 style="font-size:clamp(24px,3vw,40px);line-height:1.12;letter-spacing:-0.025em;font-weight:600;max-width:1040px;margin:0 auto">{{ t.contactTitle }}</h2>
+    <a href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:10px;margin-top:30px;font-weight:600;font-size:16px;color:#F4EFE3;background:#172139;padding:16px 32px;border-radius:3px;box-shadow:0 14px 40px rgba(23,33,57,0.22)" style-hover="background:#28344F;transform:translateY(-2px)">{{ t.contactCta }} ↗</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="border-top:1px solid rgba(23,33,57,0.08);background:#F1ECE1">
+    <div class="grx-footer grx-pad" style="max-width:1240px;margin:0 auto;padding:52px 32px 30px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px">
+      <div>
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:16px">
+          <img src="assets/freedom-tree.png" alt="Freedom.AI" style="width:30px;height:30px;object-fit:contain;flex:none">
+          <span style="font-weight:700;font-size:15px">Gregory Renard</span>
+        </div>
+        <p style="font-size:13.5px;line-height:1.6;color:#6C7180;max-width:280px">{{ t.footerBlurb }}</p>
+        <div style="display:flex;gap:14px;margin-top:18px">
+          <sc-for list="{{ socials }}" as="s" hint-placeholder-count="5"><a href="{{ s.url }}" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#6C7180" style-hover="color:#94731B">{{ s.name }}</a></sc-for>
+        </div>
+      </div>
+      <sc-for list="{{ footerCols }}" as="col" hint-placeholder-count="3">
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#9A9282;margin-bottom:14px">{{ col.h }}</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <sc-for list="{{ col.items }}" as="it" hint-placeholder-count="4">
+              <a href="{{ it.url }}" target="{{ it.target }}" rel="noopener noreferrer" style="font-size:14px;color:#3E4557" style-hover="color:#172139">{{ it.label }}</a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border-top:1px solid rgba(23,33,57,0.06)">
+      <div class="grx-pad" style="max-width:1240px;margin:0 auto;padding:18px 32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:12.5px;color:#9A9282">
+        <span>{{ t.copyright }}</span>
+        <span style="font-family:'JetBrains Mono',monospace">SF · Silicon Valley · Paris · Bruxelles</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'en', audioOpen: false };
+  componentDidMount() { try { const l = localStorage.getItem('grx_lang'); if (l) this.setState({ lang: l }); try { document.documentElement.lang = l || 'en'; } catch (e) {} } catch (e) {} }
+  setLang(l) { try { localStorage.setItem('grx_lang', l); } catch (e) {} this.setState({ lang: l }); }
+  parseLinks(str) {
+    if (!str) return [];
+    const out = []; const re = /\[([^\]]+)\]\(([^)]+)\)/g; let last = 0, m;
+    while ((m = re.exec(str))) {
+      if (m.index > last) out.push({ t: str.slice(last, m.index), notLink: true });
+      out.push({ t: m[1], url: m[2], isLink: true });
+      last = re.lastIndex;
+    }
+    if (last < str.length) out.push({ t: str.slice(last), notLink: true });
+    return out;
+  }
+
+  renderVals() {
+    const lang = this.state.lang;
+    const C = {
+      en: {
+        introKicker: 'The shift',
+        introHeading: 'AI is no longer just a tool.',
+        introBody: 'It is becoming an operational layer integrated into workflows, decision systems, and organizational memory. The challenge is no longer access to AI — it is the ability to operationalize it meaningfully, safely, and at scale.',
+        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Advisory & Execution', nav_lab: 'AI Lab', nav_why: 'Story', nav_method: 'Method', nav_ethics: 'Ethics', nav_speaking: 'Talks', nav_writing: 'Publications', nav_cta: 'Freedom.AI',
+        eyebrow: 'Cognitive Orchestration™',
+        heroTitle: 'From AI ambition to', heroTitleEm: 'operational reality.',
+        heroSub: "Most organizations stall at the same place: pilots multiply, budgets grow, yet AI never reaches production with real ROI. After 30 years building applied AI at global scale, I turned that recurring failure into a method — Cognitive Orchestration™ — a proven three-phase path from AI ambition to systems live in production, with measurable impact and governance built in.",
+        ctaPrimary: "Let's Build", ctaSecondary: 'Read the essay',
+        pullQuote: 'If AI is rewriting the rules of productivity, we must rewrite our relationship with work itself.',
+        playbookKicker: 'The solution', playbookTitle: 'Cognitive Orchestration™ — from ambition to production',
+        goalLabel: 'OUTCOME',
+        proofLine: 'Method successfully deployed with Groupe Eiffage, Sodebo, Actual, Groupe IDEA, AAICO (now Opus) & many more',
+        problemKicker: 'The problem',
+        problemTitle: 'Most companies never get AI into production — let alone a positive ROI.',
+        problemBody: "Pilots multiply, budgets grow — and AI stays stuck in slideware and endless POCs. The gap is rarely the technology. It's the absence of a method that connects executive vision, real data, governance and adoption.",
+        problems: [
+          { t: 'Stalled POCs', d: 'Promising pilots that never ship to production or scale.' },
+          { t: 'No measurable ROI', d: 'AI spend with no clear, audited business impact.' },
+          { t: 'No governance', d: 'Black-box tools — compliance and adoption left to chance.' }
+        ],
+        problemBridge: 'AI transformation is already here. The real question: do you have a partner who has lived it for 30 years — and thought deeply about what it does to work?',
+        problemBridgeCta: 'Read the essays & listen to the podcast',
+        methodIntro: 'A proven, end-to-end method — refined over 30 years and deployed at global scale — taking you from ambition to AI live in production.',
+        resultsKicker: 'Proven results',
+        resultsTitle: 'Outcomes, not slideware.',
+        results: [
+          { k: '+30–50%', v: 'efficiency gains' },
+          { k: '−20–40%', v: 'operational cost' },
+          { k: '8–10 wks', v: 'to first measurable impact' },
+          { k: '8,000+', v: 'employees onboarded to GenAI' }
+        ],
+        resultsNote: 'Deployed across automotive, construction, banking, deep-tech and space science.',
+        resultsCta: 'Put it to work with Freedom.AI',
+        deeperKicker: 'Go deeper',
+        deeperTitle: 'The thinking behind the method',
+        essayMeta: 'Essay · Part 1/2 (Feb 2024) · Part 2/2 (Mar 2026)',
+        essayTitle: 'Work in the Age of AI',
+        essayWatchKicker: '▶ Watch first · English video',
+        essayWatchNote: 'The two essays below are in French only. English readers — start here: this short NotebookLM video walks through the full content in English.',
+        essayQuote: "For over two decades, I've harnessed AI to disrupt markets and augment my capabilities. In this essay, I've distilled my experiences, lessons learned, and vision for the future of AI and work.",
+        essayP1: 'Essay — Part 1 (FR only) ↗', essayP2: 'Essay — Part 2 (FR only) ↗', essayPodcast: 'Podcast of the essays — FR (NotebookLM) ↗', essayNotebook: 'Play with the NotebookLM (podcast, flashcards, quiz) ↗',
+        audioTitle: 'The Technological Capital — Redefining Work in the Age of AI', audioMeta: '▶ WATCH · NOTEBOOKLM VIDEO · ~6 MIN',
+        bookMeta: 'The book · Companion to Cognitive Orchestration™',
+        bookTitle: 'Otium of Work',
+        bookWorkingTitle: 'Working title — likely to be renamed.',
+        bookWorkingTitleLink: 'See the book in progress with Marylène Delbourg-Delphis',
+        bookBody: 'A concise field guide for leaders who want to turn AI vision into measurable results. Built on 30 years of applied AI, it distills what truly works — and what to avoid — when bringing AI into real production, with clear frameworks, real examples and lessons learned.',
+        bookParts: ['Understand', 'Produce', 'Reinvent'],
+        bookRelease: '🗓 Expected release: H2-2026.',
+        contactLoc: 'SAN FRANCISCO · PARIS · BRUSSELS',
+        contactTitle: 'This is the method I\u2019ve spent 30 years refining. When you\u2019re ready to put it into production, my team and I deliver it through Freedom.AI.',
+        contactCta: 'Put this method to work',
+        footerBlurb: 'Hands-on AI architect & Cognitive Orchestration since 1996. Building operational, AI-native organizations.',
+        copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
+      },
+      fr: {
+        introKicker: 'Le basculement',
+        introHeading: "L'IA n'est plus un simple outil.",
+        introBody: "Elle devient une couche opérationnelle intégrée aux workflows, aux systèmes de décision et à la mémoire de l'organisation. L'enjeu n'est plus l'accès à l'IA — c'est la capacité à l'opérationnaliser de façon utile, sûre et à grande échelle.",
+        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Conseil & Exécution', nav_lab: 'AI Lab', nav_why: 'Parcours', nav_method: 'Méthode', nav_ethics: 'Éthique', nav_speaking: 'Conférences', nav_writing: 'Publications', nav_cta: 'Freedom.AI',
+        eyebrow: 'Cognitive Orchestration™',
+        heroTitle: "De l'ambition IA à la", heroTitleEm: 'réalité opérationnelle.',
+        heroSub: "La plupart des organisations bloquent au même endroit : les pilotes se multiplient, les budgets gonflent, mais l'IA n'atteint jamais la production avec un vrai ROI. Après 30 ans à construire de l'IA appliquée à l'échelle mondiale, j'ai transformé cet échec récurrent en méthode — Cognitive Orchestration™ — un chemin éprouvé en trois phases, de l'ambition IA à des systèmes en production, avec impact mesurable et gouvernance intégrée.",
+        ctaPrimary: 'Construisons', ctaSecondary: "Lire l'essai",
+        pullQuote: "Si l'IA réécrit les règles de la productivité, nous devons réécrire notre rapport au travail lui-même.",
+        playbookKicker: 'La solution', playbookTitle: 'Cognitive Orchestration™ — de l’ambition à la production',
+        goalLabel: 'RÉSULTAT',
+        proofLine: 'Méthode déployée avec succès chez Groupe Eiffage, Sodebo, Actual, Groupe IDEA, AAICO (devenu Opus) & bien d’autres',
+        problemKicker: 'Le problème',
+        problemTitle: "La plupart des entreprises n'arrivent jamais à mettre l'IA en production — encore moins avec un ROI positif.",
+        problemBody: "Les pilotes se multiplient, les budgets gonflent — et l'IA reste bloquée en slideware et en POC sans fin. Le frein est rarement la technologie. C'est l'absence d'une méthode qui relie vision exécutive, données réelles, gouvernance et adoption.",
+        problems: [
+          { t: 'POC qui stagnent', d: 'Des pilotes prometteurs qui ne passent jamais en production.' },
+          { t: 'ROI non mesurable', d: 'Des dépenses IA sans impact métier clair et audité.' },
+          { t: 'Aucune gouvernance', d: 'Des outils boîte noire — conformité et adoption laissées au hasard.' }
+        ],
+        problemBridge: "La transformation IA est déjà là. La vraie question : avez-vous un partenaire qui l'a vécue depuis 30 ans — et qui a réfléchi en profondeur à ce qu'elle fait au travail ?",
+        problemBridgeCta: 'Lire les essais & écouter le podcast',
+        methodIntro: "Une méthode éprouvée, de bout en bout — affinée sur 30 ans et déployée à grande échelle — qui vous mène de l'ambition à l'IA en production.",
+        resultsKicker: 'Résultats prouvés',
+        resultsTitle: 'Des résultats, pas des slides.',
+        results: [
+          { k: '+30–50%', v: "gains d'efficacité" },
+          { k: '−20–40%', v: 'coûts opérationnels' },
+          { k: '8–10 sem.', v: 'pour un premier impact mesurable' },
+          { k: '8 000+', v: 'collaborateurs formés à la GenAI' }
+        ],
+        resultsNote: "Déployée dans l'automobile, la construction, la banque, la deep-tech et les sciences spatiales.",
+        resultsCta: 'Le mettre en œuvre · Freedom.AI',
+        deeperKicker: 'Pour aller plus loin',
+        deeperTitle: 'La pensée derrière la méthode',
+        essayMeta: 'Essai · Partie 1/2 (fév. 2024) · Partie 2/2 (mars 2026)',
+        essayWatchKicker: '▶ À regarder d’abord · Vidéo en anglais',
+        essayWatchNote: 'Les deux essais ci-dessous sont en français uniquement. Pour les lecteurs anglophones : cette courte vidéo NotebookLM présente l’intégralité du contenu en anglais.',
+        essayTitle: 'Le travail à l\u2019ère de l\u2019IA',
+        essayQuote: "Depuis plus de vingt ans, j'utilise l'IA pour disrupter des marchés et augmenter mes capacités. Dans cet essai, j'ai distillé mes expériences, mes leçons et ma vision du futur de l'IA et du travail.",
+        essayP1: 'Essai — Partie 1 (FR only) ↗', essayP2: 'Essai — Partie 2 (FR only) ↗', essayPodcast: 'Podcast des essais — FR (NotebookLM) ↗', essayNotebook: 'Explorer le NotebookLM (podcast, flashcards, quiz) ↗',
+        audioTitle: 'The Technological Capital — Redéfinir le travail à l\u2019ère de l\u2019IA', audioMeta: '▶ REGARDER · VIDÉO NOTEBOOKLM · ~6 MIN',
+        bookMeta: 'Le livre · Compagnon de Cognitive Orchestration™',
+        bookTitle: 'Otium of Work',
+        bookWorkingTitle: 'Titre de travail — sera probablement renommé.',
+        bookWorkingTitleLink: 'Voir le livre en cours avec Marylène Delbourg-Delphis',
+        bookBody: "Un guide concis pour les dirigeants qui veulent transformer la vision IA en résultats mesurables. Bâti sur 30 ans d'IA appliquée, il distille ce qui fonctionne vraiment — et ce qu'il faut éviter — pour amener l'IA en production réelle, avec des cadres clairs, des exemples concrets et des leçons apprises.",
+        bookParts: ['Comprendre', 'Produire', 'Réinventer'],
+        bookRelease: '🗓 Sortie prévue : S2-2026.',
+        contactLoc: 'SAN FRANCISCO · PARIS · BRUXELLES',
+        contactTitle: "C'est la méthode que j'affine depuis 30 ans. Quand vous serez prêt à la mettre en production, mon équipe et moi la déployons via Freedom.AI.",
+        contactCta: 'Mettre la méthode en œuvre',
+        footerBlurb: "Architecte IA de terrain & Orchestration Cognitive depuis 1996. Construire des organisations opérationnelles, AI-native.",
+        copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
+      }
+    };
+    const t = C[lang];
+    const toc = [
+      { href: '#problem', label: lang === 'fr' ? 'Le problème' : 'The problem' },
+      { href: '#method', label: lang === 'fr' ? 'La solution' : 'The solution' },
+      { href: '#essay', label: lang === 'fr' ? "L'essai & le podcast" : 'The essay & podcast' }
+    ];
+
+    const phasesData = lang === 'fr' ? [
+      { tag: 'Phase 1', title: 'Comprendre, cadrer & aligner le leadership', body: "Avant de construire quoi que ce soit, on répond au « pourquoi » : pourquoi l'IA, pourquoi maintenant, et quelle organisation vous voulez devenir. Via des ateliers exécutifs, on clarifie la vision, on pose les fondations culturelles et stratégiques, et on cartographie — avec le diagnostic FAI-Score™ — là où l'IA crée une valeur tangible et mesurable.", bullets: [], goal: "Clarté du cap, alignement du leadership et une étoile polaire IA qui inspire et déclenche l'action." },
+      { tag: 'Phase 2', title: 'Co-concevoir, prototyper & livrer des quick wins', body: "L'IA cesse d'être un concept pour devenir un levier de performance mesurable. En ateliers de qualification (métier + IT), on isole les opportunités à fort ROI et on déploie 2 à 3 IA-collègues ou workflows agentiques opérationnels, bâtis sur vos données et systèmes.", bullets: ['Cartographie des processus & contrôle de la maturité data', 'Co-création des cas d\u2019usage avec vos équipes (Finance, RH, Ops, Supply Chain…)', 'RAG sécurisés, copilotes et pipelines d\u2019automatisation déployés chez vous', 'Observabilité, gouvernance et conformité dès le premier jour', 'Tableau de bord KPI « avant / après » : temps gagné, précision, adoption'], goal: "Impact mesurable en 8 à 10 semaines — efficacité +30 à 50 %, coûts −20 à 40 %, adoption prouvée." },
+      { tag: 'Phase 3', title: 'Industrialiser, gouverner & pérenniser', body: "Le passage à l'échelle : un engagement de 12 à 36 mois pour industrialiser, gouverner et pérenniser l'IA dans toute l'entreprise, en partenariat avec vos équipes dirigeantes et techniques.", bullets: ['Cadre de gouvernance IA dédié (rôles, RACI, standards, sécurité, éthique)', 'Pipelines MLOps / LLMOps : cycle de vie, monitoring, gestion de la dérive', 'Tableaux de bord d\u2019observabilité (performance, biais, conformité, coûts)', 'Alignement continu avec l\u2019EU AI Act, le RGPD et l\u2019audit interne', 'Coaching de vos champions IA pour une appropriation progressive'], goal: "Valeur durable, pleine appropriation par les équipes internes, et un écosystème IA résilient qui s'améliore dans le temps." }
+    ] : [
+      { tag: 'Phase 1', title: 'Understand, Frame & Align Leadership', body: "Before building anything, we answer the most important question: why. Why AI, why now, and what kind of company you want to become. Through executive workshops we clarify the vision, establish the cultural and strategic foundations, and — using our FAI-Score™ readiness diagnostic — map where AI can create tangible, measurable value.", bullets: [], goal: 'Clarity of purpose, leadership alignment, and a strategic north star for AI that inspires and drives action.' },
+      { tag: 'Phase 2', title: 'Co-Design, Prototype & Deliver Quick Wins', body: "AI stops being a concept and becomes a measurable driver of performance. In hands-on qualification workshops (business + IT) we isolate high-ROI opportunities and deploy 2–3 operational AI co-workers or agentic workflows, built on your own data and systems.", bullets: ['Business-process mapping and data-readiness check', 'Co-creation of use cases with your teams (Finance, HR, Ops, Supply Chain…)', 'Secure RAGs, copilots and automation pipelines deployed in your environment', 'Embedded observability, governance and compliance from day one', '“Before / After” KPI dashboard — time saved, accuracy, adoption'], goal: 'Measurable business impact within 8–10 weeks — efficiency +30 to 50%, cost −20 to 40%, adoption proven.' },
+      { tag: 'Phase 3', title: 'Scale, Govern & Sustain', body: "Where your organization shifts gears — a 12 to 36-month engagement to industrialize, govern and sustain AI at scale across the enterprise, as a long-term partnership with your leadership and technical teams.", bullets: ['A dedicated AI governance framework (roles, RACI, standards, security, ethics)', 'MLOps / LLMOps pipelines for lifecycle, monitoring and drift management', 'Enterprise observability dashboards (performance, bias, compliance, cost)', 'Continuous alignment with the EU AI Act, GDPR and internal audit', 'Coaching your internal AI champions to progressively own the systems'], goal: 'Sustained business value, full ownership by internal teams, and a resilient AI ecosystem that improves over time.' }
+    ];
+    const whenLabels = lang === 'fr' ? ['Semaines 1–3', '8–10 semaines', '12–36 mois'] : ['Weeks 1–3', '8–10 weeks', '12–36 months'];
+    const phases = phasesData.map((p, i) => ({ ...p, hasBullets: p.bullets.length > 0, when: whenLabels[i] }));
+
+    const partnerStr = lang === 'fr'
+      ? "Depuis 2021, Gregory Renard — [Freedom.AI](https://freedom.ai/) travaille en partenariat étroit avec [RealChange](https://www.realchange.com/ia-innovation-artificial-intelligence-applied), partenaire d'implémentation de confiance qui aide les organisations du monde entier à donner vie à la méthode — de la stratégie à l'exécution à grande échelle."
+      : "Since 2021, Gregory Renard — [Freedom.AI](https://freedom.ai/) works in close partnership with [RealChange](https://www.realchange.com/ia-innovation-artificial-intelligence-applied), a trusted implementation partner helping organizations worldwide bring the method to life — from strategy to large-scale execution.";
+    const rich = { partner: this.parseLinks(partnerStr) };
+
+    const socials = [
+      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/gregoryrenard/' },
+      { name: 'Wikipedia', url: 'https://fr.wikipedia.org/wiki/Gr%C3%A9gory_Renard' },
+      { name: 'Scholar', url: 'https://scholar.google.com/citations?user=Khit-6kAAAAJ&hl=fr' },
+      { name: 'GitHub', url: 'https://github.com/gregrenard/' },
+      { name: 'X', url: 'https://twitter.com/Redo' }
+    ];
+    const footerCols = lang === 'fr' ? [
+      { h: 'Naviguer', items: [
+        { label: 'Vision', url: './', target: '_self' },
+        { label: 'Méthode', url: 'Method', target: '_self' },
+        { label: 'Conférences', url: 'Keynote-Speaker', target: '_self' }
+      ]},
+      { h: 'À propos', items: [
+        { label: 'Parcours', url: 'Why', target: '_self' },
+        { label: 'Éthique', url: 'Ethics', target: '_self' },
+        { label: 'Publications', url: 'Publications', target: '_self' },
+        { label: 'Presse', url: 'Press', target: '_self' }
+      ]},
+      { h: 'Ailleurs', items: [
+        { label: 'Contact', url: 'Contact', target: '_self' },
+        { label: 'Freedom.AI ↗', url: 'https://www.freedom.ai/', target: '_blank' },
+        { label: 'Everyone.AI ↗', url: 'https://everyone.ai/', target: '_blank' },
+        { label: 'Holberton-Turing Oath ↗', url: 'https://www.holbertonturingoath.org/', target: '_blank' }
+      ]}
+    ] : [
+      { h: 'Navigate', items: [
+        { label: 'Vision', url: './', target: '_self' },
+        { label: 'Method', url: 'Method', target: '_self' },
+        { label: 'Talks', url: 'Keynote-Speaker', target: '_self' }
+      ]},
+      { h: 'About', items: [
+        { label: 'Story', url: 'Why', target: '_self' },
+        { label: 'Ethics', url: 'Ethics', target: '_self' },
+        { label: 'Publications', url: 'Publications', target: '_self' },
+        { label: 'Press', url: 'Press', target: '_self' }
+      ]},
+      { h: 'Elsewhere', items: [
+        { label: 'Contact', url: 'Contact', target: '_self' },
+        { label: 'Freedom.AI ↗', url: 'https://www.freedom.ai/', target: '_blank' },
+        { label: 'Everyone.AI ↗', url: 'https://everyone.ai/', target: '_blank' },
+        { label: 'Holberton-Turing Oath ↗', url: 'https://www.holbertonturingoath.org/', target: '_blank' }
+      ]}
+    ];
+
+    return {
+      rootRef: (el) => { this._root = el; },
+      lang, t, phases, rich, socials, footerCols, toc,
+      langLabel: lang === 'en' ? 'FR' : 'EN',
+      toggleLang: () => this.setLang(lang === 'en' ? 'fr' : 'en'),
+      scrollToEssay: (e) => { e.preventDefault(); const el = document.getElementById('essay'); if (el) { const y = el.getBoundingClientRect().top + window.scrollY - 80; window.scrollTo({ top: y, behavior: 'smooth' }); } },
+      jumpTo: (e) => { e.preventDefault(); const id = e.currentTarget.getAttribute('href').slice(1); const el = document.getElementById(id); if (el) { const y = el.getBoundingClientRect().top + window.scrollY - 80; window.scrollTo({ top: y, behavior: 'smooth' }); } },
+      audioOpen: this.state.audioOpen,
+      audioClosed: !this.state.audioOpen,
+      audioSrc: 'assets/redefining-work-ai.mp4',
+      openMedia: () => this.setState({ audioOpen: true }),
+      audioNotebookLink: lang === 'fr' ? 'Ouvrir dans NotebookLM (podcast, flashcards, quiz) ↗' : 'Open in NotebookLM (podcast, flashcards, quiz) ↗',
+      heroImg: 'https://static.wixstatic.com/media/fa93f3_4f90b2e23b654a648fc38930da34dc17~mv2.png/v1/fill/w_760,h_560,al_c,q_85,enc_auto/greg.png',
+      essay1: 'https://static.wixstatic.com/media/fa93f3_99bdf3267913492f8bea91a4cadb2547~mv2.png/v1/fill/w_320,h_415,al_c,q_85,enc_auto/essay.png',
+      essay2: 'https://static.wixstatic.com/media/fa93f3_a0fcf77449c04dad9b2cc37e20b39a98~mv2.png/v1/fill/w_320,h_415,al_c,q_85,enc_auto/essay2.png',
+      bookImg: 'https://static.wixstatic.com/media/758a70_bd0eb7fc7e664528be40a973fdf18ad3~mv2.png/v1/crop/x_232,y_264,w_1505,h_1518/fill/w_520,h_524,al_c,q_85,enc_auto/book.png',
+      freedomLogo: 'https://static.wixstatic.com/media/fa93f3_268c2f0f0572437ba6a746256ff719c7~mv2.png/v1/fill/w_240,h_168,al_c,q_85,enc_auto/freedom.png',
+      realchangeLogo: 'https://static.wixstatic.com/media/fa93f3_8dd3e56d814d496c897fd6cd8ed3ce2d~mv2.png/v1/fill/w_340,h_54,al_c,q_85,enc_auto/realchange.png'
+    };
+  }
+}
+</script>
+</body>
+</html>

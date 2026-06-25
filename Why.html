@@ -28,34 +28,36 @@
 <meta name="twitter:image" content="https://gregory-renard.com/assets/og-cover.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Newsreader:opsz,wght@6..72,400..700&amp;display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:#070C1E;color:#EAEEF5;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body{background:#F1ECE1;color:#172139;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  h1,h2,h3,blockquote{font-family:'Newsreader', Georgia, 'Times New Roman', serif;font-optical-sizing:auto}
   a{color:inherit;text-decoration:none}
-  ::selection{background:rgba(59,123,255,0.32);color:#fff}
+  ::selection{background:rgba(148,115,27,0.26);color:#172139}
   @keyframes grx-pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
   [data-reveal]{opacity:1}
-  .grx-link{color:#8FB3FF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(143,179,255,0.45);transition:color .2s}
-  .grx-link:hover{color:#fff;text-decoration-color:#8FB3FF}
+  .grx-link{color:#94731B;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(148,115,27,0.45);transition:color .2s}
+  .grx-link:hover{color:#172139;text-decoration-color:#94731B}
   .grx-tlU{position:relative;max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;column-gap:80px;padding:8px 0}
-  .grx-tlU::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(255,255,255,0.13);transform:translateX(-50%)}
+  .grx-tlU::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(23,33,57,0.13);transform:translateX(-50%)}
   .grx-col{display:flex;flex-direction:column;gap:36px}
   .grx-colL{text-align:right;padding-right:50px}
   .grx-colR{text-align:left;padding-left:50px;margin-top:104px}
   .grx-tlU-item{position:relative}
-  .grx-tlU-dot{position:absolute;top:6px;width:13px;height:13px;border-radius:50%;background:#3B7BFF;box-shadow:0 0 12px rgba(59,123,255,0.9);border:2px solid #070C1E;z-index:1}
-  .grx-colL .grx-tlU-dot{right:-86px;background:#3B7BFF;box-shadow:0 0 12px rgba(59,123,255,0.9)}
-  .grx-colR .grx-tlU-dot{left:-86px;background:#34CFE0;box-shadow:0 0 12px rgba(52,207,224,0.85)}
-  .grx-colL .grx-tlU-item::after{content:"";position:absolute;top:11px;right:-84px;width:34px;height:1px;background:rgba(255,255,255,0.16)}
-  .grx-colR .grx-tlU-item::after{content:"";position:absolute;top:11px;left:-84px;width:34px;height:1px;background:rgba(255,255,255,0.16)}
-  .grx-tlU-year{font-size:clamp(24px,2.1vw,34px);font-weight:800;letter-spacing:-0.02em;color:#EAEEF5;line-height:1}
-  .grx-tlU-tag{font-weight:700;font-size:15px;color:#7FA8FF;margin-top:9px}
-  .grx-tlU-body{font-size:14px;line-height:1.55;color:#AAB3C4;margin-top:6px}
+  .grx-tlU-dot{position:absolute;top:6px;width:13px;height:13px;border-radius:50%;background:#94731B;box-shadow:0 0 12px rgba(148,115,27,0.9);border:2px solid #F1ECE1;z-index:1}
+  .grx-colL .grx-tlU-dot{right:-86px;background:#94731B;box-shadow:0 0 12px rgba(148,115,27,0.9)}
+  .grx-colR .grx-tlU-dot{left:-86px;background:#5C7A99;box-shadow:0 0 12px rgba(92,122,153,0.85)}
+  .grx-colL .grx-tlU-item::after{content:"";position:absolute;top:11px;right:-84px;width:34px;height:1px;background:rgba(23,33,57,0.16)}
+  .grx-colR .grx-tlU-item::after{content:"";position:absolute;top:11px;left:-84px;width:34px;height:1px;background:rgba(23,33,57,0.16)}
+  .grx-tlU-year{font-size:clamp(24px,2.1vw,34px);font-weight:600;letter-spacing:-0.02em;color:#172139;line-height:1}
+  .grx-tlU-tag{font-weight:700;font-size:15px;color:#94731B;margin-top:9px}
+  .grx-tlU-body{font-size:14px;line-height:1.55;color:#3E4557;margin-top:6px}
   @media (max-width:900px){
     .grx-navlink{display:none !important}
     .grx-hero,.grx-2{grid-template-columns:1fr !important}
+    .grx-sectors{grid-template-columns:repeat(2,1fr) !important}
     .grx-hero-img{min-height:300px !important;order:-1;max-width:360px;margin:0 auto}
     .grx-pad{padding-left:22px !important;padding-right:22px !important}
     .grx-ind{grid-template-columns:1fr 1fr !important}
@@ -76,10 +78,10 @@
   .grx-burger{display:none}
   .grx-mobile-menu{display:none}
   @media (max-width:900px){
-    .grx-burger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.05);color:#EAEEF5;font-size:20px;line-height:1;cursor:pointer}
-    .grx-mobile-menu{background:rgba(7,12,30,0.98);border-top:1px solid rgba(255,255,255,0.08);padding:8px 22px 16px}
+    .grx-burger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border-radius:10px;border:1px solid rgba(23,33,57,0.14);background:rgba(23,33,57,0.05);color:#172139;font-size:20px;line-height:1;cursor:pointer}
+    .grx-mobile-menu{background:rgba(241,236,225,0.98);border-top:1px solid rgba(23,33,57,0.08);padding:8px 22px 16px}
     .grx-nav-toggle:checked ~ .grx-mobile-menu{display:flex;flex-direction:column}
-    .grx-mobile-menu a{padding:14px 4px;font-size:16px;color:#CAD2E0;border-bottom:1px solid rgba(255,255,255,0.06)}
+    .grx-mobile-menu a{padding:14px 4px;font-size:16px;color:#3E4557;border-bottom:1px solid rgba(23,33,57,0.06)}
     .grx-mobile-menu a:last-child{border-bottom:none}
   }
 </style>
@@ -112,34 +114,36 @@
 <meta name="twitter:image" content="https://gregory-renard.com/assets/og-cover.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Newsreader:opsz,wght@6..72,400..700&amp;display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:#070C1E;color:#EAEEF5;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body{background:#F1ECE1;color:#172139;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  h1,h2,h3,blockquote{font-family:'Newsreader', Georgia, 'Times New Roman', serif;font-optical-sizing:auto}
   a{color:inherit;text-decoration:none}
-  ::selection{background:rgba(59,123,255,0.32);color:#fff}
+  ::selection{background:rgba(148,115,27,0.26);color:#172139}
   @keyframes grx-pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
   [data-reveal]{opacity:1}
-  .grx-link{color:#8FB3FF;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(143,179,255,0.45);transition:color .2s}
-  .grx-link:hover{color:#fff;text-decoration-color:#8FB3FF}
+  .grx-link{color:#94731B;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(148,115,27,0.45);transition:color .2s}
+  .grx-link:hover{color:#172139;text-decoration-color:#94731B}
   .grx-tlU{position:relative;max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;column-gap:80px;padding:8px 0}
-  .grx-tlU::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(255,255,255,0.13);transform:translateX(-50%)}
+  .grx-tlU::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(23,33,57,0.13);transform:translateX(-50%)}
   .grx-col{display:flex;flex-direction:column;gap:36px}
   .grx-colL{text-align:right;padding-right:50px}
   .grx-colR{text-align:left;padding-left:50px;margin-top:104px}
   .grx-tlU-item{position:relative}
-  .grx-tlU-dot{position:absolute;top:6px;width:13px;height:13px;border-radius:50%;background:#3B7BFF;box-shadow:0 0 12px rgba(59,123,255,0.9);border:2px solid #070C1E;z-index:1}
-  .grx-colL .grx-tlU-dot{right:-86px;background:#3B7BFF;box-shadow:0 0 12px rgba(59,123,255,0.9)}
-  .grx-colR .grx-tlU-dot{left:-86px;background:#34CFE0;box-shadow:0 0 12px rgba(52,207,224,0.85)}
-  .grx-colL .grx-tlU-item::after{content:"";position:absolute;top:11px;right:-84px;width:34px;height:1px;background:rgba(255,255,255,0.16)}
-  .grx-colR .grx-tlU-item::after{content:"";position:absolute;top:11px;left:-84px;width:34px;height:1px;background:rgba(255,255,255,0.16)}
-  .grx-tlU-year{font-size:clamp(24px,2.1vw,34px);font-weight:800;letter-spacing:-0.02em;color:#EAEEF5;line-height:1}
-  .grx-tlU-tag{font-weight:700;font-size:15px;color:#7FA8FF;margin-top:9px}
-  .grx-tlU-body{font-size:14px;line-height:1.55;color:#AAB3C4;margin-top:6px}
+  .grx-tlU-dot{position:absolute;top:6px;width:13px;height:13px;border-radius:50%;background:#94731B;box-shadow:0 0 12px rgba(148,115,27,0.9);border:2px solid #F1ECE1;z-index:1}
+  .grx-colL .grx-tlU-dot{right:-86px;background:#94731B;box-shadow:0 0 12px rgba(148,115,27,0.9)}
+  .grx-colR .grx-tlU-dot{left:-86px;background:#5C7A99;box-shadow:0 0 12px rgba(92,122,153,0.85)}
+  .grx-colL .grx-tlU-item::after{content:"";position:absolute;top:11px;right:-84px;width:34px;height:1px;background:rgba(23,33,57,0.16)}
+  .grx-colR .grx-tlU-item::after{content:"";position:absolute;top:11px;left:-84px;width:34px;height:1px;background:rgba(23,33,57,0.16)}
+  .grx-tlU-year{font-size:clamp(24px,2.1vw,34px);font-weight:600;letter-spacing:-0.02em;color:#172139;line-height:1}
+  .grx-tlU-tag{font-weight:700;font-size:15px;color:#94731B;margin-top:9px}
+  .grx-tlU-body{font-size:14px;line-height:1.55;color:#3E4557;margin-top:6px}
   @media (max-width:900px){
     .grx-navlink{display:none !important}
     .grx-hero,.grx-2{grid-template-columns:1fr !important}
+    .grx-sectors{grid-template-columns:repeat(2,1fr) !important}
     .grx-hero-img{min-height:300px !important;order:-1;max-width:360px;margin:0 auto}
     .grx-pad{padding-left:22px !important;padding-right:22px !important}
     .grx-ind{grid-template-columns:1fr 1fr !important}
@@ -160,41 +164,41 @@
   .grx-burger{display:none}
   .grx-mobile-menu{display:none}
   @media (max-width:900px){
-    .grx-burger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.05);color:#EAEEF5;font-size:20px;line-height:1;cursor:pointer}
-    .grx-mobile-menu{background:rgba(7,12,30,0.98);border-top:1px solid rgba(255,255,255,0.08);padding:8px 22px 16px}
+    .grx-burger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border-radius:10px;border:1px solid rgba(23,33,57,0.14);background:rgba(23,33,57,0.05);color:#172139;font-size:20px;line-height:1;cursor:pointer}
+    .grx-mobile-menu{background:rgba(241,236,225,0.98);border-top:1px solid rgba(23,33,57,0.08);padding:8px 22px 16px}
     .grx-nav-toggle:checked ~ .grx-mobile-menu{display:flex;flex-direction:column}
-    .grx-mobile-menu a{padding:14px 4px;font-size:16px;color:#CAD2E0;border-bottom:1px solid rgba(255,255,255,0.06)}
+    .grx-mobile-menu a{padding:14px 4px;font-size:16px;color:#3E4557;border-bottom:1px solid rgba(23,33,57,0.06)}
     .grx-mobile-menu a:last-child{border-bottom:none}
   }
 </style>
 </helmet>
 
-<div ref="{{ rootRef }}" style="position:relative;min-height:100vh;background:radial-gradient(1100px 700px at 80% -10%, rgba(59,123,255,0.10), transparent 60%), #070C1E;overflow-x:hidden">
+<div ref="{{ rootRef }}" style="position:relative;min-height:100vh;background:#F1ECE1;overflow-x:hidden">
 
   <!-- NAV -->
-  <header style="position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(7,12,30,0.66);border-bottom:1px solid rgba(255,255,255,0.07)">
+  <header style="position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(241,236,225,0.66);border-bottom:1px solid rgba(23,33,57,0.07)">
     <nav class="grx-pad" style="max-width:1240px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;gap:26px">
       <a href="./" style="display:flex;align-items:center;gap:11px;margin-right:auto">
-        <span style="width:34px;height:34px;border-radius:9px;background:linear-gradient(140deg,#3B7BFF,#1E4FD6);display:grid;place-items:center;font-weight:800;font-size:15px;color:#fff;box-shadow:0 0 22px rgba(59,123,255,0.45)">GR</span>
-        <span style="font-weight:700;font-size:15px;letter-spacing:-0.01em">Gregory Renard</span>
+        <img src="assets/freedom-tree.png" alt="Freedom.AI" style="width:34px;height:34px;object-fit:contain;flex:none">
+        <span style="display:flex;flex-direction:column;gap:1px;line-height:1.1;white-space:nowrap"><span style="font-weight:700;font-size:15px;letter-spacing:-0.01em">Gregory Renard</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.13em;text-transform:uppercase;color:#94731B">Applied AI Architect · Since 1996</span></span>
       </a>
-      <a class="grx-navlink" href="./" style="font-size:14px;color:#AEB6C6">{{ t.nav_vision }}</a>
-      <a class="grx-navlink" href="AI-Transformation" style="font-size:14px;color:#AEB6C6">{{ t.nav_transfo }}</a>
-      <a class="grx-navlink" href="AI-Lab" style="font-size:14px;color:#AEB6C6">{{ t.nav_lab }}</a>
-      <a class="grx-navlink" href="Advisory-Execution" style="font-size:14px;color:#AEB6C6">{{ t.nav_advisory }}</a>
-      <a class="grx-navlink" href="Why" style="font-size:14px;color:#fff;font-weight:600">{{ t.nav_why }}</a>
-      <a href="Contact" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#fff;background:#3B7BFF;padding:9px 17px;border-radius:9px;box-shadow:0 6px 18px rgba(59,123,255,0.32)" style-hover="background:#5A92FF">{{ t.nav_cta }}</a>
-      <button onClick="{{ toggleLang }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:#fff;background:rgba(59,123,255,0.18);border:1px solid rgba(59,123,255,0.42);border-radius:100px;padding:7px 13px;cursor:pointer">{{ langLabel }}</button>
+            <a class="grx-navlink" href="Method" style="font-size:14px;color:#3E4557">{{ t.nav_method }}</a>
+      <a class="grx-navlink" href="Why" style="font-size:14px;color:#172139;font-weight:600">{{ t.nav_why }}</a>
+      <a class="grx-navlink" href="Ethics" style="font-size:14px;color:#3E4557">{{ t.nav_ethics }}</a>
+      <a class="grx-navlink" href="Keynote-Speaker" style="font-size:14px;color:#3E4557">{{ t.nav_speaking }}</a>
+      <a class="grx-navlink" href="Publications" style="font-size:14px;color:#3E4557">{{ t.nav_writing }}</a>
+      <a href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#F4EFE3;background:#172139;padding:9px 17px;border-radius:3px;box-shadow:0 6px 18px rgba(23,33,57,0.20)" style-hover="background:#28344F">{{ t.nav_cta }} ↗</a>
+      <button onClick="{{ toggleLang }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:#172139;background:rgba(148,115,27,0.18);border:1px solid rgba(148,115,27,0.42);border-radius:100px;padding:7px 13px;cursor:pointer">{{ langLabel }}</button>
       <label for="grx-nav-toggle" class="grx-burger" aria-label="Open menu">☰</label>
     </nav>
     <input type="checkbox" id="grx-nav-toggle" class="grx-nav-toggle" aria-hidden="true">
     <div class="grx-mobile-menu">
-      <a href="./">{{ t.nav_vision }}</a>
-      <a href="AI-Transformation">{{ t.nav_transfo }}</a>
-      <a href="AI-Lab">{{ t.nav_lab }}</a>
-      <a href="Advisory-Execution">{{ t.nav_advisory }}</a>
+      <a href="Method">{{ t.nav_method }}</a>
       <a href="Why">{{ t.nav_why }}</a>
-      <a href="Keynote-Speaker">Keynote Speaker</a>
+      <a href="Ethics">{{ t.nav_ethics }}</a>
+      <a href="Keynote-Speaker">{{ t.nav_speaking }}</a>
+      <a href="Publications">{{ t.nav_writing }}</a>
+      <a href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer">{{ t.nav_cta }} ↗</a>
     </div>
   </header>
 
@@ -202,16 +206,14 @@
   <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:84px 32px 30px">
     <div class="grx-hero" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center">
       <div data-reveal="">
-        <div style="display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:#7FA8FF;border:1px solid rgba(59,123,255,0.28);background:rgba(59,123,255,0.06);padding:7px 13px;border-radius:100px;margin-bottom:24px">
-          <span style="width:7px;height:7px;border-radius:50%;background:#3B7BFF;box-shadow:0 0 10px #3B7BFF;animation:grx-pulse 2.4s ease-in-out infinite"></span>{{ t.eyebrow }}
-        </div>
-        <h1 style="font-size:clamp(30px,4vw,54px);line-height:1.04;letter-spacing:-0.032em;font-weight:800;white-space:nowrap">{{ t.heroTitle }}</h1>
-        <p style="margin-top:22px;font-size:clamp(16px,1.4vw,19px);line-height:1.62;color:#AAB3C4;max-width:560px">{{ t.heroSub }}</p>
-        <p style="margin-top:18px;font-size:16px;line-height:1.62;color:#C2CAD8;max-width:560px">{{ t.heroBio }}</p>
+        <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#94731B;margin-bottom:24px"><span style="width:36px;height:1px;background:#94731B;display:inline-block"></span>{{ t.eyebrow }}</div>
+        <h1 style="font-size:clamp(30px,4vw,54px);line-height:1.04;letter-spacing:-0.032em;font-weight:600;white-space:nowrap">{{ t.heroTitle }}</h1>
+        <p style="margin-top:22px;font-size:clamp(16px,1.4vw,19px);line-height:1.62;color:#3E4557;max-width:560px">{{ t.heroSub }}</p>
+        <p style="margin-top:18px;font-size:16px;line-height:1.62;color:#3E4557;max-width:560px">{{ t.heroBio }}</p>
       </div>
-      <div data-reveal="" class="grx-hero-img" style="position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.12);box-shadow:0 30px 70px rgba(0,0,0,0.5);min-height:380px">
+      <div data-reveal="" class="grx-hero-img" style="position:relative;border-radius:4px;overflow:hidden;border:1px solid rgba(23,33,57,0.12);box-shadow:0 30px 70px rgba(23,33,57,0.16);min-height:380px">
         <img src="{{ portrait }}" alt="Gregory Renard" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block">
-        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(7,12,30,0.6))"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(241,236,225,0.6))"></div>
       </div>
     </div>
   </section>
@@ -224,10 +226,10 @@
   <!-- PERSONAL -->
   <section class="grx-pad" style="max-width:1100px;margin:0 auto;padding:40px 32px 10px">
     <figure data-reveal style="margin:0;display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:center">
-      <div style="width:240px;flex:none;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);box-shadow:0 22px 54px rgba(0,0,0,0.5)"><img src="assets/greg-einstein.png" alt="Gregory Renard beside the bust of Albert Einstein" style="width:100%;display:block"></div>
+      <div style="width:240px;flex:none;border-radius:4px;overflow:hidden;border:1px solid rgba(23,33,57,0.1);box-shadow:0 22px 54px rgba(23,33,57,0.16)"><img src="assets/greg-einstein.png" alt="Gregory Renard beside the bust of Albert Einstein" style="width:100%;display:block"></div>
       <figcaption style="flex:1;min-width:260px;max-width:560px">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.06em;color:#7FA8FF;margin-bottom:14px">{{ t.personalKicker }}</div>
-        <p style="margin:0;font-size:16px;line-height:1.62;color:#C9D1DF">{{ t.personalText }}</p>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.06em;color:#94731B;margin-bottom:14px">{{ t.personalKicker }}</div>
+        <p style="margin:0;font-size:16px;line-height:1.62;color:#3E4557">{{ t.personalText }}</p>
       </figcaption>
     </figure>
   </section>
@@ -235,11 +237,11 @@
   <!-- TIMELINE -->
   <section class="grx-pad" style="max-width:1040px;margin:0 auto;padding:50px 32px 30px">
     <div data-reveal="" style="margin-bottom:30px;text-align:center">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:14px">{{ t.tlKicker }}</div>
-      <h2 style="font-size:clamp(26px,3vw,42px);line-height:1.08;letter-spacing:-0.025em;font-weight:800">{{ t.tlTitle }}</h2>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#94731B;margin-bottom:14px">{{ t.tlKicker }}</div>
+      <h2 style="font-size:clamp(26px,3vw,42px);line-height:1.08;letter-spacing:-0.025em;font-weight:600">{{ t.tlTitle }}</h2>
       <div style="display:flex;gap:24px;justify-content:center;margin-top:18px;flex-wrap:wrap">
-        <span style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#AEB6C6"><span style="width:11px;height:11px;border-radius:50%;background:#3B7BFF;box-shadow:0 0 8px rgba(59,123,255,0.8)"></span>{{ t.tlLegendDown }}</span>
-        <span style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#AEB6C6"><span style="width:11px;height:11px;border-radius:50%;background:#34CFE0;box-shadow:0 0 8px rgba(52,207,224,0.8)"></span>{{ t.tlLegendUp }}</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#3E4557"><span style="width:11px;height:11px;border-radius:50%;background:#94731B;box-shadow:0 0 8px rgba(148,115,27,0.8)"></span>{{ t.tlLegendDown }}</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#3E4557"><span style="width:11px;height:11px;border-radius:50%;background:#5C7A99;box-shadow:0 0 8px rgba(92,122,153,0.8)"></span>{{ t.tlLegendUp }}</span>
       </div>
     </div>
     <div class="grx-tlU">
@@ -266,10 +268,73 @@
     </div>
   </section>
 
+  <!-- AWARDS -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:50px 32px 20px">
+    <div data-reveal="" style="margin-bottom:26px">
+      <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#94731B;margin-bottom:14px"><span style="width:36px;height:1px;background:#94731B;display:inline-block"></span>{{ t.awardsKicker }}</div>
+      <h2 style="font-size:clamp(26px,3vw,40px);line-height:1.08;letter-spacing:-0.025em;font-weight:600">{{ t.awardsTitle }}</h2>
+    </div>
+    <div class="grx-awards" style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+      <article style="border:1px solid rgba(23,33,57,0.09);border-radius:4px;overflow:hidden;background:rgba(23,33,57,0.02)">
+        <div style="background:#F5F1E6;padding:22px;border-bottom:1px solid rgba(23,33,57,0.07);display:flex;align-items:center;justify-content:center;min-height:290px"><img src="assets/nasa-cert.png" alt="2022 NASA FDL Applied AI Award of Merit" style="max-width:100%;max-height:270px;width:auto;height:auto;display:block;margin:0 auto;object-fit:contain;border-radius:6px"></div>
+        <div style="padding:22px 24px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#94731B;margin-bottom:9px">NASA · SETI · FDL.AI · U.S. DOE</div>
+          <p style="font-size:15px;line-height:1.6;color:#3E4557"><sc-for list="{{ rich.nasa }}" as="seg" hint-placeholder-count="2"><sc-if value="{{ seg.isLink }}" hint-placeholder-val="{{ true }}"><a href="{{ seg.url }}" target="_blank" rel="noopener noreferrer" style="color:#94731B;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(148,115,27,0.4)" style-hover="color:#172139;text-decoration-color:#94731B">{{ seg.t }}</a></sc-if><sc-if value="{{ seg.notLink }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p>
+        </div>
+      </article>
+      <article style="border:1px solid rgba(23,33,57,0.09);border-radius:4px;overflow:hidden;background:rgba(23,33,57,0.02)">
+        <div style="background:#F5F1E6;padding:22px;border-bottom:1px solid rgba(23,33,57,0.07);display:flex;align-items:center;justify-content:center;min-height:290px"><img src="assets/walloon-cert.png" alt="Officier du Mérite Wallon 2025" style="max-width:100%;max-height:270px;width:auto;height:auto;display:block;margin:0 auto;object-fit:contain;border-radius:6px"></div>
+        <div style="padding:22px 24px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#94731B;margin-bottom:9px">WALLONIA · BELGIUM · 2025</div>
+          <p style="font-size:15px;line-height:1.6;color:#3E4557"><sc-for list="{{ rich.walloon }}" as="seg" hint-placeholder-count="2"><sc-if value="{{ seg.isLink }}" hint-placeholder-val="{{ true }}"><a href="{{ seg.url }}" target="_blank" rel="noopener noreferrer" style="color:#94731B;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(148,115,27,0.4)" style-hover="color:#172139;text-decoration-color:#94731B">{{ seg.t }}</a></sc-if><sc-if value="{{ seg.notLink }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p>
+        </div>
+      </article>
+    </div>
+    <p data-reveal="" style="margin-top:24px;font-size:16px;line-height:1.66;color:#3E4557"><sc-for list="{{ rich.policy }}" as="seg" hint-placeholder-count="4"><sc-if value="{{ seg.isLink }}" hint-placeholder-val="{{ true }}"><a href="{{ seg.url }}" target="_blank" rel="noopener noreferrer" style="color:#94731B;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(148,115,27,0.4)" style-hover="color:#172139;text-decoration-color:#94731B">{{ seg.t }}</a></sc-if><sc-if value="{{ seg.notLink }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p>
+  </section>
+
+  <!-- ACADEMIA -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:40px 32px 16px">
+    <div data-reveal="" style="margin-bottom:18px">
+      <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#94731B;margin-bottom:14px"><span style="width:36px;height:1px;background:#94731B;display:inline-block"></span>{{ t.academiaKicker }}</div>
+      <h2 style="font-size:clamp(26px,3vw,40px);line-height:1.08;letter-spacing:-0.025em;font-weight:600">{{ t.academiaTitle }}</h2>
+    </div>
+    <p data-reveal="" style="font-size:17px;line-height:1.68;color:#3E4557;max-width:980px"><sc-for list="{{ rich.academia }}" as="seg" hint-placeholder-count="3"><sc-if value="{{ seg.isLink }}" hint-placeholder-val="{{ true }}"><a href="{{ seg.url }}" target="_blank" rel="noopener noreferrer" style="color:#94731B;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(148,115,27,0.4)" style-hover="color:#172139;text-decoration-color:#94731B">{{ seg.t }}</a></sc-if><sc-if value="{{ seg.notLink }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p>
+  </section>
+
+  <!-- RECOGNITION -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:24px 32px 20px">
+    <p data-reveal="" style="text-align:center;font-size:14px;color:#6C7180;max-width:760px;margin:0 auto 22px">{{ t.recognitionTitle }}</p>
+    <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center">
+      <sc-for list="{{ logos }}" as="l" hint-placeholder-count="12">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#3E4557;border:1px solid rgba(23,33,57,0.12);background:rgba(23,33,57,0.025);border-radius:100px;padding:8px 14px">{{ l }}</span>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- SECTORS -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:40px 32px 16px">
+    <div data-reveal="" style="margin-bottom:26px">
+      <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#94731B;margin-bottom:14px"><span style="width:36px;height:1px;background:#94731B;display:inline-block"></span>{{ t.sectorsKicker }}</div>
+      <h2 style="font-size:clamp(26px,3vw,40px);line-height:1.08;letter-spacing:-0.025em;font-weight:600">{{ t.sectorsTitle }}</h2>
+      <p style="margin-top:14px;font-size:16px;line-height:1.6;color:#3E4557">{{ t.sectorsLead }}</p>
+    </div>
+    <div class="grx-sectors" style="display:grid;grid-template-columns:repeat(7,1fr);gap:10px">
+      <sc-for list="{{ sectors }}" as="sec" hint-placeholder-count="7">
+        <article style="display:flex;flex-direction:column;border:1px solid rgba(23,33,57,0.09);border-radius:4px;padding:16px 15px 17px;background:rgba(23,33,57,0.02);transition:border-color .3s,transform .3s,background .3s" style-hover="border-color:rgba(148,115,27,0.45);transform:translateY(-4px);background:rgba(148,115,27,0.05)">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#94731B;margin-bottom:10px">{{ sec.tag }}</div>
+          <h3 style="font-size:14px;font-weight:700;letter-spacing:-0.01em;line-height:1.2">{{ sec.name }}</h3>
+          <p style="margin-top:7px;font-size:12px;line-height:1.45;color:#6C7180;flex:1">{{ sec.d }}</p>
+          <sc-if value="{{ sec.hasUrl }}" hint-placeholder-val="{{ false }}"><a href="{{ sec.url }}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:11px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;color:#94731B" style-hover="color:#172139">{{ t.sectorsWatch }}</a></sc-if>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
   <!-- ETHICS TEASER -->
   <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:40px 32px 20px">
-    <div data-reveal="" style="border:1px solid rgba(59,123,255,0.22);border-radius:22px;background:linear-gradient(120deg,rgba(59,123,255,0.08),rgba(255,255,255,0.015));padding:40px 42px" data-comment-anchor="9732ac46dc-div">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:14px">{{ t.ethicsKicker }}</div>
+    <div data-reveal="" style="border:1px solid rgba(148,115,27,0.22);border-radius:4px;background:linear-gradient(120deg,rgba(148,115,27,0.08),rgba(23,33,57,0.015));padding:40px 42px" data-comment-anchor="9732ac46dc-div">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#94731B;margin-bottom:14px">{{ t.ethicsKicker }}</div>
       
       <p style="font-size:clamp(17px,1.7vw,22px);line-height:1.5;font-weight:600;letter-spacing:-0.01em"><sc-for list="{{ rich.ethics }}" as="seg" hint-placeholder-count="2"><sc-if value="{{ seg.isLink }}" hint-placeholder-val="{{ true }}"><a class="grx-link" href="{{ seg.url }}" target="_blank" rel="noopener noreferrer">{{ seg.t }}</a></sc-if><sc-if value="{{ seg.notLink }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p><a class="grx-link" href="Ethics" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600">{{ t.ethicsLink }} →</a>
     </div>
@@ -278,14 +343,14 @@
   <!-- INDUSTRIES -->
   <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:50px 32px 20px">
     <div data-reveal="" style="margin-bottom:26px">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#3B7BFF;margin-bottom:12px">{{ t.indKicker }}</div>
-      <h2 style="font-size:clamp(24px,2.6vw,36px);line-height:1.1;letter-spacing:-0.025em;font-weight:800">{{ t.indTitle }}</h2>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#94731B;margin-bottom:12px">{{ t.indKicker }}</div>
+      <h2 style="font-size:clamp(24px,2.6vw,36px);line-height:1.1;letter-spacing:-0.025em;font-weight:600">{{ t.indTitle }}</h2>
     </div>
     <div class="grx-ind" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
       <sc-for list="{{ industries }}" as="ind" hint-placeholder-count="8">
-        <div data-reveal="" style="border:1px solid rgba(255,255,255,0.09);border-radius:14px;background:rgba(255,255,255,0.02);padding:20px 18px">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.05em;color:#7FA8FF;margin-bottom:9px">{{ ind.name }}</div>
-          <p style="font-size:14px;line-height:1.5;color:#C2CAD8"><sc-for list="{{ ind.segs }}" as="seg" hint-placeholder-count="1"><sc-if value="{{ seg.isLink }}" hint-placeholder-val="{{ true }}"><a class="grx-link" href="{{ seg.url }}" target="_blank" rel="noopener noreferrer">{{ seg.t }}</a></sc-if><sc-if value="{{ seg.notLink }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p>
+        <div data-reveal="" style="border:1px solid rgba(23,33,57,0.09);border-radius:4px;background:rgba(23,33,57,0.02);padding:20px 18px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.05em;color:#94731B;margin-bottom:9px">{{ ind.name }}</div>
+          <p style="font-size:14px;line-height:1.5;color:#3E4557"><sc-for list="{{ ind.segs }}" as="seg" hint-placeholder-count="1"><sc-if value="{{ seg.isLink }}" hint-placeholder-val="{{ true }}"><a class="grx-link" href="{{ seg.url }}" target="_blank" rel="noopener noreferrer">{{ seg.t }}</a></sc-if><sc-if value="{{ seg.notLink }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p>
         </div>
       </sc-for>
     </div>
@@ -293,47 +358,47 @@
 
   <!-- VENTURES -->
   <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:36px 32px 20px">
-    <p data-reveal="" style="font-size:15.5px;line-height:1.6;color:#AEB6C6;max-width:900px;margin-bottom:18px">{{ t.venturesIntro }}</p>
-    <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:10px">
+    <p data-reveal="" style="font-size:15.5px;line-height:1.6;color:#3E4557;max-width:900px;margin-bottom:18px">{{ t.venturesIntro }}</p>
+    <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center">
       <sc-for list="{{ ventures }}" as="v" hint-placeholder-count="10">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#C2CAD8;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.025);border-radius:100px;padding:9px 16px">{{ v }}</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#3E4557;border:1px solid rgba(23,33,57,0.12);background:rgba(23,33,57,0.025);border-radius:100px;padding:9px 16px">{{ v }}</span>
       </sc-for>
     </div>
   </section>
 
   <!-- CONTACT CTA -->
   <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:70px 32px 90px;text-align:center">
-    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#7FA8FF;margin-bottom:16px">{{ t.contactLoc }}</div>
-    <h2 style="font-size:clamp(34px,4.6vw,62px);line-height:1.02;letter-spacing:-0.03em;font-weight:800;max-width:760px;margin:0 auto">{{ t.contactTitle }}</h2>
-    <a href="Contact" style="display:inline-flex;align-items:center;gap:10px;margin-top:30px;font-weight:600;font-size:16px;color:#fff;background:#3B7BFF;padding:16px 32px;border-radius:13px;box-shadow:0 14px 40px rgba(59,123,255,0.4)" style-hover="background:#5A92FF;transform:translateY(-2px)">{{ t.contactCta }} →</a>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#94731B;margin-bottom:16px">{{ t.contactLoc }}</div>
+    <h2 style="font-size:clamp(34px,4.6vw,62px);line-height:1.02;letter-spacing:-0.03em;font-weight:600;max-width:760px;margin:0 auto">{{ t.contactTitle }}</h2>
+    <a href="Contact" style="display:inline-flex;align-items:center;gap:10px;margin-top:30px;font-weight:600;font-size:16px;color:#172139;background:#94731B;padding:16px 32px;border-radius:3px;box-shadow:0 14px 40px rgba(148,115,27,0.4)" style-hover="background:#B08F2F;transform:translateY(-2px)">{{ t.contactCta }} →</a>
   </section>
 
   <!-- FOOTER -->
-  <footer style="border-top:1px solid rgba(255,255,255,0.08);background:#070C1E">
+  <footer style="border-top:1px solid rgba(23,33,57,0.08);background:#F1ECE1">
     <div class="grx-footer grx-pad" style="max-width:1240px;margin:0 auto;padding:52px 32px 30px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px">
       <div>
         <div style="display:flex;align-items:center;gap:11px;margin-bottom:16px">
-          <span style="width:32px;height:32px;border-radius:8px;background:linear-gradient(140deg,#3B7BFF,#1E4FD6);display:grid;place-items:center;font-weight:800;font-size:14px;color:#fff">GR</span>
+          <img src="assets/freedom-tree.png" alt="Freedom.AI" style="width:30px;height:30px;object-fit:contain;flex:none">
           <span style="font-weight:700;font-size:15px">Gregory Renard</span>
         </div>
-        <p style="font-size:13.5px;line-height:1.6;color:#8893A6;max-width:280px">{{ t.footerBlurb }}</p>
+        <p style="font-size:13.5px;line-height:1.6;color:#6C7180;max-width:280px">{{ t.footerBlurb }}</p>
         <div style="display:flex;gap:14px;margin-top:18px">
-          <sc-for list="{{ socials }}" as="s" hint-placeholder-count="5"><a href="{{ s.url }}" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#97A0B2" style-hover="color:#7FA8FF">{{ s.name }}</a></sc-for>
+          <sc-for list="{{ socials }}" as="s" hint-placeholder-count="5"><a href="{{ s.url }}" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#6C7180" style-hover="color:#94731B">{{ s.name }}</a></sc-for>
         </div>
       </div>
       <sc-for list="{{ footerCols }}" as="col" hint-placeholder-count="3">
         <div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#5E6678;margin-bottom:14px">{{ col.h }}</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#9A9282;margin-bottom:14px">{{ col.h }}</div>
           <div style="display:flex;flex-direction:column;gap:10px">
             <sc-for list="{{ col.items }}" as="it" hint-placeholder-count="4">
-              <a href="{{ it.url }}" target="{{ it.target }}" rel="noopener noreferrer" style="font-size:14px;color:#AEB6C6" style-hover="color:#fff">{{ it.label }}</a>
+              <a href="{{ it.url }}" target="{{ it.target }}" rel="noopener noreferrer" style="font-size:14px;color:#3E4557" style-hover="color:#172139">{{ it.label }}</a>
             </sc-for>
           </div>
         </div>
       </sc-for>
     </div>
-    <div style="border-top:1px solid rgba(255,255,255,0.06)">
-      <div class="grx-pad" style="max-width:1240px;margin:0 auto;padding:18px 32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:12.5px;color:#6B7385">
+    <div style="border-top:1px solid rgba(23,33,57,0.06)">
+      <div class="grx-pad" style="max-width:1240px;margin:0 auto;padding:18px 32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:12.5px;color:#9A9282">
         <span>{{ t.copyright }}</span>
         <span style="font-family:'JetBrains Mono',monospace">SF · Silicon Valley · Paris · Bruxelles</span>
       </div>
@@ -362,12 +427,20 @@ class Component extends DCLogic {
     const lang = this.state.lang;
     const C = {
       en: {
-        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Advisory & Execution', nav_lab: 'AI Lab', nav_why: 'Why', nav_cta: "Let's Build",
+        sectorsKicker: 'Across sectors', sectorsTitle: 'Where Gregory has delivered', sectorsLead: 'One common thread across two decades: Gregory has shipped production-grade applied AI in these industries — at scale and on time.', sectorsWatch: 'Watch \u2197',
+        academiaKicker: 'Academia & teaching', academiaTitle: 'Teaching the next generation',
+        academiaBody: "Beyond industry, Gregory co-founded the [Sociology-NLP Research Group](https://matrix.berkeley.edu/initiatives/solidarity-and-strife-democracies-time-pandemic/) at UC Berkeley\u2019s Matrix Department (2020) and teaches the next generation of engineers \u2014 guest-lecturing at [Stanford](https://www.stanford.edu/), the [Institute for Advanced Study](https://www.ias.edu/) and [UC Berkeley](https://www.berkeley.edu/), and mentoring at [Holberton School](https://github.com/alx-tools/deep-learning) and 42 School. His portfolio spans a dozen issued AI patents and 200+ publications and talks \u2014 among them a [Nature paper](https://www.nature.com/articles/s42256-023-00653-1) on generative AI and machine intelligence.",
+        recognitionTitle: 'Invited as speaker, advisor or member of leading organizations',
+        awardsKicker: 'Awards & recognition', awardsTitle: 'Recognition that reflects real impact',
+        nasaBody: 'Recognized with the [2022 NASA FDL AI Merit Award](https://fdl.ai/) for Space & Earth Science, and serving since 2016 on the programme\u2019s AI Technical Committee — guiding projects from storm prediction to H\u2082-discovery engines.',
+        walloonBody: 'Gregory Renard received the [2025 Walloon Merit distinction](https://connaitrelawallonie.wallonie.be/fr/wallons-marquants/distinction-du-merite-wallon/merites-wallons/renard-gregory) for his pioneering work in conversational AI and his commitment to ethical, human-centered innovation.',
+        policyBody: 'His policy impact is equally concrete: co-initiator of [AI4Humanity](https://www.youtube.com/live/ADi_8OL6vRk) ([2018](https://journals.openedition.org/lettre-cdf/pdf/4309)), contributor to the [France IA strategy](https://www.strategie-plan.gouv.fr/actualites/strategie-nationale-intelligence-artificielle) (2017) and the [Villani report](https://www.iris-france.org/en/110108-villanis-report-defence-at-the-age-of-ai/) (2018) anchoring France and Europe\u2019s AI strategy, reserve member of the EU High-Level Expert Group on AI, and co-author of the [Holberton-Turing Oath](https://www.holbertonturingoath.org/) setting early ethical guard-rails for the industry.',
+        nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Advisory & Execution', nav_lab: 'AI Lab', nav_why: 'Story', nav_method: 'Method', nav_ethics: 'Ethics', nav_speaking: 'Talks', nav_writing: 'Publications', nav_cta: 'Freedom.AI',
         eyebrow: 'Why I do this',
         heroTitle: 'Who is Gregory Renard?',
         heroSub: 'A proven track record of being early — and setting the template for major technology trends, from semantic search in 1996 to agentic systems today.',
         heroBio: 'A former math teacher and sociologist of NLP, Gregory believes in a connected world where universal access to information and knowledge frees people to reach their full potential. Since 1996 he has worked on data pipelines and orchestrators at scale, unsupervised ML, deep learning for NLP, spoken dialogue systems, conversational platforms, Emotional AI and Multimodal AI.',
-        mission: "My life's goal is to positively impact more than one billion people — focusing on applied AI for good.",
+        mission: "My mission is to positively impact more than one billion people — focusing on applied AI for good.",
         personalKicker: 'A bit more personal', personalText: 'Beyond the work: a former math teacher, and a volunteer firefighter — holder of two National Decorations, one for his firefighting service and one for his work on ethical AI. Also a Guest AI Expert at the Institute for Advanced Study in Princeton — once home to Einstein, Gödel and Oppenheimer — invited for his fine-grained understanding of bias in language models.',
         tlKicker: 'Track record', tlTitle: 'Early, and setting the template',
         tlLegendDown: '1996 → 2013  ·  down the left', tlLegendUp: '2014 → 2026  ·  up the right',
@@ -382,12 +455,20 @@ class Component extends DCLogic {
         copyright: '\u00A92026 — Gregory Renard · Freedom.AI Consulting LLC'
       },
       fr: {
-        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Conseil & Exécution', nav_lab: 'AI Lab', nav_why: 'Pourquoi', nav_cta: 'Construisons',
+        sectorsKicker: 'À travers les secteurs', sectorsTitle: "Là où Gregory a livré", sectorsLead: "Un fil rouge sur deux décennies : Gregory a livré une IA appliquée de qualité production dans ces secteurs — à grande échelle et dans les temps.", sectorsWatch: 'Voir \u2197',
+        academiaKicker: 'Monde académique & enseignement', academiaTitle: 'Transmettre à la prochaine génération',
+        academiaBody: "Au-delà de l'industrie, Gregory a co-fondé le [Sociology-NLP Research Group](https://matrix.berkeley.edu/initiatives/solidarity-and-strife-democracies-time-pandemic/) au Matrix Department de l'UC Berkeley (2020) et forme la nouvelle génération d'ingénieurs \u2014 conférences à [Stanford](https://www.stanford.edu/), à l'[Institute for Advanced Study](https://www.ias.edu/) et à [UC Berkeley](https://www.berkeley.edu/), et mentorat à la [Holberton School](https://github.com/alx-tools/deep-learning) et à l'École 42. Son portfolio compte une douzaine de brevets IA délivrés et 200+ publications et interventions \u2014 dont un [article dans Nature](https://www.nature.com/articles/s42256-023-00653-1) sur l'IA générative et l'intelligence machine.",
+        recognitionTitle: 'Invité comme conférencier, conseiller ou membre des plus grandes organisations',
+        awardsKicker: 'Distinctions & reconnaissance', awardsTitle: 'Une reconnaissance qui reflète un impact réel',
+        nasaBody: "Distingué par le [NASA FDL AI Merit Award 2022](https://fdl.ai/) pour les sciences spatiales et terrestres, et membre depuis 2016 du comité technique IA du programme — de la prévision des tempêtes aux moteurs de découverte d'H\u2082.",
+        walloonBody: "Gregory Renard a reçu la [distinction du Mérite Wallon 2025](https://connaitrelawallonie.wallonie.be/fr/wallons-marquants/distinction-du-merite-wallon/merites-wallons/renard-gregory) pour son travail pionnier en IA conversationnelle et son engagement pour une innovation éthique et centrée sur l'humain.",
+        policyBody: "Son impact sur les politiques publiques est tout aussi concret : co-initiateur d'[AI4Humanity](https://www.youtube.com/live/ADi_8OL6vRk) ([2018](https://journals.openedition.org/lettre-cdf/pdf/4309)), contributeur de la [stratégie France IA](https://www.strategie-plan.gouv.fr/actualites/strategie-nationale-intelligence-artificielle) (2017) et du [rapport Villani](https://www.iris-france.org/en/110108-villanis-report-defence-at-the-age-of-ai/) (2018) qui ancre la stratégie IA de la France et de l'Europe, membre réserviste du groupe d'experts de haut niveau de l'UE sur l'IA, et co-auteur du [Serment Holberton-Turing](https://www.holbertonturingoath.org/).",
+        nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Conseil & Exécution', nav_lab: 'AI Lab', nav_why: 'Parcours', nav_method: 'Méthode', nav_ethics: 'Éthique', nav_speaking: 'Conférences', nav_writing: 'Publications', nav_cta: 'Freedom.AI',
         eyebrow: 'Pourquoi je fais cela',
         heroTitle: 'Qui est Gregory Renard ?',
         heroSub: "Une trajectoire d'avance — poser le modèle des grandes tendances technologiques, de la recherche sémantique en 1996 aux systèmes agentiques d'aujourd'hui.",
         heroBio: "Ancien professeur de mathématiques et sociologue du NLP, Gregory croit en un monde connecté où l'accès universel à l'information et au savoir libère le potentiel de chacun. Depuis 1996, il travaille sur les pipelines de données à l'échelle, le ML non supervisé, le deep learning pour le NLP, les systèmes de dialogue, les plateformes conversationnelles, l'IA émotionnelle et l'IA multimodale.",
-        mission: "L'objectif de ma vie : impacter positivement plus d'un milliard de personnes — avec une IA appliquée au service du bien.",
+        mission: "Ma mission : impacter positivement plus d'un milliard de personnes — avec une IA appliquée au service du bien.",
         personalKicker: 'Plus personnel', personalText: "Au-delà du travail : ancien professeur de mathématiques, et pompier volontaire — titulaire de deux Distinctions nationales, l'une pour son engagement de pompier, l'autre pour son travail sur l'IA éthique. Également Guest AI Expert à l'Institute for Advanced Study de Princeton — là où travaillaient Einstein, Gödel et Oppenheimer — invité pour sa compréhension fine des biais des modèles de langage.",
         tlKicker: 'Parcours', tlTitle: 'En avance, et poseur de modèles',
         tlLegendDown: '1996 → 2013  ·  descente à gauche', tlLegendUp: '2014 → 2026  ·  montée à droite',
@@ -419,7 +500,7 @@ class Component extends DCLogic {
       { year: '2017', tag: 'AI for everyone', body: 'Founded the [Everyone.AI](https://everyone.ai/) community; France AI & CNNum advisor; IronCar competition ([ironcar.org](http://www.ironcar.org)).' },
       { year: '2018–2019', tag: 'Policy & space', body: '[Satisfaction.AI](https://youtu.be/s13Z9yiL_Es) at scale; AI for Humanity (France); European Commission AI Strategy; NASA.AI Technical Committee; IAS Princeton AI & Ethics guest.' },
       { year: '2020–2021', tag: 'Human values', body: 'Models to infer human values and structure customer reviews 100× faster (Cerebra.ai); supported $50M+ fundraising across Plato, ZeroSystem and Cerebra.AI.' },
-      { year: '2022–2026', tag: 'Agentic systems', body: 'Next-generation agentic workflows with Bright.AI, Docugami and Renault Group — operationalizing the [essay & method](AI-Transformation). In 2025, built [SRL4Children](https://github.com/gregrenard/SRL4Children), an open-source agentic framework for [Everyone.AI](https://everyone.ai/).' }
+      { year: '2022–2026', tag: 'Agentic systems', body: 'Next-generation agentic workflows with Bright.AI, Docugami and Renault Group — operationalizing the [essay & method](Method). In 2025, built [SRL4Children](https://github.com/gregrenard/SRL4Children), an open-source agentic framework for [Everyone.AI](https://everyone.ai/).' }
     ];
     const tlFR = [
       { year: '1996', tag: 'Découverte du NLP', body: 'Première architecture NLP pour centres d\u2019appels dans le Nord de la France — recherche sémantique.' },
@@ -436,7 +517,7 @@ class Component extends DCLogic {
       { year: '2017', tag: 'L\u2019IA pour tous', body: 'Création de la communauté [Everyone.AI](https://everyone.ai/) ; conseiller France AI & CNNum ; compétition IronCar ([ironcar.org](http://www.ironcar.org)).' },
       { year: '2018–2019', tag: 'Politiques & espace', body: '[Satisfaction.AI](https://youtu.be/s13Z9yiL_Es) à l\u2019échelle ; AI for Humanity (France) ; stratégie IA de la Commission européenne ; comité technique NASA.AI ; invité IAS Princeton (IA & éthique).' },
       { year: '2020–2021', tag: 'Valeurs humaines', body: 'Modèles pour inférer les valeurs humaines et structurer les avis clients 100× plus vite (Cerebra.ai) ; soutien à 50M$+ de levées (Plato, ZeroSystem, Cerebra.AI).' },
-      { year: '2022–2026', tag: 'Systèmes agentiques', body: 'Workflows agentiques de nouvelle génération avec Bright.AI, Docugami et Renault Group — opérationnalisant l\u2019[essai & la méthode](AI-Transformation). En 2025, création de [SRL4Children](https://github.com/gregrenard/SRL4Children), un framework agentique open-source pour [Everyone.AI](https://everyone.ai/).' }
+      { year: '2022–2026', tag: 'Systèmes agentiques', body: 'Workflows agentiques de nouvelle génération avec Bright.AI, Docugami et Renault Group — opérationnalisant l\u2019[essai & la méthode](Method). En 2025, création de [SRL4Children](https://github.com/gregrenard/SRL4Children), un framework agentique open-source pour [Everyone.AI](https://everyone.ai/).' }
     ];
     const timeline = (lang === 'fr' ? tlFR : tlEN).map(e => ({ year: e.year, tag: e.tag, segs: this.parseLinks(e.body) }));
     const splitAt = 8;
@@ -469,9 +550,30 @@ class Component extends DCLogic {
     ];
     const industries = (lang === 'fr' ? indFR : indEN).map(i => ({ name: i.name, segs: this.parseLinks(i.body) }));
 
-    const ventures = ['Docugami', 'Eiffage Group', 'Sodebo', 'Alygne.me', 'AAICO.ai', 'Social Science Matrix · UC Berkeley', 'Holberton School', 'YouROK Corp', 'NASA Frontier Development Lab', 'Renault Group', 'Actual', 'IDEA'];
+    const ventures = ['AAICO.ai', 'Actual', 'Alygne.me', 'Docugami', 'Eiffage Group', 'Holberton School', 'IDEA', 'NASA Frontier Development Lab', 'Renault Group', 'Social Science Matrix · UC Berkeley', 'Sodebo', 'YouROK Corp'];
 
-    const rich = { ethics: this.parseLinks(ethicsStr) };
+    const sectorsRaw = lang === 'fr' ? [
+      { tag: '2013', name: 'Robotique humanoïde', d: 'Plateformes vocales pour robots humanoïdes.', url: 'https://www.youtube.com/watch?v=sx7HSGFAxzA' },
+      { tag: '2015', name: 'Automobile', d: "Plateformes d'assistant personnel embarqué pour de grands constructeurs.", url: 'https://www.youtube.com/watch?v=YCrOtk2uaCE' },
+      { tag: '2016', name: 'Service client bancaire', d: 'Augmentation du service client pour de grandes banques.', url: 'https://www.youtube.com/watch?v=s13Z9yiL_Es' },
+      { tag: '2019', name: 'Supply-chain e-commerce', d: 'IA de supply-chain pour le retail sans stock à grande échelle.', url: '' },
+      { tag: '2022', name: 'Sciences spatiales', d: 'Space-tech primée avec NASA FDL.', url: 'https://fdl.ai/about' },
+      { tag: '2024', name: 'Génie civil', d: 'IA appliquée & systèmes agentiques pour un leader mondial de la construction (Groupe Eiffage).', url: 'https://www.eiffage.com/' },
+      { tag: '2026', name: 'Physical AI', d: "Orchestration embarquée sur l'edge — des SLM exécutés on-device (NPU) pour une IA physique temps réel (Bright.AI).", url: 'https://www.bright.ai/' }
+    ] : [
+      { tag: '2013', name: 'Humanoid robotics', d: 'Voice platforms for humanoid robots.', url: 'https://www.youtube.com/watch?v=sx7HSGFAxzA' },
+      { tag: '2015', name: 'Automotive', d: 'In-car personal-assistant platforms for major manufacturers.', url: 'https://www.youtube.com/watch?v=YCrOtk2uaCE' },
+      { tag: '2016', name: 'Banking customer service', d: 'Customer-service augmentation for global banks.', url: 'https://www.youtube.com/watch?v=s13Z9yiL_Es' },
+      { tag: '2019', name: 'E-commerce supply chain', d: 'Supply-chain AI for stockless, large-scale retail.', url: '' },
+      { tag: '2022', name: 'Space & earth science', d: 'Award-winning space-tech with NASA FDL.', url: 'https://fdl.ai/about' },
+      { tag: '2024', name: 'Civil engineering', d: 'Applied AI & agentic systems for a global construction & infrastructure leader (Eiffage Group).', url: 'https://www.eiffage.com/' },
+      { tag: '2026', name: 'Physical AI', d: 'Embedded edge orchestration — SLMs running on-device (NPUs) for real-time physical AI (Bright.AI).', url: 'https://www.bright.ai/' }
+    ];
+    const sectors = sectorsRaw.map(s => ({ ...s, hasUrl: !!s.url }));
+    const rich = { ethics: this.parseLinks(ethicsStr), academia: this.parseLinks(t.academiaBody), nasa: this.parseLinks(t.nasaBody), walloon: this.parseLinks(t.walloonBody), policy: this.parseLinks(t.policyBody) };
+    const logos = ['NASA', 'Stanford', 'European Commission', 'La French Tech', 'MIT', 'UC Berkeley', 'Institute for Advanced Study', 'HUB France IA', 'FDL.ai', 'Everyone.AI', 'AI Action Summit', 'Holberton School'];
+    const nasaCert = 'assets/nasa-cert.png';
+    const walloonCert = 'assets/walloon-cert.png';
 
     const socials = [
       { name: 'LinkedIn', url: 'https://www.linkedin.com/in/gregoryrenard/' },
@@ -483,46 +585,44 @@ class Component extends DCLogic {
     const footerCols = lang === 'fr' ? [
       { h: 'Naviguer', items: [
         { label: 'Vision', url: './', target: '_self' },
-        { label: 'Transformation IA', url: 'AI-Transformation', target: '_self' },
-        { label: 'Conseil & Exécution', url: 'Advisory-Execution', target: '_self' },
-        { label: 'AI Lab', url: 'AI-Lab', target: '_self' },
-        { label: 'Keynote Speaker', url: 'Keynote-Speaker', target: '_self' }
+        { label: 'Méthode', url: 'Method', target: '_self' },
+        { label: 'Conférences', url: 'Keynote-Speaker', target: '_self' }
       ]},
       { h: 'À propos', items: [
-        { label: 'Pourquoi', url: 'Why', target: '_self' },
+        { label: 'Parcours', url: 'Why', target: '_self' },
         { label: 'Éthique', url: 'Ethics', target: '_self' },
         { label: 'Publications', url: 'Publications', target: '_self' },
         { label: 'Presse', url: 'Press', target: '_self' }
       ]},
-      { h: 'Contact', items: [
-        { label: 'Construisons', url: 'Contact', target: '_self' },
-        { label: 'Freedom.AI', url: 'https://freedom.ai/', target: '_blank' },
-        { label: 'Everyone.AI', url: 'https://everyone.ai/', target: '_blank' }
+      { h: 'Ailleurs', items: [
+        { label: 'Contact', url: 'Contact', target: '_self' },
+        { label: 'Freedom.AI ↗', url: 'https://www.freedom.ai/', target: '_blank' },
+        { label: 'Everyone.AI ↗', url: 'https://everyone.ai/', target: '_blank' },
+        { label: 'Holberton-Turing Oath ↗', url: 'https://www.holbertonturingoath.org/', target: '_blank' }
       ]}
     ] : [
       { h: 'Navigate', items: [
         { label: 'Vision', url: './', target: '_self' },
-        { label: 'AI Transformation', url: 'AI-Transformation', target: '_self' },
-        { label: 'Advisory & Execution', url: 'Advisory-Execution', target: '_self' },
-        { label: 'AI Lab', url: 'AI-Lab', target: '_self' },
-        { label: 'Keynote Speaker', url: 'Keynote-Speaker', target: '_self' }
+        { label: 'Method', url: 'Method', target: '_self' },
+        { label: 'Talks', url: 'Keynote-Speaker', target: '_self' }
       ]},
       { h: 'About', items: [
-        { label: 'Why', url: 'Why', target: '_self' },
+        { label: 'Story', url: 'Why', target: '_self' },
         { label: 'Ethics', url: 'Ethics', target: '_self' },
         { label: 'Publications', url: 'Publications', target: '_self' },
         { label: 'Press', url: 'Press', target: '_self' }
       ]},
-      { h: 'Contact', items: [
-        { label: "Let's Build", url: 'Contact', target: '_self' },
-        { label: 'Freedom.AI', url: 'https://freedom.ai/', target: '_blank' },
-        { label: 'Everyone.AI', url: 'https://everyone.ai/', target: '_blank' }
+      { h: 'Elsewhere', items: [
+        { label: 'Contact', url: 'Contact', target: '_self' },
+        { label: 'Freedom.AI ↗', url: 'https://www.freedom.ai/', target: '_blank' },
+        { label: 'Everyone.AI ↗', url: 'https://everyone.ai/', target: '_blank' },
+        { label: 'Holberton-Turing Oath ↗', url: 'https://www.holbertonturingoath.org/', target: '_blank' }
       ]}
     ];
 
     return {
       rootRef: (el) => { this._root = el; },
-      lang, t, timeline, leftCol, rightCol, industries, ventures, rich, socials, footerCols,
+      lang, t, timeline, leftCol, rightCol, industries, ventures, rich, nasaCert, walloonCert, logos, sectors, socials, footerCols,
       langLabel: lang === 'en' ? 'FR' : 'EN',
       toggleLang: () => this.setLang(lang === 'en' ? 'fr' : 'en'),
       portrait: 'assets/greg-home-orange.jpg'

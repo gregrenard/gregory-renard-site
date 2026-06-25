@@ -7,7 +7,11 @@ SKILL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO="$(cd "$SKILL_DIR/../../.." && pwd)"
 cd "$REPO"
 
-SUBPAGES="AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Press Publications Why"
+SUBPAGES="AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Method Press Publications Why"
+# Full content pages carry the static SEO head; these 3 are intentional redirect
+# stubs (AI-Lab/Advisory-Execution -> freedom.ai, AI-Transformation -> /Method)
+# with only <title> + a meta refresh, so they're excluded from the og:title check.
+CONTENT="Contact Ethics Keynote-Speaker Method Press Publications Why"
 fail=0
 
 echo "--- (a) extension gone + no accidental .// ---"
@@ -18,12 +22,18 @@ echo "--- (b) index.html is the homepage (not a redirect) ---"
 [ "$(grep -c 'http-equiv="refresh"' index.html)" = "0" ] && echo "  ok: no refresh redirect" || { echo "  BAD: index has refresh"; fail=1; }
 [ "$(grep -c '<x-dc>' index.html)" -ge 1 ]               && echo "  ok: <x-dc> present"      || { echo "  BAD: no <x-dc>"; fail=1; }
 
-echo "--- (c) static SEO present: each page has <title> + og:title inside <head> ---"
-for f in index.html $(for n in $SUBPAGES; do echo "$n.html"; done); do
+echo "--- (c) static SEO present: each content page has <title> + og:title inside <head> ---"
+cfail=0
+for f in index.html $(for n in $CONTENT; do echo "$n.html"; done); do
   h=$(awk 'BEGIN{p=1}/<body/{p=0}{if(p)print}' "$f")
-  if echo "$h" | grep -q "<title>" && echo "$h" | grep -q "og:title"; then :; else echo "  MISS seo-head: $f"; fail=1; fi
+  if echo "$h" | grep -q "<title>" && echo "$h" | grep -q "og:title"; then :; else echo "  MISS seo-head: $f"; fail=1; cfail=1; fi
 done
-[ $fail -eq 0 ] && echo "  ok: all pages have <title> + og:title in <head>"
+[ $cfail -eq 0 ] && echo "  ok: all content pages have <title> + og:title in <head>"
+echo "--- (c2) redirect stubs carry a refresh + canonical ---"
+for n in AI-Lab AI-Transformation Advisory-Execution; do
+  [ -f "$n.html" ] || continue
+  if grep -q 'http-equiv="refresh"' "$n.html" && grep -q 'rel="canonical"' "$n.html"; then echo "  ok: $n redirect stub"; else echo "  WARN: $n missing refresh/canonical"; fi
+done
 
 echo "--- (d) every internal page link resolves to a .html file ---"
 for n in $SUBPAGES; do

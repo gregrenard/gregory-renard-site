@@ -17,8 +17,8 @@ SKILL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO="$(cd "$SKILL_DIR/../../.." && pwd)"
 cd "$REPO"
 
-HOME_SRC="Gregory Renard - Home.dc.html"
-SUBPAGES="AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Press Publications Why"
+HOME_SRC="Gregory Renard - Home v2.dc.html"
+SUBPAGES="AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Method Press Publications Why"
 
 [ -f "$HOME_SRC" ] || { echo "ERROR: '$HOME_SRC' not found — run extract-pulled.py first."; exit 1; }
 
@@ -26,6 +26,9 @@ echo "==> 1/6  clean root: index.html = home page"
 cp "$HOME_SRC" index.html
 
 echo "==> 2/6  rewrite home link -> ./  (href + JS url forms, quote-anchored)"
+# v3 home file is "… - Home v2.dc.html"; also keep the legacy "- Home" form (no-op if absent)
+sed -i '' 's|"Gregory%20Renard%20-%20Home%20v2\.dc\.html"|"./"|g' *.dc.html index.html
+sed -i '' "s|'Gregory%20Renard%20-%20Home%20v2\.dc\.html'|'./'|g" *.dc.html index.html
 sed -i '' 's|"Gregory%20Renard%20-%20Home\.dc\.html"|"./"|g' *.dc.html index.html
 sed -i '' "s|'Gregory%20Renard%20-%20Home\.dc\.html'|'./'|g" *.dc.html index.html
 
