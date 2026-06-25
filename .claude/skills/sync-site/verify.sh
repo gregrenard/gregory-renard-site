@@ -62,6 +62,23 @@ else
   echo "  ok: footer label matches top nav"
 fi
 
+echo "--- (h) static pre-render mirror present + resolved (no {{ }} inside it) ---"
+for f in index.html $(for n in $CONTENT; do echo "$n.html"; done); do
+  python3 - "$f" <<'PY' || fail=1
+import sys, re
+f = sys.argv[1]; s = open(f, encoding="utf-8").read()
+m = re.search(r"<!--dc-prerender-start-->(.*?)<!--dc-prerender-end-->", s, re.S)
+if not m:
+    print("  MISS pre-render mirror:", f); sys.exit(1)
+if 'id="dc-prerender-css"' not in s:
+    print("  MISS swap CSS:", f); sys.exit(1)
+ph = len(re.findall(r"\{\{[^}]*\}\}", m.group(1)))
+if ph:
+    print("  BAD: %d unresolved {{ }} inside mirror: %s" % (ph, f)); sys.exit(1)
+print("  ok:", f)
+PY
+done
+
 echo
 [ $fail -eq 0 ] && echo "VERIFY: all checks passed ✅" || echo "VERIFY: FAILURES above ❌"
 exit $fail

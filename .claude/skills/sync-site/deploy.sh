@@ -52,5 +52,8 @@ echo "==> 6/6  bump sitemap <lastmod> to today"
 TODAY="$(date +%F)"
 sed -i '' "s|<lastmod>[^<]*</lastmod>|<lastmod>$TODAY</lastmod>|g" sitemap.xml
 
+echo "==> 7/7  static pre-render (headless): real content for no-JS / non-JS crawlers"
+python3 "$SKILL_DIR/prerender.py"
+
 echo
 bash "$SKILL_DIR/verify.sh"
