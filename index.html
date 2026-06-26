@@ -58,6 +58,13 @@
   .grx-marq:hover .grx-track{animation-play-state:paused}
   @media (max-width:900px){
     .grx-navlink{display:none !important}
+    .grx-nav{gap:14px !important}
+    .grx-cta-nav{display:none !important}
+    .grx-logo{min-width:0 !important}
+    .grx-logo-sub{display:none !important}
+    .grx-clients-title{white-space:normal !important}
+    .grx-hero-sec h1{white-space:normal !important}
+    .grx-hero-sec{padding:46px 22px 32px !important}
     .grx-hero-a,.grx-intro,.grx-ethics{grid-template-columns:1fr !important}
     .grx-clients{grid-template-columns:repeat(2,1fr) !important}
     .grx-testi{grid-template-columns:1fr !important}
@@ -149,6 +156,13 @@
   .grx-marq:hover .grx-track{animation-play-state:paused}
   @media (max-width:900px){
     .grx-navlink{display:none !important}
+    .grx-nav{gap:14px !important}
+    .grx-cta-nav{display:none !important}
+    .grx-logo{min-width:0 !important}
+    .grx-logo-sub{display:none !important}
+    .grx-clients-title{white-space:normal !important}
+    .grx-hero-sec h1{white-space:normal !important}
+    .grx-hero-sec{padding:46px 22px 32px !important}
     .grx-hero-a,.grx-intro,.grx-ethics{grid-template-columns:1fr !important}
     .grx-clients{grid-template-columns:repeat(2,1fr) !important}
     .grx-testi{grid-template-columns:1fr !important}
@@ -186,17 +200,17 @@
 
   <!-- ============ NAV ============ -->
   <header style="position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:var(--header-bg);border-bottom:1px solid rgba(var(--line-rgb),0.07)">
-    <nav style="max-width:1240px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;gap:28px">
-      <a href="./" style="display:flex;align-items:center;gap:11px;margin-right:auto;flex-shrink:0">
+    <nav class="grx-nav" style="max-width:1240px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;gap:28px">
+      <a class="grx-logo" href="./" style="display:flex;align-items:center;gap:11px;margin-right:auto;flex-shrink:0;min-width:0">
         <img src="assets/freedom-tree.png" alt="Freedom.AI" style="width:34px;height:34px;object-fit:contain;flex:none">
-        <span style="display:flex;flex-direction:column;gap:1px;line-height:1.1;white-space:nowrap"><span style="font-weight:700;font-size:15px;letter-spacing:-0.01em">Gregory Renard</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent)">Applied AI Architect · Since 1996</span></span>
+        <span style="display:flex;flex-direction:column;gap:1px;line-height:1.1;white-space:nowrap"><span style="font-weight:700;font-size:15px;letter-spacing:-0.01em">Gregory Renard</span><span class="grx-logo-sub" style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent)">Applied AI Architect · Since 1996</span></span>
       </a>
       <a class="grx-navlink" href="Method" style="font-size:14px;color:var(--text-soft)">{{ t.nav_method }}</a>
       <a class="grx-navlink" href="Why" style="font-size:14px;color:var(--text-soft)">{{ t.nav_why }}</a>
       <a class="grx-navlink" href="Ethics" style="font-size:14px;color:var(--text-soft)">{{ t.nav_ethics }}</a>
       <a class="grx-navlink" href="Keynote-Speaker" style="font-size:14px;color:var(--text-soft)">{{ t.nav_speaking }}</a>
       <a class="grx-navlink" href="Publications" style="font-size:14px;color:var(--text-soft)">{{ t.nav_writing }}</a>
-      <a href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:var(--btn-fg);background:var(--btn-bg);padding:9px 17px;border-radius:3px;box-shadow:0 6px 18px var(--btn-shadow)" style-hover="background:var(--btn-bg-hover)">{{ t.nav_cta }} ↗</a>
+      <a class="grx-cta-nav" href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:var(--btn-fg);background:var(--btn-bg);padding:9px 17px;border-radius:3px;box-shadow:0 6px 18px var(--btn-shadow)" style-hover="background:var(--btn-bg-hover)">{{ t.nav_cta }} ↗</a>
       <button onClick="{{ toggleLang }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--text);background:rgba(var(--accent-rgb),0.18);border:1px solid rgba(var(--accent-rgb),0.42);border-radius:100px;padding:7px 13px;cursor:pointer">{{ langLabel }}</button>
       <label for="grx-nav-toggle" class="grx-burger" aria-label="Open menu">☰</label>
     </nav>
@@ -213,17 +227,18 @@
 
   <!-- ============ HERO A — Authority ============ -->
   <sc-if value="{{ isA }}" hint-placeholder-val="{{ true }}">
-  <section style="max-width:1240px;margin:0 auto;padding:84px 32px 40px">
+  <section class="grx-hero-sec" style="max-width:1240px;margin:0 auto;padding:84px 32px 40px">
     <div class="grx-hero-a" style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:60px;align-items:center">
       <div data-reveal>
         <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:26px">
           <span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>{{ t.eyebrow }}
         </div>
-        <h1 style="font-size:clamp(36px,4.3vw,60px);line-height:1.14;letter-spacing:-0.02em;font-weight:560;text-wrap:balance">{{ t.heroPre }}<span style="color:var(--accent);font-style:italic">{{ t.heroEm }}</span>{{ t.heroPost }}</h1>
+        <h1 style="font-size:clamp(33px,3.9vw,54px);line-height:1.16;letter-spacing:-0.025em;font-weight:420;text-wrap:balance">{{ t.heroPre }}<span style="color:var(--accent);font-style:italic;font-weight:400">{{ t.heroEm }}</span>{{ t.heroPost }}<br><span style="white-space:nowrap">{{ t.heroLast }}</span></h1>
         <p style="margin-top:24px;font-size:clamp(16px,1.4vw,19px);line-height:1.6;color:var(--text-soft);max-width:560px">{{ t.heroSub }}</p>
         <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:34px">
           <a href="Contact" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:var(--btn-fg);background:var(--btn-bg);padding:14px 24px;border-radius:3px;box-shadow:0 10px 30px var(--btn-shadow)" style-hover="background:var(--btn-bg-hover);transform:translateY(-1px)">{{ t.ctaPrimary }} →</a>
           <a href="Method" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:var(--text);border:1px solid rgba(var(--line-rgb),0.22);padding:14px 24px;border-radius:3px" style-hover="border-color:var(--text);background:rgba(var(--line-rgb),0.04)">{{ t.ctaSecondary }}</a>
+          <a href="Why" style="display:inline-flex;align-items:center;gap:7px;align-self:center;font-size:15px;font-weight:600;color:var(--text-soft);border-bottom:1px solid transparent;padding-bottom:1px" style-hover="color:var(--accent);border-color:var(--accent)">{{ t.ctaStory }} →</a>
         </div>
         <div style="display:flex;gap:18px;margin-top:34px;align-items:center">
           <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-faint);letter-spacing:0.06em">{{ t.findMe }}</span>
@@ -262,8 +277,10 @@
   <section data-reveal style="max-width:1240px;margin:0 auto;padding:34px 32px 6px">
     <div>
       <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:22px"><span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>{{ t.whyKicker }}</div>
-      <p style="font-family:var(--font-display);font-size:clamp(21px,2.2vw,29px);line-height:1.42;letter-spacing:-0.01em;color:var(--text);text-wrap:pretty">{{ t.whyBody }}</p>
-      <div style="margin-top:20px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:var(--text-mute)">{{ t.whySign }}</div>
+      <p style="font-family:var(--font-display);font-size:clamp(24px,2.6vw,34px);line-height:1.3;letter-spacing:-0.015em;color:var(--text);text-wrap:balance">{{ t.whyLead }}</p>
+      <p style="margin-top:22px;font-size:clamp(17px,1.5vw,19px);line-height:1.75;color:var(--text-soft);text-wrap:pretty">{{ t.whyBody }}</p>
+      <p style="margin-top:20px;font-family:var(--font-display);font-style:italic;font-size:clamp(19px,2vw,24px);line-height:1.4;letter-spacing:-0.01em;color:var(--accent);text-wrap:balance">{{ t.whyClosePre }}<span style="font-weight:700;font-style:normal">{{ t.whyCloseBold }}</span>{{ t.whyClosePost }}</p>
+      <div style="margin-top:22px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.04em;color:var(--text-mute)">{{ t.whySign }}</div>
     </div>
   </section>
 
@@ -271,7 +288,7 @@
   <section class="grx-pad" style="max-width:1100px;margin:0 auto;padding:62px 32px 26px">
     <figure data-reveal style="margin:0;text-align:center">
       <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:22px"><span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>{{ t.quoteKicker }}</div>
-      <blockquote style="margin:0;font-size:clamp(22px,2.7vw,36px);line-height:1.34;font-weight:700;letter-spacing:-0.02em;text-wrap:balance">“Good news: AI isn't going to replace you. Bad news: a person who uses AI will. One thing is certain — <span style="color:var(--accent)">talent will matter even more</span>.”</blockquote>
+      <blockquote style="margin:0;font-size:clamp(22px,2.7vw,36px);line-height:1.34;font-weight:700;letter-spacing:-0.02em;text-wrap:balance">“Good news: AI isn't going to replace you.<br>Bad news: a person who uses AI will.<br>One thing is certain — <span style="color:var(--accent)">talent will matter even more</span>.”</blockquote>
       <figcaption style="margin-top:22px;font-size:14px;color:var(--text-mute)">— Gregory Renard · 2016</figcaption>
     </figure>
   </section>
@@ -279,7 +296,7 @@
   <!-- ============ CLIENTS / TRUSTED BY ============ -->
   <section data-reveal style="max-width:1240px;margin:0 auto;padding:34px 32px 6px">
     <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px"><span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>{{ t.clientsKicker }}</div>
-    <h2 style="font-size:clamp(20px,2.1vw,29px);line-height:1.16;letter-spacing:-0.02em;font-weight:560;white-space:nowrap">{{ t.clientsTitle }}</h2>
+    <h2 class="grx-clients-title" style="font-size:clamp(20px,2.1vw,29px);line-height:1.16;letter-spacing:-0.02em;font-weight:560;white-space:nowrap">{{ t.clientsTitle }}</h2>
     <div class="grx-clients" style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(var(--line-rgb),0.08);border:1px solid rgba(var(--line-rgb),0.08);border-radius:4px;overflow:hidden;margin-top:24px">
       <sc-for list="{{ clients }}" as="c" hint-placeholder-count="10">
         <sc-if value="{{ c.hasUrl }}" hint-placeholder-val="{{ true }}"><a href="{{ c.url }}" target="{{ c.target }}" rel="noopener noreferrer" style="display:flex;align-items:center;justify-content:center;min-height:88px;padding:20px 16px;background:var(--surface);font-family:var(--font-display);font-size:17px;color:var(--text-soft);text-align:center;text-decoration:none;transition:color .25s,background .25s" style-hover="color:var(--text);background:rgba(var(--accent-rgb),0.05)">{{ c.name }}</a></sc-if><sc-if value="{{ c.noUrl }}" hint-placeholder-val="{{ true }}"><div style="display:flex;align-items:center;justify-content:center;min-height:88px;padding:20px 16px;background:var(--surface);font-family:var(--font-display);font-size:17px;color:var(--text-soft);text-align:center">{{ c.name }}</div></sc-if>
@@ -436,17 +453,17 @@
 
   
   <header data-dc-tpl="29" style="position: sticky; top: 0px; z-index: 60; backdrop-filter: blur(14px); background: var(--header-bg); border-bottom: 1px solid rgba(var(--line-rgb),0.07);">
-    <nav data-dc-tpl="30" style="max-width: 1240px; margin: 0px auto; padding: 16px 32px; display: flex; align-items: center; gap: 28px;">
-      <a data-dc-tpl="31" href="./" style="display: flex; align-items: center; gap: 11px; margin-right: auto; flex-shrink: 0;">
+    <nav data-dc-tpl="30" class="grx-nav" style="max-width: 1240px; margin: 0px auto; padding: 16px 32px; display: flex; align-items: center; gap: 28px;">
+      <a data-dc-tpl="31" class="grx-logo" href="./" style="display: flex; align-items: center; gap: 11px; margin-right: auto; flex-shrink: 0; min-width: 0px;">
         <img data-dc-tpl="32" src="assets/freedom-tree.png" alt="Freedom.AI" style="width: 34px; height: 34px; object-fit: contain; flex: 0 0 auto;">
-        <span data-dc-tpl="33" style="display: flex; flex-direction: column; gap: 1px; line-height: 1.1; white-space: nowrap;"><span data-dc-tpl="34" style="font-weight: 700; font-size: 15px; letter-spacing: -0.01em;">Gregory Renard</span><span data-dc-tpl="35" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent);">Applied AI Architect · Since 1996</span></span>
+        <span data-dc-tpl="33" style="display: flex; flex-direction: column; gap: 1px; line-height: 1.1; white-space: nowrap;"><span data-dc-tpl="34" style="font-weight: 700; font-size: 15px; letter-spacing: -0.01em;">Gregory Renard</span><span data-dc-tpl="35" class="grx-logo-sub" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent);">Applied AI Architect · Since 1996</span></span>
       </a>
       <a data-dc-tpl="36" class="grx-navlink" href="Method" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Method</span></a>
       <a data-dc-tpl="37" class="grx-navlink" href="Why" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Story</span></a>
       <a data-dc-tpl="38" class="grx-navlink" href="Ethics" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Ethics</span></a>
       <a data-dc-tpl="39" class="grx-navlink" href="Keynote-Speaker" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Talks</span></a>
       <a data-dc-tpl="40" class="grx-navlink" href="Publications" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Publications</span></a>
-      <a data-dc-tpl="41" href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer" class="scp0" style="display: inline-flex; align-items: center; gap: 7px; font-size: 14px; font-weight: 600; color: var(--btn-fg); background: var(--btn-bg); padding: 9px 17px; border-radius: 3px; box-shadow: 0 6px 18px var(--btn-shadow);"><span class="sc-interp">Freedom.AI</span> ↗</a>
+      <a data-dc-tpl="41" class="grx-cta-nav scp0" href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 7px; font-size: 14px; font-weight: 600; color: var(--btn-fg); background: var(--btn-bg); padding: 9px 17px; border-radius: 3px; box-shadow: 0 6px 18px var(--btn-shadow);"><span class="sc-interp">Freedom.AI</span> ↗</a>
       <button data-dc-tpl="42" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--text); background: rgba(var(--accent-rgb),0.18); border: 1px solid rgba(var(--accent-rgb),0.42); border-radius: 100px; padding: 7px 13px; cursor: pointer;"><span class="sc-interp">FR</span></button>
       <label data-dc-tpl="43" for="grx-nav-toggle" class="grx-burger" aria-label="Open menu">☰</label>
     </nav>
@@ -463,45 +480,46 @@
 
   
   
-  <section data-dc-tpl="53" style="max-width: 1240px; margin: 0px auto; padding: 84px 32px 40px;">
+  <section data-dc-tpl="53" class="grx-hero-sec" style="max-width: 1240px; margin: 0px auto; padding: 84px 32px 40px;">
     <div data-dc-tpl="54" class="grx-hero-a" style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 60px; align-items: center;">
       <div data-dc-tpl="55" data-reveal="">
         <div data-dc-tpl="56" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 26px;">
           <span data-dc-tpl="57" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">AI — on humanity’s side</span>
         </div>
-        <h1 data-dc-tpl="58" style="font-size: clamp(36px, 4.3vw, 60px); line-height: 1.14; letter-spacing: -0.02em; font-weight: 560; text-wrap: balance;"><span class="sc-interp">AI should </span><span data-dc-tpl="59" style="color: var(--accent); font-style: italic;"><span class="sc-interp">serve people</span></span><span class="sc-interp"> — not the other way around. I’ve spent 30 years proving it.</span></h1>
-        <p data-dc-tpl="60" style="margin-top: 24px; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: var(--text-soft); max-width: 560px;"><span class="sc-interp">Hands-on AI architect since 1996. With a proven method — Cognitive Orchestration™ — I move leaders and their teams from AI anxiety to AI in production, at scale. Let’s build something that lasts.</span></p>
-        <div data-dc-tpl="61" style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px;">
-          <a data-dc-tpl="62" href="Contact" class="scp1" style="display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 15px; color: var(--btn-fg); background: var(--btn-bg); padding: 14px 24px; border-radius: 3px; box-shadow: 0 10px 30px var(--btn-shadow);"><span class="sc-interp">Let's talk</span> →</a>
-          <a data-dc-tpl="63" href="Method" class="scp2" style="display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 15px; color: var(--text); border: 1px solid rgba(var(--line-rgb),0.22); padding: 14px 24px; border-radius: 3px;"><span class="sc-interp">See the method</span></a>
+        <h1 data-dc-tpl="58" style="font-size: clamp(33px, 3.9vw, 54px); line-height: 1.16; letter-spacing: -0.025em; font-weight: 420; text-wrap: balance;"><span class="sc-interp">AI should </span><span data-dc-tpl="59" style="color: var(--accent); font-style: italic; font-weight: 400;"><span class="sc-interp">serve people</span></span><span class="sc-interp"> — not the other way around. </span><br data-dc-tpl="60"><span data-dc-tpl="61" style="white-space: nowrap;"><span class="sc-interp">I’ve spent 30 years proving it.</span></span></h1>
+        <p data-dc-tpl="62" style="margin-top: 24px; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: var(--text-soft); max-width: 560px;"><span class="sc-interp">Hands-on AI architect since 1996. With a proven method — Cognitive Orchestration™ — I move leaders and their teams from AI anxiety to AI in production, at scale. Let’s build something that lasts.</span></p>
+        <div data-dc-tpl="63" style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px;">
+          <a data-dc-tpl="64" href="Contact" class="scp1" style="display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 15px; color: var(--btn-fg); background: var(--btn-bg); padding: 14px 24px; border-radius: 3px; box-shadow: 0 10px 30px var(--btn-shadow);"><span class="sc-interp">Let's talk</span> →</a>
+          <a data-dc-tpl="65" href="Method" class="scp2" style="display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 15px; color: var(--text); border: 1px solid rgba(var(--line-rgb),0.22); padding: 14px 24px; border-radius: 3px;"><span class="sc-interp">See the method</span></a>
+          <a data-dc-tpl="66" href="Why" class="scp3" style="display: inline-flex; align-items: center; gap: 7px; align-self: center; font-size: 15px; font-weight: 600; color: var(--text-soft); border-bottom: 1px solid transparent; padding-bottom: 1px;"><span class="sc-interp">Read my story</span> →</a>
         </div>
-        <div data-dc-tpl="64" style="display: flex; gap: 18px; margin-top: 34px; align-items: center;">
-          <span data-dc-tpl="65" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: var(--text-faint); letter-spacing: 0.06em;"><span class="sc-interp">FIND ME</span></span>
+        <div data-dc-tpl="67" style="display: flex; gap: 18px; margin-top: 34px; align-items: center;">
+          <span data-dc-tpl="68" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: var(--text-faint); letter-spacing: 0.06em;"><span class="sc-interp">FIND ME</span></span>
           
-            <a data-dc-tpl="67" href="https://www.linkedin.com/in/gregoryrenard/" target="_blank" rel="noopener noreferrer" class="scp3" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute); border-bottom: 1px solid transparent;"><span class="sc-interp">LinkedIn</span></a>
+            <a data-dc-tpl="70" href="https://www.linkedin.com/in/gregoryrenard/" target="_blank" rel="noopener noreferrer" class="scp4" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute); border-bottom: 1px solid transparent;"><span class="sc-interp">LinkedIn</span></a>
           
-            <a data-dc-tpl="67" href="https://fr.wikipedia.org/wiki/Gr%C3%A9gory_Renard" target="_blank" rel="noopener noreferrer" class="scp3" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute); border-bottom: 1px solid transparent;"><span class="sc-interp">Wikipedia</span></a>
+            <a data-dc-tpl="70" href="https://fr.wikipedia.org/wiki/Gr%C3%A9gory_Renard" target="_blank" rel="noopener noreferrer" class="scp4" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute); border-bottom: 1px solid transparent;"><span class="sc-interp">Wikipedia</span></a>
           
-            <a data-dc-tpl="67" href="https://scholar.google.com/citations?user=Khit-6kAAAAJ&amp;hl=fr" target="_blank" rel="noopener noreferrer" class="scp3" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute); border-bottom: 1px solid transparent;"><span class="sc-interp">Scholar</span></a>
+            <a data-dc-tpl="70" href="https://scholar.google.com/citations?user=Khit-6kAAAAJ&amp;hl=fr" target="_blank" rel="noopener noreferrer" class="scp4" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute); border-bottom: 1px solid transparent;"><span class="sc-interp">Scholar</span></a>
           
-            <a data-dc-tpl="67" href="https://github.com/gregrenard/" target="_blank" rel="noopener noreferrer" class="scp3" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute); border-bottom: 1px solid transparent;"><span class="sc-interp">GitHub</span></a>
+            <a data-dc-tpl="70" href="https://github.com/gregrenard/" target="_blank" rel="noopener noreferrer" class="scp4" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute); border-bottom: 1px solid transparent;"><span class="sc-interp">GitHub</span></a>
           
-            <a data-dc-tpl="67" href="https://twitter.com/Redo" target="_blank" rel="noopener noreferrer" class="scp3" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute); border-bottom: 1px solid transparent;"><span class="sc-interp">X</span></a>
+            <a data-dc-tpl="70" href="https://twitter.com/Redo" target="_blank" rel="noopener noreferrer" class="scp4" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute); border-bottom: 1px solid transparent;"><span class="sc-interp">X</span></a>
           
-            <a data-dc-tpl="67" href="https://www.youtube.com/@GregoryRenard" target="_blank" rel="noopener noreferrer" class="scp3" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute); border-bottom: 1px solid transparent;"><span class="sc-interp">YouTube</span></a>
+            <a data-dc-tpl="70" href="https://www.youtube.com/@GregoryRenard" target="_blank" rel="noopener noreferrer" class="scp4" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute); border-bottom: 1px solid transparent;"><span class="sc-interp">YouTube</span></a>
           
         </div>
       </div>
-      <div data-dc-tpl="68" data-reveal="" style="position: relative;">
-        <div data-dc-tpl="69" style="position: absolute; inset: -14px; border-radius: 24px; background: radial-gradient(circle at 50% 30%, var(--photo-glow), transparent 70%); filter: blur(30px); z-index: 0;"></div>
-        <div data-dc-tpl="70" style="position: relative; z-index: 1; border-radius: 20px; overflow: hidden; border: 1px solid rgba(var(--line-rgb),0.12); box-shadow: rgba(0, 0, 0, 0.5) 0px 30px 70px;">
-          <img data-dc-tpl="71" src="assets/greg-home-hd.png" alt="Gregory Renard speaking — applied AI architect" style="width: 100%; display: block; aspect-ratio: 4 / 5; object-fit: cover; object-position: center center;">
-          <div data-dc-tpl="72" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 34px 20px 18px; background: linear-gradient(transparent, rgba(5, 9, 22, 0.55) 38%, rgba(5, 9, 22, 0.94)); display: flex; align-items: flex-end; justify-content: space-between;">
-            <div data-dc-tpl="73">
-              <div data-dc-tpl="74" style="font-weight: 700; font-size: 15px; color: rgb(244, 239, 228); text-shadow: rgba(0, 0, 0, 0.8) 0px 1px 6px;">Gregory Renard</div>
-              <div data-dc-tpl="75" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(203, 182, 128); text-shadow: rgba(0, 0, 0, 0.85) 0px 1px 5px;">SF · Paris · Bruxelles</div>
+      <div data-dc-tpl="71" data-reveal="" style="position: relative;">
+        <div data-dc-tpl="72" style="position: absolute; inset: -14px; border-radius: 24px; background: radial-gradient(circle at 50% 30%, var(--photo-glow), transparent 70%); filter: blur(30px); z-index: 0;"></div>
+        <div data-dc-tpl="73" style="position: relative; z-index: 1; border-radius: 20px; overflow: hidden; border: 1px solid rgba(var(--line-rgb),0.12); box-shadow: rgba(0, 0, 0, 0.5) 0px 30px 70px;">
+          <img data-dc-tpl="74" src="assets/greg-home-hd.png" alt="Gregory Renard speaking — applied AI architect" style="width: 100%; display: block; aspect-ratio: 4 / 5; object-fit: cover; object-position: center center;">
+          <div data-dc-tpl="75" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 34px 20px 18px; background: linear-gradient(transparent, rgba(5, 9, 22, 0.55) 38%, rgba(5, 9, 22, 0.94)); display: flex; align-items: flex-end; justify-content: space-between;">
+            <div data-dc-tpl="76">
+              <div data-dc-tpl="77" style="font-weight: 700; font-size: 15px; color: rgb(244, 239, 228); text-shadow: rgba(0, 0, 0, 0.8) 0px 1px 6px;">Gregory Renard</div>
+              <div data-dc-tpl="78" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(203, 182, 128); text-shadow: rgba(0, 0, 0, 0.85) 0px 1px 5px;">SF · Paris · Bruxelles</div>
             </div>
-            <span data-dc-tpl="76" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(235, 217, 168); border: 1px solid rgba(var(--accent-rgb),0.45); background: rgba(7, 12, 30, 0.55); border-radius: 100px; padding: 5px 10px; text-shadow: rgba(0, 0, 0, 0.7) 0px 1px 4px;">AI Native since 1996</span>
+            <span data-dc-tpl="79" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(235, 217, 168); border: 1px solid rgba(var(--accent-rgb),0.45); background: rgba(7, 12, 30, 0.55); border-radius: 100px; padding: 5px 10px; text-shadow: rgba(0, 0, 0, 0.7) 0px 1px 4px;">AI Native since 1996</span>
           </div>
         </div>
       </div>
@@ -510,312 +528,314 @@
   
 
   
-  <section data-dc-tpl="77" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 8px 32px 0px;">
-    <a data-dc-tpl="78" href="https://aiforgood.itu.int/speaker/gregory-renard/" target="_blank" rel="noopener noreferrer" class="scp4" style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; text-decoration: none; border-top-color: ; border-top-style: ; border-top-width: ; border-right-color: ; border-right-style: ; border-right-width: ; border-bottom-color: ; border-bottom-style: ; border-bottom-width: ; border-left: 3px solid var(--accent); border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 3px; background: rgba(var(--line-rgb),0.02); padding: 14px 20px;">
-      <span data-dc-tpl="79" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--btn-fg); background: var(--btn-bg); padding: 5px 10px; border-radius: 100px; white-space: nowrap;"><span class="sc-interp">09 Jul 2026 · Upcoming</span></span>
-      <span data-dc-tpl="80" style="font-size: 14.5px; line-height: 1.5; color: var(--text-soft); flex: 1 1 0%; min-width: 240px;"><span class="sc-interp">Speaking at the AI for Good Global Summit — the United Nations’ flagship summit on AI for humanity, in Geneva.</span></span>
-      <span data-dc-tpl="81" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12.5px; font-weight: 600; color: var(--accent); white-space: nowrap;"><span class="sc-interp">View session</span> ↗</span>
+  <section data-dc-tpl="80" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 8px 32px 0px;">
+    <a data-dc-tpl="81" href="https://aiforgood.itu.int/speaker/gregory-renard/" target="_blank" rel="noopener noreferrer" class="scp5" style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; text-decoration: none; border-top-color: ; border-top-style: ; border-top-width: ; border-right-color: ; border-right-style: ; border-right-width: ; border-bottom-color: ; border-bottom-style: ; border-bottom-width: ; border-left: 3px solid var(--accent); border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-radius: 3px; background: rgba(var(--line-rgb),0.02); padding: 14px 20px;">
+      <span data-dc-tpl="82" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--btn-fg); background: var(--btn-bg); padding: 5px 10px; border-radius: 100px; white-space: nowrap;"><span class="sc-interp">09 Jul 2026 · Upcoming</span></span>
+      <span data-dc-tpl="83" style="font-size: 14.5px; line-height: 1.5; color: var(--text-soft); flex: 1 1 0%; min-width: 240px;"><span class="sc-interp">Speaking at the AI for Good Global Summit — the United Nations’ flagship summit on AI for humanity, in Geneva.</span></span>
+      <span data-dc-tpl="84" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12.5px; font-weight: 600; color: var(--accent); white-space: nowrap;"><span class="sc-interp">View session</span> ↗</span>
     </a>
   </section>
 
   
-  <section data-dc-tpl="82" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 34px 32px 6px;">
-    <div data-dc-tpl="83">
-      <div data-dc-tpl="84" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px;"><span data-dc-tpl="85" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">My why</span></div>
-      <p data-dc-tpl="86" style="font-family: var(--font-display); font-size: clamp(21px, 2.2vw, 29px); line-height: 1.42; letter-spacing: -0.01em; color: var(--text); text-wrap: pretty;"><span class="sc-interp">The technology has never been the point. What moves me are the people living through this shift — the teams afraid of being replaced, the children growing up in a world reshaped by AI. I’ve spent my life making sure AI amplifies what makes us human instead of erasing it. That’s why I build, I teach, and I speak.</span></p>
-      <div data-dc-tpl="87" style="margin-top: 20px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.04em; color: var(--text-mute);"><span class="sc-interp">— Gregory</span></div>
+  <section data-dc-tpl="85" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 34px 32px 6px;">
+    <div data-dc-tpl="86">
+      <div data-dc-tpl="87" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px;"><span data-dc-tpl="88" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">My why</span></div>
+      <p data-dc-tpl="89" style="font-family: var(--font-display); font-size: clamp(24px, 2.6vw, 34px); line-height: 1.3; letter-spacing: -0.015em; color: var(--text); text-wrap: balance;"><span class="sc-interp">The technology has never been the point.</span></p>
+      <p data-dc-tpl="90" style="margin-top: 22px; font-size: clamp(17px, 1.5vw, 19px); line-height: 1.75; color: var(--text-soft); text-wrap: pretty;"><span class="sc-interp">What moves me are the people living through this shift — the teams afraid of being replaced, the children growing up in a world reshaped by AI. I’ve spent my life making sure AI amplifies what makes us human instead of erasing it.</span></p>
+      <p data-dc-tpl="91" style="margin-top: 20px; font-family: var(--font-display); font-style: italic; font-size: clamp(19px, 2vw, 24px); line-height: 1.4; letter-spacing: -0.01em; color: var(--accent); text-wrap: balance;"><span class="sc-interp">That’s why I build, I teach, and I speak — all in service of one goal: to use technology to impact </span><span data-dc-tpl="92" style="font-weight: 700; font-style: normal;"><span class="sc-interp">a billion lives</span></span><span class="sc-interp"> for the better.</span></p>
+      <div data-dc-tpl="93" style="margin-top: 22px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.04em; color: var(--text-mute);"><span class="sc-interp">— Gregory</span></div>
     </div>
   </section>
 
   
-  <section data-dc-tpl="88" class="grx-pad" style="max-width: 1100px; margin: 0px auto; padding: 62px 32px 26px;">
-    <figure data-dc-tpl="89" data-reveal="" style="margin: 0px; text-align: center;">
-      <div data-dc-tpl="90" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px;"><span data-dc-tpl="91" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">In his own words</span></div>
-      <blockquote data-dc-tpl="92" style="margin: 0px; font-size: clamp(22px, 2.7vw, 36px); line-height: 1.34; font-weight: 700; letter-spacing: -0.02em; text-wrap: balance;">“Good news: AI isn't going to replace you. Bad news: a person who uses AI will. One thing is certain — <span data-dc-tpl="93" style="color: var(--accent);">talent will matter even more</span>.”</blockquote>
-      <figcaption data-dc-tpl="94" style="margin-top: 22px; font-size: 14px; color: var(--text-mute);">— Gregory Renard · 2016</figcaption>
+  <section data-dc-tpl="94" class="grx-pad" style="max-width: 1100px; margin: 0px auto; padding: 62px 32px 26px;">
+    <figure data-dc-tpl="95" data-reveal="" style="margin: 0px; text-align: center;">
+      <div data-dc-tpl="96" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px;"><span data-dc-tpl="97" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">In my own words</span></div>
+      <blockquote data-dc-tpl="98" style="margin: 0px; font-size: clamp(22px, 2.7vw, 36px); line-height: 1.34; font-weight: 700; letter-spacing: -0.02em; text-wrap: balance;">“Good news: AI isn't going to replace you.<br data-dc-tpl="99">Bad news: a person who uses AI will.<br data-dc-tpl="100">One thing is certain — <span data-dc-tpl="101" style="color: var(--accent);">talent will matter even more</span>.”</blockquote>
+      <figcaption data-dc-tpl="102" style="margin-top: 22px; font-size: 14px; color: var(--text-mute);">— Gregory Renard · 2016</figcaption>
     </figure>
   </section>
 
   
-  <section data-dc-tpl="95" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 34px 32px 6px;">
-    <div data-dc-tpl="96" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px;"><span data-dc-tpl="97" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">Trusted by</span></div>
-    <h2 data-dc-tpl="98" style="font-size: clamp(20px, 2.1vw, 29px); line-height: 1.16; letter-spacing: -0.02em; font-weight: 560; white-space: nowrap;"><span class="sc-interp">Leaders building at scale — and the ventures shaping what’s next</span></h2>
-    <div data-dc-tpl="99" class="grx-clients" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: rgba(var(--line-rgb),0.08); border: 1px solid rgba(var(--line-rgb),0.08); border-radius: 4px; overflow: hidden; margin-top: 24px;">
+  <section data-dc-tpl="103" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 34px 32px 6px;">
+    <div data-dc-tpl="104" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px;"><span data-dc-tpl="105" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">Trusted by</span></div>
+    <h2 data-dc-tpl="106" class="grx-clients-title" style="font-size: clamp(20px, 2.1vw, 29px); line-height: 1.16; letter-spacing: -0.02em; font-weight: 560; white-space: nowrap;"><span class="sc-interp">Leaders building at scale — and the ventures shaping what’s next</span></h2>
+    <div data-dc-tpl="107" class="grx-clients" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: rgba(var(--line-rgb),0.08); border: 1px solid rgba(var(--line-rgb),0.08); border-radius: 4px; overflow: hidden; margin-top: 24px;">
       
-        <div data-dc-tpl="104" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center;"><span class="sc-interp">Actual</span></div>
+        <div data-dc-tpl="112" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center;"><span class="sc-interp">Actual</span></div>
       
-        <a data-dc-tpl="102" href="https://www.bright.ai/" target="_blank" rel="noopener noreferrer" class="scp5" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center; text-decoration: none; transition: color 0.25s, background 0.25s;"><span class="sc-interp">Bright.AI</span></a>
+        <a data-dc-tpl="110" href="https://www.bright.ai/" target="_blank" rel="noopener noreferrer" class="scp6" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center; text-decoration: none; transition: color 0.25s, background 0.25s;"><span class="sc-interp">Bright.AI</span></a>
       
-        <a data-dc-tpl="102" href="https://consentplace.com/" target="_blank" rel="noopener noreferrer" class="scp5" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center; text-decoration: none; transition: color 0.25s, background 0.25s;"><span class="sc-interp">ConsentPlace</span></a>
+        <a data-dc-tpl="110" href="https://consentplace.com/" target="_blank" rel="noopener noreferrer" class="scp6" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center; text-decoration: none; transition: color 0.25s, background 0.25s;"><span class="sc-interp">ConsentPlace</span></a>
       
-        <a data-dc-tpl="102" href="https://www.docugami.com/" target="_blank" rel="noopener noreferrer" class="scp5" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center; text-decoration: none; transition: color 0.25s, background 0.25s;"><span class="sc-interp">Docugami</span></a>
+        <a data-dc-tpl="110" href="https://www.docugami.com/" target="_blank" rel="noopener noreferrer" class="scp6" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center; text-decoration: none; transition: color 0.25s, background 0.25s;"><span class="sc-interp">Docugami</span></a>
       
-        <a data-dc-tpl="102" href="https://www.eiffage.com/" target="_blank" rel="noopener noreferrer" class="scp5" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center; text-decoration: none; transition: color 0.25s, background 0.25s;"><span class="sc-interp">Eiffage Group</span></a>
+        <a data-dc-tpl="110" href="https://www.eiffage.com/" target="_blank" rel="noopener noreferrer" class="scp6" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center; text-decoration: none; transition: color 0.25s, background 0.25s;"><span class="sc-interp">Eiffage Group</span></a>
       
-        <div data-dc-tpl="104" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center;"><span class="sc-interp">IDEA Group</span></div>
+        <div data-dc-tpl="112" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center;"><span class="sc-interp">IDEA Group</span></div>
       
-        <a data-dc-tpl="102" href="https://www.injectsense.com" target="_blank" rel="noopener noreferrer" class="scp5" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center; text-decoration: none; transition: color 0.25s, background 0.25s;"><span class="sc-interp">Injectsense</span></a>
+        <a data-dc-tpl="110" href="https://www.injectsense.com" target="_blank" rel="noopener noreferrer" class="scp6" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center; text-decoration: none; transition: color 0.25s, background 0.25s;"><span class="sc-interp">Injectsense</span></a>
       
-        <a data-dc-tpl="102" href="https://frontierdevelopmentlab.org/" target="_blank" rel="noopener noreferrer" class="scp5" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center; text-decoration: none; transition: color 0.25s, background 0.25s;"><span class="sc-interp">NASA · FDL</span></a>
+        <a data-dc-tpl="110" href="https://frontierdevelopmentlab.org/" target="_blank" rel="noopener noreferrer" class="scp6" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center; text-decoration: none; transition: color 0.25s, background 0.25s;"><span class="sc-interp">NASA · FDL</span></a>
       
-        <a data-dc-tpl="102" href="https://www.renaultgroup.com/en/news-on-air/news/artificial-intelligence-renault-group-accelerates/" target="_blank" rel="noopener noreferrer" class="scp5" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center; text-decoration: none; transition: color 0.25s, background 0.25s;"><span class="sc-interp">Renault Group</span></a>
+        <a data-dc-tpl="110" href="https://www.renaultgroup.com/en/news-on-air/news/artificial-intelligence-renault-group-accelerates/" target="_blank" rel="noopener noreferrer" class="scp6" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center; text-decoration: none; transition: color 0.25s, background 0.25s;"><span class="sc-interp">Renault Group</span></a>
       
-        <div data-dc-tpl="104" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center;"><span class="sc-interp">Sodebo</span></div>
-      
-    </div>
-  </section>
-
-  
-  <section data-dc-tpl="105" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 24px 32px 8px;">
-    <div data-dc-tpl="106" class="grx-stats" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(var(--line-rgb),0.08); border: 1px solid rgba(var(--line-rgb),0.08); border-radius: 4px; overflow: hidden;">
-      
-        <div data-dc-tpl="108" style="background: var(--surface); padding: 22px;">
-          <div data-dc-tpl="113" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: clamp(17px, 1.6vw, 22px); font-weight: 600; color: var(--accent); letter-spacing: -0.01em;"><span class="sc-interp">30 yrs</span></div>
-          <div data-dc-tpl="114" style="margin-top: 6px; font-size: 13px; line-height: 1.45; color: var(--text-mute);"><span class="sc-interp">Applied AI at scale</span></div>
-        </div>
-      
-        <div data-dc-tpl="108" style="background: var(--surface); padding: 22px;">
-          <a data-dc-tpl="110" href="https://fdl.ai/" target="_blank" rel="noopener noreferrer" class="scp6" style="display: inline-flex; align-items: center; gap: 6px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: clamp(17px, 1.6vw, 22px); font-weight: 600; color: var(--accent); letter-spacing: -0.01em;"><span class="sc-interp">NASA FDL 2022</span><span data-dc-tpl="111" style="font-size: 11px; opacity: 0.55;">↗</span></a>
-          <div data-dc-tpl="114" style="margin-top: 6px; font-size: 13px; line-height: 1.45; color: var(--text-mute);"><span class="sc-interp">Applied AI Award of Merit</span></div>
-        </div>
-      
-        <div data-dc-tpl="108" style="background: var(--surface); padding: 22px;">
-          <a data-dc-tpl="110" href="https://connaitrelawallonie.wallonie.be/fr/wallons-marquants/distinction-du-merite-wallon/merites-wallons/renard-gregory" target="_blank" rel="noopener noreferrer" class="scp6" style="display: inline-flex; align-items: center; gap: 6px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: clamp(17px, 1.6vw, 22px); font-weight: 600; color: var(--accent); letter-spacing: -0.01em;"><span class="sc-interp">Officer 2025</span><span data-dc-tpl="111" style="font-size: 11px; opacity: 0.55;">↗</span></a>
-          <div data-dc-tpl="114" style="margin-top: 6px; font-size: 13px; line-height: 1.45; color: var(--text-mute);"><span class="sc-interp">Order of Merit — Wallonia · AI &amp; Ethics</span></div>
-        </div>
-      
-        <div data-dc-tpl="108" style="background: var(--surface); padding: 22px;">
-          <a data-dc-tpl="110" href="https://scholar.google.com/citations?user=Khit-6kAAAAJ&amp;hl=fr" target="_blank" rel="noopener noreferrer" class="scp6" style="display: inline-flex; align-items: center; gap: 6px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: clamp(17px, 1.6vw, 22px); font-weight: 600; color: var(--accent); letter-spacing: -0.01em;"><span class="sc-interp">50+</span><span data-dc-tpl="111" style="font-size: 11px; opacity: 0.55;">↗</span></a>
-          <div data-dc-tpl="114" style="margin-top: 6px; font-size: 13px; line-height: 1.45; color: var(--text-mute);"><span class="sc-interp">Publications &amp; patents · TEDx, Stanford, MIT, Berkeley</span></div>
-        </div>
+        <div data-dc-tpl="112" style="display: flex; align-items: center; justify-content: center; min-height: 88px; padding: 20px 16px; background: var(--surface); font-family: var(--font-display); font-size: 17px; color: var(--text-soft); text-align: center;"><span class="sc-interp">Sodebo</span></div>
       
     </div>
   </section>
 
   
-  <section data-dc-tpl="115" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 64px 32px 12px;">
-    <div data-dc-tpl="116" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px;"><span data-dc-tpl="117" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">Case study</span></div>
-    <h2 data-dc-tpl="118" style="font-size: clamp(26px, 3vw, 40px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 560;"><span class="sc-interp">Direct, measurable impact</span></h2>
-    <div data-dc-tpl="119" style="margin-top: 26px; border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 4px; background: var(--surface); padding: 36px 40px;">
-      <div data-dc-tpl="120" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent);"><span class="sc-interp">Global Civil Engineering &amp; Concessions Group</span></div>
-      <div data-dc-tpl="121" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 28px; margin-top: 26px;">
+  <section data-dc-tpl="113" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 24px 32px 8px;">
+    <div data-dc-tpl="114" class="grx-stats" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(var(--line-rgb),0.08); border: 1px solid rgba(var(--line-rgb),0.08); border-radius: 4px; overflow: hidden;">
+      
+        <div data-dc-tpl="116" style="background: var(--surface); padding: 22px;">
+          <div data-dc-tpl="121" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: clamp(17px, 1.6vw, 22px); font-weight: 600; color: var(--accent); letter-spacing: -0.01em;"><span class="sc-interp">30 yrs</span></div>
+          <div data-dc-tpl="122" style="margin-top: 6px; font-size: 13px; line-height: 1.45; color: var(--text-mute);"><span class="sc-interp">Applied AI at scale</span></div>
+        </div>
+      
+        <div data-dc-tpl="116" style="background: var(--surface); padding: 22px;">
+          <a data-dc-tpl="118" href="https://fdl.ai/" target="_blank" rel="noopener noreferrer" class="scp7" style="display: inline-flex; align-items: center; gap: 6px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: clamp(17px, 1.6vw, 22px); font-weight: 600; color: var(--accent); letter-spacing: -0.01em;"><span class="sc-interp">NASA FDL 2022</span><span data-dc-tpl="119" style="font-size: 11px; opacity: 0.55;">↗</span></a>
+          <div data-dc-tpl="122" style="margin-top: 6px; font-size: 13px; line-height: 1.45; color: var(--text-mute);"><span class="sc-interp">Applied AI Award of Merit</span></div>
+        </div>
+      
+        <div data-dc-tpl="116" style="background: var(--surface); padding: 22px;">
+          <a data-dc-tpl="118" href="https://connaitrelawallonie.wallonie.be/fr/wallons-marquants/distinction-du-merite-wallon/merites-wallons/renard-gregory" target="_blank" rel="noopener noreferrer" class="scp7" style="display: inline-flex; align-items: center; gap: 6px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: clamp(17px, 1.6vw, 22px); font-weight: 600; color: var(--accent); letter-spacing: -0.01em;"><span class="sc-interp">Officer 2025</span><span data-dc-tpl="119" style="font-size: 11px; opacity: 0.55;">↗</span></a>
+          <div data-dc-tpl="122" style="margin-top: 6px; font-size: 13px; line-height: 1.45; color: var(--text-mute);"><span class="sc-interp">Order of Merit — Wallonia · AI &amp; Ethics</span></div>
+        </div>
+      
+        <div data-dc-tpl="116" style="background: var(--surface); padding: 22px;">
+          <a data-dc-tpl="118" href="https://scholar.google.com/citations?user=Khit-6kAAAAJ&amp;hl=fr" target="_blank" rel="noopener noreferrer" class="scp7" style="display: inline-flex; align-items: center; gap: 6px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: clamp(17px, 1.6vw, 22px); font-weight: 600; color: var(--accent); letter-spacing: -0.01em;"><span class="sc-interp">50+</span><span data-dc-tpl="119" style="font-size: 11px; opacity: 0.55;">↗</span></a>
+          <div data-dc-tpl="122" style="margin-top: 6px; font-size: 13px; line-height: 1.45; color: var(--text-mute);"><span class="sc-interp">Publications &amp; patents · TEDx, Stanford, MIT, Berkeley</span></div>
+        </div>
+      
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="123" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 64px 32px 12px;">
+    <div data-dc-tpl="124" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px;"><span data-dc-tpl="125" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">Case study</span></div>
+    <h2 data-dc-tpl="126" style="font-size: clamp(26px, 3vw, 40px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 560;"><span class="sc-interp">Direct, measurable impact</span></h2>
+    <div data-dc-tpl="127" style="margin-top: 26px; border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 4px; background: var(--surface); padding: 36px 40px;">
+      <div data-dc-tpl="128" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent);"><span class="sc-interp">Global Civil Engineering &amp; Concessions Group</span></div>
+      <div data-dc-tpl="129" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 28px; margin-top: 26px;">
         
-          <div data-dc-tpl="123">
-            <div data-dc-tpl="124" style="font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 42px); line-height: 1; font-weight: 600; letter-spacing: -0.02em; color: var(--text);"><span class="sc-interp">€23B+</span></div>
-            <div data-dc-tpl="125" style="margin-top: 8px; font-size: 13px; line-height: 1.4; color: var(--text-mute);"><span class="sc-interp">annual revenue</span></div>
+          <div data-dc-tpl="131">
+            <div data-dc-tpl="132" style="font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 42px); line-height: 1; font-weight: 600; letter-spacing: -0.02em; color: var(--text);"><span class="sc-interp">€23B+</span></div>
+            <div data-dc-tpl="133" style="margin-top: 8px; font-size: 13px; line-height: 1.4; color: var(--text-mute);"><span class="sc-interp">annual revenue</span></div>
           </div>
         
-          <div data-dc-tpl="123">
-            <div data-dc-tpl="124" style="font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 42px); line-height: 1; font-weight: 600; letter-spacing: -0.02em; color: var(--text);"><span class="sc-interp">84,000+</span></div>
-            <div data-dc-tpl="125" style="margin-top: 8px; font-size: 13px; line-height: 1.4; color: var(--text-mute);"><span class="sc-interp">employees</span></div>
+          <div data-dc-tpl="131">
+            <div data-dc-tpl="132" style="font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 42px); line-height: 1; font-weight: 600; letter-spacing: -0.02em; color: var(--text);"><span class="sc-interp">84,000+</span></div>
+            <div data-dc-tpl="133" style="margin-top: 8px; font-size: 13px; line-height: 1.4; color: var(--text-mute);"><span class="sc-interp">employees</span></div>
           </div>
         
-          <div data-dc-tpl="123">
-            <div data-dc-tpl="124" style="font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 42px); line-height: 1; font-weight: 600; letter-spacing: -0.02em; color: var(--text);"><span class="sc-interp">15k+</span></div>
-            <div data-dc-tpl="125" style="margin-top: 8px; font-size: 13px; line-height: 1.4; color: var(--text-mute);"><span class="sc-interp">white-collar staff onboarded to GenAI</span></div>
+          <div data-dc-tpl="131">
+            <div data-dc-tpl="132" style="font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 42px); line-height: 1; font-weight: 600; letter-spacing: -0.02em; color: var(--text);"><span class="sc-interp">15k+</span></div>
+            <div data-dc-tpl="133" style="margin-top: 8px; font-size: 13px; line-height: 1.4; color: var(--text-mute);"><span class="sc-interp">white-collar staff onboarded to GenAI</span></div>
           </div>
         
-          <div data-dc-tpl="123">
-            <div data-dc-tpl="124" style="font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 42px); line-height: 1; font-weight: 600; letter-spacing: -0.02em; color: var(--text);"><span class="sc-interp">12 mo</span></div>
-            <div data-dc-tpl="125" style="margin-top: 8px; font-size: 13px; line-height: 1.4; color: var(--text-mute);"><span class="sc-interp">with productivity gains</span></div>
+          <div data-dc-tpl="131">
+            <div data-dc-tpl="132" style="font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 42px); line-height: 1; font-weight: 600; letter-spacing: -0.02em; color: var(--text);"><span class="sc-interp">12 mo</span></div>
+            <div data-dc-tpl="133" style="margin-top: 8px; font-size: 13px; line-height: 1.4; color: var(--text-mute);"><span class="sc-interp">with productivity gains</span></div>
           </div>
         
       </div>
-      <div data-dc-tpl="126" style="display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(var(--line-rgb),0.1);">
-        <span data-dc-tpl="127" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; color: var(--text-soft); flex: 1 1 0%; min-width: 240px;"><span class="sc-interp">Cognitive Orchestration™ — Phases 1 &amp; 2 delivered · Phase 3 renewed.</span></span>
-        <a data-dc-tpl="128" href="Method" class="scp6" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; font-weight: 600; color: var(--accent); border-bottom: 1px solid rgba(var(--accent-rgb),0.4); padding-bottom: 2px; white-space: nowrap;"><span class="sc-interp">See the method</span> →</a>
-      </div>
-    </div>
-  </section>
-
-  
-  <section data-dc-tpl="129" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 48px 32px 12px;">
-    <div data-dc-tpl="130" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px;"><span data-dc-tpl="131" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">Trusted by the people who’ve worked with me</span></div>
-    <div data-dc-tpl="132" class="grx-testi" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;">
-      
-        <figure data-dc-tpl="134" style="margin: 0px; display: flex; flex-direction: column; border: 1px solid rgba(var(--line-rgb),0.1); border-radius: 4px; background: var(--surface); padding: 28px;">
-          <div data-dc-tpl="135" style="font-family: var(--font-display); font-size: 44px; line-height: 0.6; color: rgba(var(--accent-rgb),0.5); height: 22px;">“</div>
-          <blockquote data-dc-tpl="136" style="margin: 0px; font-size: 15px; line-height: 1.62; color: var(--text-soft); flex: 1 1 0%;"><span class="sc-interp">A thought leader in Applied AI and NLP — and a pragmatic, scrappy engineer who consistently ships functional, performant solutions. A true expert who can inform technology strategy and bring those ideas to life with code.</span></blockquote>
-          <figcaption data-dc-tpl="137" style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(var(--line-rgb),0.1);">
-            <div data-dc-tpl="138" style="font-weight: 700; font-size: 14.5px; color: var(--text);"><span class="sc-interp">Daniel LeBlanc</span></div>
-            <div data-dc-tpl="139" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: var(--accent); margin-top: 4px;"><span class="sc-interp">Data, Software &amp; AI Engineering · Ex-McKinsey</span></div>
-          </figcaption>
-        </figure>
-      
-        <figure data-dc-tpl="134" style="margin: 0px; display: flex; flex-direction: column; border: 1px solid rgba(var(--line-rgb),0.1); border-radius: 4px; background: var(--surface); padding: 28px;">
-          <div data-dc-tpl="135" style="font-family: var(--font-display); font-size: 44px; line-height: 0.6; color: rgba(var(--accent-rgb),0.5); height: 22px;">“</div>
-          <blockquote data-dc-tpl="136" style="margin: 0px; font-size: 15px; line-height: 1.62; color: var(--text-soft); flex: 1 1 0%;"><span class="sc-interp">His ability to blend technical mastery and big-picture business vision is a very rare gift. His holistic approach to bringing AI to the corporate world always creates immediate value for businesses and people.</span></blockquote>
-          <figcaption data-dc-tpl="137" style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(var(--line-rgb),0.1);">
-            <div data-dc-tpl="138" style="font-weight: 700; font-size: 14.5px; color: var(--text);"><span class="sc-interp">Audrey Duet</span></div>
-            <div data-dc-tpl="139" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: var(--accent); margin-top: 4px;"><span class="sc-interp">Head, Data &amp; AI Innovation · World Economic Forum</span></div>
-          </figcaption>
-        </figure>
-      
-        <figure data-dc-tpl="134" style="margin: 0px; display: flex; flex-direction: column; border: 1px solid rgba(var(--line-rgb),0.1); border-radius: 4px; background: var(--surface); padding: 28px;">
-          <div data-dc-tpl="135" style="font-family: var(--font-display); font-size: 44px; line-height: 0.6; color: rgba(var(--accent-rgb),0.5); height: 22px;">“</div>
-          <blockquote data-dc-tpl="136" style="margin: 0px; font-size: 15px; line-height: 1.62; color: var(--text-soft); flex: 1 1 0%;"><span class="sc-interp">A true innovator with strong ethical values who always tries to make others great. Beyond his talent for innovation, Gregory consistently turns bold ideas into real, working products.</span></blockquote>
-          <figcaption data-dc-tpl="137" style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(var(--line-rgb),0.1);">
-            <div data-dc-tpl="138" style="font-weight: 700; font-size: 14.5px; color: var(--text);"><span class="sc-interp">Bernard Ourghanlian</span></div>
-            <div data-dc-tpl="139" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: var(--accent); margin-top: 4px;"><span class="sc-interp">CTO &amp; CSO · Microsoft France</span></div>
-          </figcaption>
-        </figure>
-      
-        <figure data-dc-tpl="134" style="margin: 0px; display: flex; flex-direction: column; border: 1px solid rgba(var(--line-rgb),0.1); border-radius: 4px; background: var(--surface); padding: 28px;">
-          <div data-dc-tpl="135" style="font-family: var(--font-display); font-size: 44px; line-height: 0.6; color: rgba(var(--accent-rgb),0.5); height: 22px;">“</div>
-          <blockquote data-dc-tpl="136" style="margin: 0px; font-size: 15px; line-height: 1.62; color: var(--text-soft); flex: 1 1 0%;"><span class="sc-interp">A proven AI leader with strong conviction around AI-powered products that augment human ability. Ultra-connected in the AI and startup ecosystem, in France and in Silicon Valley.</span></blockquote>
-          <figcaption data-dc-tpl="137" style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(var(--line-rgb),0.1);">
-            <div data-dc-tpl="138" style="font-weight: 700; font-size: 14.5px; color: var(--text);"><span class="sc-interp">Laurent Vernhes</span></div>
-            <div data-dc-tpl="139" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: var(--accent); margin-top: 4px;"><span class="sc-interp">Chief Technology Officer · mentor</span></div>
-          </figcaption>
-        </figure>
-      
-    </div>
-  </section>
-
-  
-  <section data-dc-tpl="140" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 48px 32px 8px;">
-    <div data-dc-tpl="141" style="border: 1px solid rgba(var(--accent-rgb),0.22); border-radius: 4px; background: linear-gradient(120deg,rgba(var(--accent-rgb),0.07),rgba(var(--line-rgb),0.015)); padding: 44px; text-align: center;">
-      <div data-dc-tpl="142" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px;"><span data-dc-tpl="143" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">Who I work with</span></div>
-      <h2 data-dc-tpl="144" style="font-size: clamp(24px, 2.8vw, 36px); line-height: 1.22; letter-spacing: -0.02em; font-weight: 560; max-width: 880px; margin: 0px auto; text-wrap: balance;"><span class="sc-interp">I advise CEOs, boards and executive committees — when they need decisions, execution and measurable outcomes.</span></h2>
-      <div data-dc-tpl="145" style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-        
-          <span data-dc-tpl="147" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-soft); border: 1px solid rgba(var(--line-rgb),0.18); border-radius: 100px; padding: 9px 16px;"><span class="sc-interp">CEOs · Boards · Executive Committees</span></span>
-        
-          <span data-dc-tpl="147" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-soft); border: 1px solid rgba(var(--line-rgb),0.18); border-radius: 100px; padding: 9px 16px;"><span class="sc-interp">Business · IT · Data leaders</span></span>
-        
-          <span data-dc-tpl="147" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-soft); border: 1px solid rgba(var(--line-rgb),0.18); border-radius: 100px; padding: 9px 16px;"><span class="sc-interp">Organizations &amp; public institutions</span></span>
-        
-          <span data-dc-tpl="147" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-soft); border: 1px solid rgba(var(--line-rgb),0.18); border-radius: 100px; padding: 9px 16px;"><span class="sc-interp">Investors &amp; transformation programs</span></span>
-        
+      <div data-dc-tpl="134" style="display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(var(--line-rgb),0.1);">
+        <span data-dc-tpl="135" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; color: var(--text-soft); flex: 1 1 0%; min-width: 240px;"><span class="sc-interp">Cognitive Orchestration™ — Phases 1 &amp; 2 delivered · Phase 3 renewed.</span></span>
+        <a data-dc-tpl="136" href="Method" class="scp7" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; font-weight: 600; color: var(--accent); border-bottom: 1px solid rgba(var(--accent-rgb),0.4); padding-bottom: 2px; white-space: nowrap;"><span class="sc-interp">See the method</span> →</a>
       </div>
     </div>
   </section>
 
   
-  <section data-dc-tpl="148" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 84px 32px 40px;">
-    <div data-dc-tpl="149" class="grx-ethics" style="border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 4px; background: var(--surface); padding: 46px 48px; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center;">
-      <div data-dc-tpl="150">
-        <div data-dc-tpl="151" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;"><span data-dc-tpl="152" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">Work with me · via Freedom.AI</span></div>
-        <h2 data-dc-tpl="153" style="font-size: clamp(28px, 3vw, 40px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 560;"><span class="sc-interp">Ready to put AI to work?</span></h2>
-        <p data-dc-tpl="154" style="margin-top: 16px; font-size: 16px; line-height: 1.66; color: var(--text-soft); max-width: 600px;"><span class="sc-interp">Start a collaboration through Freedom.AI — my Applied AI lab &amp; advisory, where my team and I design, prototype and operationalize frontier Generative AI into production-grade systems. We work end-to-end across cloud, on-premise, edge and fully local: advanced LLM orchestration, conversational platforms, tool-using AI, knowledge graphs, grounded reasoning and operational AI workflows. We validate what truly works under real constraints — then turn it into repeatable methods and playbooks.</span></p>
-        <div data-dc-tpl="155" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 30px;">
+  <section data-dc-tpl="137" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 48px 32px 12px;">
+    <div data-dc-tpl="138" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px;"><span data-dc-tpl="139" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">Trusted by the people who’ve worked with me</span></div>
+    <div data-dc-tpl="140" class="grx-testi" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;">
+      
+        <figure data-dc-tpl="142" style="margin: 0px; display: flex; flex-direction: column; border: 1px solid rgba(var(--line-rgb),0.1); border-radius: 4px; background: var(--surface); padding: 28px;">
+          <div data-dc-tpl="143" style="font-family: var(--font-display); font-size: 44px; line-height: 0.6; color: rgba(var(--accent-rgb),0.5); height: 22px;">“</div>
+          <blockquote data-dc-tpl="144" style="margin: 0px; font-size: 15px; line-height: 1.62; color: var(--text-soft); flex: 1 1 0%;"><span class="sc-interp">A thought leader in Applied AI and NLP — and a pragmatic, scrappy engineer who consistently ships functional, performant solutions. A true expert who can inform technology strategy and bring those ideas to life with code.</span></blockquote>
+          <figcaption data-dc-tpl="145" style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(var(--line-rgb),0.1);">
+            <div data-dc-tpl="146" style="font-weight: 700; font-size: 14.5px; color: var(--text);"><span class="sc-interp">Daniel LeBlanc</span></div>
+            <div data-dc-tpl="147" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: var(--accent); margin-top: 4px;"><span class="sc-interp">Data, Software &amp; AI Engineering · Ex-McKinsey</span></div>
+          </figcaption>
+        </figure>
+      
+        <figure data-dc-tpl="142" style="margin: 0px; display: flex; flex-direction: column; border: 1px solid rgba(var(--line-rgb),0.1); border-radius: 4px; background: var(--surface); padding: 28px;">
+          <div data-dc-tpl="143" style="font-family: var(--font-display); font-size: 44px; line-height: 0.6; color: rgba(var(--accent-rgb),0.5); height: 22px;">“</div>
+          <blockquote data-dc-tpl="144" style="margin: 0px; font-size: 15px; line-height: 1.62; color: var(--text-soft); flex: 1 1 0%;"><span class="sc-interp">His ability to blend technical mastery and big-picture business vision is a very rare gift. His holistic approach to bringing AI to the corporate world always creates immediate value for businesses and people.</span></blockquote>
+          <figcaption data-dc-tpl="145" style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(var(--line-rgb),0.1);">
+            <div data-dc-tpl="146" style="font-weight: 700; font-size: 14.5px; color: var(--text);"><span class="sc-interp">Audrey Duet</span></div>
+            <div data-dc-tpl="147" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: var(--accent); margin-top: 4px;"><span class="sc-interp">Head, Data &amp; AI Innovation · World Economic Forum</span></div>
+          </figcaption>
+        </figure>
+      
+        <figure data-dc-tpl="142" style="margin: 0px; display: flex; flex-direction: column; border: 1px solid rgba(var(--line-rgb),0.1); border-radius: 4px; background: var(--surface); padding: 28px;">
+          <div data-dc-tpl="143" style="font-family: var(--font-display); font-size: 44px; line-height: 0.6; color: rgba(var(--accent-rgb),0.5); height: 22px;">“</div>
+          <blockquote data-dc-tpl="144" style="margin: 0px; font-size: 15px; line-height: 1.62; color: var(--text-soft); flex: 1 1 0%;"><span class="sc-interp">A true innovator with strong ethical values who always tries to make others great. Beyond his talent for innovation, Gregory consistently turns bold ideas into real, working products.</span></blockquote>
+          <figcaption data-dc-tpl="145" style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(var(--line-rgb),0.1);">
+            <div data-dc-tpl="146" style="font-weight: 700; font-size: 14.5px; color: var(--text);"><span class="sc-interp">Bernard Ourghanlian</span></div>
+            <div data-dc-tpl="147" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: var(--accent); margin-top: 4px;"><span class="sc-interp">CTO &amp; CSO · Microsoft France</span></div>
+          </figcaption>
+        </figure>
+      
+        <figure data-dc-tpl="142" style="margin: 0px; display: flex; flex-direction: column; border: 1px solid rgba(var(--line-rgb),0.1); border-radius: 4px; background: var(--surface); padding: 28px;">
+          <div data-dc-tpl="143" style="font-family: var(--font-display); font-size: 44px; line-height: 0.6; color: rgba(var(--accent-rgb),0.5); height: 22px;">“</div>
+          <blockquote data-dc-tpl="144" style="margin: 0px; font-size: 15px; line-height: 1.62; color: var(--text-soft); flex: 1 1 0%;"><span class="sc-interp">A proven AI leader with strong conviction around AI-powered products that augment human ability. Ultra-connected in the AI and startup ecosystem, in France and in Silicon Valley.</span></blockquote>
+          <figcaption data-dc-tpl="145" style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(var(--line-rgb),0.1);">
+            <div data-dc-tpl="146" style="font-weight: 700; font-size: 14.5px; color: var(--text);"><span class="sc-interp">Laurent Vernhes</span></div>
+            <div data-dc-tpl="147" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: var(--accent); margin-top: 4px;"><span class="sc-interp">Chief Technology Officer · mentor</span></div>
+          </figcaption>
+        </figure>
+      
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="148" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 48px 32px 8px;">
+    <div data-dc-tpl="149" style="border: 1px solid rgba(var(--accent-rgb),0.22); border-radius: 4px; background: linear-gradient(120deg,rgba(var(--accent-rgb),0.07),rgba(var(--line-rgb),0.015)); padding: 44px; text-align: center;">
+      <div data-dc-tpl="150" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px;"><span data-dc-tpl="151" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">Who I work with</span></div>
+      <h2 data-dc-tpl="152" style="font-size: clamp(24px, 2.8vw, 36px); line-height: 1.22; letter-spacing: -0.02em; font-weight: 560; max-width: 880px; margin: 0px auto; text-wrap: balance;"><span class="sc-interp">I advise CEOs, boards and executive committees — when they need decisions, execution and measurable outcomes.</span></h2>
+      <div data-dc-tpl="153" style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+        
+          <span data-dc-tpl="155" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-soft); border: 1px solid rgba(var(--line-rgb),0.18); border-radius: 100px; padding: 9px 16px;"><span class="sc-interp">CEOs · Boards · Executive Committees</span></span>
+        
+          <span data-dc-tpl="155" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-soft); border: 1px solid rgba(var(--line-rgb),0.18); border-radius: 100px; padding: 9px 16px;"><span class="sc-interp">Business · IT · Data leaders</span></span>
+        
+          <span data-dc-tpl="155" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-soft); border: 1px solid rgba(var(--line-rgb),0.18); border-radius: 100px; padding: 9px 16px;"><span class="sc-interp">Organizations &amp; public institutions</span></span>
+        
+          <span data-dc-tpl="155" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-soft); border: 1px solid rgba(var(--line-rgb),0.18); border-radius: 100px; padding: 9px 16px;"><span class="sc-interp">Investors &amp; transformation programs</span></span>
+        
+      </div>
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="156" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 84px 32px 40px;">
+    <div data-dc-tpl="157" class="grx-ethics" style="border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 4px; background: var(--surface); padding: 46px 48px; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center;">
+      <div data-dc-tpl="158">
+        <div data-dc-tpl="159" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;"><span data-dc-tpl="160" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">Work with me · via Freedom.AI</span></div>
+        <h2 data-dc-tpl="161" style="font-size: clamp(28px, 3vw, 40px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 560;"><span class="sc-interp">Ready to put AI to work?</span></h2>
+        <p data-dc-tpl="162" style="margin-top: 16px; font-size: 16px; line-height: 1.66; color: var(--text-soft); max-width: 600px;"><span class="sc-interp">Start a collaboration through Freedom.AI — my Applied AI lab &amp; advisory, where my team and I design, prototype and operationalize frontier Generative AI into production-grade systems. We work end-to-end across cloud, on-premise, edge and fully local: advanced LLM orchestration, conversational platforms, tool-using AI, knowledge graphs, grounded reasoning and operational AI workflows. We validate what truly works under real constraints — then turn it into repeatable methods and playbooks.</span></p>
+        <div data-dc-tpl="163" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 30px;">
           
-            <div data-dc-tpl="157" style="padding-top: 15px; border-top: 2px solid rgba(var(--accent-rgb),0.55);">
-              <div data-dc-tpl="158" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.03em; color: var(--accent); margin-bottom: 8px;"><span class="sc-interp">01 · Applied AI Advisory &amp; Execution</span></div>
-              <div data-dc-tpl="159" style="font-size: 14px; line-height: 1.5; color: var(--text-soft);"><span class="sc-interp">Strategy &amp; hands-on execution for leaders and boards.</span></div>
+            <div data-dc-tpl="165" style="padding-top: 15px; border-top: 2px solid rgba(var(--accent-rgb),0.55);">
+              <div data-dc-tpl="166" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.03em; color: var(--accent); margin-bottom: 8px;"><span class="sc-interp">01 · Applied AI Advisory &amp; Execution</span></div>
+              <div data-dc-tpl="167" style="font-size: 14px; line-height: 1.5; color: var(--text-soft);"><span class="sc-interp">Strategy &amp; hands-on execution for leaders and boards.</span></div>
             </div>
           
-            <div data-dc-tpl="157" style="padding-top: 15px; border-top: 2px solid rgba(var(--accent-rgb),0.55);">
-              <div data-dc-tpl="158" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.03em; color: var(--accent); margin-bottom: 8px;"><span class="sc-interp">02 · AI Lab</span></div>
-              <div data-dc-tpl="159" style="font-size: 14px; line-height: 1.5; color: var(--text-soft);"><span class="sc-interp">Frontier GenAI, prototyped and shipped to production.</span></div>
+            <div data-dc-tpl="165" style="padding-top: 15px; border-top: 2px solid rgba(var(--accent-rgb),0.55);">
+              <div data-dc-tpl="166" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.03em; color: var(--accent); margin-bottom: 8px;"><span class="sc-interp">02 · AI Lab</span></div>
+              <div data-dc-tpl="167" style="font-size: 14px; line-height: 1.5; color: var(--text-soft);"><span class="sc-interp">Frontier GenAI, prototyped and shipped to production.</span></div>
             </div>
           
         </div>
-        <a data-dc-tpl="160" href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer" class="scp1" style="display: inline-flex; align-items: center; gap: 9px; margin-top: 30px; font-weight: 600; font-size: 15px; color: var(--btn-fg); background: var(--btn-bg); padding: 14px 26px; border-radius: 3px; box-shadow: 0 10px 30px var(--btn-shadow);"><span class="sc-interp">Start a collaboration via Freedom.AI</span> ↗</a>
+        <a data-dc-tpl="168" href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer" class="scp1" style="display: inline-flex; align-items: center; gap: 9px; margin-top: 30px; font-weight: 600; font-size: 15px; color: var(--btn-fg); background: var(--btn-bg); padding: 14px 26px; border-radius: 3px; box-shadow: 0 10px 30px var(--btn-shadow);"><span class="sc-interp">Start a collaboration via Freedom.AI</span> ↗</a>
       </div>
-      <div data-dc-tpl="161" class="grx-ethics-logo" style="flex: 0 0 auto; width: 250px; display: grid; place-items: center; padding: 10px 24px; border-left: 1px solid rgba(var(--line-rgb),0.1);">
-        <img data-dc-tpl="162" src="assets/freedom-badge.png" alt="Freedom.AI" style="width: 200px; height: auto; display: block;">
-      </div>
-    </div>
-  </section>
-
-  
-  <section data-dc-tpl="163" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 56px 32px 20px;">
-    <div data-dc-tpl="164" class="grx-ethics" style="border: 1px solid rgba(var(--accent-rgb),0.22); border-radius: 4px; background: linear-gradient(120deg,rgba(var(--accent-rgb),0.08),rgba(var(--line-rgb),0.015)); padding: 44px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;">
-      <div data-dc-tpl="165">
-        <div data-dc-tpl="166" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;"><span data-dc-tpl="167" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">Ethics &amp; responsibility</span></div>
-        <p data-dc-tpl="168" style="font-size: clamp(18px, 1.8vw, 24px); line-height: 1.45; font-weight: 600; letter-spacing: -0.01em; color: var(--text);"><span class="sc-interp">Since 2016, a public advocate for ethical, responsible AI — co-initiator of </span><a data-dc-tpl="171" href="https://www.youtube.com/live/ADi_8OL6vRk" target="_blank" rel="noopener noreferrer" class="scp7" style="color: var(--accent); text-decoration-line: underline; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: rgba(var(--accent-rgb),0.4); text-underline-offset: 3px;"><span class="sc-interp">AI4Humanity</span></a><span class="sc-interp"> and co-author of the </span><a data-dc-tpl="171" href="https://www.holbertonturingoath.org/" target="_blank" rel="noopener noreferrer" class="scp7" style="color: var(--accent); text-decoration-line: underline; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: rgba(var(--accent-rgb),0.4); text-underline-offset: 3px;"><span class="sc-interp">Holberton-Turing Oath</span></a><span class="sc-interp">, rooted in the belief that every technological advance must remain centered on humanity.</span></p>
-        <p data-dc-tpl="173" style="margin-top: 16px; font-size: 15px; line-height: 1.6; color: var(--text-soft); max-width: 620px;"><span class="sc-interp">In 2024 he co-founded </span><a data-dc-tpl="176" href="https://everyone.ai/" target="_blank" rel="noopener noreferrer" class="scp7" style="color: var(--accent); text-decoration-line: underline; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: rgba(var(--accent-rgb),0.4); text-underline-offset: 3px;"><span class="sc-interp">Everyone.AI</span></a><span class="sc-interp">, a nonprofit anticipating the opportunities and risks of AI for children — notably through </span><a data-dc-tpl="176" href="https://everyone.ai/research/" target="_blank" rel="noopener noreferrer" class="scp7" style="color: var(--accent); text-decoration-line: underline; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: rgba(var(--accent-rgb),0.4); text-underline-offset: 3px;"><span class="sc-interp">The Future of Child Development in the AI Era</span></a><span class="sc-interp"> (2024).</span></p>
-        <a data-dc-tpl="178" href="Ethics" class="scp8" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; font-size: 14px; font-weight: 600; color: var(--text); background: rgba(var(--accent-rgb),0.18); border: 1px solid rgba(var(--accent-rgb),0.4); padding: 11px 20px; border-radius: 3px;"><span class="sc-interp">On ethics &amp; AI</span> →</a>
-      </div>
-      <div data-dc-tpl="179" class="grx-ethics-logo" style="flex: 0 0 auto; width: 150px; display: grid; place-items: center; padding: 18px; border-left: 1px solid rgba(var(--line-rgb),0.1);">
-        <img data-dc-tpl="180" src="https://static.wixstatic.com/media/758a70_bcd5c592084e492fb02f32943ddb4d55~mv2.webp/v1/fill/w_108,h_118,al_c,q_85,enc_auto/AI.webp" alt="Everyone.AI" style="width: 96px; height: auto; display: block; animation: 5s ease-in-out 0s infinite normal none running grx-floaty;">
+      <div data-dc-tpl="169" class="grx-ethics-logo" style="flex: 0 0 auto; width: 250px; display: grid; place-items: center; padding: 10px 24px; border-left: 1px solid rgba(var(--line-rgb),0.1);">
+        <img data-dc-tpl="170" src="assets/freedom-badge.png" alt="Freedom.AI" style="width: 200px; height: auto; display: block;">
       </div>
     </div>
   </section>
 
   
-  <section data-dc-tpl="181" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 80px 32px 90px; text-align: center;">
-    <div data-dc-tpl="182" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 18px;"><span class="sc-interp">SAN FRANCISCO · PARIS · BRUSSELS</span></div>
-    <h2 data-dc-tpl="183" style="font-size: clamp(40px, 5.5vw, 76px); line-height: 1; letter-spacing: -0.035em; font-weight: 560;"><span class="sc-interp">Let’s build together!</span></h2>
-    <p data-dc-tpl="184" style="margin: 22px auto 0px; font-size: 18px; line-height: 1.55; color: var(--text-soft); max-width: 560px;"><span class="sc-interp">I partner with a small number of leaders each year — from strategy to production. No hype, no endless POCs.</span></p>
-    <a data-dc-tpl="185" href="Contact" class="scp9" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 34px; font-weight: 600; font-size: 16px; color: var(--btn-fg); background: var(--btn-bg); padding: 16px 32px; border-radius: 3px; box-shadow: 0 14px 40px var(--btn-shadow);"><span class="sc-interp">Contact Gregory</span> →</a>
+  <section data-dc-tpl="171" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 56px 32px 20px;">
+    <div data-dc-tpl="172" class="grx-ethics" style="border: 1px solid rgba(var(--accent-rgb),0.22); border-radius: 4px; background: linear-gradient(120deg,rgba(var(--accent-rgb),0.08),rgba(var(--line-rgb),0.015)); padding: 44px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;">
+      <div data-dc-tpl="173">
+        <div data-dc-tpl="174" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;"><span data-dc-tpl="175" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">Ethics &amp; responsibility</span></div>
+        <p data-dc-tpl="176" style="font-size: clamp(18px, 1.8vw, 24px); line-height: 1.45; font-weight: 600; letter-spacing: -0.01em; color: var(--text);"><span class="sc-interp">Since 2016, a public advocate for ethical, responsible AI — co-initiator of </span><a data-dc-tpl="179" href="https://www.youtube.com/live/ADi_8OL6vRk" target="_blank" rel="noopener noreferrer" class="scp8" style="color: var(--accent); text-decoration-line: underline; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: rgba(var(--accent-rgb),0.4); text-underline-offset: 3px;"><span class="sc-interp">AI4Humanity</span></a><span class="sc-interp"> and co-author of the </span><a data-dc-tpl="179" href="https://www.holbertonturingoath.org/" target="_blank" rel="noopener noreferrer" class="scp8" style="color: var(--accent); text-decoration-line: underline; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: rgba(var(--accent-rgb),0.4); text-underline-offset: 3px;"><span class="sc-interp">Holberton-Turing Oath</span></a><span class="sc-interp">, rooted in the belief that every technological advance must remain centered on humanity.</span></p>
+        <p data-dc-tpl="181" style="margin-top: 16px; font-size: 15px; line-height: 1.6; color: var(--text-soft); max-width: 620px;"><span class="sc-interp">In 2024 he co-founded </span><a data-dc-tpl="184" href="https://everyone.ai/" target="_blank" rel="noopener noreferrer" class="scp8" style="color: var(--accent); text-decoration-line: underline; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: rgba(var(--accent-rgb),0.4); text-underline-offset: 3px;"><span class="sc-interp">Everyone.AI</span></a><span class="sc-interp">, a nonprofit anticipating the opportunities and risks of AI for children — notably through </span><a data-dc-tpl="184" href="https://everyone.ai/research/" target="_blank" rel="noopener noreferrer" class="scp8" style="color: var(--accent); text-decoration-line: underline; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: rgba(var(--accent-rgb),0.4); text-underline-offset: 3px;"><span class="sc-interp">The Future of Child Development in the AI Era</span></a><span class="sc-interp"> (2024).</span></p>
+        <a data-dc-tpl="186" href="Ethics" class="scp9" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; font-size: 14px; font-weight: 600; color: var(--text); background: rgba(var(--accent-rgb),0.18); border: 1px solid rgba(var(--accent-rgb),0.4); padding: 11px 20px; border-radius: 3px;"><span class="sc-interp">On ethics &amp; AI</span> →</a>
+      </div>
+      <div data-dc-tpl="187" class="grx-ethics-logo" style="flex: 0 0 auto; width: 150px; display: grid; place-items: center; padding: 18px; border-left: 1px solid rgba(var(--line-rgb),0.1);">
+        <img data-dc-tpl="188" src="https://static.wixstatic.com/media/758a70_bcd5c592084e492fb02f32943ddb4d55~mv2.webp/v1/fill/w_108,h_118,al_c,q_85,enc_auto/AI.webp" alt="Everyone.AI" style="width: 96px; height: auto; display: block; animation: 5s ease-in-out 0s infinite normal none running grx-floaty;">
+      </div>
+    </div>
   </section>
 
   
-  <footer data-dc-tpl="186" style="border-top: 1px solid rgba(var(--line-rgb),0.08); background: var(--bg);">
-    <div data-dc-tpl="187" class="grx-footer" style="max-width: 1240px; margin: 0px auto; padding: 52px 32px 30px; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 36px;">
-      <div data-dc-tpl="188">
-        <div data-dc-tpl="189" style="display: flex; align-items: center; gap: 11px; margin-bottom: 16px;">
-          <img data-dc-tpl="190" src="assets/freedom-tree.png" alt="Freedom.AI" style="width: 30px; height: 30px; object-fit: contain; flex: 0 0 auto;">
-          <span data-dc-tpl="191" style="font-weight: 700; font-size: 15px;">Gregory Renard</span>
+  <section data-dc-tpl="189" data-reveal="" style="max-width: 1240px; margin: 0px auto; padding: 80px 32px 90px; text-align: center;">
+    <div data-dc-tpl="190" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 18px;"><span class="sc-interp">SAN FRANCISCO · PARIS · BRUSSELS</span></div>
+    <h2 data-dc-tpl="191" style="font-size: clamp(40px, 5.5vw, 76px); line-height: 1; letter-spacing: -0.035em; font-weight: 560;"><span class="sc-interp">Let’s build together!</span></h2>
+    <p data-dc-tpl="192" style="margin: 22px auto 0px; font-size: 18px; line-height: 1.55; color: var(--text-soft); max-width: 560px;"><span class="sc-interp">I partner with a small number of leaders each year — from strategy to production. No hype, no endless POCs.</span></p>
+    <a data-dc-tpl="193" href="Contact" class="scpa" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 34px; font-weight: 600; font-size: 16px; color: var(--btn-fg); background: var(--btn-bg); padding: 16px 32px; border-radius: 3px; box-shadow: 0 14px 40px var(--btn-shadow);"><span class="sc-interp">Contact Gregory</span> →</a>
+  </section>
+
+  
+  <footer data-dc-tpl="194" style="border-top: 1px solid rgba(var(--line-rgb),0.08); background: var(--bg);">
+    <div data-dc-tpl="195" class="grx-footer" style="max-width: 1240px; margin: 0px auto; padding: 52px 32px 30px; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 36px;">
+      <div data-dc-tpl="196">
+        <div data-dc-tpl="197" style="display: flex; align-items: center; gap: 11px; margin-bottom: 16px;">
+          <img data-dc-tpl="198" src="assets/freedom-tree.png" alt="Freedom.AI" style="width: 30px; height: 30px; object-fit: contain; flex: 0 0 auto;">
+          <span data-dc-tpl="199" style="font-weight: 700; font-size: 15px;">Gregory Renard</span>
         </div>
-        <p data-dc-tpl="192" style="font-size: 13.5px; line-height: 1.6; color: var(--text-mute); max-width: 280px;"><span class="sc-interp">Hands-on AI architect &amp; Cognitive Orchestration since 1996. Building operational, AI-native organizations.</span></p>
-        <div data-dc-tpl="193" style="display: flex; gap: 14px; margin-top: 18px;">
+        <p data-dc-tpl="200" style="font-size: 13.5px; line-height: 1.6; color: var(--text-mute); max-width: 280px;"><span class="sc-interp">Hands-on AI architect &amp; Cognitive Orchestration since 1996. Building operational, AI-native organizations.</span></p>
+        <div data-dc-tpl="201" style="display: flex; gap: 14px; margin-top: 18px;">
           
-            <a data-dc-tpl="195" href="https://www.linkedin.com/in/gregoryrenard/" target="_blank" rel="noopener noreferrer" class="scpa" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">LinkedIn</span></a>
+            <a data-dc-tpl="203" href="https://www.linkedin.com/in/gregoryrenard/" target="_blank" rel="noopener noreferrer" class="scpb" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">LinkedIn</span></a>
           
-            <a data-dc-tpl="195" href="https://fr.wikipedia.org/wiki/Gr%C3%A9gory_Renard" target="_blank" rel="noopener noreferrer" class="scpa" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">Wikipedia</span></a>
+            <a data-dc-tpl="203" href="https://fr.wikipedia.org/wiki/Gr%C3%A9gory_Renard" target="_blank" rel="noopener noreferrer" class="scpb" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">Wikipedia</span></a>
           
-            <a data-dc-tpl="195" href="https://scholar.google.com/citations?user=Khit-6kAAAAJ&amp;hl=fr" target="_blank" rel="noopener noreferrer" class="scpa" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">Scholar</span></a>
+            <a data-dc-tpl="203" href="https://scholar.google.com/citations?user=Khit-6kAAAAJ&amp;hl=fr" target="_blank" rel="noopener noreferrer" class="scpb" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">Scholar</span></a>
           
-            <a data-dc-tpl="195" href="https://github.com/gregrenard/" target="_blank" rel="noopener noreferrer" class="scpa" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">GitHub</span></a>
+            <a data-dc-tpl="203" href="https://github.com/gregrenard/" target="_blank" rel="noopener noreferrer" class="scpb" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">GitHub</span></a>
           
-            <a data-dc-tpl="195" href="https://twitter.com/Redo" target="_blank" rel="noopener noreferrer" class="scpa" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">X</span></a>
+            <a data-dc-tpl="203" href="https://twitter.com/Redo" target="_blank" rel="noopener noreferrer" class="scpb" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">X</span></a>
           
-            <a data-dc-tpl="195" href="https://www.youtube.com/@GregoryRenard" target="_blank" rel="noopener noreferrer" class="scpa" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">YouTube</span></a>
+            <a data-dc-tpl="203" href="https://www.youtube.com/@GregoryRenard" target="_blank" rel="noopener noreferrer" class="scpb" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">YouTube</span></a>
           
         </div>
       </div>
       
-        <div data-dc-tpl="197">
-          <div data-dc-tpl="198" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px;"><span class="sc-interp">Navigate</span></div>
-          <div data-dc-tpl="199" style="display: flex; flex-direction: column; gap: 10px;">
+        <div data-dc-tpl="205">
+          <div data-dc-tpl="206" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px;"><span class="sc-interp">Navigate</span></div>
+          <div data-dc-tpl="207" style="display: flex; flex-direction: column; gap: 10px;">
             
-              <a data-dc-tpl="201" href="./" target="_self" rel="noopener noreferrer" class="scp6" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Vision</span></a>
+              <a data-dc-tpl="209" href="./" target="_self" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Vision</span></a>
             
-              <a data-dc-tpl="201" href="Method" target="_self" rel="noopener noreferrer" class="scp6" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Method</span></a>
+              <a data-dc-tpl="209" href="Method" target="_self" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Method</span></a>
             
-              <a data-dc-tpl="201" href="Keynote-Speaker" target="_self" rel="noopener noreferrer" class="scp6" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Talks</span></a>
-            
-          </div>
-        </div>
-      
-        <div data-dc-tpl="197">
-          <div data-dc-tpl="198" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px;"><span class="sc-interp">About</span></div>
-          <div data-dc-tpl="199" style="display: flex; flex-direction: column; gap: 10px;">
-            
-              <a data-dc-tpl="201" href="Why" target="_self" rel="noopener noreferrer" class="scp6" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Story</span></a>
-            
-              <a data-dc-tpl="201" href="Ethics" target="_self" rel="noopener noreferrer" class="scp6" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Ethics</span></a>
-            
-              <a data-dc-tpl="201" href="Publications" target="_self" rel="noopener noreferrer" class="scp6" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Publications</span></a>
-            
-              <a data-dc-tpl="201" href="Press" target="_self" rel="noopener noreferrer" class="scp6" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Press</span></a>
+              <a data-dc-tpl="209" href="Keynote-Speaker" target="_self" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Talks</span></a>
             
           </div>
         </div>
       
-        <div data-dc-tpl="197">
-          <div data-dc-tpl="198" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px;"><span class="sc-interp">Elsewhere</span></div>
-          <div data-dc-tpl="199" style="display: flex; flex-direction: column; gap: 10px;">
+        <div data-dc-tpl="205">
+          <div data-dc-tpl="206" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px;"><span class="sc-interp">About</span></div>
+          <div data-dc-tpl="207" style="display: flex; flex-direction: column; gap: 10px;">
             
-              <a data-dc-tpl="201" href="Contact" target="_self" rel="noopener noreferrer" class="scp6" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Contact</span></a>
+              <a data-dc-tpl="209" href="Why" target="_self" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Story</span></a>
             
-              <a data-dc-tpl="201" href="https://www.freedom.ai/" target="_blank" rel="noopener noreferrer" class="scp6" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Freedom.AI ↗</span></a>
+              <a data-dc-tpl="209" href="Ethics" target="_self" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Ethics</span></a>
             
-              <a data-dc-tpl="201" href="https://everyone.ai/" target="_blank" rel="noopener noreferrer" class="scp6" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Everyone.AI ↗</span></a>
+              <a data-dc-tpl="209" href="Publications" target="_self" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Publications</span></a>
             
-              <a data-dc-tpl="201" href="https://www.holbertonturingoath.org/" target="_blank" rel="noopener noreferrer" class="scp6" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Holberton-Turing Oath ↗</span></a>
+              <a data-dc-tpl="209" href="Press" target="_self" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Press</span></a>
+            
+          </div>
+        </div>
+      
+        <div data-dc-tpl="205">
+          <div data-dc-tpl="206" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px;"><span class="sc-interp">Elsewhere</span></div>
+          <div data-dc-tpl="207" style="display: flex; flex-direction: column; gap: 10px;">
+            
+              <a data-dc-tpl="209" href="Contact" target="_self" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Contact</span></a>
+            
+              <a data-dc-tpl="209" href="https://www.freedom.ai/" target="_blank" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Freedom.AI ↗</span></a>
+            
+              <a data-dc-tpl="209" href="https://everyone.ai/" target="_blank" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Everyone.AI ↗</span></a>
+            
+              <a data-dc-tpl="209" href="https://www.holbertonturingoath.org/" target="_blank" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Holberton-Turing Oath ↗</span></a>
             
           </div>
         </div>
       
     </div>
-    <div data-dc-tpl="202" style="border-top: 1px solid rgba(var(--line-rgb),0.06);">
-      <div data-dc-tpl="203" style="max-width: 1240px; margin: 0px auto; padding: 18px 32px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; font-size: 12.5px; color: var(--text-faint);">
-        <span data-dc-tpl="204"><span class="sc-interp">©2026 — Gregory Renard · Freedom.AI Consulting LLC</span></span>
-        <span data-dc-tpl="205" style="font-family: &quot;JetBrains Mono&quot;, monospace;">SF · Silicon Valley · Paris · Bruxelles</span>
+    <div data-dc-tpl="210" style="border-top: 1px solid rgba(var(--line-rgb),0.06);">
+      <div data-dc-tpl="211" style="max-width: 1240px; margin: 0px auto; padding: 18px 32px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; font-size: 12.5px; color: var(--text-faint);">
+        <span data-dc-tpl="212"><span class="sc-interp">©2026 — Gregory Renard · Freedom.AI Consulting LLC</span></span>
+        <span data-dc-tpl="213" style="font-family: &quot;JetBrains Mono&quot;, monospace;">SF · Silicon Valley · Paris · Bruxelles</span>
       </div>
     </div>
   </footer></div></div></div><!--dc-prerender-end-->
@@ -849,18 +869,20 @@ class Component extends DCLogic {
       en: {
         nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Advisory & Execution', nav_lab: 'AI Lab', nav_why: 'Story', nav_ethics: 'Ethics', nav_speaking: 'Talks', nav_writing: 'Publications', nav_method: 'Method', nav_cta: 'Freedom.AI', workKicker: 'Work with me · via Freedom.AI', workTitle: 'Ready to put AI to work?', workBody: 'Start a collaboration through Freedom.AI — my Applied AI lab & advisory, where my team and I design, prototype and operationalize frontier Generative AI into production-grade systems. We work end-to-end across cloud, on-premise, edge and fully local: advanced LLM orchestration, conversational platforms, tool-using AI, knowledge graphs, grounded reasoning and operational AI workflows. We validate what truly works under real constraints — then turn it into repeatable methods and playbooks.', workCta: 'Start a collaboration via Freedom.AI',
         eyebrow: 'AI — on humanity’s side',
-        heroPre: 'AI should ', heroEm: 'serve people', heroPost: ' — not the other way around. I’ve spent 30 years proving it.',
+        heroPre: 'AI should ', heroEm: 'serve people', heroPost: ' — not the other way around. ', heroLast: 'I’ve spent 30 years proving it.',
         heroSub: 'Hands-on AI architect since 1996. With a proven method — Cognitive Orchestration™ — I move leaders and their teams from AI anxiety to AI in production, at scale. Let’s build something that lasts.',
         whyKicker: 'My why', whySign: '— Gregory',
+        whyLead: 'The technology has never been the point.',
+        whyClosePre: 'That’s why I build, I teach, and I speak — all in service of one goal: to use technology to impact ', whyCloseBold: 'a billion lives', whyClosePost: ' for the better.',
         ribbonTag: '09 Jul 2026 · Upcoming', ribbonText: 'Speaking at the AI for Good Global Summit — the United Nations’ flagship summit on AI for humanity, in Geneva.', ribbonCta: 'View session',
         clientsKicker: 'Trusted by', clientsTitle: 'Leaders building at scale — and the ventures shaping what’s next',
         caseKicker: 'Case study', caseTitle: 'Direct, measurable impact', caseName: 'Global Civil Engineering & Concessions Group', casePlaybook: 'Cognitive Orchestration™ — Phases 1 & 2 delivered · Phase 3 renewed.', caseLink: 'See the method',
         testiKicker: 'Trusted by the people who’ve worked with me',
         whoKicker: 'Who I work with', whoTitle: 'I advise CEOs, boards and executive committees — when they need decisions, execution and measurable outcomes.',
-        whyBody: 'The technology has never been the point. What moves me are the people living through this shift — the teams afraid of being replaced, the children growing up in a world reshaped by AI. I’ve spent my life making sure AI amplifies what makes us human instead of erasing it. That’s why I build, I teach, and I speak.',
+        whyBody: 'What moves me are the people living through this shift — the teams afraid of being replaced, the children growing up in a world reshaped by AI. I’ve spent my life making sure AI amplifies what makes us human instead of erasing it.',
         findMe: 'FIND ME',
-        ctaPrimary: "Let's talk", ctaSecondary: 'See the method',
-        ethicsKicker: 'Ethics & responsibility', quoteKicker: 'In his own words',
+        ctaPrimary: "Let's talk", ctaSecondary: 'See the method', ctaStory: 'Read my story',
+        ethicsKicker: 'Ethics & responsibility', quoteKicker: 'In my own words',
         ethicsBody: 'Since 2016, a public advocate for ethical, responsible AI — co-initiator of [AI4Humanity](https://www.youtube.com/live/ADi_8OL6vRk) and co-author of the [Holberton-Turing Oath](https://www.holbertonturingoath.org/), rooted in the belief that every technological advance must remain centered on humanity.',
         everyone: 'In 2024 he co-founded [Everyone.AI](https://everyone.ai/), a nonprofit anticipating the opportunities and risks of AI for children — notably through [The Future of Child Development in the AI Era](https://everyone.ai/research/) (2024).',
         ethicsLink: 'On ethics & AI',
@@ -873,18 +895,20 @@ class Component extends DCLogic {
       fr: {
         nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Conseil & Exécution', nav_lab: 'AI Lab', nav_why: 'Parcours', nav_ethics: 'Éthique', nav_speaking: 'Conférences', nav_writing: 'Publications', nav_method: 'Méthode', nav_cta: 'Freedom.AI', workKicker: 'Travailler avec moi · via Freedom.AI', workTitle: "Prêt à mettre l'IA au travail ?", workBody: "Démarrons une collaboration via Freedom.AI — mon lab & cabinet de conseil en IA appliquée, où mon équipe et moi concevons, prototypons et industrialisons l'IA générative de pointe en systèmes prêts pour la production. Nous travaillons de bout en bout : cloud, on-premise, edge et entièrement local — orchestration LLM avancée, plateformes conversationnelles, IA à outils, graphes de connaissances, raisonnement ancré et workflows IA opérationnels. Nous validons ce qui marche réellement sous contraintes réelles, puis le transformons en méthodes et playbooks réutilisables.", workCta: 'Démarrer une collaboration via Freedom.AI',
         eyebrow: "L'IA, du côté de l'humain",
-        heroPre: "L'IA doit ", heroEm: 'servir les gens', heroPost: " — pas l'inverse. J'ai passé 30 ans à le prouver.",
+        heroPre: "L'IA doit ", heroEm: 'servir les gens', heroPost: " — pas l'inverse. ", heroLast: "J'ai passé 30 ans à le prouver.",
         heroSub: "Architecte IA de terrain depuis 1996. Avec une méthode éprouvée — Cognitive Orchestration™ — je fais passer dirigeants et équipes de l'anxiété de l'IA à l'IA en production, à grande échelle. Construisons quelque chose qui dure.",
         whyKicker: 'Mon pourquoi', whySign: '— Gregory',
+        whyLead: "La technologie n'a jamais été l'essentiel.",
+        whyClosePre: "C'est pour cela que je construis, j'enseigne et je prends la parole — au service d'un seul objectif : mettre la technologie au service d'", whyCloseBold: 'un milliard de vies', whyClosePost: '.',
         ribbonTag: '09 juil. 2026 · À venir', ribbonText: 'Intervenant au AI for Good Global Summit — le sommet phare des Nations Unies sur l’IA au service de l’humanité, à Genève.', ribbonCta: 'Voir la session',
         clientsKicker: 'Ils me font confiance', clientsTitle: 'Des dirigeants qui construisent à grande échelle — et les ventures qui inventent la suite',
         caseKicker: 'Étude de cas', caseTitle: 'Un impact direct et mesurable', caseName: 'Groupe mondial de Génie civil & Concessions', casePlaybook: 'Cognitive Orchestration™ — Phases 1 & 2 livrées · Phase 3 renouvelée.', caseLink: 'Voir la méthode',
         testiKicker: 'La confiance de celles et ceux qui ont travaillé avec moi',
         whoKicker: 'Avec qui je travaille', whoTitle: "J'accompagne les CEO, conseils et comités exécutifs — quand ils ont besoin de décisions, d'exécution et de résultats mesurables.",
-        whyBody: "La technologie n'a jamais été l'essentiel. Ce qui me touche, ce sont les femmes et les hommes qui vivent ce basculement — les équipes qui craignent d'être remplacées, les enfants qui grandissent dans un monde réinventé par l'IA. J'ai passé ma vie à faire en sorte que l'IA amplifie ce qui nous rend humains, au lieu de l'effacer. C'est pour cela que je construis, j'enseigne et je prends la parole.",
+        whyBody: "Ce qui me touche, ce sont les femmes et les hommes qui vivent ce basculement — les équipes qui craignent d'être remplacées, les enfants qui grandissent dans un monde réinventé par l'IA. J'ai passé ma vie à faire en sorte que l'IA amplifie ce qui nous rend humains, au lieu de l'effacer.",
         findMe: 'ME SUIVRE',
-        ctaPrimary: 'Parlons-en', ctaSecondary: 'Voir la méthode',
-        ethicsKicker: 'Éthique & responsabilité', quoteKicker: 'Dans ses mots',
+        ctaPrimary: 'Parlons-en', ctaSecondary: 'Voir la méthode', ctaStory: 'Lire mon parcours',
+        ethicsKicker: 'Éthique & responsabilité', quoteKicker: 'Dans mes mots',
         ethicsBody: "Depuis 2016, défenseur public d'une IA éthique et responsable — co-initiateur d'[AI4Humanity](https://www.youtube.com/live/ADi_8OL6vRk) et co-auteur du [Serment Holberton-Turing](https://www.holbertonturingoath.org/), convaincu que chaque avancée technologique doit rester centrée sur l'humain.",
         everyone: "En 2024, il co-fonde [Everyone.AI](https://everyone.ai/), une organisation à but non lucratif anticipant les opportunités et les risques de l'IA pour les enfants — notamment via [The Future of Child Development in the AI Era](https://everyone.ai/research/) (2024).",
         ethicsLink: "Éthique & IA",
