@@ -58,7 +58,10 @@
     .grx-footer{grid-template-columns:1fr 1fr !important;gap:26px !important}
     .grx-talks{grid-template-columns:1fr !important}
   }
-  @media (max-width:400px){ .grx-footer{grid-template-columns:1fr !important} }
+  @media (max-width:640px){
+    .grx-up{grid-template-columns:1fr !important;gap:16px !important;justify-items:start}
+  }
+  @media (max-width:760px){ .grx-footer{grid-template-columns:1fr !important;gap:30px !important} }
   .grx-nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
   .grx-burger{display:none}
   .grx-mobile-menu{display:none}
@@ -130,7 +133,10 @@
     .grx-footer{grid-template-columns:1fr 1fr !important;gap:26px !important}
     .grx-talks{grid-template-columns:1fr !important}
   }
-  @media (max-width:400px){ .grx-footer{grid-template-columns:1fr !important} }
+  @media (max-width:640px){
+    .grx-up{grid-template-columns:1fr !important;gap:16px !important;justify-items:start}
+  }
+  @media (max-width:760px){ .grx-footer{grid-template-columns:1fr !important;gap:30px !important} }
   .grx-nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
   .grx-burger{display:none}
   .grx-mobile-menu{display:none}
@@ -193,7 +199,7 @@
   <!-- UPCOMING — AI FOR GOOD (UN/ITU) -->
   <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:18px 32px 0">
     <a href="https://aiforgood.itu.int/speaker/gregory-renard/" target="_blank" rel="noopener noreferrer" data-reveal style="display:block;text-decoration:none;border:1px solid rgba(148,115,27,0.4);border-radius:4px;background:linear-gradient(120deg,rgba(148,115,27,0.07),rgba(23,33,57,0.03));padding:26px 30px;transition:border-color .3s,transform .3s" style-hover="border-color:#94731B;transform:translateY(-3px)">
-      <div style="display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:center">
+      <div class="grx-up" style="display:grid;grid-template-columns:auto 1fr auto;gap:26px;align-items:center">
         <div style="flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;width:96px;height:96px;border-radius:4px;background:#172139;color:#F4EFE3">
           <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#CBB680">JUL</div>
           <div style="font-family:'Newsreader',serif;font-size:36px;line-height:1;font-weight:600">09</div>
@@ -302,7 +308,7 @@
           <span style="font-weight:700;font-size:15px">Gregory Renard</span>
         </div>
         <p style="font-size:13.5px;line-height:1.6;color:#6C7180;max-width:280px">{{ t.footerBlurb }}</p>
-        <div style="display:flex;gap:14px;margin-top:18px">
+        <div style="display:flex;flex-wrap:wrap;gap:12px 14px;margin-top:18px">
           <sc-for list="{{ socials }}" as="s" hint-placeholder-count="5"><a href="{{ s.url }}" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#6C7180" style-hover="color:#94731B">{{ s.name }}</a></sc-for>
         </div>
       </div>
@@ -375,7 +381,7 @@
   
   <section data-dc-tpl="62" class="grx-pad" style="max-width: 1240px; margin: 0px auto; padding: 18px 32px 0px;">
     <a data-dc-tpl="63" href="https://aiforgood.itu.int/speaker/gregory-renard/" target="_blank" rel="noopener noreferrer" data-reveal="" class="scp3" style="display: block; text-decoration: none; border: 1px solid rgba(148, 115, 27, 0.4); border-radius: 4px; background: linear-gradient(120deg, rgba(148, 115, 27, 0.07), rgba(23, 33, 57, 0.03)); padding: 26px 30px; transition: border-color 0.3s, transform 0.3s;">
-      <div data-dc-tpl="64" style="display: grid; grid-template-columns: auto 1fr auto; gap: 26px; align-items: center;">
+      <div data-dc-tpl="64" class="grx-up" style="display: grid; grid-template-columns: auto 1fr auto; gap: 26px; align-items: center;">
         <div data-dc-tpl="65" style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 96px; height: 96px; border-radius: 4px; background: rgb(23, 33, 57); color: rgb(244, 239, 227);">
           <div data-dc-tpl="66" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.12em; color: rgb(203, 182, 128);">JUL</div>
           <div data-dc-tpl="67" style="font-family: Newsreader, serif; font-size: 36px; line-height: 1; font-weight: 600;">09</div>
@@ -629,7 +635,7 @@
           <span data-dc-tpl="130" style="font-weight: 700; font-size: 15px;">Gregory Renard</span>
         </div>
         <p data-dc-tpl="131" style="font-size: 13.5px; line-height: 1.6; color: rgb(108, 113, 128); max-width: 280px;"><span class="sc-interp">Hands-on AI architect &amp; Cognitive Orchestration since 1996. Building operational, AI-native organizations.</span></p>
-        <div data-dc-tpl="132" style="display: flex; gap: 14px; margin-top: 18px;">
+        <div data-dc-tpl="132" style="display: flex; flex-wrap: wrap; gap: 12px 14px; margin-top: 18px;">
           <a data-dc-tpl="134" href="https://www.linkedin.com/in/gregoryrenard/" target="_blank" rel="noopener noreferrer" class="scp8" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(108, 113, 128);"><span class="sc-interp">LinkedIn</span></a><a data-dc-tpl="134" href="https://fr.wikipedia.org/wiki/Gr%C3%A9gory_Renard" target="_blank" rel="noopener noreferrer" class="scp8" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(108, 113, 128);"><span class="sc-interp">Wikipedia</span></a><a data-dc-tpl="134" href="https://scholar.google.com/citations?user=Khit-6kAAAAJ&amp;hl=fr" target="_blank" rel="noopener noreferrer" class="scp8" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(108, 113, 128);"><span class="sc-interp">Scholar</span></a><a data-dc-tpl="134" href="https://github.com/gregrenard/" target="_blank" rel="noopener noreferrer" class="scp8" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(108, 113, 128);"><span class="sc-interp">GitHub</span></a><a data-dc-tpl="134" href="https://twitter.com/Redo" target="_blank" rel="noopener noreferrer" class="scp8" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(108, 113, 128);"><span class="sc-interp">X</span></a><a data-dc-tpl="134" href="https://www.youtube.com/@GregoryRenard" target="_blank" rel="noopener noreferrer" class="scp8" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(108, 113, 128);"><span class="sc-interp">YouTube</span></a>
         </div>
       </div>
