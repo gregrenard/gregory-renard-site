@@ -56,6 +56,11 @@
     .grx-footer{grid-template-columns:1fr 1fr !important;gap:26px !important}
     .grx-goal{flex-direction:column !important;align-items:flex-start !important}
   }
+  @media (max-width:640px){
+    .grx-essay-thumbs{width:100% !important;max-width:340px;margin:0 auto}
+    .grx-essay-thumbs a{flex:1;min-width:0}
+    .grx-essay-thumbs img{width:100% !important}
+  }
   @media (max-width:760px){ .grx-footer{grid-template-columns:1fr !important;gap:30px !important} }
   .grx-nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
   .grx-burger{display:none}
@@ -125,6 +130,11 @@
   @media (max-width:620px){
     .grx-footer{grid-template-columns:1fr 1fr !important;gap:26px !important}
     .grx-goal{flex-direction:column !important;align-items:flex-start !important}
+  }
+  @media (max-width:640px){
+    .grx-essay-thumbs{width:100% !important;max-width:340px;margin:0 auto}
+    .grx-essay-thumbs a{flex:1;min-width:0}
+    .grx-essay-thumbs img{width:100% !important}
   }
   @media (max-width:760px){ .grx-footer{grid-template-columns:1fr !important;gap:30px !important} }
   .grx-nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
@@ -289,7 +299,7 @@
     </div>
 
     <div class="grx-essay" data-reveal style="display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;border:1px solid rgba(23,33,57,0.09);border-radius:4px;background:rgba(23,33,57,0.02);padding:36px 38px">
-      <div style="display:flex;gap:16px;flex:none">
+      <div class="grx-essay-thumbs" style="display:flex;gap:16px;flex:none">
         <a href="https://docs.google.com/document/d/10ne6XzLIRMr2H3XNg67xB8pn5kArSaiEfNI3n0T8Qho/edit?usp=sharing" target="_blank" rel="noopener noreferrer" style="display:block;transition:transform .3s" style-hover="transform:translateY(-4px)"><img src="{{ essay1 }}" alt="Essay cover — Work in the Age of AI, Part 1" style="width:160px;height:auto;border-radius:8px;box-shadow:0 16px 36px rgba(23,33,57,0.16)"></a>
         <a href="https://docs.google.com/document/d/18CTvuogtTzfLazCSEopB_GmkoQSpIF1JprJJcTeKRJQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer" style="display:block;transition:transform .3s" style-hover="transform:translateY(-4px)"><img src="{{ essay2 }}" alt="Essay cover — Work in the Age of AI, Part 2" style="width:160px;height:auto;border-radius:8px;box-shadow:0 16px 36px rgba(23,33,57,0.16)"></a>
       </div>
@@ -610,7 +620,7 @@
     </div>
 
     <div data-dc-tpl="128" class="grx-essay" data-reveal="" style="display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: center; border: 1px solid rgba(23, 33, 57, 0.09); border-radius: 4px; background: rgba(23, 33, 57, 0.02); padding: 36px 38px;">
-      <div data-dc-tpl="129" style="display: flex; gap: 16px; flex: 0 0 auto;">
+      <div data-dc-tpl="129" class="grx-essay-thumbs" style="display: flex; gap: 16px; flex: 0 0 auto;">
         <a data-dc-tpl="130" href="https://docs.google.com/document/d/10ne6XzLIRMr2H3XNg67xB8pn5kArSaiEfNI3n0T8Qho/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="scp2" style="display: block; transition: transform 0.3s;"><img data-dc-tpl="131" src="https://static.wixstatic.com/media/fa93f3_99bdf3267913492f8bea91a4cadb2547~mv2.png/v1/fill/w_320,h_415,al_c,q_85,enc_auto/essay.png" alt="Essay cover — Work in the Age of AI, Part 1" style="width: 160px; height: auto; border-radius: 8px; box-shadow: rgba(23, 33, 57, 0.16) 0px 16px 36px;"></a>
         <a data-dc-tpl="132" href="https://docs.google.com/document/d/18CTvuogtTzfLazCSEopB_GmkoQSpIF1JprJJcTeKRJQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="scp2" style="display: block; transition: transform 0.3s;"><img data-dc-tpl="133" src="https://static.wixstatic.com/media/fa93f3_a0fcf77449c04dad9b2cc37e20b39a98~mv2.png/v1/fill/w_320,h_415,al_c,q_85,enc_auto/essay2.png" alt="Essay cover — Work in the Age of AI, Part 2" style="width: 160px; height: auto; border-radius: 8px; box-shadow: rgba(23, 33, 57, 0.16) 0px 16px 36px;"></a>
       </div>
