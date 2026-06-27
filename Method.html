@@ -744,7 +744,26 @@
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   state = { lang: 'en', audioOpen: false };
-  componentDidMount() { try { const l = localStorage.getItem('grx_lang'); if (l) this.setState({ lang: l }); try { document.documentElement.lang = l || 'en'; } catch (e) {} } catch (e) {} }
+  componentDidMount() { try { const l = localStorage.getItem('grx_lang'); if (l) this.setState({ lang: l }); try { document.documentElement.lang = l || 'en'; } catch (e) {} } catch (e) {} this.scrollToHash(); }
+  scrollToHash() {
+    try {
+      const h = (location.hash || '').replace('#', '');
+      if (!h) return;
+      const jump = () => {
+        const el = document.getElementById(h);
+        if (!el) return false;
+        const top = el.getBoundingClientRect().top + window.pageYOffset - 78;
+        window.scrollTo(0, top);
+        return true;
+      };
+      let tries = 0;
+      const go = () => { if (!jump() && tries++ < 25) setTimeout(go, 120); };
+      setTimeout(go, 160);
+      // correct for layout shift once images/fonts settle
+      window.addEventListener('load', () => setTimeout(jump, 200));
+      setTimeout(jump, 900);
+    } catch (e) {}
+  }
   setLang(l) { try { localStorage.setItem('grx_lang', l); } catch (e) {} this.setState({ lang: l }); }
   parseLinks(str) {
     if (!str) return [];
