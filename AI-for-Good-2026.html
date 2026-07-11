@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
 <title>AI for Good 2026 — Toward Beneficial AI for Children · Gregory Renard</title>
-<meta name="description" content="Recap of Gregory Renard's Solution Stage talk with Dr. Mathilde Cerioli at the United Nations / ITU AI for Good Global Summit, Geneva — defining and scaling beneficial model behaviors assessment for children.">
+<meta name="description" content="Recap of Gregory Renard's Solution Stage talk with Dr. Mathilde Cerioli at the United Nations / ITU AI for Good Global Summit, Geneva — a safety label for the AI tools children use.">
 <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -15,15 +15,16 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Gregory Renard">
 <meta property="og:title" content="AI for Good 2026 — Toward Beneficial AI for Children">
-<meta property="og:description" content="Gregory Renard on the UN / ITU AI for Good Solution Stage: a developmental seatbelt for the AI tools children use. Photos, the deck & the AiA Safety Builder.">
+<meta property="og:description" content="Gregory Renard on the UN / ITU AI for Good Solution Stage: a safety label for the AI tools children use. Photos, the deck & the AiA Safety Builder.">
 <meta property="og:url" content="https://gregory-renard.com/AI-for-Good-2026">
 <meta property="og:image" content="https://gregory-renard.com/assets/ai_for_good_geneve/ai_for_good_keynote_opening.jpg">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1800">
 <meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AI for Good 2026 — Toward Beneficial AI for Children">
-<meta name="twitter:description" content="Gregory Renard on the UN / ITU AI for Good Solution Stage: a developmental seatbelt for the AI tools children use.">
+<meta name="twitter:description" content="Gregory Renard on the UN / ITU AI for Good Solution Stage: a safety label for the AI tools children use.">
 <meta name="twitter:image" content="https://gregory-renard.com/assets/ai_for_good_geneve/ai_for_good_keynote_opening.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,6 +65,12 @@
   @media (max-width:760px){
     .grx-footer{grid-template-columns:1fr !important;gap:30px !important}
     .grx-gallery{grid-template-columns:1fr 1fr !important}
+  }
+  @media (max-width:1080px){
+    .grx-nowrap{white-space:normal !important;text-wrap:balance}
+  }
+  @media (max-width:900px){
+    .grx-subtitle{white-space:normal !important;text-wrap:balance}
   }
   @media (max-width:520px){
     .grx-gallery{grid-template-columns:1fr !important}
@@ -86,7 +93,7 @@
 <x-dc>
 <helmet>
 <title>AI for Good 2026 — Toward Beneficial AI for Children · Gregory Renard</title>
-<meta name="description" content="Recap of Gregory Renard's Solution Stage talk with Dr. Mathilde Cerioli at the United Nations / ITU AI for Good Global Summit, Geneva — defining and scaling beneficial model behaviors assessment for children.">
+<meta name="description" content="Recap of Gregory Renard's Solution Stage talk with Dr. Mathilde Cerioli at the United Nations / ITU AI for Good Global Summit, Geneva — a safety label for the AI tools children use.">
 <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -96,15 +103,16 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Gregory Renard">
 <meta property="og:title" content="AI for Good 2026 — Toward Beneficial AI for Children">
-<meta property="og:description" content="Gregory Renard on the UN / ITU AI for Good Solution Stage: a developmental seatbelt for the AI tools children use. Photos, the deck & the AiA Safety Builder.">
+<meta property="og:description" content="Gregory Renard on the UN / ITU AI for Good Solution Stage: a safety label for the AI tools children use. Photos, the deck & the AiA Safety Builder.">
 <meta property="og:url" content="https://gregory-renard.com/AI-for-Good-2026">
 <meta property="og:image" content="https://gregory-renard.com/assets/ai_for_good_geneve/ai_for_good_keynote_opening.jpg">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1800">
 <meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AI for Good 2026 — Toward Beneficial AI for Children">
-<meta name="twitter:description" content="Gregory Renard on the UN / ITU AI for Good Solution Stage: a developmental seatbelt for the AI tools children use.">
+<meta name="twitter:description" content="Gregory Renard on the UN / ITU AI for Good Solution Stage: a safety label for the AI tools children use.">
 <meta name="twitter:image" content="https://gregory-renard.com/assets/ai_for_good_geneve/ai_for_good_keynote_opening.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -145,6 +153,12 @@
   @media (max-width:760px){
     .grx-footer{grid-template-columns:1fr !important;gap:30px !important}
     .grx-gallery{grid-template-columns:1fr 1fr !important}
+  }
+  @media (max-width:1080px){
+    .grx-nowrap{white-space:normal !important;text-wrap:balance}
+  }
+  @media (max-width:900px){
+    .grx-subtitle{white-space:normal !important;text-wrap:balance}
   }
   @media (max-width:520px){
     .grx-gallery{grid-template-columns:1fr !important}
@@ -171,21 +185,22 @@
         <img src="assets/freedom-tree.png" alt="Gregory Renard" style="width:34px;height:34px;object-fit:contain;flex:none">
         <span style="display:flex;flex-direction:column;gap:1px;line-height:1.1;white-space:nowrap"><span style="font-weight:700;font-size:15px;letter-spacing:-0.01em">Gregory Renard</span><span class="grx-logo-sub" style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent)">Applied AI Architect · Since 1996</span></span>
       </a>
-      <a class="grx-navlink" href="Method" style="font-size:14px;color:var(--text-soft)">Method</a>
-      <a class="grx-navlink" href="Why" style="font-size:14px;color:var(--text-soft)">Story</a>
-      <a class="grx-navlink" href="Ethics" style="font-size:14px;color:var(--text-soft)">Ethics</a>
-      <a class="grx-navlink" href="Keynote-Speaker" style="font-size:14px;color:var(--text-soft)">Talks</a>
-      <a class="grx-navlink" href="Publications" style="font-size:14px;color:var(--text-soft)">Publications</a>
+      <a class="grx-navlink" href="Method" style="font-size:14px;color:var(--text-soft)">{{ t.navMethod }}</a>
+      <a class="grx-navlink" href="Why" style="font-size:14px;color:var(--text-soft)">{{ t.navStory }}</a>
+      <a class="grx-navlink" href="Ethics" style="font-size:14px;color:var(--text-soft)">{{ t.navEthics }}</a>
+      <a class="grx-navlink" href="Keynote-Speaker" style="font-size:14px;color:var(--text-soft)">{{ t.navTalks }}</a>
+      <a class="grx-navlink" href="Publications" style="font-size:14px;color:var(--text-soft)">{{ t.navPub }}</a>
       <a class="grx-cta-nav" href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:var(--btn-fg);background:var(--btn-bg);padding:9px 17px;border-radius:3px;box-shadow:0 6px 18px rgba(23,33,57,0.2)" style-hover="background:var(--btn-bg-hover)">Freedom.AI ↗</a>
+      <button onClick="{{ toggleLang }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--text);background:rgba(var(--accent-rgb),0.18);border:1px solid rgba(var(--accent-rgb),0.42);border-radius:100px;padding:7px 13px;cursor:pointer">{{ langLabel }}</button>
       <label for="grx-nav-toggle" class="grx-burger" aria-label="Open menu">☰</label>
     </nav>
     <input type="checkbox" id="grx-nav-toggle" class="grx-nav-toggle" aria-hidden="true">
     <div class="grx-mobile-menu">
-      <a href="Method">Method</a>
-      <a href="Why">Story</a>
-      <a href="Ethics">Ethics</a>
-      <a href="Keynote-Speaker">Talks</a>
-      <a href="Publications">Publications</a>
+      <a href="Method">{{ t.navMethod }}</a>
+      <a href="Why">{{ t.navStory }}</a>
+      <a href="Ethics">{{ t.navEthics }}</a>
+      <a href="Keynote-Speaker">{{ t.navTalks }}</a>
+      <a href="Publications">{{ t.navPub }}</a>
       <a href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer">Freedom.AI ↗</a>
     </div>
   </header>
@@ -194,43 +209,44 @@
   <section class="grx-hero" style="max-width:1240px;margin:0 auto;padding:64px 32px 32px;display:grid;grid-template-columns:1.02fr 0.98fr;gap:56px;align-items:center">
     <div>
       <div style="display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:22px">
-        <span style="width:32px;height:1px;background:var(--accent);display:inline-block"></span>United Nations · ITU · AI for Good Global Summit
+        <span style="width:32px;height:1px;background:var(--accent);display:inline-block"></span>{{ t.eyebrow }}
       </div>
       <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:22px">
         <div style="display:inline-flex;align-items:center;gap:13px;background:#172139;border:1px solid rgba(var(--accent-rgb),0.25);border-radius:6px;padding:11px 16px">
-          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#CBB680;white-space:nowrap">UN · ITU · Geneva</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#CBB680;white-space:nowrap">{{ t.pill }}</span>
           <span style="width:1px;height:24px;background:rgba(244,239,227,0.16);display:inline-block"></span>
           <img src="assets/itu-un-logo.png" alt="UN Partners · ITU · Swiss Confederation" style="height:26px;width:auto;display:block">
         </div>
         <img src="assets/aiforgood-logo.png" alt="AI for Good" style="height:38px;width:auto;object-fit:contain">
       </div>
-      <h1 style="font-size:clamp(34px,4.4vw,60px);line-height:1.08;letter-spacing:-0.03em;font-weight:500;text-wrap:balance">Toward Beneficial<br>AI for <span style="color:var(--accent);font-style:italic;font-weight:400">Children</span></h1>
-      <p style="margin-top:20px;font-family:var(--font-display);font-size:clamp(19px,2vw,25px);line-height:1.35;letter-spacing:-0.01em;color:var(--text-soft);text-wrap:balance">Defining &amp; Scaling Beneficial Model Behaviors Assessment</p>
-      <p style="margin-top:22px;font-size:16.5px;line-height:1.66;color:var(--text-soft);max-width:560px">Presented on the <strong style="font-weight:700;color:var(--text)">Solution Stage</strong> with <strong style="font-weight:700;color:var(--text)">Dr. Mathilde Cerioli</strong> — Chief Scientist, Everyone.AI — at the United Nations / ITU AI for Good Global Summit, Geneva, 9 July 2026.</p>
+      <h1 style="font-size:clamp(34px,4.4vw,60px);line-height:1.08;letter-spacing:-0.03em;font-weight:500;text-wrap:balance">{{ t.h1a }}<br>{{ t.h1b }}<span style="color:var(--accent);font-style:italic;font-weight:400">{{ t.h1em }}</span></h1>
+      <p class="grx-subtitle" style="margin-top:20px;font-family:var(--font-display);font-size:clamp(15px,1.5vw,19px);line-height:1.35;letter-spacing:-0.015em;color:var(--text-soft);text-wrap:pretty">{{ t.subtitle }}</p>
+      <p style="margin-top:22px;font-size:16.5px;line-height:1.66;color:var(--text-soft);max-width:560px"><sc-for list="{{ heroSub }}" as="seg" hint-placeholder-count="4"><sc-if value="{{ seg.bold }}" hint-placeholder-val="{{ true }}"><strong style="font-weight:700;color:var(--text)">{{ seg.t }}</strong></sc-if><sc-if value="{{ seg.plain }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p>
       <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:30px">
-        <a href="https://everyone.ai/aia-safety-builder/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14.5px;color:#fff;background:var(--accent);padding:13px 18px;border-radius:3px;box-shadow:0 10px 30px rgba(var(--accent-rgb),0.35);white-space:nowrap" style-hover="background:var(--accent-bright);transform:translateY(-1px)">Explore the AiA Safety Builder ↗</a>
-        <a href="#slides" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;color:var(--btn-fg);background:var(--btn-bg);padding:13px 18px;border-radius:3px;box-shadow:0 10px 30px rgba(23,33,57,0.2);white-space:nowrap" style-hover="background:var(--btn-bg-hover);transform:translateY(-1px)">See the deck →</a>
-        <a href="#gallery" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;color:var(--text);border:1px solid rgba(var(--line-rgb),0.22);padding:13px 18px;border-radius:3px;white-space:nowrap" style-hover="border-color:var(--text);background:rgba(var(--line-rgb),0.04)">View the photos</a>
+        <a href="https://everyone.ai/aia-safety-builder/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14.5px;color:#fff;background:var(--accent);padding:13px 18px;border-radius:3px;box-shadow:0 10px 30px rgba(var(--accent-rgb),0.35);white-space:nowrap" style-hover="background:var(--accent-bright);transform:translateY(-1px)">{{ t.btnExplore }}</a>
+        <a href="#slides" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;color:var(--btn-fg);background:var(--btn-bg);padding:13px 18px;border-radius:3px;box-shadow:0 10px 30px rgba(23,33,57,0.2);white-space:nowrap" style-hover="background:var(--btn-bg-hover);transform:translateY(-1px)">{{ t.btnDeck }}</a>
+        <a href="#gallery" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;color:var(--text);border:1px solid rgba(var(--line-rgb),0.22);padding:13px 18px;border-radius:3px;white-space:nowrap" style-hover="border-color:var(--text);background:rgba(var(--line-rgb),0.04)">{{ t.btnPhotos }}</a>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:20px">
-        <a href="https://aiforgood.itu.int/event/defining-and-scaling-beneficial-model-behaviors-assessment/" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);border-bottom:1px solid rgba(var(--accent-rgb),0.4);padding-bottom:2px" style-hover="color:var(--text);border-color:var(--text)">Official session ↗</a>
-        <a href="https://aiforgood.itu.int/speaker/gregory-renard/" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);border-bottom:1px solid rgba(var(--accent-rgb),0.4);padding-bottom:2px" style-hover="color:var(--text);border-color:var(--text)">Speaker profile ↗</a>
+        <a href="https://aiforgood.itu.int/event/defining-and-scaling-beneficial-model-behaviors-assessment/" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);border-bottom:1px solid rgba(var(--accent-rgb),0.4);padding-bottom:2px" style-hover="color:var(--text);border-color:var(--text)">{{ t.linkSession }}</a>
+        <a href="https://aiforgood.itu.int/speaker/gregory-renard/" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);border-bottom:1px solid rgba(var(--accent-rgb),0.4);padding-bottom:2px" style-hover="color:var(--text);border-color:var(--text)">{{ t.linkSpeaker }}</a>
       </div>
     </div>
     <div style="position:relative">
       <div style="position:relative;z-index:1;border-radius:16px;overflow:hidden;border:1px solid rgba(var(--line-rgb),0.12);box-shadow:0 30px 70px rgba(23,33,57,0.28)">
         <img src="assets/ai_for_good_geneve/ai_for_good_keynote_opening.jpg" alt="Gregory Renard and Dr. Mathilde Cerioli on the AI for Good Solution Stage, Geneva" style="width:100%;display:block;aspect-ratio:4/3;object-fit:cover;object-position:center">
         <div style="position:absolute;left:0;right:0;bottom:0;padding:34px 22px 16px;background:linear-gradient(transparent,rgba(7,12,30,0.55) 42%,rgba(7,12,30,0.9))">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#EBD9A8;text-shadow:0 1px 5px rgba(0,0,0,0.85)">SOLUTION STAGE · GENEVA · 09 JUL 2026</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#EBD9A8;text-shadow:0 1px 5px rgba(0,0,0,0.85)">{{ t.photoStrip }}</div>
         </div>
       </div>
+      <p style="margin-top:20px;text-align:center;font-family:var(--font-display);font-style:italic;font-size:clamp(17px,1.7vw,21px);line-height:1.4;letter-spacing:-0.01em;color:var(--accent);text-wrap:balance">{{ t.taglineA }}<br>{{ t.taglineB }}<span style="font-weight:700;font-style:normal">{{ t.taglineBillion }}</span>{{ t.taglineC }}</p>
     </div>
   </section>
 
   <!-- ============ THE STORY ============ -->
   <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:52px 32px 12px">
-    <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px"><span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>The talk, in four beats</div>
-    <h2 style="font-size:clamp(26px,3vw,40px);line-height:1.12;letter-spacing:-0.025em;font-weight:520;max-width:760px;text-wrap:balance">Generative AI is now in children's lives. It still has no seatbelt.</h2>
+    <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px"><span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>{{ t.storyKicker }}</div>
+    <h2 class="grx-nowrap" style="font-size:clamp(23px,2.7vw,38px);line-height:1.12;letter-spacing:-0.025em;font-weight:520;max-width:none;white-space:nowrap"><span style="color:var(--text)">{{ t.storyH2a }}</span> <span style="color:var(--accent);font-style:italic;font-weight:600">{{ t.storyH2b }}</span></h2>
     <div class="grx-story" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(var(--line-rgb),0.1);border:1px solid rgba(var(--line-rgb),0.1);border-radius:6px;overflow:hidden;margin-top:30px">
       <sc-for list="{{ story }}" as="s" hint-placeholder-count="4">
         <div style="background:var(--surface);padding:34px 34px">
@@ -244,14 +260,30 @@
       </sc-for>
     </div>
     <div style="margin-top:26px;border:1px solid rgba(var(--accent-rgb),0.24);border-radius:6px;background:linear-gradient(120deg,rgba(var(--accent-rgb),0.08),rgba(var(--line-rgb),0.015));padding:30px 36px;text-align:center">
-      <blockquote style="margin:0;font-size:clamp(21px,2.4vw,30px);line-height:1.3;font-weight:600;letter-spacing:-0.015em;color:var(--text);text-wrap:balance">Let's make AI a safer place for children.</blockquote>
+      <blockquote style="margin:0;font-size:clamp(21px,2.4vw,30px);line-height:1.3;font-weight:600;letter-spacing:-0.015em;color:var(--text);text-wrap:balance">{{ t.quote }}</blockquote>
       <div style="margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:0.06em;color:var(--accent)">#BeneficialAIforChildren</div>
+    </div>
+  </section>
+
+  <!-- ============ THE VISION / WHY ============ -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:34px 32px 12px">
+    <div style="border:1px solid rgba(var(--line-rgb),0.14);border-radius:6px;background:var(--surface);padding:40px 44px">
+      <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px"><span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>{{ t.visionKicker }}</div>
+      <h2 style="font-size:clamp(24px,2.9vw,38px);line-height:1.16;letter-spacing:-0.02em;font-weight:520;max-width:none">{{ t.visionH2a }}<br>{{ t.visionH2b }}</h2>
+      <p style="margin-top:18px;font-size:16.5px;line-height:1.7;color:var(--text-soft);max-width:none;text-wrap:pretty"><sc-for list="{{ visionBody }}" as="seg" hint-placeholder-count="6"><sc-if value="{{ seg.bold }}" hint-placeholder-val="{{ true }}"><strong style="font-weight:700;color:var(--text)">{{ seg.t }}</strong></sc-if><sc-if value="{{ seg.plain }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;align-items:center">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--text-faint);margin-right:4px">{{ t.signalLabel }}</span>
+        <sc-for list="{{ ratings }}" as="r" hint-placeholder-count="4">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--text);border:1px solid rgba(var(--accent-rgb),0.4);background:rgba(var(--accent-rgb),0.08);border-radius:100px;padding:8px 15px">{{ r }}</span>
+        </sc-for>
+      </div>
+      <p style="margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--text-faint)">{{ t.visionFoot }}</p>
     </div>
   </section>
 
   <!-- ============ PHOTO GALLERY ============ -->
   <section id="gallery" class="grx-pad" style="max-width:1240px;margin:0 auto;padding:60px 32px 12px;scroll-margin-top:90px">
-    <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:22px"><span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>From the stage · Geneva</div>
+    <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:22px"><span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>{{ t.galleryKicker }}</div>
     <div class="grx-gallery" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
       <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="6">
         <button class="grx-gcard" onClick="{{ g.open }}" style="position:relative;display:block;padding:0;border:1px solid rgba(var(--line-rgb),0.12);border-radius:8px;overflow:hidden;background:var(--surface-2);cursor:pointer;aspect-ratio:4/3;text-align:left">
@@ -266,8 +298,8 @@
   <section id="slides" class="grx-pad" style="max-width:1240px;margin:0 auto;padding:64px 32px 12px;scroll-margin-top:90px">
     <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px">
       <div>
-        <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:12px"><span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>The presentation</div>
-        <h2 style="font-size:clamp(24px,2.7vw,36px);line-height:1.1;letter-spacing:-0.02em;font-weight:520">The full Solution Stage deck</h2>
+        <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:12px"><span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>{{ t.sliderKicker }}</div>
+        <h2 style="font-size:clamp(24px,2.7vw,36px);line-height:1.1;letter-spacing:-0.02em;font-weight:520">{{ t.sliderTitle }}</h2>
       </div>
       <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:var(--text-mute)">{{ counter }}</div>
     </div>
@@ -296,20 +328,20 @@
     </div>
 
     <div style="margin-top:22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center">
-      <a href="assets/presentations/ai-for-good-2026-solution-stage-gregory-renard.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:var(--text);border:1px solid rgba(var(--line-rgb),0.24);padding:13px 22px;border-radius:3px;background:var(--surface)" style-hover="border-color:var(--text);background:rgba(var(--line-rgb),0.04)">Download the full deck (PDF) ↓</a>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-faint)">24 slides · 16:9 · use ← → to navigate</span>
+      <a href="assets/presentations/ai-for-good-2026-solution-stage-gregory-renard.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:var(--text);border:1px solid rgba(var(--line-rgb),0.24);padding:13px 22px;border-radius:3px;background:var(--surface)" style-hover="border-color:var(--text);background:rgba(var(--line-rgb),0.04)">{{ t.download }}</a>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-faint)">{{ t.sliderNote }}</span>
     </div>
   </section>
 
   <!-- ============ LINKS / PROOF ============ -->
   <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:64px 32px 20px">
-    <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:22px"><span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>Go deeper</div>
+    <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:22px"><span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>{{ t.proofKicker }}</div>
     <a href="https://everyone.ai/aia-safety-builder/" target="_blank" rel="noopener noreferrer" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;border-radius:6px;background:var(--btn-bg);color:var(--btn-fg);padding:28px 34px;box-shadow:0 14px 40px rgba(23,33,57,0.22)" style-hover="background:var(--btn-bg-hover)">
       <div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#EBD9A8;margin-bottom:8px">The tool · Everyone.AI</div>
-        <div style="font-family:var(--font-display);font-size:clamp(22px,2.4vw,30px);line-height:1.15;font-weight:600">Explore the AiA Safety Builder</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#EBD9A8;margin-bottom:8px">{{ t.proofTag }}</div>
+        <div style="font-family:var(--font-display);font-size:clamp(22px,2.4vw,30px);line-height:1.15;font-weight:600">{{ t.proofTitle }}</div>
       </div>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:#EBD9A8;white-space:nowrap">Open ↗</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:#EBD9A8;white-space:nowrap">{{ t.proofOpen }}</span>
     </a>
     <div class="grx-links" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px">
       <sc-for list="{{ links }}" as="l" hint-placeholder-count="3">
@@ -330,7 +362,7 @@
           <img src="assets/freedom-tree.png" alt="Gregory Renard" style="width:30px;height:30px;object-fit:contain;flex:none">
           <span style="font-weight:700;font-size:15px">Gregory Renard</span>
         </div>
-        <p style="font-size:13.5px;line-height:1.6;color:var(--text-mute);max-width:340px">Hands-on AI architect &amp; Cognitive Orchestration since 1996. Co-founder of Everyone.AI — anticipating the opportunities and risks of AI for children.</p>
+        <p style="font-size:13.5px;line-height:1.6;color:var(--text-mute);max-width:340px">{{ t.footerBlurb }}</p>
         <div style="display:flex;flex-wrap:wrap;gap:12px 14px;margin-top:18px">
           <sc-for list="{{ socials }}" as="s" hint-placeholder-count="4">
             <a href="{{ s.url }}" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-mute)" style-hover="color:var(--accent)">{{ s.name }}</a>
@@ -338,20 +370,20 @@
         </div>
       </div>
       <div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-faint);margin-bottom:14px">This talk</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-faint);margin-bottom:14px">{{ t.footTalk }}</div>
         <div style="display:flex;flex-direction:column;gap:10px">
-          <a href="https://aiforgood.itu.int/event/defining-and-scaling-beneficial-model-behaviors-assessment/" target="_blank" rel="noopener noreferrer" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">Official session ↗</a>
-          <a href="https://aiforgood.itu.int/speaker/gregory-renard/" target="_blank" rel="noopener noreferrer" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">Speaker profile ↗</a>
+          <a href="https://aiforgood.itu.int/event/defining-and-scaling-beneficial-model-behaviors-assessment/" target="_blank" rel="noopener noreferrer" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">{{ t.linkSession }}</a>
+          <a href="https://aiforgood.itu.int/speaker/gregory-renard/" target="_blank" rel="noopener noreferrer" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">{{ t.linkSpeaker }}</a>
           <a href="https://everyone.ai/aia-safety-builder/" target="_blank" rel="noopener noreferrer" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">AiA Safety Builder ↗</a>
         </div>
       </div>
       <div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-faint);margin-bottom:14px">Navigate</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-faint);margin-bottom:14px">{{ t.footNav }}</div>
         <div style="display:flex;flex-direction:column;gap:10px">
-          <a href="./" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">Home</a>
-          <a href="Keynote-Speaker" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">Talks</a>
-          <a href="Ethics" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">Ethics</a>
-          <a href="Contact" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">Contact</a>
+          <a href="./" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">{{ t.footHome }}</a>
+          <a href="Keynote-Speaker" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">{{ t.footTalks }}</a>
+          <a href="Ethics" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">{{ t.footEthics }}</a>
+          <a href="Contact" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">{{ t.footContact }}</a>
         </div>
       </div>
     </div>
@@ -376,457 +408,481 @@
 
 </div>
 </x-dc>
-<!--dc-prerender-start--><div id="dc-prerender"><div class="sc-host" data-sc-name="AI-for-Good-2026"><div data-dc-tpl="26" style="position: relative; min-height: 100vh; background: var(--bg); overflow-x: clip;">
+<!--dc-prerender-start--><div id="dc-prerender"><div class="sc-host" data-sc-name="AI-for-Good-2026"><div data-dc-tpl="27" style="position: relative; min-height: 100vh; background: var(--bg); overflow-x: clip;">
 
   
-  <header data-dc-tpl="27" style="position: sticky; top: 0px; z-index: 60; backdrop-filter: blur(14px); background: var(--header-bg); border-bottom: 1px solid rgba(var(--line-rgb),0.07);">
-    <nav data-dc-tpl="28" class="grx-nav" style="max-width: 1240px; margin: 0px auto; padding: 16px 32px; display: flex; align-items: center; gap: 28px;">
-      <a data-dc-tpl="29" class="grx-logo" href="./" style="display: flex; align-items: center; gap: 11px; margin-right: auto; flex-shrink: 0; min-width: 0px;">
-        <img data-dc-tpl="30" src="assets/freedom-tree.png" alt="Gregory Renard" style="width: 34px; height: 34px; object-fit: contain; flex: 0 0 auto;">
-        <span data-dc-tpl="31" style="display: flex; flex-direction: column; gap: 1px; line-height: 1.1; white-space: nowrap;"><span data-dc-tpl="32" style="font-weight: 700; font-size: 15px; letter-spacing: -0.01em;">Gregory Renard</span><span data-dc-tpl="33" class="grx-logo-sub" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent);">Applied AI Architect · Since 1996</span></span>
+  <header data-dc-tpl="28" style="position: sticky; top: 0px; z-index: 60; backdrop-filter: blur(14px); background: var(--header-bg); border-bottom: 1px solid rgba(var(--line-rgb),0.07);">
+    <nav data-dc-tpl="29" class="grx-nav" style="max-width: 1240px; margin: 0px auto; padding: 16px 32px; display: flex; align-items: center; gap: 28px;">
+      <a data-dc-tpl="30" class="grx-logo" href="./" style="display: flex; align-items: center; gap: 11px; margin-right: auto; flex-shrink: 0; min-width: 0px;">
+        <img data-dc-tpl="31" src="assets/freedom-tree.png" alt="Gregory Renard" style="width: 34px; height: 34px; object-fit: contain; flex: 0 0 auto;">
+        <span data-dc-tpl="32" style="display: flex; flex-direction: column; gap: 1px; line-height: 1.1; white-space: nowrap;"><span data-dc-tpl="33" style="font-weight: 700; font-size: 15px; letter-spacing: -0.01em;">Gregory Renard</span><span data-dc-tpl="34" class="grx-logo-sub" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent);">Applied AI Architect · Since 1996</span></span>
       </a>
-      <a data-dc-tpl="34" class="grx-navlink" href="Method" style="font-size: 14px; color: var(--text-soft);">Method</a>
-      <a data-dc-tpl="35" class="grx-navlink" href="Why" style="font-size: 14px; color: var(--text-soft);">Story</a>
-      <a data-dc-tpl="36" class="grx-navlink" href="Ethics" style="font-size: 14px; color: var(--text-soft);">Ethics</a>
-      <a data-dc-tpl="37" class="grx-navlink" href="Keynote-Speaker" style="font-size: 14px; color: var(--text-soft);">Talks</a>
-      <a data-dc-tpl="38" class="grx-navlink" href="Publications" style="font-size: 14px; color: var(--text-soft);">Publications</a>
-      <a data-dc-tpl="39" class="grx-cta-nav scp0" href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 7px; font-size: 14px; font-weight: 600; color: var(--btn-fg); background: var(--btn-bg); padding: 9px 17px; border-radius: 3px; box-shadow: rgba(23, 33, 57, 0.2) 0px 6px 18px;">Freedom.AI ↗</a>
-      <label data-dc-tpl="40" for="grx-nav-toggle" class="grx-burger" aria-label="Open menu">☰</label>
+      <a data-dc-tpl="35" class="grx-navlink" href="Method" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Method</span></a>
+      <a data-dc-tpl="36" class="grx-navlink" href="Why" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Story</span></a>
+      <a data-dc-tpl="37" class="grx-navlink" href="Ethics" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Ethics</span></a>
+      <a data-dc-tpl="38" class="grx-navlink" href="Keynote-Speaker" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Talks</span></a>
+      <a data-dc-tpl="39" class="grx-navlink" href="Publications" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Publications</span></a>
+      <a data-dc-tpl="40" class="grx-cta-nav scp0" href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 7px; font-size: 14px; font-weight: 600; color: var(--btn-fg); background: var(--btn-bg); padding: 9px 17px; border-radius: 3px; box-shadow: rgba(23, 33, 57, 0.2) 0px 6px 18px;">Freedom.AI ↗</a>
+      <button data-dc-tpl="41" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--text); background: rgba(var(--accent-rgb),0.18); border: 1px solid rgba(var(--accent-rgb),0.42); border-radius: 100px; padding: 7px 13px; cursor: pointer;"><span class="sc-interp">FR</span></button>
+      <label data-dc-tpl="42" for="grx-nav-toggle" class="grx-burger" aria-label="Open menu">☰</label>
     </nav>
-    <input data-dc-tpl="41" type="checkbox" id="grx-nav-toggle" class="grx-nav-toggle" aria-hidden="true">
-    <div data-dc-tpl="42" class="grx-mobile-menu">
-      <a data-dc-tpl="43" href="Method">Method</a>
-      <a data-dc-tpl="44" href="Why">Story</a>
-      <a data-dc-tpl="45" href="Ethics">Ethics</a>
-      <a data-dc-tpl="46" href="Keynote-Speaker">Talks</a>
-      <a data-dc-tpl="47" href="Publications">Publications</a>
-      <a data-dc-tpl="48" href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer">Freedom.AI ↗</a>
+    <input data-dc-tpl="43" type="checkbox" id="grx-nav-toggle" class="grx-nav-toggle" aria-hidden="true">
+    <div data-dc-tpl="44" class="grx-mobile-menu">
+      <a data-dc-tpl="45" href="Method"><span class="sc-interp">Method</span></a>
+      <a data-dc-tpl="46" href="Why"><span class="sc-interp">Story</span></a>
+      <a data-dc-tpl="47" href="Ethics"><span class="sc-interp">Ethics</span></a>
+      <a data-dc-tpl="48" href="Keynote-Speaker"><span class="sc-interp">Talks</span></a>
+      <a data-dc-tpl="49" href="Publications"><span class="sc-interp">Publications</span></a>
+      <a data-dc-tpl="50" href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer">Freedom.AI ↗</a>
     </div>
   </header>
 
   
-  <section data-dc-tpl="49" class="grx-hero" style="max-width: 1240px; margin: 0px auto; padding: 64px 32px 32px; display: grid; grid-template-columns: 1.02fr 0.98fr; gap: 56px; align-items: center;">
-    <div data-dc-tpl="50">
-      <div data-dc-tpl="51" style="display: inline-flex; align-items: center; gap: 12px; flex-wrap: wrap; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px;">
-        <span data-dc-tpl="52" style="width: 32px; height: 1px; background: var(--accent); display: inline-block;"></span>United Nations · ITU · AI for Good Global Summit
+  <section data-dc-tpl="51" class="grx-hero" style="max-width: 1240px; margin: 0px auto; padding: 64px 32px 32px; display: grid; grid-template-columns: 1.02fr 0.98fr; gap: 56px; align-items: center;">
+    <div data-dc-tpl="52">
+      <div data-dc-tpl="53" style="display: inline-flex; align-items: center; gap: 12px; flex-wrap: wrap; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px;">
+        <span data-dc-tpl="54" style="width: 32px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">United Nations · ITU · AI for Good Global Summit</span>
       </div>
-      <div data-dc-tpl="53" style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 22px;">
-        <div data-dc-tpl="54" style="display: inline-flex; align-items: center; gap: 13px; background: rgb(23, 33, 57); border: 1px solid rgba(var(--accent-rgb),0.25); border-radius: 6px; padding: 11px 16px;">
-          <span data-dc-tpl="55" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(203, 182, 128); white-space: nowrap;">UN · ITU · Geneva</span>
-          <span data-dc-tpl="56" style="width: 1px; height: 24px; background: rgba(244, 239, 227, 0.16); display: inline-block;"></span>
-          <img data-dc-tpl="57" src="assets/itu-un-logo.png" alt="UN Partners · ITU · Swiss Confederation" style="height: 26px; width: auto; display: block;">
+      <div data-dc-tpl="55" style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 22px;">
+        <div data-dc-tpl="56" style="display: inline-flex; align-items: center; gap: 13px; background: rgb(23, 33, 57); border: 1px solid rgba(var(--accent-rgb),0.25); border-radius: 6px; padding: 11px 16px;">
+          <span data-dc-tpl="57" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(203, 182, 128); white-space: nowrap;"><span class="sc-interp">UN · ITU · Geneva</span></span>
+          <span data-dc-tpl="58" style="width: 1px; height: 24px; background: rgba(244, 239, 227, 0.16); display: inline-block;"></span>
+          <img data-dc-tpl="59" src="assets/itu-un-logo.png" alt="UN Partners · ITU · Swiss Confederation" style="height: 26px; width: auto; display: block;">
         </div>
-        <img data-dc-tpl="58" src="assets/aiforgood-logo.png" alt="AI for Good" style="height: 38px; width: auto; object-fit: contain;">
+        <img data-dc-tpl="60" src="assets/aiforgood-logo.png" alt="AI for Good" style="height: 38px; width: auto; object-fit: contain;">
       </div>
-      <h1 data-dc-tpl="59" style="font-size: clamp(34px, 4.4vw, 60px); line-height: 1.08; letter-spacing: -0.03em; font-weight: 500; text-wrap: balance;">Toward Beneficial<br data-dc-tpl="60">AI for <span data-dc-tpl="61" style="color: var(--accent); font-style: italic; font-weight: 400;">Children</span></h1>
-      <p data-dc-tpl="62" style="margin-top: 20px; font-family: var(--font-display); font-size: clamp(19px, 2vw, 25px); line-height: 1.35; letter-spacing: -0.01em; color: var(--text-soft); text-wrap: balance;">Defining &amp; Scaling Beneficial Model Behaviors Assessment</p>
-      <p data-dc-tpl="63" style="margin-top: 22px; font-size: 16.5px; line-height: 1.66; color: var(--text-soft); max-width: 560px;">Presented on the <strong data-dc-tpl="64" style="font-weight: 700; color: var(--text);">Solution Stage</strong> with <strong data-dc-tpl="65" style="font-weight: 700; color: var(--text);">Dr. Mathilde Cerioli</strong> — Chief Scientist, Everyone.AI — at the United Nations / ITU AI for Good Global Summit, Geneva, 9 July 2026.</p>
-      <div data-dc-tpl="66" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px;">
-        <a data-dc-tpl="67" href="https://everyone.ai/aia-safety-builder/" target="_blank" rel="noopener noreferrer" class="scp1" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14.5px; color: rgb(255, 255, 255); background: var(--accent); padding: 13px 18px; border-radius: 3px; box-shadow: 0 10px 30px rgba(var(--accent-rgb),0.35); white-space: nowrap;">Explore the AiA Safety Builder ↗</a>
-        <a data-dc-tpl="68" href="#slides" class="scp2" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14.5px; color: var(--btn-fg); background: var(--btn-bg); padding: 13px 18px; border-radius: 3px; box-shadow: rgba(23, 33, 57, 0.2) 0px 10px 30px; white-space: nowrap;">See the deck →</a>
-        <a data-dc-tpl="69" href="#gallery" class="scp3" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14.5px; color: var(--text); border: 1px solid rgba(var(--line-rgb),0.22); padding: 13px 18px; border-radius: 3px; white-space: nowrap;">View the photos</a>
+      <h1 data-dc-tpl="61" style="font-size: clamp(34px, 4.4vw, 60px); line-height: 1.08; letter-spacing: -0.03em; font-weight: 500; text-wrap: balance;"><span class="sc-interp">Toward Beneficial</span><br data-dc-tpl="62"><span class="sc-interp">AI for </span><span data-dc-tpl="63" style="color: var(--accent); font-style: italic; font-weight: 400;"><span class="sc-interp">Children</span></span></h1>
+      <p data-dc-tpl="64" class="grx-subtitle" style="margin-top: 20px; font-family: var(--font-display); font-size: clamp(15px, 1.5vw, 19px); line-height: 1.35; letter-spacing: -0.015em; color: var(--text-soft); text-wrap: pretty;"><span class="sc-interp">Defining &amp; Scaling Beneficial Model Behaviors Assessment</span></p>
+      <p data-dc-tpl="65" style="margin-top: 22px; font-size: 16.5px; line-height: 1.66; color: var(--text-soft); max-width: 560px;"><span class="sc-interp">Presented on the </span><strong data-dc-tpl="68" style="font-weight: 700; color: var(--text);"><span class="sc-interp">Solution Stage</span></strong><span class="sc-interp"> with </span><strong data-dc-tpl="68" style="font-weight: 700; color: var(--text);"><span class="sc-interp">Dr. Mathilde Cerioli</span></strong><span class="sc-interp"> — Chief Scientist, Everyone.AI — at the United Nations / ITU AI for Good Global Summit, Geneva, 9 July 2026.</span></p>
+      <div data-dc-tpl="70" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px;">
+        <a data-dc-tpl="71" href="https://everyone.ai/aia-safety-builder/" target="_blank" rel="noopener noreferrer" class="scp1" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14.5px; color: rgb(255, 255, 255); background: var(--accent); padding: 13px 18px; border-radius: 3px; box-shadow: 0 10px 30px rgba(var(--accent-rgb),0.35); white-space: nowrap;"><span class="sc-interp">Explore the AiA Safety Builder ↗</span></a>
+        <a data-dc-tpl="72" href="#slides" class="scp2" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14.5px; color: var(--btn-fg); background: var(--btn-bg); padding: 13px 18px; border-radius: 3px; box-shadow: rgba(23, 33, 57, 0.2) 0px 10px 30px; white-space: nowrap;"><span class="sc-interp">See the deck →</span></a>
+        <a data-dc-tpl="73" href="#gallery" class="scp3" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14.5px; color: var(--text); border: 1px solid rgba(var(--line-rgb),0.22); padding: 13px 18px; border-radius: 3px; white-space: nowrap;"><span class="sc-interp">View the photos</span></a>
       </div>
-      <div data-dc-tpl="70" style="display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 20px;">
-        <a data-dc-tpl="71" href="https://aiforgood.itu.int/event/defining-and-scaling-beneficial-model-behaviors-assessment/" target="_blank" rel="noopener noreferrer" class="scp4" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; font-weight: 600; color: var(--accent); border-bottom: 1px solid rgba(var(--accent-rgb),0.4); padding-bottom: 2px;">Official session ↗</a>
-        <a data-dc-tpl="72" href="https://aiforgood.itu.int/speaker/gregory-renard/" target="_blank" rel="noopener noreferrer" class="scp4" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; font-weight: 600; color: var(--accent); border-bottom: 1px solid rgba(var(--accent-rgb),0.4); padding-bottom: 2px;">Speaker profile ↗</a>
+      <div data-dc-tpl="74" style="display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 20px;">
+        <a data-dc-tpl="75" href="https://aiforgood.itu.int/event/defining-and-scaling-beneficial-model-behaviors-assessment/" target="_blank" rel="noopener noreferrer" class="scp4" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; font-weight: 600; color: var(--accent); border-bottom: 1px solid rgba(var(--accent-rgb),0.4); padding-bottom: 2px;"><span class="sc-interp">Official session ↗</span></a>
+        <a data-dc-tpl="76" href="https://aiforgood.itu.int/speaker/gregory-renard/" target="_blank" rel="noopener noreferrer" class="scp4" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; font-weight: 600; color: var(--accent); border-bottom: 1px solid rgba(var(--accent-rgb),0.4); padding-bottom: 2px;"><span class="sc-interp">Speaker profile ↗</span></a>
       </div>
     </div>
-    <div data-dc-tpl="73" style="position: relative;">
-      <div data-dc-tpl="74" style="position: relative; z-index: 1; border-radius: 16px; overflow: hidden; border: 1px solid rgba(var(--line-rgb),0.12); box-shadow: rgba(23, 33, 57, 0.28) 0px 30px 70px;">
-        <img data-dc-tpl="75" src="assets/ai_for_good_geneve/ai_for_good_keynote_opening.jpg" alt="Gregory Renard and Dr. Mathilde Cerioli on the AI for Good Solution Stage, Geneva" style="width: 100%; display: block; aspect-ratio: 4 / 3; object-fit: cover; object-position: center center;">
-        <div data-dc-tpl="76" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 34px 22px 16px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.55) 42%, rgba(7, 12, 30, 0.9));">
-          <div data-dc-tpl="77" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; color: rgb(235, 217, 168); text-shadow: rgba(0, 0, 0, 0.85) 0px 1px 5px;">SOLUTION STAGE · GENEVA · 09 JUL 2026</div>
+    <div data-dc-tpl="77" style="position: relative;">
+      <div data-dc-tpl="78" style="position: relative; z-index: 1; border-radius: 16px; overflow: hidden; border: 1px solid rgba(var(--line-rgb),0.12); box-shadow: rgba(23, 33, 57, 0.28) 0px 30px 70px;">
+        <img data-dc-tpl="79" src="assets/ai_for_good_geneve/ai_for_good_keynote_opening.jpg" alt="Gregory Renard and Dr. Mathilde Cerioli on the AI for Good Solution Stage, Geneva" style="width: 100%; display: block; aspect-ratio: 4 / 3; object-fit: cover; object-position: center center;">
+        <div data-dc-tpl="80" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 34px 22px 16px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.55) 42%, rgba(7, 12, 30, 0.9));">
+          <div data-dc-tpl="81" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; color: rgb(235, 217, 168); text-shadow: rgba(0, 0, 0, 0.85) 0px 1px 5px;"><span class="sc-interp">SOLUTION STAGE · GENEVA · 09 JUL 2026</span></div>
         </div>
       </div>
+      <p data-dc-tpl="82" style="margin-top: 20px; text-align: center; font-family: var(--font-display); font-style: italic; font-size: clamp(17px, 1.7vw, 21px); line-height: 1.4; letter-spacing: -0.01em; color: var(--accent); text-wrap: balance;"><span class="sc-interp">My goal: a safety label for AI every family can trust — and,</span><br data-dc-tpl="83"><span class="sc-interp">through it, impact </span><span data-dc-tpl="84" style="font-weight: 700; font-style: normal;"><span class="sc-interp">a billion lives</span></span><span class="sc-interp"> for the better.</span></p>
     </div>
   </section>
 
   
-  <section data-dc-tpl="78" class="grx-pad" style="max-width: 1240px; margin: 0px auto; padding: 52px 32px 12px;">
-    <div data-dc-tpl="79" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;"><span data-dc-tpl="80" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span>The talk, in four beats</div>
-    <h2 data-dc-tpl="81" style="font-size: clamp(26px, 3vw, 40px); line-height: 1.12; letter-spacing: -0.025em; font-weight: 520; max-width: 760px; text-wrap: balance;">Generative AI is now in children's lives. It still has no seatbelt.</h2>
-    <div data-dc-tpl="82" class="grx-story" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(var(--line-rgb),0.1); border: 1px solid rgba(var(--line-rgb),0.1); border-radius: 6px; overflow: hidden; margin-top: 30px;">
+  <section data-dc-tpl="85" class="grx-pad" style="max-width: 1240px; margin: 0px auto; padding: 52px 32px 12px;">
+    <div data-dc-tpl="86" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;"><span data-dc-tpl="87" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">The talk, in four beats</span></div>
+    <h2 data-dc-tpl="88" class="grx-nowrap" style="font-size: clamp(23px, 2.7vw, 38px); line-height: 1.12; letter-spacing: -0.025em; font-weight: 520; max-width: none; white-space: nowrap;"><span data-dc-tpl="89" style="color: var(--text);"><span class="sc-interp">Generative AI is now in children's lives.</span></span> <span data-dc-tpl="90" style="color: var(--accent); font-style: italic; font-weight: 600;"><span class="sc-interp">It still has no seatbelt.</span></span></h2>
+    <div data-dc-tpl="91" class="grx-story" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(var(--line-rgb),0.1); border: 1px solid rgba(var(--line-rgb),0.1); border-radius: 6px; overflow: hidden; margin-top: 30px;">
       
-        <div data-dc-tpl="84" style="background: var(--surface); padding: 34px;">
-          <div data-dc-tpl="85" style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px;">
-            <span data-dc-tpl="86" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--accent);"><span class="sc-interp">01</span></span>
-            <span data-dc-tpl="87" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mute);"><span class="sc-interp">The third way</span></span>
+        <div data-dc-tpl="93" style="background: var(--surface); padding: 34px;">
+          <div data-dc-tpl="94" style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px;">
+            <span data-dc-tpl="95" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--accent);"><span class="sc-interp">01</span></span>
+            <span data-dc-tpl="96" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mute);"><span class="sc-interp">The third way</span></span>
           </div>
-          <h3 data-dc-tpl="88" style="font-size: 22px; line-height: 1.24; letter-spacing: -0.015em; font-weight: 600; color: var(--text);"><span class="sc-interp">A developmental seatbelt</span></h3>
-          <p data-dc-tpl="89" style="margin-top: 12px; font-size: 15.5px; line-height: 1.66; color: var(--text-soft); text-wrap: pretty;"><span class="sc-interp">Not banning AI, not unfettered innovation — a reasonable, auditable standard for every AI tool a child uses. Volvo gave cars a seatbelt in 1959. Generative AI is now in children’s lives, with no seatbelt yet.</span></p>
+          <h3 data-dc-tpl="97" style="font-size: 22px; line-height: 1.24; letter-spacing: -0.015em; font-weight: 600; color: var(--text);"><span class="sc-interp">A developmental seatbelt</span></h3>
+          <p data-dc-tpl="98" style="margin-top: 12px; font-size: 15.5px; line-height: 1.66; color: var(--text-soft); text-wrap: pretty;"><span class="sc-interp">Not banning AI, not unfettered innovation — a reasonable, auditable standard for every AI tool a child uses. Volvo gave cars a seatbelt in 1959. Generative AI is now in children’s lives, with no seatbelt yet.</span></p>
         </div>
       
-        <div data-dc-tpl="84" style="background: var(--surface); padding: 34px;">
-          <div data-dc-tpl="85" style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px;">
-            <span data-dc-tpl="86" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--accent);"><span class="sc-interp">02</span></span>
-            <span data-dc-tpl="87" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mute);"><span class="sc-interp">What we measure</span></span>
+        <div data-dc-tpl="93" style="background: var(--surface); padding: 34px;">
+          <div data-dc-tpl="94" style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px;">
+            <span data-dc-tpl="95" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--accent);"><span class="sc-interp">02</span></span>
+            <span data-dc-tpl="96" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mute);"><span class="sc-interp">What we measure</span></span>
           </div>
-          <h3 data-dc-tpl="88" style="font-size: 22px; line-height: 1.24; letter-spacing: -0.015em; font-weight: 600; color: var(--text);"><span class="sc-interp">15 behaviors, 3 domain cues</span></h3>
-          <p data-dc-tpl="89" style="margin-top: 12px; font-size: 15.5px; line-height: 1.66; color: var(--text-soft); text-wrap: pretty;"><span class="sc-interp">Anthropomorphic, Interactional and Relational cues, each scored on a 5-level gradient. Our CALIBER method turns developmental science into a scalable, auditable behavioral assessment for AI.</span></p>
+          <h3 data-dc-tpl="97" style="font-size: 22px; line-height: 1.24; letter-spacing: -0.015em; font-weight: 600; color: var(--text);"><span class="sc-interp">15 behaviors, 3 domain cues</span></h3>
+          <p data-dc-tpl="98" style="margin-top: 12px; font-size: 15.5px; line-height: 1.66; color: var(--text-soft); text-wrap: pretty;"><span class="sc-interp">Anthropomorphic, Interactional and Relational cues, each scored on a 5-level gradient — turning developmental science into a scalable, auditable behavioral assessment for AI.</span></p>
         </div>
       
-        <div data-dc-tpl="84" style="background: var(--surface); padding: 34px;">
-          <div data-dc-tpl="85" style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px;">
-            <span data-dc-tpl="86" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--accent);"><span class="sc-interp">03</span></span>
-            <span data-dc-tpl="87" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mute);"><span class="sc-interp">The tool</span></span>
+        <div data-dc-tpl="93" style="background: var(--surface); padding: 34px;">
+          <div data-dc-tpl="94" style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px;">
+            <span data-dc-tpl="95" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--accent);"><span class="sc-interp">03</span></span>
+            <span data-dc-tpl="96" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mute);"><span class="sc-interp">The tool</span></span>
           </div>
-          <h3 data-dc-tpl="88" style="font-size: 22px; line-height: 1.24; letter-spacing: -0.015em; font-weight: 600; color: var(--text);"><span class="sc-interp">AiA Safety Builder</span></h3>
-          <p data-dc-tpl="89" style="margin-top: 12px; font-size: 15.5px; line-height: 1.66; color: var(--text-soft); text-wrap: pretty;"><span class="sc-interp">A pipeline — Endpoints → Attack → Content Gate → Score + Report → Guardrails. It diagnoses risky behaviors and auto-generates measured guardrails you can audit.</span></p>
+          <h3 data-dc-tpl="97" style="font-size: 22px; line-height: 1.24; letter-spacing: -0.015em; font-weight: 600; color: var(--text);"><span class="sc-interp">AiA Safety Builder</span></h3>
+          <p data-dc-tpl="98" style="margin-top: 12px; font-size: 15.5px; line-height: 1.66; color: var(--text-soft); text-wrap: pretty;"><span class="sc-interp">A pipeline — Endpoints → Attack → Content Gate → Score + Report → Guardrails. It diagnoses risky behaviors and auto-generates measured guardrails you can audit.</span></p>
         </div>
       
-        <div data-dc-tpl="84" style="background: var(--surface); padding: 34px;">
-          <div data-dc-tpl="85" style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px;">
-            <span data-dc-tpl="86" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--accent);"><span class="sc-interp">04</span></span>
-            <span data-dc-tpl="87" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mute);"><span class="sc-interp">The goal</span></span>
+        <div data-dc-tpl="93" style="background: var(--surface); padding: 34px;">
+          <div data-dc-tpl="94" style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px;">
+            <span data-dc-tpl="95" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--accent);"><span class="sc-interp">04</span></span>
+            <span data-dc-tpl="96" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mute);"><span class="sc-interp">The goal</span></span>
           </div>
-          <h3 data-dc-tpl="88" style="font-size: 22px; line-height: 1.24; letter-spacing: -0.015em; font-weight: 600; color: var(--text);"><span class="sc-interp">A safer place for children</span></h3>
-          <p data-dc-tpl="89" style="margin-top: 12px; font-size: 15.5px; line-height: 1.66; color: var(--text-soft); text-wrap: pretty;"><span class="sc-interp">Give every family a standard they can trust, and every builder a measurable path to it. Beneficial AI for children — defined, scored, and scaled.</span></p>
+          <h3 data-dc-tpl="97" style="font-size: 22px; line-height: 1.24; letter-spacing: -0.015em; font-weight: 600; color: var(--text);"><span class="sc-interp">A safer place for children</span></h3>
+          <p data-dc-tpl="98" style="margin-top: 12px; font-size: 15.5px; line-height: 1.66; color: var(--text-soft); text-wrap: pretty;"><span class="sc-interp">Give every family a standard they can trust, and every builder a measurable path to it. Beneficial AI for children — defined, scored, and scaled.</span></p>
         </div>
       
     </div>
-    <div data-dc-tpl="90" style="margin-top: 26px; border: 1px solid rgba(var(--accent-rgb),0.24); border-radius: 6px; background: linear-gradient(120deg,rgba(var(--accent-rgb),0.08),rgba(var(--line-rgb),0.015)); padding: 30px 36px; text-align: center;">
-      <blockquote data-dc-tpl="91" style="margin: 0px; font-size: clamp(21px, 2.4vw, 30px); line-height: 1.3; font-weight: 600; letter-spacing: -0.015em; color: var(--text); text-wrap: balance;">Let's make AI a safer place for children.</blockquote>
-      <div data-dc-tpl="92" style="margin-top: 14px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12.5px; letter-spacing: 0.06em; color: var(--accent);">#BeneficialAIforChildren</div>
-    </div>
-  </section>
-
-  
-  <section data-dc-tpl="93" id="gallery" class="grx-pad" style="max-width: 1240px; margin: 0px auto; padding: 60px 32px 12px; scroll-margin-top: 90px;">
-    <div data-dc-tpl="94" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px;"><span data-dc-tpl="95" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span>From the stage · Geneva</div>
-    <div data-dc-tpl="96" class="grx-gallery" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
-      
-        <button data-dc-tpl="98" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
-          <img data-dc-tpl="99" class="grx-gimg" src="assets/ai_for_good_geneve/ai_for_good_greg_portrait.jpg" alt="Gregory Renard portrait on stage at AI for Good, Geneva" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block;">
-          <span data-dc-tpl="100" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">Gregory Renard on the Solution Stage</span></span>
-        </button>
-      
-        <button data-dc-tpl="98" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
-          <img data-dc-tpl="99" class="grx-gimg" src="assets/ai_for_good_geneve/ai_for_good_keynote_opening.jpg" alt="Gregory Renard and Dr. Mathilde Cerioli opening the AI for Good session" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block;">
-          <span data-dc-tpl="100" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">Opening the talk with Dr. Mathilde Cerioli</span></span>
-        </button>
-      
-        <button data-dc-tpl="98" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
-          <img data-dc-tpl="99" class="grx-gimg" src="assets/ai_for_good_geneve/ai_for_good_keynote_principles.jpg" alt="Gregory Renard presenting principles to a full room at AI for Good" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block;">
-          <span data-dc-tpl="100" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">The principles, to a full room</span></span>
-        </button>
-      
-        <button data-dc-tpl="98" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
-          <img data-dc-tpl="99" class="grx-gimg" src="assets/ai_for_good_geneve/ai_for_good_safety_builder_report.jpg" alt="The AiA Safety Builder report shown on the AI for Good stage screen" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block;">
-          <span data-dc-tpl="100" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">The AiA Safety Builder, live on screen</span></span>
-        </button>
-      
-        <button data-dc-tpl="98" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
-          <img data-dc-tpl="99" class="grx-gimg" src="assets/ai_for_good_geneve/ai_for_good_keynote_closing.jpg" alt="Closing slide — a safer place for children" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block;">
-          <span data-dc-tpl="100" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">“A safer place for children”</span></span>
-        </button>
-      
-        <button data-dc-tpl="98" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
-          <img data-dc-tpl="99" class="grx-gimg" src="assets/ai_for_good_geneve/ai_for_good_team_2.jpeg" alt="The Everyone.AI team at AI for Good, Geneva" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block;">
-          <span data-dc-tpl="100" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">The Everyone.AI team in Geneva</span></span>
-        </button>
-      
+    <div data-dc-tpl="99" style="margin-top: 26px; border: 1px solid rgba(var(--accent-rgb),0.24); border-radius: 6px; background: linear-gradient(120deg,rgba(var(--accent-rgb),0.08),rgba(var(--line-rgb),0.015)); padding: 30px 36px; text-align: center;">
+      <blockquote data-dc-tpl="100" style="margin: 0px; font-size: clamp(21px, 2.4vw, 30px); line-height: 1.3; font-weight: 600; letter-spacing: -0.015em; color: var(--text); text-wrap: balance;"><span class="sc-interp">Let's make AI a safer place for children.</span></blockquote>
+      <div data-dc-tpl="101" style="margin-top: 14px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12.5px; letter-spacing: 0.06em; color: var(--accent);">#BeneficialAIforChildren</div>
     </div>
   </section>
 
   
-  <section data-dc-tpl="101" id="slides" class="grx-pad" style="max-width: 1240px; margin: 0px auto; padding: 64px 32px 12px; scroll-margin-top: 90px;">
-    <div data-dc-tpl="102" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 22px;">
-      <div data-dc-tpl="103">
-        <div data-dc-tpl="104" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px;"><span data-dc-tpl="105" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span>The presentation</div>
-        <h2 data-dc-tpl="106" style="font-size: clamp(24px, 2.7vw, 36px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 520;">The full Solution Stage deck</h2>
+  <section data-dc-tpl="102" class="grx-pad" style="max-width: 1240px; margin: 0px auto; padding: 34px 32px 12px;">
+    <div data-dc-tpl="103" style="border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 6px; background: var(--surface); padding: 40px 44px;">
+      <div data-dc-tpl="104" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;"><span data-dc-tpl="105" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">My why · where I want this to go</span></div>
+      <h2 data-dc-tpl="106" style="font-size: clamp(24px, 2.9vw, 38px); line-height: 1.16; letter-spacing: -0.02em; font-weight: 520; max-width: none;"><span class="sc-interp">A unified safety label for AI in children's products —</span><br data-dc-tpl="107"><span class="sc-interp">the way TV shows carry an age rating.</span></h2>
+      <p data-dc-tpl="108" style="margin-top: 18px; font-size: 16.5px; line-height: 1.7; color: var(--text-soft); max-width: none; text-wrap: pretty;"><span class="sc-interp">For decades, parents have relied on a simple, shared signal — the age rating on a TV program — to know what's suitable for their child. AI now lives inside toys and everyday products, with no equivalent. I want to give it one: a single, trusted </span><strong data-dc-tpl="111" style="font-weight: 700; color: var(--text);"><span class="sc-interp">safety label</span></strong><span class="sc-interp"> — starting with children's toys, then extending to every product that embeds LLMs or agentic AI — so any parent can tell at a glance whether an AI-powered toy or product is appropriate for a given age and use. The </span><strong data-dc-tpl="111" style="font-weight: 700; color: var(--text);"><span class="sc-interp">AiA Safety Builder</span></strong><span class="sc-interp">, built at </span><strong data-dc-tpl="111" style="font-weight: 700; color: var(--text);"><span class="sc-interp">Everyone.AI</span></strong><span class="sc-interp">, is the measurable foundation that makes such a safety label possible — and it's how I intend to impact </span><strong data-dc-tpl="111" style="font-weight: 700; color: var(--text);"><span class="sc-interp">a billion lives</span></strong><span class="sc-interp"> for the better.</span></p>
+      <div data-dc-tpl="113" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; align-items: center;">
+        <span data-dc-tpl="114" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; color: var(--text-faint); margin-right: 4px;"><span class="sc-interp">THE SIGNAL, MADE SIMPLE</span></span>
+        
+          <span data-dc-tpl="116" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--text); border: 1px solid rgba(var(--accent-rgb),0.4); background: rgba(var(--accent-rgb),0.08); border-radius: 100px; padding: 8px 15px;"><span class="sc-interp">Ages 3+</span></span>
+        
+          <span data-dc-tpl="116" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--text); border: 1px solid rgba(var(--accent-rgb),0.4); background: rgba(var(--accent-rgb),0.08); border-radius: 100px; padding: 8px 15px;"><span class="sc-interp">Ages 7+</span></span>
+        
+          <span data-dc-tpl="116" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--text); border: 1px solid rgba(var(--accent-rgb),0.4); background: rgba(var(--accent-rgb),0.08); border-radius: 100px; padding: 8px 15px;"><span class="sc-interp">Ages 12+</span></span>
+        
+          <span data-dc-tpl="116" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--text); border: 1px solid rgba(var(--accent-rgb),0.4); background: rgba(var(--accent-rgb),0.08); border-radius: 100px; padding: 8px 15px;"><span class="sc-interp">Not child-safe</span></span>
+        
       </div>
-      <div data-dc-tpl="107" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 14px; font-weight: 600; color: var(--text-mute);"><span class="sc-interp">1 / 24</span></div>
-    </div>
-
-    <div data-dc-tpl="108" style="position: relative; border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 10px; overflow: hidden; background: rgb(13, 17, 34);">
-      <div data-dc-tpl="109" style="overflow: hidden;">
-        <div data-dc-tpl="110" style="display: flex; transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1); will-change: transform; transform: translateX(0%);">
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-01.jpg" alt="AI for Good deck — slide 1 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-02.jpg" alt="AI for Good deck — slide 2 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-03.jpg" alt="AI for Good deck — slide 3 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-04.jpg" alt="AI for Good deck — slide 4 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-05.jpg" alt="AI for Good deck — slide 5 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-06.jpg" alt="AI for Good deck — slide 6 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-07.jpg" alt="AI for Good deck — slide 7 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-08.jpg" alt="AI for Good deck — slide 8 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-09.jpg" alt="AI for Good deck — slide 9 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-10.jpg" alt="AI for Good deck — slide 10 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-11.jpg" alt="AI for Good deck — slide 11 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-12.jpg" alt="AI for Good deck — slide 12 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-13.jpg" alt="AI for Good deck — slide 13 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-14.jpg" alt="AI for Good deck — slide 14 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-15.jpg" alt="AI for Good deck — slide 15 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-16.jpg" alt="AI for Good deck — slide 16 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-17.jpg" alt="AI for Good deck — slide 17 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-18.jpg" alt="AI for Good deck — slide 18 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-19.jpg" alt="AI for Good deck — slide 19 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-20.jpg" alt="AI for Good deck — slide 20 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-21.jpg" alt="AI for Good deck — slide 21 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-22.jpg" alt="AI for Good deck — slide 22 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-23.jpg" alt="AI for Good deck — slide 23 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-            <div data-dc-tpl="112" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
-              <img data-dc-tpl="113" src="assets/presentations/slides/slide-24.jpg" alt="AI for Good deck — slide 24 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-          
-        </div>
-      </div>
-      <button data-dc-tpl="114" class="grx-arrow" aria-label="Previous slide" style="position: absolute; top: 50%; left: 14px; transform: translateY(-50%); width: 46px; height: 46px; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(244, 239, 227, 0.35); background: rgba(13, 17, 34, 0.6); color: rgb(244, 239, 228); font-size: 20px; cursor: pointer; backdrop-filter: blur(4px);">‹</button>
-      <button data-dc-tpl="115" class="grx-arrow" aria-label="Next slide" style="position: absolute; top: 50%; right: 14px; transform: translateY(-50%); width: 46px; height: 46px; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(244, 239, 227, 0.35); background: rgba(13, 17, 34, 0.6); color: rgb(244, 239, 228); font-size: 20px; cursor: pointer; backdrop-filter: blur(4px);">›</button>
-      <div data-dc-tpl="116" style="position: absolute; bottom: 12px; right: 14px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: rgb(244, 239, 228); background: rgba(13, 17, 34, 0.62); border: 1px solid rgba(244, 239, 227, 0.2); border-radius: 100px; padding: 5px 12px; backdrop-filter: blur(4px);"><span class="sc-interp">1 / 24</span></div>
-    </div>
-
-    <div data-dc-tpl="117" style="display: flex; gap: 8px; margin-top: 14px; overflow-x: auto; padding-bottom: 6px;">
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 1" data-idx="0" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 1; outline-color: var(--accent); outline-style: solid; outline-width: 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-01.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 2" data-idx="1" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-02.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 3" data-idx="2" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-03.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 4" data-idx="3" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-04.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 5" data-idx="4" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-05.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 6" data-idx="5" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-06.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 7" data-idx="6" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-07.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 8" data-idx="7" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-08.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 9" data-idx="8" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-09.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 10" data-idx="9" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-10.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 11" data-idx="10" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-11.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 12" data-idx="11" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-12.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 13" data-idx="12" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-13.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 14" data-idx="13" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-14.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 15" data-idx="14" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-15.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 16" data-idx="15" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-16.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 17" data-idx="16" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-17.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 18" data-idx="17" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-18.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 19" data-idx="18" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-19.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 20" data-idx="19" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-20.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 21" data-idx="20" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-21.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 22" data-idx="21" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-22.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 23" data-idx="22" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-23.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-        <button data-dc-tpl="119" class="grx-thumb" aria-label="Go to slide 24" data-idx="23" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
-          <img data-dc-tpl="120" src="assets/presentations/slides/slide-24.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        </button>
-      
-    </div>
-
-    <div data-dc-tpl="121" style="margin-top: 22px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center;">
-      <a data-dc-tpl="122" href="assets/presentations/ai-for-good-2026-solution-stage-gregory-renard.pdf" target="_blank" rel="noopener noreferrer" class="scp3" style="display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 15px; color: var(--text); border: 1px solid rgba(var(--line-rgb),0.24); padding: 13px 22px; border-radius: 3px; background: var(--surface);">Download the full deck (PDF) ↓</a>
-      <span data-dc-tpl="123" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-faint);">24 slides · 16:9 · use ← → to navigate</span>
+      <p data-dc-tpl="117" style="margin-top: 14px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; color: var(--text-faint);"><span class="sc-interp">Illustrative examples only — not a binding standard. They show the direction: a shared, PG-style rating any family could read in a second.</span></p>
     </div>
   </section>
 
   
-  <section data-dc-tpl="124" class="grx-pad" style="max-width: 1240px; margin: 0px auto; padding: 64px 32px 20px;">
-    <div data-dc-tpl="125" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px;"><span data-dc-tpl="126" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span>Go deeper</div>
-    <a data-dc-tpl="127" href="https://everyone.ai/aia-safety-builder/" target="_blank" rel="noopener noreferrer" class="scp0" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; border-radius: 6px; background: var(--btn-bg); color: var(--btn-fg); padding: 28px 34px; box-shadow: rgba(23, 33, 57, 0.22) 0px 14px 40px;">
+  <section data-dc-tpl="118" id="gallery" class="grx-pad" style="max-width: 1240px; margin: 0px auto; padding: 60px 32px 12px; scroll-margin-top: 90px;">
+    <div data-dc-tpl="119" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px;"><span data-dc-tpl="120" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">From the stage · Geneva</span></div>
+    <div data-dc-tpl="121" class="grx-gallery" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
+      
+        <button data-dc-tpl="123" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
+          <img data-dc-tpl="124" class="grx-gimg" src="assets/ai_for_good_geneve/ai_for_good_greg_portrait.jpg" alt="Gregory Renard portrait on stage at AI for Good, Geneva" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block;">
+          <span data-dc-tpl="125" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">Gregory Renard on the Solution Stage</span></span>
+        </button>
+      
+        <button data-dc-tpl="123" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
+          <img data-dc-tpl="124" class="grx-gimg" src="assets/ai_for_good_geneve/ai_for_good_keynote_opening.jpg" alt="Gregory Renard and Dr. Mathilde Cerioli opening the AI for Good session" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block;">
+          <span data-dc-tpl="125" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">Opening the talk with Dr. Mathilde Cerioli</span></span>
+        </button>
+      
+        <button data-dc-tpl="123" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
+          <img data-dc-tpl="124" class="grx-gimg" src="assets/ai_for_good_geneve/ai_for_good_keynote_principles.jpg" alt="Gregory Renard presenting principles to a full room at AI for Good" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block;">
+          <span data-dc-tpl="125" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">The principles, to a full room</span></span>
+        </button>
+      
+        <button data-dc-tpl="123" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
+          <img data-dc-tpl="124" class="grx-gimg" src="assets/ai_for_good_geneve/ai_for_good_safety_builder_report.jpg" alt="The AiA Safety Builder report shown on the AI for Good stage screen" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block;">
+          <span data-dc-tpl="125" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">The AiA Safety Builder, live on screen</span></span>
+        </button>
+      
+        <button data-dc-tpl="123" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
+          <img data-dc-tpl="124" class="grx-gimg" src="assets/ai_for_good_geneve/ai_for_good_keynote_closing.jpg" alt="Closing slide — a safer place for children" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block;">
+          <span data-dc-tpl="125" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">“A safer place for children”</span></span>
+        </button>
+      
+        <button data-dc-tpl="123" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
+          <img data-dc-tpl="124" class="grx-gimg" src="assets/ai_for_good_geneve/ai_for_good_team_2.jpeg" alt="The Everyone.AI team at AI for Good, Geneva" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block;">
+          <span data-dc-tpl="125" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">The Everyone.AI team in Geneva</span></span>
+        </button>
+      
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="126" id="slides" class="grx-pad" style="max-width: 1240px; margin: 0px auto; padding: 64px 32px 12px; scroll-margin-top: 90px;">
+    <div data-dc-tpl="127" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 22px;">
       <div data-dc-tpl="128">
-        <div data-dc-tpl="129" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(235, 217, 168); margin-bottom: 8px;">The tool · Everyone.AI</div>
-        <div data-dc-tpl="130" style="font-family: var(--font-display); font-size: clamp(22px, 2.4vw, 30px); line-height: 1.15; font-weight: 600;">Explore the AiA Safety Builder</div>
+        <div data-dc-tpl="129" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px;"><span data-dc-tpl="130" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">The presentation</span></div>
+        <h2 data-dc-tpl="131" style="font-size: clamp(24px, 2.7vw, 36px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 520;"><span class="sc-interp">The full Solution Stage deck</span></h2>
       </div>
-      <span data-dc-tpl="131" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 14px; font-weight: 600; color: rgb(235, 217, 168); white-space: nowrap;">Open ↗</span>
+      <div data-dc-tpl="132" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 14px; font-weight: 600; color: var(--text-mute);"><span class="sc-interp">1 / 24</span></div>
+    </div>
+
+    <div data-dc-tpl="133" style="position: relative; border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 10px; overflow: hidden; background: rgb(13, 17, 34);">
+      <div data-dc-tpl="134" style="overflow: hidden;">
+        <div data-dc-tpl="135" style="display: flex; transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1); will-change: transform; transform: translateX(0%);">
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-01.jpg" alt="AI for Good deck — slide 1 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-02.jpg" alt="AI for Good deck — slide 2 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-03.jpg" alt="AI for Good deck — slide 3 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-04.jpg" alt="AI for Good deck — slide 4 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-05.jpg" alt="AI for Good deck — slide 5 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-06.jpg" alt="AI for Good deck — slide 6 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-07.jpg" alt="AI for Good deck — slide 7 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-08.jpg" alt="AI for Good deck — slide 8 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-09.jpg" alt="AI for Good deck — slide 9 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-10.jpg" alt="AI for Good deck — slide 10 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-11.jpg" alt="AI for Good deck — slide 11 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-12.jpg" alt="AI for Good deck — slide 12 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-13.jpg" alt="AI for Good deck — slide 13 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-14.jpg" alt="AI for Good deck — slide 14 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-15.jpg" alt="AI for Good deck — slide 15 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-16.jpg" alt="AI for Good deck — slide 16 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-17.jpg" alt="AI for Good deck — slide 17 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-18.jpg" alt="AI for Good deck — slide 18 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-19.jpg" alt="AI for Good deck — slide 19 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-20.jpg" alt="AI for Good deck — slide 20 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-21.jpg" alt="AI for Good deck — slide 21 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-22.jpg" alt="AI for Good deck — slide 22 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-23.jpg" alt="AI for Good deck — slide 23 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+            <div data-dc-tpl="137" style="flex: 0 0 100%; aspect-ratio: 16 / 9; background: rgb(13, 17, 34);">
+              <img data-dc-tpl="138" src="assets/presentations/slides/slide-24.jpg" alt="AI for Good deck — slide 24 of 24" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+            </div>
+          
+        </div>
+      </div>
+      <button data-dc-tpl="139" class="grx-arrow" aria-label="Previous slide" style="position: absolute; top: 50%; left: 14px; transform: translateY(-50%); width: 46px; height: 46px; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(244, 239, 227, 0.35); background: rgba(13, 17, 34, 0.6); color: rgb(244, 239, 228); font-size: 20px; cursor: pointer; backdrop-filter: blur(4px);">‹</button>
+      <button data-dc-tpl="140" class="grx-arrow" aria-label="Next slide" style="position: absolute; top: 50%; right: 14px; transform: translateY(-50%); width: 46px; height: 46px; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(244, 239, 227, 0.35); background: rgba(13, 17, 34, 0.6); color: rgb(244, 239, 228); font-size: 20px; cursor: pointer; backdrop-filter: blur(4px);">›</button>
+      <div data-dc-tpl="141" style="position: absolute; bottom: 12px; right: 14px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: rgb(244, 239, 228); background: rgba(13, 17, 34, 0.62); border: 1px solid rgba(244, 239, 227, 0.2); border-radius: 100px; padding: 5px 12px; backdrop-filter: blur(4px);"><span class="sc-interp">1 / 24</span></div>
+    </div>
+
+    <div data-dc-tpl="142" style="display: flex; gap: 8px; margin-top: 14px; overflow-x: auto; padding-bottom: 6px;">
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 1" data-idx="0" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 1; outline-color: var(--accent); outline-style: solid; outline-width: 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-01.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 2" data-idx="1" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-02.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 3" data-idx="2" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-03.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 4" data-idx="3" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-04.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 5" data-idx="4" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-05.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 6" data-idx="5" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-06.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 7" data-idx="6" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-07.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 8" data-idx="7" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-08.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 9" data-idx="8" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-09.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 10" data-idx="9" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-10.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 11" data-idx="10" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-11.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 12" data-idx="11" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-12.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 13" data-idx="12" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-13.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 14" data-idx="13" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-14.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 15" data-idx="14" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-15.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 16" data-idx="15" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-16.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 17" data-idx="16" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-17.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 18" data-idx="17" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-18.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 19" data-idx="18" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-19.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 20" data-idx="19" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-20.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 21" data-idx="20" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-21.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 22" data-idx="21" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-22.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 23" data-idx="22" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-23.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+        <button data-dc-tpl="144" class="grx-thumb" aria-label="Go to slide 24" data-idx="23" style="flex: 0 0 auto; width: 96px; aspect-ratio: 16 / 9; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 4px; overflow: hidden; cursor: pointer; background: var(--surface-2); opacity: 0.45; outline: transparent solid 2px; outline-offset: -2px;">
+          <img data-dc-tpl="145" src="assets/presentations/slides/slide-24.jpg" alt="" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </button>
+      
+    </div>
+
+    <div data-dc-tpl="146" style="margin-top: 22px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center;">
+      <a data-dc-tpl="147" href="assets/presentations/ai-for-good-2026-solution-stage-gregory-renard.pdf" target="_blank" rel="noopener noreferrer" class="scp3" style="display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 15px; color: var(--text); border: 1px solid rgba(var(--line-rgb),0.24); padding: 13px 22px; border-radius: 3px; background: var(--surface);"><span class="sc-interp">Download the full deck (PDF) ↓</span></a>
+      <span data-dc-tpl="148" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-faint);"><span class="sc-interp">24 slides · 16:9 · use ← → to navigate</span></span>
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="149" class="grx-pad" style="max-width: 1240px; margin: 0px auto; padding: 64px 32px 20px;">
+    <div data-dc-tpl="150" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px;"><span data-dc-tpl="151" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">Go deeper</span></div>
+    <a data-dc-tpl="152" href="https://everyone.ai/aia-safety-builder/" target="_blank" rel="noopener noreferrer" class="scp0" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; border-radius: 6px; background: var(--btn-bg); color: var(--btn-fg); padding: 28px 34px; box-shadow: rgba(23, 33, 57, 0.22) 0px 14px 40px;">
+      <div data-dc-tpl="153">
+        <div data-dc-tpl="154" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(235, 217, 168); margin-bottom: 8px;"><span class="sc-interp">The tool · Everyone.AI</span></div>
+        <div data-dc-tpl="155" style="font-family: var(--font-display); font-size: clamp(22px, 2.4vw, 30px); line-height: 1.15; font-weight: 600;"><span class="sc-interp">Explore the AiA Safety Builder</span></div>
+      </div>
+      <span data-dc-tpl="156" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 14px; font-weight: 600; color: rgb(235, 217, 168); white-space: nowrap;"><span class="sc-interp">Open ↗</span></span>
     </a>
-    <div data-dc-tpl="132" class="grx-links" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px;">
+    <div data-dc-tpl="157" class="grx-links" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px;">
       
-        <a data-dc-tpl="134" href="https://aiforgood.itu.int/event/defining-and-scaling-beneficial-model-behaviors-assessment/" target="_blank" rel="noopener noreferrer" class="scp5" style="display: flex; flex-direction: column; gap: 8px; border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 6px; background: var(--surface); padding: 24px 26px; min-height: 120px;">
-          <span data-dc-tpl="135" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);"><span class="sc-interp">Official session</span></span>
-          <span data-dc-tpl="136" style="font-size: 17px; font-weight: 600; line-height: 1.25; color: var(--text); letter-spacing: -0.01em; flex: 1 1 0%;"><span class="sc-interp">Defining &amp; Scaling Beneficial Model Behaviors Assessment</span></span>
-          <span data-dc-tpl="137" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">aiforgood.itu.int</span> ↗</span>
+        <a data-dc-tpl="159" href="https://aiforgood.itu.int/event/defining-and-scaling-beneficial-model-behaviors-assessment/" target="_blank" rel="noopener noreferrer" class="scp5" style="display: flex; flex-direction: column; gap: 8px; border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 6px; background: var(--surface); padding: 24px 26px; min-height: 120px;">
+          <span data-dc-tpl="160" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);"><span class="sc-interp">Official session</span></span>
+          <span data-dc-tpl="161" style="font-size: 17px; font-weight: 600; line-height: 1.25; color: var(--text); letter-spacing: -0.01em; flex: 1 1 0%;"><span class="sc-interp">Defining &amp; Scaling Beneficial Model Behaviors Assessment</span></span>
+          <span data-dc-tpl="162" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">aiforgood.itu.int</span> ↗</span>
         </a>
       
-        <a data-dc-tpl="134" href="https://aiforgood.itu.int/speaker/gregory-renard/" target="_blank" rel="noopener noreferrer" class="scp5" style="display: flex; flex-direction: column; gap: 8px; border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 6px; background: var(--surface); padding: 24px 26px; min-height: 120px;">
-          <span data-dc-tpl="135" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);"><span class="sc-interp">Speaker profile</span></span>
-          <span data-dc-tpl="136" style="font-size: 17px; font-weight: 600; line-height: 1.25; color: var(--text); letter-spacing: -0.01em; flex: 1 1 0%;"><span class="sc-interp">Gregory Renard — AI for Good</span></span>
-          <span data-dc-tpl="137" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">aiforgood.itu.int</span> ↗</span>
+        <a data-dc-tpl="159" href="https://aiforgood.itu.int/speaker/gregory-renard/" target="_blank" rel="noopener noreferrer" class="scp5" style="display: flex; flex-direction: column; gap: 8px; border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 6px; background: var(--surface); padding: 24px 26px; min-height: 120px;">
+          <span data-dc-tpl="160" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);"><span class="sc-interp">Speaker profile</span></span>
+          <span data-dc-tpl="161" style="font-size: 17px; font-weight: 600; line-height: 1.25; color: var(--text); letter-spacing: -0.01em; flex: 1 1 0%;"><span class="sc-interp">Gregory Renard — AI for Good</span></span>
+          <span data-dc-tpl="162" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">aiforgood.itu.int</span> ↗</span>
         </a>
       
-        <a data-dc-tpl="134" href="https://everyone.ai" target="_blank" rel="noopener noreferrer" class="scp5" style="display: flex; flex-direction: column; gap: 8px; border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 6px; background: var(--surface); padding: 24px 26px; min-height: 120px;">
-          <span data-dc-tpl="135" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);"><span class="sc-interp">Nonprofit</span></span>
-          <span data-dc-tpl="136" style="font-size: 17px; font-weight: 600; line-height: 1.25; color: var(--text); letter-spacing: -0.01em; flex: 1 1 0%;"><span class="sc-interp">Everyone.AI — beneficial AI for children</span></span>
-          <span data-dc-tpl="137" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">everyone.ai</span> ↗</span>
+        <a data-dc-tpl="159" href="https://everyone.ai" target="_blank" rel="noopener noreferrer" class="scp5" style="display: flex; flex-direction: column; gap: 8px; border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 6px; background: var(--surface); padding: 24px 26px; min-height: 120px;">
+          <span data-dc-tpl="160" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);"><span class="sc-interp">Nonprofit</span></span>
+          <span data-dc-tpl="161" style="font-size: 17px; font-weight: 600; line-height: 1.25; color: var(--text); letter-spacing: -0.01em; flex: 1 1 0%;"><span class="sc-interp">Everyone.AI — beneficial AI for children</span></span>
+          <span data-dc-tpl="162" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">everyone.ai</span> ↗</span>
         </a>
       
     </div>
   </section>
 
   
-  <footer data-dc-tpl="138" style="border-top: 1px solid rgba(var(--line-rgb),0.08); background: var(--bg); margin-top: 40px;">
-    <div data-dc-tpl="139" class="grx-footer" style="max-width: 1240px; margin: 0px auto; padding: 52px 32px 30px; display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 36px;">
-      <div data-dc-tpl="140">
-        <div data-dc-tpl="141" style="display: flex; align-items: center; gap: 11px; margin-bottom: 16px;">
-          <img data-dc-tpl="142" src="assets/freedom-tree.png" alt="Gregory Renard" style="width: 30px; height: 30px; object-fit: contain; flex: 0 0 auto;">
-          <span data-dc-tpl="143" style="font-weight: 700; font-size: 15px;">Gregory Renard</span>
+  <footer data-dc-tpl="163" style="border-top: 1px solid rgba(var(--line-rgb),0.08); background: var(--bg); margin-top: 40px;">
+    <div data-dc-tpl="164" class="grx-footer" style="max-width: 1240px; margin: 0px auto; padding: 52px 32px 30px; display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 36px;">
+      <div data-dc-tpl="165">
+        <div data-dc-tpl="166" style="display: flex; align-items: center; gap: 11px; margin-bottom: 16px;">
+          <img data-dc-tpl="167" src="assets/freedom-tree.png" alt="Gregory Renard" style="width: 30px; height: 30px; object-fit: contain; flex: 0 0 auto;">
+          <span data-dc-tpl="168" style="font-weight: 700; font-size: 15px;">Gregory Renard</span>
         </div>
-        <p data-dc-tpl="144" style="font-size: 13.5px; line-height: 1.6; color: var(--text-mute); max-width: 340px;">Hands-on AI architect &amp; Cognitive Orchestration since 1996. Co-founder of Everyone.AI — anticipating the opportunities and risks of AI for children.</p>
-        <div data-dc-tpl="145" style="display: flex; flex-wrap: wrap; gap: 12px 14px; margin-top: 18px;">
+        <p data-dc-tpl="169" style="font-size: 13.5px; line-height: 1.6; color: var(--text-mute); max-width: 340px;"><span class="sc-interp">Hands-on AI architect &amp; Cognitive Orchestration since 1996. Co-founder of Everyone.AI — anticipating the opportunities and risks of AI for children.</span></p>
+        <div data-dc-tpl="170" style="display: flex; flex-wrap: wrap; gap: 12px 14px; margin-top: 18px;">
           
-            <a data-dc-tpl="147" href="https://www.linkedin.com/in/gregoryrenard/" target="_blank" rel="noopener noreferrer" class="scp6" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">LinkedIn</span></a>
+            <a data-dc-tpl="172" href="https://www.linkedin.com/in/gregoryrenard/" target="_blank" rel="noopener noreferrer" class="scp6" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">LinkedIn</span></a>
           
-            <a data-dc-tpl="147" href="https://everyone.ai/" target="_blank" rel="noopener noreferrer" class="scp6" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">Everyone.AI</span></a>
+            <a data-dc-tpl="172" href="https://everyone.ai/" target="_blank" rel="noopener noreferrer" class="scp6" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">Everyone.AI</span></a>
           
-            <a data-dc-tpl="147" href="https://www.youtube.com/@GregoryRenard" target="_blank" rel="noopener noreferrer" class="scp6" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">YouTube</span></a>
+            <a data-dc-tpl="172" href="https://www.youtube.com/@GregoryRenard" target="_blank" rel="noopener noreferrer" class="scp6" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">YouTube</span></a>
           
-            <a data-dc-tpl="147" href="https://twitter.com/Redo" target="_blank" rel="noopener noreferrer" class="scp6" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">X</span></a>
+            <a data-dc-tpl="172" href="https://twitter.com/Redo" target="_blank" rel="noopener noreferrer" class="scp6" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">X</span></a>
           
-        </div>
-      </div>
-      <div data-dc-tpl="148">
-        <div data-dc-tpl="149" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px;">This talk</div>
-        <div data-dc-tpl="150" style="display: flex; flex-direction: column; gap: 10px;">
-          <a data-dc-tpl="151" href="https://aiforgood.itu.int/event/defining-and-scaling-beneficial-model-behaviors-assessment/" target="_blank" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);">Official session ↗</a>
-          <a data-dc-tpl="152" href="https://aiforgood.itu.int/speaker/gregory-renard/" target="_blank" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);">Speaker profile ↗</a>
-          <a data-dc-tpl="153" href="https://everyone.ai/aia-safety-builder/" target="_blank" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);">AiA Safety Builder ↗</a>
         </div>
       </div>
-      <div data-dc-tpl="154">
-        <div data-dc-tpl="155" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px;">Navigate</div>
-        <div data-dc-tpl="156" style="display: flex; flex-direction: column; gap: 10px;">
-          <a data-dc-tpl="157" href="./" class="scp7" style="font-size: 14px; color: var(--text-soft);">Home</a>
-          <a data-dc-tpl="158" href="Keynote-Speaker" class="scp7" style="font-size: 14px; color: var(--text-soft);">Talks</a>
-          <a data-dc-tpl="159" href="Ethics" class="scp7" style="font-size: 14px; color: var(--text-soft);">Ethics</a>
-          <a data-dc-tpl="160" href="Contact" class="scp7" style="font-size: 14px; color: var(--text-soft);">Contact</a>
+      <div data-dc-tpl="173">
+        <div data-dc-tpl="174" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px;"><span class="sc-interp">This talk</span></div>
+        <div data-dc-tpl="175" style="display: flex; flex-direction: column; gap: 10px;">
+          <a data-dc-tpl="176" href="https://aiforgood.itu.int/event/defining-and-scaling-beneficial-model-behaviors-assessment/" target="_blank" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Official session ↗</span></a>
+          <a data-dc-tpl="177" href="https://aiforgood.itu.int/speaker/gregory-renard/" target="_blank" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Speaker profile ↗</span></a>
+          <a data-dc-tpl="178" href="https://everyone.ai/aia-safety-builder/" target="_blank" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);">AiA Safety Builder ↗</a>
+        </div>
+      </div>
+      <div data-dc-tpl="179">
+        <div data-dc-tpl="180" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px;"><span class="sc-interp">Navigate</span></div>
+        <div data-dc-tpl="181" style="display: flex; flex-direction: column; gap: 10px;">
+          <a data-dc-tpl="182" href="./" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Home</span></a>
+          <a data-dc-tpl="183" href="Keynote-Speaker" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Talks</span></a>
+          <a data-dc-tpl="184" href="Ethics" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Ethics</span></a>
+          <a data-dc-tpl="185" href="Contact" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Contact</span></a>
         </div>
       </div>
     </div>
-    <div data-dc-tpl="161" style="border-top: 1px solid rgba(var(--line-rgb),0.06);">
-      <div data-dc-tpl="162" style="max-width: 1240px; margin: 0px auto; padding: 18px 32px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; font-size: 12.5px; color: var(--text-faint);">
-        <span data-dc-tpl="163">©2026 — Gregory Renard · Freedom.AI Consulting LLC</span>
-        <span data-dc-tpl="164" style="font-family: &quot;JetBrains Mono&quot;, monospace;">SF · Silicon Valley · Paris · Bruxelles</span>
+    <div data-dc-tpl="186" style="border-top: 1px solid rgba(var(--line-rgb),0.06);">
+      <div data-dc-tpl="187" style="max-width: 1240px; margin: 0px auto; padding: 18px 32px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; font-size: 12.5px; color: var(--text-faint);">
+        <span data-dc-tpl="188">©2026 — Gregory Renard · Freedom.AI Consulting LLC</span>
+        <span data-dc-tpl="189" style="font-family: &quot;JetBrains Mono&quot;, monospace;">SF · Silicon Valley · Paris · Bruxelles</span>
       </div>
     </div>
   </footer>
@@ -835,12 +891,16 @@
   </div></div></div><!--dc-prerender-end-->
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { slide: 0, lightbox: -1 };
+  state = { slide: 0, lightbox: -1, lang: 'en' };
 
   componentDidMount() {
     this._total = 24;
     this._galleryLen = 6;
     this._touchX = null;
+    try {
+      const l = localStorage.getItem('grx_lang');
+      if (l) { this.setState({ lang: l }); try { document.documentElement.lang = l; } catch (e) {} }
+    } catch (e) {}
     this._onKey = (e) => {
       if (this.state.lightbox >= 0) {
         if (e.key === 'Escape') this.setState({ lightbox: -1 });
@@ -876,6 +936,23 @@ class Component extends DCLogic {
 
   componentDidUpdate() { this._apply(); }
 
+  setLang(l) {
+    try { localStorage.setItem('grx_lang', l); } catch (e) {}
+    try { document.documentElement.lang = l; } catch (e) {}
+    this.setState({ lang: l });
+  }
+
+  parseBold(str) {
+    const out = [];
+    const parts = String(str).split('**');
+    for (let i = 0; i < parts.length; i++) {
+      if (parts[i] === '') continue;
+      const bold = i % 2 === 1;
+      out.push({ t: parts[i], bold, plain: !bold });
+    }
+    return out;
+  }
+
   _apply() {
     const i = this.state.slide;
     if (this._track) this._track.style.transform = `translateX(-${i * 100}%)`;
@@ -900,7 +977,105 @@ class Component extends DCLogic {
   }
 
   renderVals() {
+    const lang = this.state.lang === 'fr' ? 'fr' : 'en';
     const total = 24;
+
+    const C = {
+      en: {
+        navMethod: 'Method', navStory: 'Story', navEthics: 'Ethics', navTalks: 'Talks', navPub: 'Publications',
+        eyebrow: 'United Nations · ITU · AI for Good Global Summit',
+        pill: 'UN · ITU · Geneva',
+        h1a: 'Toward Beneficial', h1b: 'AI for ', h1em: 'Children',
+        subtitle: 'Defining & Scaling Beneficial Model Behaviors Assessment',
+        heroSub: 'Presented on the **Solution Stage** with **Dr. Mathilde Cerioli** — Chief Scientist, Everyone.AI — at the United Nations / ITU AI for Good Global Summit, Geneva, 9 July 2026.',
+        btnExplore: 'Explore the AiA Safety Builder ↗', btnDeck: 'See the deck →', btnPhotos: 'View the photos',
+        linkSession: 'Official session ↗', linkSpeaker: 'Speaker profile ↗',
+        photoStrip: 'SOLUTION STAGE · GENEVA · 09 JUL 2026',
+        taglineA: 'My goal: a safety label for AI every family can trust — and,', taglineB: 'through it, impact ', taglineBillion: 'a billion lives', taglineC: ' for the better.',
+        storyKicker: 'The talk, in four beats',
+        storyH2a: "Generative AI is now in children's lives.", storyH2b: 'It still has no seatbelt.',
+        story: [
+          { num: '01', label: 'The third way', title: 'A developmental seatbelt', body: 'Not banning AI, not unfettered innovation — a reasonable, auditable standard for every AI tool a child uses. Volvo gave cars a seatbelt in 1959. Generative AI is now in children\u2019s lives, with no seatbelt yet.' },
+          { num: '02', label: 'What we measure', title: '15 behaviors, 3 domain cues', body: 'Anthropomorphic, Interactional and Relational cues, each scored on a 5-level gradient — turning developmental science into a scalable, auditable behavioral assessment for AI.' },
+          { num: '03', label: 'The tool', title: 'AiA Safety Builder', body: 'A pipeline — Endpoints \u2192 Attack \u2192 Content Gate \u2192 Score + Report \u2192 Guardrails. It diagnoses risky behaviors and auto-generates measured guardrails you can audit.' },
+          { num: '04', label: 'The goal', title: 'A safer place for children', body: 'Give every family a standard they can trust, and every builder a measurable path to it. Beneficial AI for children — defined, scored, and scaled.' }
+        ],
+        quote: "Let's make AI a safer place for children.",
+        visionKicker: 'My why · where I want this to go',
+        visionH2a: "A unified safety label for AI in children's products —", visionH2b: 'the way TV shows carry an age rating.',
+        visionBody: "For decades, parents have relied on a simple, shared signal — the age rating on a TV program — to know what's suitable for their child. AI now lives inside toys and everyday products, with no equivalent. I want to give it one: a single, trusted **safety label** — starting with children's toys, then extending to every product that embeds LLMs or agentic AI — so any parent can tell at a glance whether an AI-powered toy or product is appropriate for a given age and use. The **AiA Safety Builder**, built at **Everyone.AI**, is the measurable foundation that makes such a safety label possible — and it's how I intend to impact **a billion lives** for the better.",
+        signalLabel: 'THE SIGNAL, MADE SIMPLE',
+        ratings: ['Ages 3+', 'Ages 7+', 'Ages 12+', 'Not child-safe'],
+        visionFoot: 'Illustrative examples only — not a binding standard. They show the direction: a shared, PG-style rating any family could read in a second.',
+        galleryKicker: 'From the stage · Geneva',
+        galleryCaptions: [
+          'Gregory Renard on the Solution Stage',
+          'Opening the talk with Dr. Mathilde Cerioli',
+          'The principles, to a full room',
+          'The AiA Safety Builder, live on screen',
+          '\u201CA safer place for children\u201D',
+          'The Everyone.AI team in Geneva'
+        ],
+        sliderKicker: 'The presentation', sliderTitle: 'The full Solution Stage deck',
+        download: 'Download the full deck (PDF) ↓', sliderNote: '24 slides · 16:9 · use ← → to navigate',
+        proofKicker: 'Go deeper', proofTag: 'The tool · Everyone.AI', proofTitle: 'Explore the AiA Safety Builder', proofOpen: 'Open ↗',
+        links: [
+          { tag: 'Official session', label: 'Defining & Scaling Beneficial Model Behaviors Assessment', host: 'aiforgood.itu.int', url: 'https://aiforgood.itu.int/event/defining-and-scaling-beneficial-model-behaviors-assessment/' },
+          { tag: 'Speaker profile', label: 'Gregory Renard — AI for Good', host: 'aiforgood.itu.int', url: 'https://aiforgood.itu.int/speaker/gregory-renard/' },
+          { tag: 'Nonprofit', label: 'Everyone.AI — beneficial AI for children', host: 'everyone.ai', url: 'https://everyone.ai' }
+        ],
+        footerBlurb: 'Hands-on AI architect & Cognitive Orchestration since 1996. Co-founder of Everyone.AI — anticipating the opportunities and risks of AI for children.',
+        footTalk: 'This talk', footNav: 'Navigate', footHome: 'Home', footTalks: 'Talks', footEthics: 'Ethics', footContact: 'Contact'
+      },
+      fr: {
+        navMethod: 'Méthode', navStory: 'Parcours', navEthics: 'Éthique', navTalks: 'Conférences', navPub: 'Publications',
+        eyebrow: 'Nations Unies · ITU · AI for Good Global Summit',
+        pill: 'ONU · ITU · Genève',
+        h1a: 'Vers une IA', h1b: 'bénéfique pour les ', h1em: 'enfants',
+        subtitle: 'Définir & déployer à l’échelle l’évaluation des comportements bénéfiques des modèles',
+        heroSub: 'Présenté sur la **Solution Stage** avec **Dr. Mathilde Cerioli** — Chief Scientist, Everyone.AI — au AI for Good Global Summit des Nations Unies / ITU, Genève, le 9 juillet 2026.',
+        btnExplore: 'Découvrir l’AiA Safety Builder ↗', btnDeck: 'Voir le deck →', btnPhotos: 'Voir les photos',
+        linkSession: 'Session officielle ↗', linkSpeaker: 'Profil intervenant ↗',
+        photoStrip: 'SOLUTION STAGE · GENÈVE · 09 JUIL 2026',
+        taglineA: 'Mon objectif : un label de sécurité pour l’IA en qui chaque famille peut avoir confiance — et,', taglineB: 'à travers lui, impacter ', taglineBillion: 'un milliard de vies', taglineC: ' pour le meilleur.',
+        storyKicker: 'La conférence, en quatre temps',
+        storyH2a: "L'IA générative est déjà dans la vie des enfants.", storyH2b: "Elle n'a toujours pas de ceinture.",
+        story: [
+          { num: '01', label: 'La troisième voie', title: 'Une ceinture de sécurité développementale', body: "Ni interdire l'IA, ni l'innovation sans limites — un standard raisonnable et auditable pour chaque outil d'IA qu'un enfant utilise. Volvo a donné une ceinture aux voitures en 1959. L'IA générative est aujourd'hui dans la vie des enfants, sans ceinture." },
+          { num: '02', label: 'Ce que l’on mesure', title: '15 comportements, 3 familles d’indices', body: "Des indices anthropomorphiques, interactionnels et relationnels, chacun noté sur une échelle à 5 niveaux — pour transformer la science du développement en une évaluation comportementale scalable et auditable de l'IA." },
+          { num: '03', label: 'L’outil', title: 'AiA Safety Builder', body: 'Un pipeline — Endpoints \u2192 Attaque \u2192 Filtre de contenu \u2192 Score + Rapport \u2192 Garde-fous. Il diagnostique les comportements à risque et génère automatiquement des garde-fous mesurés et auditables.' },
+          { num: '04', label: 'L’objectif', title: 'Un endroit plus sûr pour les enfants', body: "Donner à chaque famille un standard de confiance, et à chaque concepteur un chemin mesurable pour l'atteindre. Une IA bénéfique pour les enfants — définie, mesurée, déployée." }
+        ],
+        quote: "Faisons de l'IA un endroit plus sûr pour les enfants.",
+        visionKicker: 'Mon pourquoi · où je veux aller',
+        visionH2a: "Un label de sécurité unifié pour l'IA dans les produits pour enfants —", visionH2b: 'comme la classification par âge des programmes TV.',
+        visionBody: "Depuis des décennies, les parents s'appuient sur un signal simple et partagé — la classification par âge d'un programme TV — pour savoir ce qui convient à leur enfant. L'IA vit désormais dans les jouets et les produits du quotidien, sans équivalent. Je veux lui en donner un : un **label de sécurité** unique et fiable — d'abord pour les jouets des enfants, puis pour tout produit intégrant des LLMs ou de l'IA agentique — pour qu'un parent sache d'un coup d'œil si un jouet ou un produit doté d'IA convient à un âge et un usage donnés. L'**AiA Safety Builder**, développé chez **Everyone.AI**, est la fondation mesurable qui rend ce label de sécurité possible — et c'est ainsi que je compte impacter **un milliard de vies** pour le meilleur.",
+        signalLabel: 'LE SIGNAL, EN CLAIR',
+        ratings: ['Dès 3 ans', 'Dès 7 ans', 'Dès 12 ans', 'Non adapté'],
+        visionFoot: 'Exemples purement illustratifs — sans valeur d’engagement. Ils montrent la direction : une classification partagée, de type PG, lisible par toute famille en une seconde.',
+        galleryKicker: 'Sur scène · Genève',
+        galleryCaptions: [
+          'Gregory Renard sur la Solution Stage',
+          'Ouverture de la conférence avec Dr. Mathilde Cerioli',
+          'Les principes, devant une salle comble',
+          "L'AiA Safety Builder, en direct à l'écran",
+          '« Un endroit plus sûr pour les enfants »',
+          "L'équipe Everyone.AI à Genève"
+        ],
+        sliderKicker: 'La présentation', sliderTitle: 'Le deck complet de la Solution Stage',
+        download: 'Télécharger le deck complet (PDF) ↓', sliderNote: '24 slides · 16:9 · naviguez avec ← →',
+        proofKicker: 'Aller plus loin', proofTag: 'L’outil · Everyone.AI', proofTitle: 'Découvrir l’AiA Safety Builder', proofOpen: 'Ouvrir ↗',
+        links: [
+          { tag: 'Session officielle', label: 'Defining & Scaling Beneficial Model Behaviors Assessment', host: 'aiforgood.itu.int', url: 'https://aiforgood.itu.int/event/defining-and-scaling-beneficial-model-behaviors-assessment/' },
+          { tag: 'Profil intervenant', label: 'Gregory Renard — AI for Good', host: 'aiforgood.itu.int', url: 'https://aiforgood.itu.int/speaker/gregory-renard/' },
+          { tag: 'Association', label: 'Everyone.AI — une IA bénéfique pour les enfants', host: 'everyone.ai', url: 'https://everyone.ai' }
+        ],
+        footerBlurb: "Architecte IA de terrain & Orchestration Cognitive depuis 1996. Co-fondateur d'Everyone.AI — anticiper les opportunités et les risques de l'IA pour les enfants.",
+        footTalk: 'Cette conférence', footNav: 'Naviguer', footHome: 'Accueil', footTalks: 'Conférences', footEthics: 'Éthique', footContact: 'Contact'
+      }
+    };
+    const t = C[lang];
+
     const slides = [];
     for (let i = 1; i <= total; i++) {
       const idx = i - 1;
@@ -913,28 +1088,15 @@ class Component extends DCLogic {
       });
     }
 
-    const story = [
-      { num: '01', label: 'The third way', title: 'A developmental seatbelt', body: 'Not banning AI, not unfettered innovation — a reasonable, auditable standard for every AI tool a child uses. Volvo gave cars a seatbelt in 1959. Generative AI is now in children\u2019s lives, with no seatbelt yet.' },
-      { num: '02', label: 'What we measure', title: '15 behaviors, 3 domain cues', body: 'Anthropomorphic, Interactional and Relational cues, each scored on a 5-level gradient. Our CALIBER method turns developmental science into a scalable, auditable behavioral assessment for AI.' },
-      { num: '03', label: 'The tool', title: 'AiA Safety Builder', body: 'A pipeline — Endpoints \u2192 Attack \u2192 Content Gate \u2192 Score + Report \u2192 Guardrails. It diagnoses risky behaviors and auto-generates measured guardrails you can audit.' },
-      { num: '04', label: 'The goal', title: 'A safer place for children', body: 'Give every family a standard they can trust, and every builder a measurable path to it. Beneficial AI for children — defined, scored, and scaled.' }
+    const galleryImgs = [
+      { src: 'assets/ai_for_good_geneve/ai_for_good_greg_portrait.jpg', alt: 'Gregory Renard portrait on stage at AI for Good, Geneva' },
+      { src: 'assets/ai_for_good_geneve/ai_for_good_keynote_opening.jpg', alt: 'Gregory Renard and Dr. Mathilde Cerioli opening the AI for Good session' },
+      { src: 'assets/ai_for_good_geneve/ai_for_good_keynote_principles.jpg', alt: 'Gregory Renard presenting principles to a full room at AI for Good' },
+      { src: 'assets/ai_for_good_geneve/ai_for_good_safety_builder_report.jpg', alt: 'The AiA Safety Builder report shown on the AI for Good stage screen' },
+      { src: 'assets/ai_for_good_geneve/ai_for_good_keynote_closing.jpg', alt: 'Closing slide — a safer place for children' },
+      { src: 'assets/ai_for_good_geneve/ai_for_good_team_2.jpeg', alt: 'The Everyone.AI team at AI for Good, Geneva' }
     ];
-
-    const galleryRaw = [
-      { src: 'assets/ai_for_good_geneve/ai_for_good_greg_portrait.jpg', caption: 'Gregory Renard on the Solution Stage', alt: 'Gregory Renard portrait on stage at AI for Good, Geneva' },
-      { src: 'assets/ai_for_good_geneve/ai_for_good_keynote_opening.jpg', caption: 'Opening the talk with Dr. Mathilde Cerioli', alt: 'Gregory Renard and Dr. Mathilde Cerioli opening the AI for Good session' },
-      { src: 'assets/ai_for_good_geneve/ai_for_good_keynote_principles.jpg', caption: 'The principles, to a full room', alt: 'Gregory Renard presenting principles to a full room at AI for Good' },
-      { src: 'assets/ai_for_good_geneve/ai_for_good_safety_builder_report.jpg', caption: 'The AiA Safety Builder, live on screen', alt: 'The AiA Safety Builder report shown on the AI for Good stage screen' },
-      { src: 'assets/ai_for_good_geneve/ai_for_good_keynote_closing.jpg', caption: '\u201CA safer place for children\u201D', alt: 'Closing slide — a safer place for children' },
-      { src: 'assets/ai_for_good_geneve/ai_for_good_team_2.jpeg', caption: 'The Everyone.AI team in Geneva', alt: 'The Everyone.AI team at AI for Good, Geneva' }
-    ];
-    const gallery = galleryRaw.map((g, i) => ({ ...g, open: () => this.setState({ lightbox: i }) }));
-
-    const links = [
-      { tag: 'Official session', label: 'Defining & Scaling Beneficial Model Behaviors Assessment', host: 'aiforgood.itu.int', url: 'https://aiforgood.itu.int/event/defining-and-scaling-beneficial-model-behaviors-assessment/' },
-      { tag: 'Speaker profile', label: 'Gregory Renard — AI for Good', host: 'aiforgood.itu.int', url: 'https://aiforgood.itu.int/speaker/gregory-renard/' },
-      { tag: 'Nonprofit', label: 'Everyone.AI — beneficial AI for children', host: 'everyone.ai', url: 'https://everyone.ai' }
-    ];
+    const gallery = galleryImgs.map((g, i) => ({ src: g.src, alt: g.alt, caption: t.galleryCaptions[i], open: () => this.setState({ lightbox: i }) }));
 
     const socials = [
       { name: 'LinkedIn', url: 'https://www.linkedin.com/in/gregoryrenard/' },
@@ -944,13 +1106,21 @@ class Component extends DCLogic {
     ];
 
     const lb = this.state.lightbox;
-    const lbItem = lb >= 0 ? galleryRaw[lb] : null;
+    const lbImg = lb >= 0 ? galleryImgs[lb] : null;
+    const lbCaption = lb >= 0 ? t.galleryCaptions[lb] : '';
 
     return {
+      t,
+      lang,
+      langLabel: lang === 'en' ? 'FR' : 'EN',
+      toggleLang: () => this.setLang(lang === 'en' ? 'fr' : 'en'),
+      heroSub: this.parseBold(t.heroSub),
+      visionBody: this.parseBold(t.visionBody),
+      story: t.story,
+      ratings: t.ratings,
+      links: t.links,
       slides,
-      story,
       gallery,
-      links,
       socials,
       counter: `${this.state.slide + 1} / ${total}`,
       trackRef: (el) => { this._track = el; },
@@ -958,9 +1128,9 @@ class Component extends DCLogic {
       next: () => this.go(this.state.slide + 1),
       prev: () => this.go(this.state.slide - 1),
       lightboxOpen: lb >= 0,
-      lightboxSrc: lbItem ? lbItem.src : '',
-      lightboxAlt: lbItem ? lbItem.alt : '',
-      lightboxCaption: lbItem ? lbItem.caption : '',
+      lightboxSrc: lbImg ? lbImg.src : '',
+      lightboxAlt: lbImg ? lbImg.alt : '',
+      lightboxCaption: lbCaption,
       closeLightbox: () => this.setState({ lightbox: -1 }),
       lightboxNext: (e) => { if (e && e.stopPropagation) e.stopPropagation(); this.setState(s => ({ lightbox: (s.lightbox + 1) % this._galleryLen })); },
       lightboxPrev: (e) => { if (e && e.stopPropagation) e.stopPropagation(); this.setState(s => ({ lightbox: (s.lightbox - 1 + this._galleryLen) % this._galleryLen })); }

@@ -27,7 +27,7 @@ Gregory Renard's "Applied AI" approach is a proven three-phase method that takes
 - [Publications](https://gregory-renard.com/Publications): Patents, peer-reviewed research and applied-AI work spanning three decades.
 - [Press](https://gregory-renard.com/Press): Awards, distinctions and media coverage.
 - [Contact](https://gregory-renard.com/Contact): Get in touch to move from experimentation to real results.
-- [AI for Good 2026](https://gregory-renard.com/AI-for-Good-2026): Recap of Gregory Renard's UN/ITU AI for Good Global Summit talk with Dr. Mathilde Cerioli — photos, the slide deck, and the AiA Safety Builder for beneficial AI for children.
+- [AI for Good 2026](https://gregory-renard.com/AI-for-Good-2026): Recap of Gregory Renard's UN/ITU AI for Good Global Summit talk with Dr. Mathilde Cerioli — toward a safety label for the AI tools children use (like a TV age rating), with photos, the slide deck, and the AiA Safety Builder.
 
 ## Elsewhere
 
