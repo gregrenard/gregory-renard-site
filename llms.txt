@@ -18,15 +18,16 @@ Gregory Renard's "Applied AI" approach is a proven three-phase method that takes
 ## Pages
 
 - [Home / Vision](https://gregory-renard.com/): AI as the execution layer of modern organizations — overview, biography and recognitions.
-- [AI Transformation](https://gregory-renard.com/AI-Transformation.dc.html): From AI ambition to operational reality — the three-phase Applied AI method.
-- [Advisory & Execution](https://gregory-renard.com/Advisory-Execution.dc.html): Advisory and hands-on execution for leaders and boards architecting AI-native organizations.
-- [AI Lab](https://gregory-renard.com/AI-Lab.dc.html): Inside Freedom.AI — prototyping and shipping cutting-edge GenAI to production.
-- [Why](https://gregory-renard.com/Why.dc.html): Who is Gregory Renard — career timeline, vision and values.
-- [Keynote Speaker](https://gregory-renard.com/Keynote-Speaker.dc.html): AI keynotes for executive decision-makers, with topics and references.
-- [Ethics](https://gregory-renard.com/Ethics.dc.html): A human-centered, responsible approach to artificial intelligence.
-- [Publications](https://gregory-renard.com/Publications.dc.html): Patents, peer-reviewed research and applied-AI work spanning three decades.
-- [Press](https://gregory-renard.com/Press.dc.html): Awards, distinctions and media coverage.
-- [Contact](https://gregory-renard.com/Contact.dc.html): Get in touch to move from experimentation to real results.
+- [AI Transformation](https://gregory-renard.com/AI-Transformation): From AI ambition to operational reality — the three-phase Applied AI method.
+- [Advisory & Execution](https://gregory-renard.com/Advisory-Execution): Advisory and hands-on execution for leaders and boards architecting AI-native organizations.
+- [AI Lab](https://gregory-renard.com/AI-Lab): Inside Freedom.AI — prototyping and shipping cutting-edge GenAI to production.
+- [Why](https://gregory-renard.com/Why): Who is Gregory Renard — career timeline, vision and values.
+- [Keynote Speaker](https://gregory-renard.com/Keynote-Speaker): AI keynotes for executive decision-makers, with topics and references.
+- [Ethics](https://gregory-renard.com/Ethics): A human-centered, responsible approach to artificial intelligence.
+- [Publications](https://gregory-renard.com/Publications): Patents, peer-reviewed research and applied-AI work spanning three decades.
+- [Press](https://gregory-renard.com/Press): Awards, distinctions and media coverage.
+- [Contact](https://gregory-renard.com/Contact): Get in touch to move from experimentation to real results.
+- [AI for Good 2026](https://gregory-renard.com/AI-for-Good-2026): Recap of Gregory Renard's UN/ITU AI for Good Global Summit talk with Dr. Mathilde Cerioli — photos, the slide deck, and the AiA Safety Builder for beneficial AI for children.
 
 ## Elsewhere
 

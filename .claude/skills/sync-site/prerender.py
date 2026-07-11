@@ -31,7 +31,8 @@ import os, re, sys, time, socket, subprocess, signal
 REPO = os.getcwd()
 # 8 full content pages (skip the 3 redirect stubs: AI-Lab/AI-Transformation/Advisory-Execution)
 PAGES = ["index.html", "Method.html", "Why.html", "Ethics.html",
-         "Keynote-Speaker.html", "Press.html", "Publications.html", "Contact.html"]
+         "Keynote-Speaker.html", "Press.html", "Publications.html", "Contact.html",
+         "AI-for-Good-2026.html"]
 
 CHROME = os.environ.get("CHROME") or "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 SWAP_CSS = "x-dc{display:none}#dc-root:not(:empty)~#dc-prerender{display:none}"

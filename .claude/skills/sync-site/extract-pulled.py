@@ -21,6 +21,7 @@ PAGES = [
     "AI-Transformation.dc.html", "AI-Lab.dc.html", "Advisory-Execution.dc.html",
     "Contact.dc.html", "Ethics.dc.html", "Keynote-Speaker.dc.html",
     "Press.dc.html", "Publications.dc.html", "Why.dc.html",
+    "AI-for-Good-2026.dc.html",
 ]
 
 

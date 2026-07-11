@@ -18,7 +18,7 @@ REPO="$(cd "$SKILL_DIR/../../.." && pwd)"
 cd "$REPO"
 
 HOME_SRC="Gregory Renard - Home v2.dc.html"
-SUBPAGES="AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Method Press Publications Why"
+SUBPAGES="AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Method Press Publications Why AI-for-Good-2026"
 
 [ -f "$HOME_SRC" ] || { echo "ERROR: '$HOME_SRC' not found — run extract-pulled.py first."; exit 1; }
 
