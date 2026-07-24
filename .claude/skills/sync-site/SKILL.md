@@ -28,7 +28,7 @@ Everything below is the reference for what those scripts do.
 ## Syncable files (TEXT only)
 Root-level files that map 1:1 to the repo root and pull via DesignSync `get_file`:
 
-- The 13 pages: `AI-Lab.dc.html`, `AI-Transformation.dc.html`, `Advisory-Execution.dc.html` (these 3 are redirect stubs), `Contact.dc.html`, `Ethics.dc.html`, `Gregory Renard - Home v2.dc.html` (the home — renamed in the v3 redesign), `Keynote-Speaker.dc.html`, `Method.dc.html`, `Press.dc.html`, `Publications.dc.html`, `Why.dc.html`, `AI-for-Good-2026.dc.html`, `WEF-Digital-Safety-2026.dc.html`
+- The 14 pages: `AI-Lab.dc.html`, `AI-Transformation.dc.html`, `Advisory-Execution.dc.html` (these 3 are redirect stubs), `Contact.dc.html`, `Ethics.dc.html`, `Gregory Renard - Home v2.dc.html` (the home — renamed in the v3 redesign), `Keynote-Speaker.dc.html`, `Method.dc.html`, `Press.dc.html`, `Publications.dc.html`, `Why.dc.html`, `AI-for-Good-2026.dc.html`, `WEF-Digital-Safety-2026.dc.html`, `AI-for-Humanity-2018.dc.html`
 - `support.js`, `sitemap.xml`, `robots.txt`, `llms.txt`
 - NOTE: do NOT pull Design's `index.html` (it's a redirect stub). In the repo, `index.html` is a **generated deploy artifact** — see "Deploy-only transforms" below.
 
@@ -117,12 +117,13 @@ Convention: when the user will fix something in Claude Design *later*, add an id
 deploy step that keeps the live site correct meanwhile, list it here with a removal
 condition, then delete both once a sync's `git diff` shows the step is a no-op.
 
-- **WEF gallery `.png` → `.jpg` (added 2026-07-23, `deploy.sh` step 4c):** the Design
-  `WEF-Digital-Safety-2026` page references `assets/wef_digital_safety_sf/*.png`, but the
-  repo stores those photos as optimized JPEGs (the PNG originals were 1.5–5.5 MB each —
-  pulled once from the user's project-export zip, resized to 2400 px max, JPEG q82).
-  deploy.sh rewrites the refs on every sync. Removal condition: the assets are re-uploaded
-  as `.jpg` in Claude Design and the page references them directly.
+- **Photo-gallery `.png` → `.jpg` (added 2026-07-23, `deploy.sh` step 4c):** the Design
+  recap pages reference some gallery photos as `.png` (`assets/wef_digital_safety_sf/*`,
+  `assets/ai4humanity_elysee/panel_feifei_li_cani`), but the repo stores ALL gallery photos
+  as optimized JPEGs (PNG originals were 1.5–5.5 MB each — pulled from the user's
+  project-export zip, resized to 2400 px max, JPEG q82). deploy.sh rewrites the refs for
+  both dirs on every sync. Removal condition: the assets are re-uploaded as `.jpg` in
+  Claude Design and the pages reference them directly.
 - (Resolved 2026-06-14: the footer "Navigate" label was fixed in Claude
   Design — `deploy.sh` step 2b removed; `verify.sh` check **(g)** kept as a permanent
   consistency guard that warns if the footer label ever drifts from the top nav again.)

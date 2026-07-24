@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<title>AI for Humanity 2018 — Dinner at the Élysée & France's AI Strategy · Gregory Renard</title>
+<meta name="description" content="Recap of Gregory Renard's evening at the Élysée Palace with President Emmanuel Macron for the AI for Humanity summit — as one of the three co-initiators of AI4Humanity, France's national AI strategy.">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<meta name="author" content="Gregory Renard">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gregory-renard.com/AI-for-Humanity-2018">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gregory Renard">
+<meta property="og:title" content="AI for Humanity 2018 — Dinner at the Élysée & France's AI Strategy">
+<meta property="og:description" content="Guest of President Macron at the Élysée for the AI for Humanity summit — one of the three co-initiators of France's national AI strategy.">
+<meta property="og:url" content="https://gregory-renard.com/AI-for-Humanity-2018">
+<meta property="og:image" content="https://gregory-renard.com/assets/ai4humanity_elysee/greg_macron_smile.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI for Humanity 2018 — Dinner at the Élysée & France's AI Strategy">
+<meta name="twitter:description" content="Guest of President Macron at the Élysée for the AI for Humanity summit, 28 March 2018.">
+<meta name="twitter:image" content="https://gregory-renard.com/assets/ai4humanity_elysee/greg_macron_smile.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400..700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F1ECE1; --surface:#FAF7EF; --surface-2:#F5F1E6;
+    --text:#172139; --text-soft:#3E4557; --text-mute:#6C7180; --text-faint:#9A9282;
+    --accent:#94731B; --accent-rgb:148, 115, 27; --accent-bright:#B08F2F;
+    --line-rgb:23, 33, 57;
+    --btn-bg:#172139; --btn-bg-hover:#28344F; --btn-fg:#F4EFE3;
+    --header-bg:rgba(241, 236, 225, 0.85);
+    --font-display:'Newsreader', Georgia, 'Times New Roman', serif;
+    --font-sans:'Hanken Grotesk', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--font-sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  h1,h2,h3,blockquote{font-family:var(--font-display);font-optical-sizing:auto}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:rgba(var(--accent-rgb),0.32);color:var(--text)}
+  .grx-gimg{transition:transform .5s ease, filter .3s ease}
+  .grx-gcard:hover .grx-gimg{transform:scale(1.05)}
+  @media (max-width:900px){
+    .grx-nav{gap:14px !important}
+    .grx-logo-sub{display:none !important}
+    .grx-hero{grid-template-columns:1fr !important;gap:36px !important;padding:44px 22px 20px !important}
+    .grx-story{grid-template-columns:1fr !important}
+    .grx-origin{flex-direction:column !important}
+    .grx-pad{padding-left:22px !important;padding-right:22px !important}
+    .grx-links{grid-template-columns:1fr !important}
+  }
+  @media (max-width:1080px){
+    .grx-nowrap{white-space:normal !important;text-wrap:balance}
+  }
+  @media (max-width:760px){
+    .grx-footer{grid-template-columns:1fr !important;gap:30px !important}
+    .grx-gallery{grid-template-columns:1fr 1fr !important}
+  }
+  @media (max-width:520px){
+    .grx-gallery{grid-template-columns:1fr !important}
+  }
+  .grx-nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+  .grx-burger{display:none}
+  .grx-mobile-menu{display:none}
+  @media (max-width:1100px){
+    .grx-navlink{display:none !important}
+    .grx-cta-nav{display:none !important}
+    .grx-burger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border-radius:10px;border:1px solid rgba(var(--line-rgb),0.14);background:rgba(var(--line-rgb),0.05);color:var(--text);font-size:20px;line-height:1;cursor:pointer}
+    .grx-mobile-menu{background:var(--header-bg);border-top:1px solid rgba(var(--line-rgb),0.08);padding:8px 22px 16px}
+    .grx-nav-toggle:checked ~ .grx-mobile-menu{display:flex;flex-direction:column}
+    .grx-mobile-menu a{padding:14px 4px;font-size:16px;color:var(--text-soft);border-bottom:1px solid rgba(var(--line-rgb),0.06)}
+    .grx-mobile-menu a:last-child{border-bottom:none}
+  }
+</style>
+<style id="grx-hero-wrap-fix">@media (max-width:900px){h1[style*="nowrap"],.grx-hero-h1{white-space:normal!important}}</style>
+<style id="dc-prerender-css">x-dc{display:none}#dc-root:not(:empty)~#dc-prerender{display:none}</style>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>AI for Humanity 2018 — Dinner at the Élysée & France's AI Strategy · Gregory Renard</title>
+<meta name="description" content="Recap of Gregory Renard's evening at the Élysée Palace with President Emmanuel Macron for the AI for Humanity summit — as one of the three co-initiators of AI4Humanity, France's national AI strategy.">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<meta name="author" content="Gregory Renard">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://gregory-renard.com/AI-for-Humanity-2018">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gregory Renard">
+<meta property="og:title" content="AI for Humanity 2018 — Dinner at the Élysée & France's AI Strategy">
+<meta property="og:description" content="Guest of President Macron at the Élysée for the AI for Humanity summit — one of the three co-initiators of France's national AI strategy.">
+<meta property="og:url" content="https://gregory-renard.com/AI-for-Humanity-2018">
+<meta property="og:image" content="https://gregory-renard.com/assets/ai4humanity_elysee/greg_macron_smile.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI for Humanity 2018 — Dinner at the Élysée & France's AI Strategy">
+<meta name="twitter:description" content="Guest of President Macron at the Élysée for the AI for Humanity summit, 28 March 2018.">
+<meta name="twitter:image" content="https://gregory-renard.com/assets/ai4humanity_elysee/greg_macron_smile.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400..700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F1ECE1; --surface:#FAF7EF; --surface-2:#F5F1E6;
+    --text:#172139; --text-soft:#3E4557; --text-mute:#6C7180; --text-faint:#9A9282;
+    --accent:#94731B; --accent-rgb:148, 115, 27; --accent-bright:#B08F2F;
+    --line-rgb:23, 33, 57;
+    --btn-bg:#172139; --btn-bg-hover:#28344F; --btn-fg:#F4EFE3;
+    --header-bg:rgba(241, 236, 225, 0.85);
+    --font-display:'Newsreader', Georgia, 'Times New Roman', serif;
+    --font-sans:'Hanken Grotesk', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--font-sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  h1,h2,h3,blockquote{font-family:var(--font-display);font-optical-sizing:auto}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:rgba(var(--accent-rgb),0.32);color:var(--text)}
+  .grx-gimg{transition:transform .5s ease, filter .3s ease}
+  .grx-gcard:hover .grx-gimg{transform:scale(1.05)}
+  @media (max-width:900px){
+    .grx-nav{gap:14px !important}
+    .grx-logo-sub{display:none !important}
+    .grx-hero{grid-template-columns:1fr !important;gap:36px !important;padding:44px 22px 20px !important}
+    .grx-story{grid-template-columns:1fr !important}
+    .grx-origin{flex-direction:column !important}
+    .grx-pad{padding-left:22px !important;padding-right:22px !important}
+    .grx-links{grid-template-columns:1fr !important}
+  }
+  @media (max-width:1080px){
+    .grx-nowrap{white-space:normal !important;text-wrap:balance}
+  }
+  @media (max-width:760px){
+    .grx-footer{grid-template-columns:1fr !important;gap:30px !important}
+    .grx-gallery{grid-template-columns:1fr 1fr !important}
+  }
+  @media (max-width:520px){
+    .grx-gallery{grid-template-columns:1fr !important}
+  }
+  .grx-nav-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+  .grx-burger{display:none}
+  .grx-mobile-menu{display:none}
+  @media (max-width:1100px){
+    .grx-navlink{display:none !important}
+    .grx-cta-nav{display:none !important}
+    .grx-burger{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border-radius:10px;border:1px solid rgba(var(--line-rgb),0.14);background:rgba(var(--line-rgb),0.05);color:var(--text);font-size:20px;line-height:1;cursor:pointer}
+    .grx-mobile-menu{background:var(--header-bg);border-top:1px solid rgba(var(--line-rgb),0.08);padding:8px 22px 16px}
+    .grx-nav-toggle:checked ~ .grx-mobile-menu{display:flex;flex-direction:column}
+    .grx-mobile-menu a{padding:14px 4px;font-size:16px;color:var(--text-soft);border-bottom:1px solid rgba(var(--line-rgb),0.06)}
+    .grx-mobile-menu a:last-child{border-bottom:none}
+  }
+</style>
+</helmet>
+
+<div style="position:relative;min-height:100vh;background:var(--bg);overflow-x:clip">
+
+  <!-- ============ NAV ============ -->
+  <header style="position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:var(--header-bg);border-bottom:1px solid rgba(var(--line-rgb),0.07)">
+    <nav class="grx-nav" style="max-width:1240px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;gap:28px">
+      <a class="grx-logo" href="./" style="display:flex;align-items:center;gap:11px;margin-right:auto;flex-shrink:0;min-width:0">
+        <img src="assets/freedom-tree.png" alt="Gregory Renard" style="width:34px;height:34px;object-fit:contain;flex:none">
+        <span style="display:flex;flex-direction:column;gap:1px;line-height:1.1;white-space:nowrap"><span style="font-weight:700;font-size:15px;letter-spacing:-0.01em">Gregory Renard</span><span class="grx-logo-sub" style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent)">Applied AI Architect · Since 1996</span></span>
+      </a>
+      <a class="grx-navlink" href="Why" style="font-size:14px;color:var(--text-soft);white-space:nowrap">{{ t.navStory }}</a>
+      <a class="grx-navlink" href="Method" style="font-size:14px;color:var(--text-soft);white-space:nowrap">{{ t.navMethod }}</a>
+      <a class="grx-navlink" href="Ethics" style="font-size:14px;color:var(--text-soft);white-space:nowrap">{{ t.navEthics }}</a>
+      <a class="grx-navlink" href="Keynote-Speaker" style="font-size:14px;color:var(--text-soft);white-space:nowrap">{{ t.navTalks }}</a>
+      <a class="grx-navlink" href="Press" style="font-size:14px;color:var(--text-soft);white-space:nowrap">{{ t.navPress }}</a>
+      <a class="grx-navlink" href="Publications" style="font-size:14px;color:var(--text-soft);white-space:nowrap">{{ t.navPub }}</a>
+      <a class="grx-cta-nav" href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:var(--btn-fg);background:var(--btn-bg);padding:9px 17px;border-radius:3px;box-shadow:0 6px 18px rgba(23,33,57,0.2)" style-hover="background:var(--btn-bg-hover)">Freedom.AI ↗</a>
+      <button onClick="{{ toggleLang }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--text);background:rgba(var(--accent-rgb),0.18);border:1px solid rgba(var(--accent-rgb),0.42);border-radius:100px;padding:7px 13px;cursor:pointer">{{ langLabel }}</button>
+      <label for="grx-nav-toggle" class="grx-burger" aria-label="Open menu">☰</label>
+    </nav>
+    <input type="checkbox" id="grx-nav-toggle" class="grx-nav-toggle" aria-hidden="true">
+    <div class="grx-mobile-menu">
+      <a href="Why">{{ t.navStory }}</a>
+      <a href="Method">{{ t.navMethod }}</a>
+      <a href="Ethics">{{ t.navEthics }}</a>
+      <a href="Keynote-Speaker">{{ t.navTalks }}</a>
+      <a href="Press">{{ t.navPress }}</a>
+      <a href="Publications">{{ t.navPub }}</a>
+      <a href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer">Freedom.AI ↗</a>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="grx-hero" style="max-width:1240px;margin:0 auto;padding:48px 32px 32px;display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center">
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:22px">
+        <span style="width:32px;height:1px;background:var(--accent);display:inline-block"></span>{{ t.eyebrow }}
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:22px">
+        <div style="display:inline-flex;align-items:center;gap:13px;background:#172139;border:1px solid rgba(var(--accent-rgb),0.25);border-radius:6px;padding:11px 16px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#CBB680;white-space:nowrap">{{ t.pill }}</span>
+          <span style="width:1px;height:24px;background:rgba(244,239,227,0.16);display:inline-block"></span>
+          <span style="font-family:var(--font-display);font-weight:600;font-size:13px;letter-spacing:0.04em;color:#F4EFE4;white-space:nowrap">Présidence de la République</span>
+        </div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Ai_for_humanity_logo.svg" alt="AI for Humanity" style="height:34px;width:auto;object-fit:contain">
+      </div>
+      <h1 style="font-size:clamp(32px,4vw,54px);line-height:1.1;letter-spacing:-0.03em;font-weight:500;text-wrap:balance">{{ t.h1a }}<span style="color:var(--accent);font-style:italic;font-weight:400">{{ t.h1em }}</span></h1>
+      <p style="margin-top:20px;font-family:var(--font-display);font-size:clamp(17px,1.7vw,22px);line-height:1.35;letter-spacing:-0.01em;color:var(--text-soft);text-wrap:balance">{{ t.subtitle }}</p>
+      <p style="margin-top:22px;font-size:16.5px;line-height:1.66;color:var(--text-soft);max-width:560px"><sc-for list="{{ heroSub }}" as="seg" hint-placeholder-count="4"><sc-if value="{{ seg.bold }}" hint-placeholder-val="{{ true }}"><strong style="font-weight:700;color:var(--text)">{{ seg.t }}</strong></sc-if><sc-if value="{{ seg.plain }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:30px">
+        <a href="https://www.youtube.com/live/ADi_8OL6vRk" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14.5px;color:#fff;background:var(--accent);padding:13px 18px;border-radius:3px;box-shadow:0 10px 30px rgba(var(--accent-rgb),0.35);white-space:nowrap" style-hover="background:var(--accent-bright);transform:translateY(-1px)">{{ t.btnWatch }}</a>
+        <a href="#gallery" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;color:var(--btn-fg);background:var(--btn-bg);padding:13px 18px;border-radius:3px;box-shadow:0 10px 30px rgba(23,33,57,0.2);white-space:nowrap" style-hover="background:var(--btn-bg-hover);transform:translateY(-1px)">{{ t.btnPhotos }}</a>
+        <a href="Why" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;color:var(--text);border:1px solid rgba(var(--line-rgb),0.22);padding:13px 18px;border-radius:3px;white-space:nowrap" style-hover="border-color:var(--text);background:rgba(var(--line-rgb),0.04)">{{ t.btnStory }}</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:20px">
+        <a href="https://www.vie-publique.fr/rapport/37225-donner-un-sens-lintelligence-artificielle-pour-une-strategie-nation" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);border-bottom:1px solid rgba(var(--accent-rgb),0.4);padding-bottom:2px" style-hover="color:var(--text);border-color:var(--text)">{{ t.linkReport }}</a>
+        <a href="https://journals.openedition.org/lettre-cdf/pdf/4309" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--accent);border-bottom:1px solid rgba(var(--accent-rgb),0.4);padding-bottom:2px" style-hover="color:var(--text);border-color:var(--text)">{{ t.linkCdf }}</a>
+      </div>
+    </div>
+    <div style="position:relative">
+      <div style="position:relative;z-index:1;border-radius:16px;overflow:hidden;border:1px solid rgba(var(--line-rgb),0.12);box-shadow:0 30px 70px rgba(23,33,57,0.28)">
+        <img src="assets/ai4humanity_elysee/greg_macron_smile.jpg" alt="Gregory Renard with President Emmanuel Macron at the Élysée Palace" style="width:100%;display:block;aspect-ratio:4/4.6;object-fit:cover;object-position:50% 18%">
+        <div style="position:absolute;left:0;right:0;bottom:0;padding:34px 22px 16px;background:linear-gradient(transparent,rgba(7,12,30,0.55) 42%,rgba(7,12,30,0.9))">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#EBD9A8;text-shadow:0 1px 5px rgba(0,0,0,0.85)">{{ t.photoStrip }}</div>
+        </div>
+      </div>
+      <p style="margin-top:20px;text-align:center;font-family:var(--font-display);font-style:italic;font-size:clamp(17px,1.7vw,21px);line-height:1.4;letter-spacing:-0.01em;color:var(--accent);text-wrap:balance">{{ t.taglineA }}<span style="font-weight:700;font-style:normal">{{ t.taglineB }}</span>{{ t.taglineC }}</p>
+    </div>
+  </section>
+
+  <!-- ============ ORIGIN — STANFORD ============ -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:52px 32px 12px">
+    <div style="border:1px solid rgba(var(--line-rgb),0.14);border-radius:6px;background:var(--surface);padding:40px 44px">
+      <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px"><span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>{{ t.originKicker }}</div>
+      <h2 style="font-size:clamp(24px,2.9vw,38px);line-height:1.16;letter-spacing:-0.02em;font-weight:520;max-width:none;text-wrap:balance">{{ t.originTitle }}</h2>
+      <div class="grx-origin" style="display:flex;gap:32px;align-items:center;margin-top:22px">
+        <p style="flex:1;min-width:260px;font-size:16.5px;line-height:1.7;color:var(--text-soft);text-wrap:pretty"><sc-for list="{{ originBody }}" as="seg" hint-placeholder-count="6"><sc-if value="{{ seg.bold }}" hint-placeholder-val="{{ true }}"><strong style="font-weight:700;color:var(--text)">{{ seg.t }}</strong></sc-if><sc-if value="{{ seg.plain }}" hint-placeholder-val="{{ true }}">{{ seg.t }}</sc-if></sc-for></p>
+        <div style="width:300px;flex:none;border-radius:14px;overflow:hidden;border:1px solid rgba(var(--line-rgb),0.1);box-shadow:0 22px 54px rgba(23,33,57,0.16)">
+          <img src="assets/ai4humanity-stanford-2016.jpg" alt="Gregory Renard, François Levin and Yann Bonnet at Stanford, October 2016" loading="lazy" decoding="async" style="width:100%;display:block">
+          <div style="padding:11px 14px;background:#172139;color:#EBD9A8;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.05em;line-height:1.5">{{ t.originCaption }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE STORY ============ -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:52px 32px 12px">
+    <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px"><span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>{{ t.storyKicker }}</div>
+    <h2 class="grx-nowrap" style="font-size:clamp(23px,2.7vw,38px);line-height:1.12;letter-spacing:-0.025em;font-weight:520;max-width:none;white-space:nowrap"><span style="color:var(--text)">{{ t.storyH2a }}</span> <span style="color:var(--accent);font-style:italic;font-weight:600">{{ t.storyH2b }}</span></h2>
+    <div class="grx-story" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(var(--line-rgb),0.1);border:1px solid rgba(var(--line-rgb),0.1);border-radius:6px;overflow:hidden;margin-top:30px">
+      <sc-for list="{{ story }}" as="s" hint-placeholder-count="4">
+        <div style="background:var(--surface);padding:34px 34px">
+          <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;color:var(--accent)">{{ s.num }}</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-mute)">{{ s.label }}</span>
+          </div>
+          <h3 style="font-size:22px;line-height:1.24;letter-spacing:-0.015em;font-weight:600;color:var(--text)">{{ s.title }}</h3>
+          <p style="margin-top:12px;font-size:15.5px;line-height:1.66;color:var(--text-soft);text-wrap:pretty">{{ s.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top:26px;border:1px solid rgba(var(--accent-rgb),0.24);border-radius:6px;background:linear-gradient(120deg,rgba(var(--accent-rgb),0.08),rgba(var(--line-rgb),0.015));padding:30px 36px;text-align:center">
+      <blockquote style="margin:0;font-size:clamp(21px,2.4vw,30px);line-height:1.3;font-weight:600;letter-spacing:-0.015em;color:var(--text);text-wrap:balance">{{ t.quote }}</blockquote>
+      <div style="margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:0.06em;color:var(--accent)">#AIforHumanity</div>
+    </div>
+  </section>
+
+  <!-- ============ PHOTO GALLERY ============ -->
+  <section id="gallery" class="grx-pad" style="max-width:1240px;margin:0 auto;padding:60px 32px 12px;scroll-margin-top:90px">
+    <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:22px"><span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>{{ t.galleryKicker }}</div>
+    <div class="grx-gallery" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+      <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="8">
+        <button class="grx-gcard" onClick="{{ g.open }}" style="position:relative;display:block;padding:0;border:1px solid rgba(var(--line-rgb),0.12);border-radius:8px;overflow:hidden;background:var(--surface-2);cursor:pointer;aspect-ratio:4/3;text-align:left">
+          <img class="grx-gimg" src="{{ g.src }}" alt="{{ g.alt }}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:50% {{ g.posY }};display:block">
+          <span style="position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;background:linear-gradient(transparent,rgba(7,12,30,0.82));color:#F4EFE4;font-size:12.5px;line-height:1.4;font-weight:500;text-shadow:0 1px 4px rgba(0,0,0,0.6)">{{ g.caption }}</span>
+        </button>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ LINKS / PROOF ============ -->
+  <section class="grx-pad" style="max-width:1240px;margin:0 auto;padding:64px 32px 20px">
+    <div style="display:inline-flex;align-items:center;gap:15px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:22px"><span style="width:36px;height:1px;background:var(--accent);display:inline-block"></span>{{ t.proofKicker }}</div>
+    <a href="https://www.youtube.com/live/ADi_8OL6vRk" target="_blank" rel="noopener noreferrer" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;border-radius:6px;background:var(--btn-bg);color:var(--btn-fg);padding:28px 34px;box-shadow:0 14px 40px rgba(23,33,57,0.22)" style-hover="background:var(--btn-bg-hover)">
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#EBD9A8;margin-bottom:8px">{{ t.proofTag }}</div>
+        <div style="font-family:var(--font-display);font-size:clamp(22px,2.4vw,30px);line-height:1.15;font-weight:600">{{ t.proofTitle }}</div>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:#EBD9A8;white-space:nowrap">{{ t.proofOpen }}</span>
+    </a>
+    <div class="grx-links" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px">
+      <sc-for list="{{ links }}" as="l" hint-placeholder-count="3">
+        <a href="{{ l.url }}" target="{{ l.target }}" rel="noopener noreferrer" style="display:flex;flex-direction:column;gap:8px;border:1px solid rgba(var(--line-rgb),0.14);border-radius:6px;background:var(--surface);padding:24px 26px;min-height:120px" style-hover="border-color:var(--accent);background:rgba(var(--accent-rgb),0.05)">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent)">{{ l.tag }}</span>
+          <span style="font-size:17px;font-weight:600;line-height:1.25;color:var(--text);letter-spacing:-0.01em;flex:1">{{ l.label }}</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-mute)">{{ l.host }}</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="border-top:1px solid rgba(var(--line-rgb),0.08);background:var(--bg);margin-top:40px">
+    <div class="grx-footer" style="max-width:1240px;margin:0 auto;padding:52px 32px 30px;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:36px">
+      <div>
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:16px">
+          <img src="assets/freedom-tree.png" alt="Gregory Renard" style="width:30px;height:30px;object-fit:contain;flex:none">
+          <span style="font-weight:700;font-size:15px">Gregory Renard</span>
+        </div>
+        <p style="font-size:13.5px;line-height:1.6;color:var(--text-mute);max-width:340px">{{ t.footerBlurb }}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px 14px;margin-top:18px">
+          <sc-for list="{{ socials }}" as="s" hint-placeholder-count="4">
+            <a href="{{ s.url }}" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-mute)" style-hover="color:var(--accent)">{{ s.name }}</a>
+          </sc-for>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-faint);margin-bottom:14px">{{ t.footTalk }}</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="https://www.youtube.com/live/ADi_8OL6vRk" target="_blank" rel="noopener noreferrer" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">{{ t.footSummit }}</a>
+          <a href="AI-for-Good-2026" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">{{ t.footAifg }}</a>
+          <a href="WEF-Digital-Safety-2026" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">{{ t.footWef }}</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-faint);margin-bottom:14px">{{ t.footNav }}</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="./" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">{{ t.footHome }}</a>
+          <a href="Why" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">{{ t.navStory }}</a>
+          <a href="Ethics" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">{{ t.navEthics }}</a>
+          <a href="Contact" style="font-size:14px;color:var(--text-soft)" style-hover="color:var(--text)">{{ t.footContact }}</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(var(--line-rgb),0.06)">
+      <div style="max-width:1240px;margin:0 auto;padding:18px 32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:12.5px;color:var(--text-faint)">
+        <span>©2026 — Gregory Renard · Freedom.AI Consulting LLC</span>
+        <span style="font-family:'JetBrains Mono',monospace">SF · Silicon Valley · Paris · Bruxelles</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <sc-if value="{{ lightboxOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeLightbox }}" style="position:fixed;inset:0;z-index:200;background:rgba(7,12,30,0.92);backdrop-filter:blur(6px);display:grid;place-items:center;padding:40px">
+      <img src="{{ lightboxSrc }}" alt="{{ lightboxAlt }}" style="max-width:92vw;max-height:82vh;object-fit:contain;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,0.6)">
+      <div style="position:absolute;bottom:30px;left:0;right:0;text-align:center;color:#EBD9A8;font-family:'JetBrains Mono',monospace;font-size:12.5px;padding:0 24px">{{ lightboxCaption }}</div>
+      <button onClick="{{ closeLightbox }}" aria-label="Close" style="position:absolute;top:22px;right:26px;width:46px;height:46px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(244,239,227,0.3);background:rgba(13,17,34,0.6);color:#F4EFE4;font-size:22px;cursor:pointer">✕</button>
+      <button onClick="{{ lightboxPrev }}" aria-label="Previous" style="position:absolute;top:50%;left:20px;transform:translateY(-50%);width:50px;height:50px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(244,239,227,0.3);background:rgba(13,17,34,0.6);color:#F4EFE4;font-size:24px;cursor:pointer">‹</button>
+      <button onClick="{{ lightboxNext }}" aria-label="Next" style="position:absolute;top:50%;right:20px;transform:translateY(-50%);width:50px;height:50px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(244,239,227,0.3);background:rgba(13,17,34,0.6);color:#F4EFE4;font-size:24px;cursor:pointer">›</button>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<!--dc-prerender-start--><div id="dc-prerender"><div class="sc-host" data-sc-name="AI-for-Humanity-2018"><div data-dc-tpl="25" style="position: relative; min-height: 100vh; background: var(--bg); overflow-x: clip;">
+
+  
+  <header data-dc-tpl="26" style="position: sticky; top: 0px; z-index: 60; backdrop-filter: blur(14px); background: var(--header-bg); border-bottom: 1px solid rgba(var(--line-rgb),0.07);">
+    <nav data-dc-tpl="27" class="grx-nav" style="max-width: 1240px; margin: 0px auto; padding: 16px 32px; display: flex; align-items: center; gap: 28px;">
+      <a data-dc-tpl="28" class="grx-logo" href="./" style="display: flex; align-items: center; gap: 11px; margin-right: auto; flex-shrink: 0; min-width: 0px;">
+        <img data-dc-tpl="29" src="assets/freedom-tree.png" alt="Gregory Renard" style="width: 34px; height: 34px; object-fit: contain; flex: 0 0 auto;">
+        <span data-dc-tpl="30" style="display: flex; flex-direction: column; gap: 1px; line-height: 1.1; white-space: nowrap;"><span data-dc-tpl="31" style="font-weight: 700; font-size: 15px; letter-spacing: -0.01em;">Gregory Renard</span><span data-dc-tpl="32" class="grx-logo-sub" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 9px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent);">Applied AI Architect · Since 1996</span></span>
+      </a>
+      <a data-dc-tpl="33" class="grx-navlink" href="Why" style="font-size: 14px; color: var(--text-soft); white-space: nowrap;"><span class="sc-interp">My Story</span></a>
+      <a data-dc-tpl="34" class="grx-navlink" href="Method" style="font-size: 14px; color: var(--text-soft); white-space: nowrap;"><span class="sc-interp">Method</span></a>
+      <a data-dc-tpl="35" class="grx-navlink" href="Ethics" style="font-size: 14px; color: var(--text-soft); white-space: nowrap;"><span class="sc-interp">Ethics</span></a>
+      <a data-dc-tpl="36" class="grx-navlink" href="Keynote-Speaker" style="font-size: 14px; color: var(--text-soft); white-space: nowrap;"><span class="sc-interp">Talks</span></a>
+      <a data-dc-tpl="37" class="grx-navlink" href="Press" style="font-size: 14px; color: var(--text-soft); white-space: nowrap;"><span class="sc-interp">Press</span></a>
+      <a data-dc-tpl="38" class="grx-navlink" href="Publications" style="font-size: 14px; color: var(--text-soft); white-space: nowrap;"><span class="sc-interp">Publications</span></a>
+      <a data-dc-tpl="39" class="grx-cta-nav scp0" href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 7px; font-size: 14px; font-weight: 600; color: var(--btn-fg); background: var(--btn-bg); padding: 9px 17px; border-radius: 3px; box-shadow: rgba(23, 33, 57, 0.2) 0px 6px 18px;">Freedom.AI ↗</a>
+      <button data-dc-tpl="40" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--text); background: rgba(var(--accent-rgb),0.18); border: 1px solid rgba(var(--accent-rgb),0.42); border-radius: 100px; padding: 7px 13px; cursor: pointer;"><span class="sc-interp">FR</span></button>
+      <label data-dc-tpl="41" for="grx-nav-toggle" class="grx-burger" aria-label="Open menu">☰</label>
+    </nav>
+    <input data-dc-tpl="42" type="checkbox" id="grx-nav-toggle" class="grx-nav-toggle" aria-hidden="true">
+    <div data-dc-tpl="43" class="grx-mobile-menu">
+      <a data-dc-tpl="44" href="Why"><span class="sc-interp">My Story</span></a>
+      <a data-dc-tpl="45" href="Method"><span class="sc-interp">Method</span></a>
+      <a data-dc-tpl="46" href="Ethics"><span class="sc-interp">Ethics</span></a>
+      <a data-dc-tpl="47" href="Keynote-Speaker"><span class="sc-interp">Talks</span></a>
+      <a data-dc-tpl="48" href="Press"><span class="sc-interp">Press</span></a>
+      <a data-dc-tpl="49" href="Publications"><span class="sc-interp">Publications</span></a>
+      <a data-dc-tpl="50" href="https://www.freedom.ai/#offerings" target="_blank" rel="noopener noreferrer">Freedom.AI ↗</a>
+    </div>
+  </header>
+
+  
+  <section data-dc-tpl="51" class="grx-hero" style="max-width: 1240px; margin: 0px auto; padding: 48px 32px 32px; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center;">
+    <div data-dc-tpl="52">
+      <div data-dc-tpl="53" style="display: inline-flex; align-items: center; gap: 12px; flex-wrap: wrap; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11.5px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px;">
+        <span data-dc-tpl="54" style="width: 32px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">Élysée Palace · AI for Humanity Summit · 28 March 2018</span>
+      </div>
+      <div data-dc-tpl="55" style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 22px;">
+        <div data-dc-tpl="56" style="display: inline-flex; align-items: center; gap: 13px; background: rgb(23, 33, 57); border: 1px solid rgba(var(--accent-rgb),0.25); border-radius: 6px; padding: 11px 16px;">
+          <span data-dc-tpl="57" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(203, 182, 128); white-space: nowrap;"><span class="sc-interp">Élysée · Paris</span></span>
+          <span data-dc-tpl="58" style="width: 1px; height: 24px; background: rgba(244, 239, 227, 0.16); display: inline-block;"></span>
+          <span data-dc-tpl="59" style="font-family: var(--font-display); font-weight: 600; font-size: 13px; letter-spacing: 0.04em; color: rgb(244, 239, 228); white-space: nowrap;">Présidence de la République</span>
+        </div>
+        <img data-dc-tpl="60" src="https://upload.wikimedia.org/wikipedia/commons/6/61/Ai_for_humanity_logo.svg" alt="AI for Humanity" style="height: 34px; width: auto; object-fit: contain;">
+      </div>
+      <h1 data-dc-tpl="61" style="font-size: clamp(32px, 4vw, 54px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 500; text-wrap: balance;"><span class="sc-interp">The Night France Chose </span><span data-dc-tpl="62" style="color: var(--accent); font-style: italic; font-weight: 400;"><span class="sc-interp">AI for Humanity</span></span></h1>
+      <p data-dc-tpl="63" style="margin-top: 20px; font-family: var(--font-display); font-size: clamp(17px, 1.7vw, 22px); line-height: 1.35; letter-spacing: -0.01em; color: var(--text-soft); text-wrap: balance;"><span class="sc-interp">Dinner with President Macron &amp; the world’s AI leaders — on the eve of France’s national AI strategy.</span></p>
+      <p data-dc-tpl="64" style="margin-top: 22px; font-size: 16.5px; line-height: 1.66; color: var(--text-soft); max-width: 560px;"><span class="sc-interp">Guest of </span><strong data-dc-tpl="67" style="font-weight: 700; color: var(--text);"><span class="sc-interp">President Emmanuel Macron</span></strong><span class="sc-interp"> at the Élysée Palace, as one of the </span><strong data-dc-tpl="67" style="font-weight: 700; color: var(--text);"><span class="sc-interp">three co-initiators of AI4Humanity</span></strong><span class="sc-interp"> — at a table of fifteen with Yann LeCun, Sam Altman, Demis Hassabis, Fei-Fei Li, Stuart Russell, Kate Crawford and Cédric Villani, the night before the strategy was announced at the Collège de France.</span></p>
+      <div data-dc-tpl="69" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px;">
+        <a data-dc-tpl="70" href="https://www.youtube.com/live/ADi_8OL6vRk" target="_blank" rel="noopener noreferrer" class="scp1" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14.5px; color: rgb(255, 255, 255); background: var(--accent); padding: 13px 18px; border-radius: 3px; box-shadow: 0 10px 30px rgba(var(--accent-rgb),0.35); white-space: nowrap;"><span class="sc-interp">Watch the summit ↗</span></a>
+        <a data-dc-tpl="71" href="#gallery" class="scp2" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14.5px; color: var(--btn-fg); background: var(--btn-bg); padding: 13px 18px; border-radius: 3px; box-shadow: rgba(23, 33, 57, 0.2) 0px 10px 30px; white-space: nowrap;"><span class="sc-interp">View the photos</span></a>
+        <a data-dc-tpl="72" href="Why" class="scp3" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14.5px; color: var(--text); border: 1px solid rgba(var(--line-rgb),0.22); padding: 13px 18px; border-radius: 3px; white-space: nowrap;"><span class="sc-interp">My story →</span></a>
+      </div>
+      <div data-dc-tpl="73" style="display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 20px;">
+        <a data-dc-tpl="74" href="https://www.vie-publique.fr/rapport/37225-donner-un-sens-lintelligence-artificielle-pour-une-strategie-nation" target="_blank" rel="noopener noreferrer" class="scp4" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; font-weight: 600; color: var(--accent); border-bottom: 1px solid rgba(var(--accent-rgb),0.4); padding-bottom: 2px;"><span class="sc-interp">The Villani report ↗</span></a>
+        <a data-dc-tpl="75" href="https://journals.openedition.org/lettre-cdf/pdf/4309" target="_blank" rel="noopener noreferrer" class="scp4" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; font-weight: 600; color: var(--accent); border-bottom: 1px solid rgba(var(--accent-rgb),0.4); padding-bottom: 2px;"><span class="sc-interp">Collège de France ↗</span></a>
+      </div>
+    </div>
+    <div data-dc-tpl="76" style="position: relative;">
+      <div data-dc-tpl="77" style="position: relative; z-index: 1; border-radius: 16px; overflow: hidden; border: 1px solid rgba(var(--line-rgb),0.12); box-shadow: rgba(23, 33, 57, 0.28) 0px 30px 70px;">
+        <img data-dc-tpl="78" src="assets/ai4humanity_elysee/greg_macron_smile.jpg" alt="Gregory Renard with President Emmanuel Macron at the Élysée Palace" style="width: 100%; display: block; aspect-ratio: 4 / 4.6; object-fit: cover; object-position: 50% 18%;">
+        <div data-dc-tpl="79" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 34px 22px 16px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.55) 42%, rgba(7, 12, 30, 0.9));">
+          <div data-dc-tpl="80" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; color: rgb(235, 217, 168); text-shadow: rgba(0, 0, 0, 0.85) 0px 1px 5px;"><span class="sc-interp">SALON DES AMBASSADEURS · ÉLYSÉE · 28 MAR 2018</span></div>
+        </div>
+      </div>
+      <p data-dc-tpl="81" style="margin-top: 20px; text-align: center; font-family: var(--font-display); font-style: italic; font-size: clamp(17px, 1.7vw, 21px); line-height: 1.4; letter-spacing: -0.01em; color: var(--accent); text-wrap: balance;"><span class="sc-interp">From a coffee at Stanford to a table of fifteen at the Élysée — </span><span data-dc-tpl="82" style="font-weight: 700; font-style: normal;"><span class="sc-interp">a national ambition</span></span><span class="sc-interp"> set in motion.</span></p>
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="83" class="grx-pad" style="max-width: 1240px; margin: 0px auto; padding: 52px 32px 12px;">
+    <div data-dc-tpl="84" style="border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 6px; background: var(--surface); padding: 40px 44px;">
+      <div data-dc-tpl="85" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;"><span data-dc-tpl="86" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">Where it started</span></div>
+      <h2 data-dc-tpl="87" style="font-size: clamp(24px, 2.9vw, 38px); line-height: 1.16; letter-spacing: -0.02em; font-weight: 520; max-width: none; text-wrap: balance;"><span class="sc-interp">From a Stanford coffee to the President’s table.</span></h2>
+      <div data-dc-tpl="88" class="grx-origin" style="display: flex; gap: 32px; align-items: center; margin-top: 22px;">
+        <p data-dc-tpl="89" style="flex: 1 1 0%; min-width: 260px; font-size: 16.5px; line-height: 1.7; color: var(--text-soft); text-wrap: pretty;"><span class="sc-interp">In October 2016, over a coffee at </span><strong data-dc-tpl="92" style="font-weight: 700; color: var(--text);"><span class="sc-interp">Stanford</span></strong><span class="sc-interp"> with </span><strong data-dc-tpl="92" style="font-weight: 700; color: var(--text);"><span class="sc-interp">François Levin</span></strong><span class="sc-interp"> and </span><strong data-dc-tpl="92" style="font-weight: 700; color: var(--text);"><span class="sc-interp">Yann Bonnet</span></strong><span class="sc-interp">, a sincere conversation set an idea in motion: France needed a national ambition for AI. Eighteen months later — through the </span><strong data-dc-tpl="92" style="font-weight: 700; color: var(--text);"><span class="sc-interp">France IA strategy</span></strong><span class="sc-interp"> (2017) and the </span><strong data-dc-tpl="92" style="font-weight: 700; color: var(--text);"><span class="sc-interp">Villani report</span></strong><span class="sc-interp"> (2018) — that idea had a name, </span><strong data-dc-tpl="92" style="font-weight: 700; color: var(--text);"><span class="sc-interp">AI4Humanity</span></strong><span class="sc-interp">, and a seat at the President’s table: a dinner of fifteen at the Élysée, the night before the strategy was announced to the world.</span></p>
+        <div data-dc-tpl="94" style="width: 300px; flex: 0 0 auto; border-radius: 14px; overflow: hidden; border: 1px solid rgba(var(--line-rgb),0.1); box-shadow: rgba(23, 33, 57, 0.16) 0px 22px 54px;">
+          <img data-dc-tpl="95" src="assets/ai4humanity-stanford-2016.jpg" alt="Gregory Renard, François Levin and Yann Bonnet at Stanford, October 2016" loading="lazy" decoding="async" style="width: 100%; display: block;">
+          <div data-dc-tpl="96" style="padding: 11px 14px; background: rgb(23, 33, 57); color: rgb(235, 217, 168); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.05em; line-height: 1.5;"><span class="sc-interp">Stanford, 24 Oct 2016 — with François Levin &amp; Yann Bonnet. The coffee that seeded AI4Humanity.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="97" class="grx-pad" style="max-width: 1240px; margin: 0px auto; padding: 52px 32px 12px;">
+    <div data-dc-tpl="98" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;"><span data-dc-tpl="99" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">The evening, in four beats</span></div>
+    <h2 data-dc-tpl="100" class="grx-nowrap" style="font-size: clamp(23px, 2.7vw, 38px); line-height: 1.12; letter-spacing: -0.025em; font-weight: 520; max-width: none; white-space: nowrap;"><span data-dc-tpl="101" style="color: var(--text);"><span class="sc-interp">One table, fifteen guests.</span></span> <span data-dc-tpl="102" style="color: var(--accent); font-style: italic; font-weight: 600;"><span class="sc-interp">The future of AI in France.</span></span></h2>
+    <div data-dc-tpl="103" class="grx-story" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(var(--line-rgb),0.1); border: 1px solid rgba(var(--line-rgb),0.1); border-radius: 6px; overflow: hidden; margin-top: 30px;">
+      
+        <div data-dc-tpl="105" style="background: var(--surface); padding: 34px;">
+          <div data-dc-tpl="106" style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px;">
+            <span data-dc-tpl="107" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--accent);"><span class="sc-interp">01</span></span>
+            <span data-dc-tpl="108" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mute);"><span class="sc-interp">The dinner</span></span>
+          </div>
+          <h3 data-dc-tpl="109" style="font-size: 22px; line-height: 1.24; letter-spacing: -0.015em; font-weight: 600; color: var(--text);"><span class="sc-interp">Hosted by the President</span></h3>
+          <p data-dc-tpl="110" style="margin-top: 12px; font-size: 15.5px; line-height: 1.66; color: var(--text-soft); text-wrap: pretty;"><span class="sc-interp">On 28 March 2018, President Emmanuel Macron gathered the world’s AI leaders in the Salon des Ambassadeurs — the eve of the AI for Humanity summit. The protocol seated me among Yann LeCun, Sam Altman, Demis Hassabis, Fei-Fei Li, Stuart Russell, Kate Crawford, Latanya Sweeney and Cédric Villani.</span></p>
+        </div>
+      
+        <div data-dc-tpl="105" style="background: var(--surface); padding: 34px;">
+          <div data-dc-tpl="106" style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px;">
+            <span data-dc-tpl="107" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--accent);"><span class="sc-interp">02</span></span>
+            <span data-dc-tpl="108" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mute);"><span class="sc-interp">Why I was there</span></span>
+          </div>
+          <h3 data-dc-tpl="109" style="font-size: 22px; line-height: 1.24; letter-spacing: -0.015em; font-weight: 600; color: var(--text);"><span class="sc-interp">One of the three co-initiators</span></h3>
+          <p data-dc-tpl="110" style="margin-top: 12px; font-size: 15.5px; line-height: 1.66; color: var(--text-soft); text-wrap: pretty;"><span class="sc-interp">AI4Humanity grew from the conversation started at Stanford in 2016. As one of its three co-initiators — and co-founder of Xbrain, building conversational AI in Silicon Valley since 2012 — I brought the practitioner’s view to the table.</span></p>
+        </div>
+      
+        <div data-dc-tpl="105" style="background: var(--surface); padding: 34px;">
+          <div data-dc-tpl="106" style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px;">
+            <span data-dc-tpl="107" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--accent);"><span class="sc-interp">03</span></span>
+            <span data-dc-tpl="108" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mute);"><span class="sc-interp">The strategy</span></span>
+          </div>
+          <h3 data-dc-tpl="109" style="font-size: 22px; line-height: 1.24; letter-spacing: -0.015em; font-weight: 600; color: var(--text);"><span class="sc-interp">France’s national AI plan</span></h3>
+          <p data-dc-tpl="110" style="margin-top: 12px; font-size: 15.5px; line-height: 1.66; color: var(--text-soft); text-wrap: pretty;"><span class="sc-interp">The next day, at the Collège de France, the President announced “AI for Humanity” — €1.5B for research, talent and ethics, anchored in the France IA strategy (2017) and the Villani report. It set the template for Europe’s approach to AI.</span></p>
+        </div>
+      
+        <div data-dc-tpl="105" style="background: var(--surface); padding: 34px;">
+          <div data-dc-tpl="106" style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px;">
+            <span data-dc-tpl="107" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; font-weight: 600; color: var(--accent);"><span class="sc-interp">04</span></span>
+            <span data-dc-tpl="108" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mute);"><span class="sc-interp">The throughline</span></span>
+          </div>
+          <h3 data-dc-tpl="109" style="font-size: 22px; line-height: 1.24; letter-spacing: -0.015em; font-weight: 600; color: var(--text);"><span class="sc-interp">From humanity to children</span></h3>
+          <p data-dc-tpl="110" style="margin-top: 12px; font-size: 15.5px; line-height: 1.66; color: var(--text-soft); text-wrap: pretty;"><span class="sc-interp">The same conviction has carried the work since: reserve member of the EU’s High-Level Expert Group on AI, co-author of the Holberton-Turing Oath — and today, beneficial AI for children, from the UN’s AI for Good stage to the WEF’s Digital Safety coalition.</span></p>
+        </div>
+      
+    </div>
+    <div data-dc-tpl="111" style="margin-top: 26px; border: 1px solid rgba(var(--accent-rgb),0.24); border-radius: 6px; background: linear-gradient(120deg,rgba(var(--accent-rgb),0.08),rgba(var(--line-rgb),0.015)); padding: 30px 36px; text-align: center;">
+      <blockquote data-dc-tpl="112" style="margin: 0px; font-size: clamp(21px, 2.4vw, 30px); line-height: 1.3; font-weight: 600; letter-spacing: -0.015em; color: var(--text); text-wrap: balance;"><span class="sc-interp">AI must serve humanity — France said it first, at scale.</span></blockquote>
+      <div data-dc-tpl="113" style="margin-top: 14px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12.5px; letter-spacing: 0.06em; color: var(--accent);">#AIforHumanity</div>
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="114" id="gallery" class="grx-pad" style="max-width: 1240px; margin: 0px auto; padding: 60px 32px 12px; scroll-margin-top: 90px;">
+    <div data-dc-tpl="115" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px;"><span data-dc-tpl="116" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">That evening · Élysée Palace</span></div>
+    <div data-dc-tpl="117" class="grx-gallery" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
+      
+        <button data-dc-tpl="119" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
+          <img data-dc-tpl="120" class="grx-gimg" src="assets/ai4humanity_elysee/panel_feifei_li_cani.jpg" alt="AI for Humanity panel — Voir, entendre et comprendre — Fei-Fei Li, Grégory Renard and Marie-Paule Cani" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block;">
+          <span data-dc-tpl="121" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">“Voir, entendre et comprendre” — my summit panel with Fei-Fei Li &amp; Marie-Paule Cani</span></span>
+        </button>
+      
+        <button data-dc-tpl="119" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
+          <img data-dc-tpl="120" class="grx-gimg" src="assets/ai4humanity_elysee/seating_plan.jpg" alt="Official seating plan of the Élysée dinner for the AI summit, 28 March 2018" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 32%; display: block;">
+          <span data-dc-tpl="121" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">The protocol — seated among Yann LeCun, Sam Altman, Demis Hassabis, Fei-Fei Li &amp; Cédric Villani</span></span>
+        </button>
+      
+        <button data-dc-tpl="119" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
+          <img data-dc-tpl="120" class="grx-gimg" src="assets/ai4humanity_elysee/dinner_table_wide.jpg" alt="President Macron speaking at the dinner table with Bruno Le Maire, Cédric Villani and Sam Altman" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 38%; display: block;">
+          <span data-dc-tpl="121" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">President Macron leading the table — Bruno Le Maire, Cédric Villani, Sam Altman</span></span>
+        </button>
+      
+        <button data-dc-tpl="119" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
+          <img data-dc-tpl="120" class="grx-gimg" src="assets/ai4humanity_elysee/sam_altman_macron.jpg" alt="Sam Altman and President Emmanuel Macron at the Élysée" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 14%; display: block;">
+          <span data-dc-tpl="121" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">Sam Altman (OpenAI) with President Macron</span></span>
+        </button>
+      
+        <button data-dc-tpl="119" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
+          <img data-dc-tpl="120" class="grx-gimg" src="assets/ai4humanity_elysee/place_card_table.jpg" alt="Place card Monsieur Grégory Renard on the Élysée dinner table" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; display: block;">
+          <span data-dc-tpl="121" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">“Monsieur Grégory Renard” — Salon des Ambassadeurs</span></span>
+        </button>
+      
+        <button data-dc-tpl="119" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
+          <img data-dc-tpl="120" class="grx-gimg" src="assets/ai4humanity_elysee/menu_presidence.jpg" alt="Présidence de la République dinner menu with gold crest" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; display: block;">
+          <span data-dc-tpl="121" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">The Présidence de la République menu</span></span>
+        </button>
+      
+        <button data-dc-tpl="119" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
+          <img data-dc-tpl="120" class="grx-gimg" src="assets/ai4humanity_elysee/elysee_arrival.jpg" alt="Sam Altman arriving at the Élysée Palace" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; display: block;">
+          <span data-dc-tpl="121" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">Sam Altman arriving at the Élysée</span></span>
+        </button>
+      
+        <button data-dc-tpl="119" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
+          <img data-dc-tpl="120" class="grx-gimg" src="assets/ai4humanity_elysee/chandelier.jpg" alt="Chandelier of the Élysée Palace" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block;">
+          <span data-dc-tpl="121" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">Under the chandeliers of the Salon des Ambassadeurs</span></span>
+        </button>
+      
+        <button data-dc-tpl="119" class="grx-gcard" style="position: relative; display: block; padding: 0px; border: 1px solid rgba(var(--line-rgb),0.12); border-radius: 8px; overflow: hidden; background: var(--surface-2); cursor: pointer; aspect-ratio: 4 / 3; text-align: left;">
+          <img data-dc-tpl="120" class="grx-gimg" src="assets/ai4humanity_elysee/elysee_courtyard_night.jpg" alt="The Élysée Palace courtyard at night" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block;">
+          <span data-dc-tpl="121" style="position: absolute; left: 0px; right: 0px; bottom: 0px; padding: 26px 16px 12px; background: linear-gradient(transparent, rgba(7, 12, 30, 0.82)); color: rgb(244, 239, 228); font-size: 12.5px; line-height: 1.4; font-weight: 500; text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;"><span class="sc-interp">The Élysée courtyard, end of the evening</span></span>
+        </button>
+      
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="122" class="grx-pad" style="max-width: 1240px; margin: 0px auto; padding: 64px 32px 20px;">
+    <div data-dc-tpl="123" style="display: inline-flex; align-items: center; gap: 15px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 22px;"><span data-dc-tpl="124" style="width: 36px; height: 1px; background: var(--accent); display: inline-block;"></span><span class="sc-interp">Go deeper</span></div>
+    <a data-dc-tpl="125" href="https://www.youtube.com/live/ADi_8OL6vRk" target="_blank" rel="noopener noreferrer" class="scp0" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; border-radius: 6px; background: var(--btn-bg); color: var(--btn-fg); padding: 28px 34px; box-shadow: rgba(23, 33, 57, 0.22) 0px 14px 40px;">
+      <div data-dc-tpl="126">
+        <div data-dc-tpl="127" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(235, 217, 168); margin-bottom: 8px;"><span class="sc-interp">The summit · Collège de France</span></div>
+        <div data-dc-tpl="128" style="font-family: var(--font-display); font-size: clamp(22px, 2.4vw, 30px); line-height: 1.15; font-weight: 600;"><span class="sc-interp">Watch the AI for Humanity announcement</span></div>
+      </div>
+      <span data-dc-tpl="129" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 14px; font-weight: 600; color: rgb(235, 217, 168); white-space: nowrap;"><span class="sc-interp">Watch ↗</span></span>
+    </a>
+    <div data-dc-tpl="130" class="grx-links" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px;">
+      
+        <a data-dc-tpl="132" href="https://www.vie-publique.fr/rapport/37225-donner-un-sens-lintelligence-artificielle-pour-une-strategie-nation" target="_blank" rel="noopener noreferrer" class="scp5" style="display: flex; flex-direction: column; gap: 8px; border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 6px; background: var(--surface); padding: 24px 26px; min-height: 120px;">
+          <span data-dc-tpl="133" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);"><span class="sc-interp">The report</span></span>
+          <span data-dc-tpl="134" style="font-size: 17px; font-weight: 600; line-height: 1.25; color: var(--text); letter-spacing: -0.01em; flex: 1 1 0%;"><span class="sc-interp">Donner un sens à l’IA — the Villani report (2018)</span></span>
+          <span data-dc-tpl="135" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">vie-publique.fr ↗</span></span>
+        </a>
+      
+        <a data-dc-tpl="132" href="AI-for-Good-2026" target="_self" rel="noopener noreferrer" class="scp5" style="display: flex; flex-direction: column; gap: 8px; border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 6px; background: var(--surface); padding: 24px 26px; min-height: 120px;">
+          <span data-dc-tpl="133" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);"><span class="sc-interp">The journey · 2026</span></span>
+          <span data-dc-tpl="134" style="font-size: 17px; font-weight: 600; line-height: 1.25; color: var(--text); letter-spacing: -0.01em; flex: 1 1 0%;"><span class="sc-interp">AI for Good Global Summit — UN/ITU, Geneva</span></span>
+          <span data-dc-tpl="135" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">the recap →</span></span>
+        </a>
+      
+        <a data-dc-tpl="132" href="WEF-Digital-Safety-2026" target="_self" rel="noopener noreferrer" class="scp5" style="display: flex; flex-direction: column; gap: 8px; border: 1px solid rgba(var(--line-rgb),0.14); border-radius: 6px; background: var(--surface); padding: 24px 26px; min-height: 120px;">
+          <span data-dc-tpl="133" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);"><span class="sc-interp">The journey · 2026</span></span>
+          <span data-dc-tpl="134" style="font-size: 17px; font-weight: 600; line-height: 1.25; color: var(--text); letter-spacing: -0.01em; flex: 1 1 0%;"><span class="sc-interp">Global Coalition for Digital Safety — WEF</span></span>
+          <span data-dc-tpl="135" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">the recap →</span></span>
+        </a>
+      
+    </div>
+  </section>
+
+  
+  <footer data-dc-tpl="136" style="border-top: 1px solid rgba(var(--line-rgb),0.08); background: var(--bg); margin-top: 40px;">
+    <div data-dc-tpl="137" class="grx-footer" style="max-width: 1240px; margin: 0px auto; padding: 52px 32px 30px; display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 36px;">
+      <div data-dc-tpl="138">
+        <div data-dc-tpl="139" style="display: flex; align-items: center; gap: 11px; margin-bottom: 16px;">
+          <img data-dc-tpl="140" src="assets/freedom-tree.png" alt="Gregory Renard" style="width: 30px; height: 30px; object-fit: contain; flex: 0 0 auto;">
+          <span data-dc-tpl="141" style="font-weight: 700; font-size: 15px;">Gregory Renard</span>
+        </div>
+        <p data-dc-tpl="142" style="font-size: 13.5px; line-height: 1.6; color: var(--text-mute); max-width: 340px;"><span class="sc-interp">Hands-on AI architect &amp; Cognitive Orchestration since 1996. Co-founder of Everyone.AI — anticipating the opportunities and risks of AI for children.</span></p>
+        <div data-dc-tpl="143" style="display: flex; flex-wrap: wrap; gap: 12px 14px; margin-top: 18px;">
+          
+            <a data-dc-tpl="145" href="https://www.linkedin.com/in/gregoryrenard/" target="_blank" rel="noopener noreferrer" class="scp6" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">LinkedIn</span></a>
+          
+            <a data-dc-tpl="145" href="https://everyone.ai/" target="_blank" rel="noopener noreferrer" class="scp6" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">Everyone.AI</span></a>
+          
+            <a data-dc-tpl="145" href="https://www.youtube.com/@GregoryRenard" target="_blank" rel="noopener noreferrer" class="scp6" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">YouTube</span></a>
+          
+            <a data-dc-tpl="145" href="https://twitter.com/Redo" target="_blank" rel="noopener noreferrer" class="scp6" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--text-mute);"><span class="sc-interp">X</span></a>
+          
+        </div>
+      </div>
+      <div data-dc-tpl="146">
+        <div data-dc-tpl="147" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px;"><span class="sc-interp">This journey</span></div>
+        <div data-dc-tpl="148" style="display: flex; flex-direction: column; gap: 10px;">
+          <a data-dc-tpl="149" href="https://www.youtube.com/live/ADi_8OL6vRk" target="_blank" rel="noopener noreferrer" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">AI for Humanity — the summit ↗</span></a>
+          <a data-dc-tpl="150" href="AI-for-Good-2026" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">AI for Good 2026 — the recap</span></a>
+          <a data-dc-tpl="151" href="WEF-Digital-Safety-2026" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">WEF Digital Safety 2026 — the recap</span></a>
+        </div>
+      </div>
+      <div data-dc-tpl="152">
+        <div data-dc-tpl="153" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 14px;"><span class="sc-interp">Navigate</span></div>
+        <div data-dc-tpl="154" style="display: flex; flex-direction: column; gap: 10px;">
+          <a data-dc-tpl="155" href="./" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Home</span></a>
+          <a data-dc-tpl="156" href="Why" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">My Story</span></a>
+          <a data-dc-tpl="157" href="Ethics" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Ethics</span></a>
+          <a data-dc-tpl="158" href="Contact" class="scp7" style="font-size: 14px; color: var(--text-soft);"><span class="sc-interp">Contact</span></a>
+        </div>
+      </div>
+    </div>
+    <div data-dc-tpl="159" style="border-top: 1px solid rgba(var(--line-rgb),0.06);">
+      <div data-dc-tpl="160" style="max-width: 1240px; margin: 0px auto; padding: 18px 32px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; font-size: 12.5px; color: var(--text-faint);">
+        <span data-dc-tpl="161">©2026 — Gregory Renard · Freedom.AI Consulting LLC</span>
+        <span data-dc-tpl="162" style="font-family: &quot;JetBrains Mono&quot;, monospace;">SF · Silicon Valley · Paris · Bruxelles</span>
+      </div>
+    </div>
+  </footer>
+
+  
+  </div></div></div><!--dc-prerender-end-->
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lightbox: -1, lang: 'en' };
+
+  componentDidMount() {
+    this._galleryLen = 9;
+    try {
+      const l = localStorage.getItem('grx_lang');
+      if (l) { this.setState({ lang: l }); try { document.documentElement.lang = l; } catch (e) {} }
+    } catch (e) {}
+    this._onKey = (e) => {
+      if (this.state.lightbox < 0) return;
+      if (e.key === 'Escape') this.setState({ lightbox: -1 });
+      else if (e.key === 'ArrowRight') this.setState(s => ({ lightbox: (s.lightbox + 1) % this._galleryLen }));
+      else if (e.key === 'ArrowLeft') this.setState(s => ({ lightbox: (s.lightbox - 1 + this._galleryLen) % this._galleryLen }));
+    };
+    window.addEventListener('keydown', this._onKey);
+  }
+
+  componentWillUnmount() { window.removeEventListener('keydown', this._onKey); }
+
+  setLang(l) {
+    try { localStorage.setItem('grx_lang', l); } catch (e) {}
+    try { document.documentElement.lang = l; } catch (e) {}
+    this.setState({ lang: l });
+  }
+
+  parseBold(str) {
+    const out = [];
+    const parts = String(str).split('**');
+    for (let i = 0; i < parts.length; i++) {
+      if (parts[i] === '') continue;
+      const bold = i % 2 === 1;
+      out.push({ t: parts[i], bold, plain: !bold });
+    }
+    return out;
+  }
+
+  renderVals() {
+    const lang = this.state.lang === 'fr' ? 'fr' : 'en';
+
+    const C = {
+      en: {
+        navStory: 'My Story', navMethod: 'Method', navEthics: 'Ethics', navTalks: 'Talks', navPress: 'Press', navPub: 'Publications',
+        eyebrow: 'Élysée Palace · AI for Humanity Summit · 28 March 2018',
+        pill: 'Élysée · Paris',
+        h1a: 'The Night France Chose ', h1em: 'AI for Humanity',
+        subtitle: 'Dinner with President Macron & the world\u2019s AI leaders — on the eve of France\u2019s national AI strategy.',
+        heroSub: 'Guest of **President Emmanuel Macron** at the Élysée Palace, as one of the **three co-initiators of AI4Humanity** — at a table of fifteen with Yann LeCun, Sam Altman, Demis Hassabis, Fei-Fei Li, Stuart Russell, Kate Crawford and Cédric Villani, the night before the strategy was announced at the Collège de France.',
+        btnWatch: 'Watch the summit ↗', btnPhotos: 'View the photos', btnStory: 'My story →',
+        linkReport: 'The Villani report ↗', linkCdf: 'Collège de France ↗',
+        photoStrip: 'SALON DES AMBASSADEURS · ÉLYSÉE · 28 MAR 2018',
+        taglineA: 'From a coffee at Stanford to a table of fifteen at the Élysée — ', taglineB: 'a national ambition', taglineC: ' set in motion.',
+        originKicker: 'Where it started',
+        originTitle: 'From a Stanford coffee to the President\u2019s table.',
+        originBody: 'In October 2016, over a coffee at **Stanford** with **François Levin** and **Yann Bonnet**, a sincere conversation set an idea in motion: France needed a national ambition for AI. Eighteen months later — through the **France IA strategy** (2017) and the **Villani report** (2018) — that idea had a name, **AI4Humanity**, and a seat at the President\u2019s table: a dinner of fifteen at the Élysée, the night before the strategy was announced to the world.',
+        originCaption: 'Stanford, 24 Oct 2016 — with François Levin & Yann Bonnet. The coffee that seeded AI4Humanity.',
+        storyKicker: 'The evening, in four beats',
+        storyH2a: 'One table, fifteen guests.', storyH2b: 'The future of AI in France.',
+        story: [
+          { num: '01', label: 'The dinner', title: 'Hosted by the President', body: 'On 28 March 2018, President Emmanuel Macron gathered the world\u2019s AI leaders in the Salon des Ambassadeurs — the eve of the AI for Humanity summit. The protocol seated me among Yann LeCun, Sam Altman, Demis Hassabis, Fei-Fei Li, Stuart Russell, Kate Crawford, Latanya Sweeney and Cédric Villani.' },
+          { num: '02', label: 'Why I was there', title: 'One of the three co-initiators', body: 'AI4Humanity grew from the conversation started at Stanford in 2016. As one of its three co-initiators — and co-founder of Xbrain, building conversational AI in Silicon Valley since 2012 — I brought the practitioner\u2019s view to the table.' },
+          { num: '03', label: 'The strategy', title: 'France\u2019s national AI plan', body: 'The next day, at the Collège de France, the President announced \u201CAI for Humanity\u201D — \u20ac1.5B for research, talent and ethics, anchored in the France IA strategy (2017) and the Villani report. It set the template for Europe\u2019s approach to AI.' },
+          { num: '04', label: 'The throughline', title: 'From humanity to children', body: 'The same conviction has carried the work since: reserve member of the EU\u2019s High-Level Expert Group on AI, co-author of the Holberton-Turing Oath — and today, beneficial AI for children, from the UN\u2019s AI for Good stage to the WEF\u2019s Digital Safety coalition.' }
+        ],
+        quote: 'AI must serve humanity — France said it first, at scale.',
+        galleryKicker: 'That evening · Élysée Palace',
+        galleryCaptions: [
+          '\u201CVoir, entendre et comprendre\u201D \u2014 my summit panel with Fei-Fei Li & Marie-Paule Cani',
+          'The protocol — seated among Yann LeCun, Sam Altman, Demis Hassabis, Fei-Fei Li & Cédric Villani',
+          'President Macron leading the table — Bruno Le Maire, Cédric Villani, Sam Altman',
+          'Sam Altman (OpenAI) with President Macron',
+          '\u201CMonsieur Grégory Renard\u201D — Salon des Ambassadeurs',
+          'The Présidence de la République menu',
+          'Sam Altman arriving at the Élysée',
+          'Under the chandeliers of the Salon des Ambassadeurs',
+          'The Élysée courtyard, end of the evening'
+        ],
+        proofKicker: 'Go deeper', proofTag: 'The summit · Collège de France', proofTitle: 'Watch the AI for Humanity announcement', proofOpen: 'Watch ↗',
+        links: [
+          { tag: 'The report', label: 'Donner un sens à l\u2019IA — the Villani report (2018)', host: 'vie-publique.fr ↗', url: 'https://www.vie-publique.fr/rapport/37225-donner-un-sens-lintelligence-artificielle-pour-une-strategie-nation', target: '_blank' },
+          { tag: 'The journey · 2026', label: 'AI for Good Global Summit — UN/ITU, Geneva', host: 'the recap →', url: 'AI-for-Good-2026', target: '_self' },
+          { tag: 'The journey · 2026', label: 'Global Coalition for Digital Safety — WEF', host: 'the recap →', url: 'WEF-Digital-Safety-2026', target: '_self' }
+        ],
+        footerBlurb: 'Hands-on AI architect & Cognitive Orchestration since 1996. Co-founder of Everyone.AI — anticipating the opportunities and risks of AI for children.',
+        footTalk: 'This journey', footSummit: 'AI for Humanity — the summit ↗', footAifg: 'AI for Good 2026 — the recap', footWef: 'WEF Digital Safety 2026 — the recap', footNav: 'Navigate', footHome: 'Home', footContact: 'Contact'
+      },
+      fr: {
+        navStory: 'Mon Parcours', navMethod: 'Méthode', navEthics: 'Éthique', navTalks: 'Conférences', navPress: 'Presse', navPub: 'Publications',
+        eyebrow: 'Palais de l\u2019Élysée · Sommet AI for Humanity · 28 mars 2018',
+        pill: 'Élysée · Paris',
+        h1a: 'Le soir où la France a choisi ', h1em: 'l\u2019IA pour l\u2019humanité',
+        subtitle: 'Dîner avec le Président Macron et les grands noms mondiaux de l\u2019IA — à la veille de la stratégie nationale.',
+        heroSub: 'Invité du **Président Emmanuel Macron** au Palais de l\u2019Élysée, en tant que l\u2019un des **trois co-initiateurs d\u2019AI4Humanity** — à une table de quinze avec Yann LeCun, Sam Altman, Demis Hassabis, Fei-Fei Li, Stuart Russell, Kate Crawford et Cédric Villani, la veille de l\u2019annonce de la stratégie au Collège de France.',
+        btnWatch: 'Voir le sommet ↗', btnPhotos: 'Voir les photos', btnStory: 'Mon parcours →',
+        linkReport: 'Le rapport Villani ↗', linkCdf: 'Collège de France ↗',
+        photoStrip: 'SALON DES AMBASSADEURS · ÉLYSÉE · 28 MARS 2018',
+        taglineA: 'D\u2019un café à Stanford à une table de quinze à l\u2019Élysée — ', taglineB: 'une ambition nationale', taglineC: ' mise en mouvement.',
+        originKicker: 'Là où tout a commencé',
+        originTitle: 'D\u2019un café à Stanford à la table du Président.',
+        originBody: 'En octobre 2016, autour d\u2019un café à **Stanford** avec **François Levin** et **Yann Bonnet**, une conversation sincère met une idée en mouvement : la France doit se donner une ambition nationale pour l\u2019IA. Dix-huit mois plus tard — via la **stratégie France IA** (2017) et le **rapport Villani** (2018) — cette idée a un nom, **AI4Humanity**, et une place à la table du Président : un dîner de quinze à l\u2019Élysée, la veille de l\u2019annonce de la stratégie au monde.',
+        originCaption: 'Stanford, 24 oct. 2016 — avec François Levin & Yann Bonnet. Le café qui a semé AI4Humanity.',
+        storyKicker: 'La soirée, en quatre temps',
+        storyH2a: 'Une table, quinze invités.', storyH2b: 'L\u2019avenir de l\u2019IA en France.',
+        story: [
+          { num: '01', label: 'Le dîner', title: 'Reçus par le Président', body: 'Le 28 mars 2018, le Président Emmanuel Macron réunit les grands noms mondiaux de l\u2019IA au Salon des Ambassadeurs — la veille du sommet AI for Humanity. Le protocole me place parmi Yann LeCun, Sam Altman, Demis Hassabis, Fei-Fei Li, Stuart Russell, Kate Crawford, Latanya Sweeney et Cédric Villani.' },
+          { num: '02', label: 'Pourquoi j\u2019y étais', title: 'L\u2019un des trois co-initiateurs', body: 'AI4Humanity est né de la conversation lancée à Stanford en 2016. En tant que l\u2019un de ses trois co-initiateurs — et co-fondateur de Xbrain, qui construisait de l\u2019IA conversationnelle dans la Silicon Valley depuis 2012 — j\u2019apportais à la table le regard du praticien.' },
+          { num: '03', label: 'La stratégie', title: 'Le plan IA national de la France', body: 'Le lendemain, au Collège de France, le Président annonce « AI for Humanity » — 1,5 Md\u20ac pour la recherche, les talents et l\u2019éthique, ancré dans la stratégie France IA (2017) et le rapport Villani. Il pose le modèle de l\u2019approche européenne de l\u2019IA.' },
+          { num: '04', label: 'Le fil rouge', title: 'De l\u2019humanité aux enfants', body: 'La même conviction porte le travail depuis : membre réserviste du groupe d\u2019experts de haut niveau de l\u2019UE sur l\u2019IA, co-auteur du Serment Holberton-Turing — et aujourd\u2019hui, une IA bénéfique pour les enfants, de la scène AI for Good de l\u2019ONU à la coalition Digital Safety du WEF.' }
+        ],
+        quote: 'L\u2019IA doit servir l\u2019humanité — la France l\u2019a dit la première, à grande échelle.',
+        galleryKicker: 'Ce soir-là · Palais de l\u2019Élysée',
+        galleryCaptions: [
+          '\u00AB Voir, entendre et comprendre \u00BB \u2014 mon panel du sommet avec Fei-Fei Li & Marie-Paule Cani',
+          'Le protocole — placé parmi Yann LeCun, Sam Altman, Demis Hassabis, Fei-Fei Li & Cédric Villani',
+          'Le Président Macron anime la table — Bruno Le Maire, Cédric Villani, Sam Altman',
+          'Sam Altman (OpenAI) avec le Président Macron',
+          '« Monsieur Grégory Renard » — Salon des Ambassadeurs',
+          'Le menu de la Présidence de la République',
+          'Sam Altman arrivant à l\u2019Élysée',
+          'Sous les lustres du Salon des Ambassadeurs',
+          'La cour de l\u2019Élysée, fin de soirée'
+        ],
+        proofKicker: 'Aller plus loin', proofTag: 'Le sommet · Collège de France', proofTitle: 'Voir l\u2019annonce d\u2019AI for Humanity', proofOpen: 'Voir ↗',
+        links: [
+          { tag: 'Le rapport', label: 'Donner un sens à l\u2019IA — le rapport Villani (2018)', host: 'vie-publique.fr ↗', url: 'https://www.vie-publique.fr/rapport/37225-donner-un-sens-lintelligence-artificielle-pour-une-strategie-nation', target: '_blank' },
+          { tag: 'Le fil rouge · 2026', label: 'AI for Good Global Summit — ONU/ITU, Genève', host: 'le récap →', url: 'AI-for-Good-2026', target: '_self' },
+          { tag: 'Le fil rouge · 2026', label: 'Global Coalition for Digital Safety — WEF', host: 'le récap →', url: 'WEF-Digital-Safety-2026', target: '_self' }
+        ],
+        footerBlurb: "Architecte IA de terrain & Orchestration Cognitive depuis 1996. Co-fondateur d'Everyone.AI — anticiper les opportunités et les risques de l'IA pour les enfants.",
+        footTalk: 'Le fil rouge', footSummit: 'AI for Humanity — le sommet ↗', footAifg: 'AI for Good 2026 — le récap', footWef: 'WEF Digital Safety 2026 — le récap', footNav: 'Naviguer', footHome: 'Accueil', footContact: 'Contact'
+      }
+    };
+    const t = C[lang];
+
+    const galleryImgs = [
+      { src: 'assets/ai4humanity_elysee/panel_feifei_li_cani.jpg', posY: '50%', alt: 'AI for Humanity panel — Voir, entendre et comprendre — Fei-Fei Li, Grégory Renard and Marie-Paule Cani' },
+      { src: 'assets/ai4humanity_elysee/seating_plan.jpg', posY: '32%', alt: 'Official seating plan of the Élysée dinner for the AI summit, 28 March 2018' },
+      { src: 'assets/ai4humanity_elysee/dinner_table_wide.jpg', posY: '38%', alt: 'President Macron speaking at the dinner table with Bruno Le Maire, Cédric Villani and Sam Altman' },
+      { src: 'assets/ai4humanity_elysee/sam_altman_macron.jpg', posY: '14%', alt: 'Sam Altman and President Emmanuel Macron at the Élysée' },
+      { src: 'assets/ai4humanity_elysee/place_card_table.jpg', posY: '55%', alt: 'Place card Monsieur Grégory Renard on the Élysée dinner table' },
+      { src: 'assets/ai4humanity_elysee/menu_presidence.jpg', posY: '45%', alt: 'Présidence de la République dinner menu with gold crest' },
+      { src: 'assets/ai4humanity_elysee/elysee_arrival.jpg', posY: '45%', alt: 'Sam Altman arriving at the Élysée Palace' },
+      { src: 'assets/ai4humanity_elysee/chandelier.jpg', posY: '30%', alt: 'Chandelier of the Élysée Palace' },
+      { src: 'assets/ai4humanity_elysee/elysee_courtyard_night.jpg', posY: '50%', alt: 'The Élysée Palace courtyard at night' }
+    ];
+    const gallery = galleryImgs.map((g, i) => ({ src: g.src, alt: g.alt, posY: g.posY, caption: t.galleryCaptions[i], open: () => this.setState({ lightbox: i }) }));
+
+    const socials = [
+      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/gregoryrenard/' },
+      { name: 'Everyone.AI', url: 'https://everyone.ai/' },
+      { name: 'YouTube', url: 'https://www.youtube.com/@GregoryRenard' },
+      { name: 'X', url: 'https://twitter.com/Redo' }
+    ];
+
+    const lb = this.state.lightbox;
+    const lbImg = lb >= 0 ? galleryImgs[lb] : null;
+
+    return {
+      t,
+      lang,
+      langLabel: lang === 'en' ? 'FR' : 'EN',
+      toggleLang: () => this.setLang(lang === 'en' ? 'fr' : 'en'),
+      heroSub: this.parseBold(t.heroSub),
+      originBody: this.parseBold(t.originBody),
+      story: t.story,
+      links: t.links,
+      gallery,
+      socials,
+      lightboxOpen: lb >= 0,
+      lightboxSrc: lbImg ? lbImg.src : '',
+      lightboxAlt: lbImg ? lbImg.alt : '',
+      lightboxCaption: lb >= 0 ? t.galleryCaptions[lb] : '',
+      closeLightbox: () => this.setState({ lightbox: -1 }),
+      lightboxNext: (e) => { if (e && e.stopPropagation) e.stopPropagation(); this.setState(s => ({ lightbox: (s.lightbox + 1) % this._galleryLen })); },
+      lightboxPrev: (e) => { if (e && e.stopPropagation) e.stopPropagation(); this.setState(s => ({ lightbox: (s.lightbox - 1 + this._galleryLen) % this._galleryLen })); }
+    };
+  }
+}
+</script>
+</body>
+</html>

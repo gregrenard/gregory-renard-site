@@ -22,6 +22,7 @@ PAGES = [
     "Contact.dc.html", "Ethics.dc.html", "Keynote-Speaker.dc.html",
     "Press.dc.html", "Publications.dc.html", "Why.dc.html",
     "AI-for-Good-2026.dc.html", "WEF-Digital-Safety-2026.dc.html",
+    "AI-for-Humanity-2018.dc.html",
 ]
 
 
