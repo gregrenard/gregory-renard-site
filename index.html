@@ -267,7 +267,7 @@
         <p style="margin-top:24px;font-size:clamp(16px,1.4vw,19px);line-height:1.6;color:var(--text-soft);max-width:560px">{{ t.heroSub }}</p>
         <div style="display:flex;gap:14px;margin-top:24px;align-items:stretch">
           <span style="width:3px;background:var(--accent);border-radius:2px;flex:none"></span>
-          <div>
+          <div style="min-width:0">
             <p style="font-family:var(--font-display);font-size:clamp(16px,1.4vw,20px);line-height:1.35;letter-spacing:-0.015em;color:var(--text);text-wrap:pretty">{{ t.heroProof }}</p>
             <div class="grx-creds" style="margin-top:11px;font-family:'JetBrains Mono',monospace;font-size:clamp(9px,0.76vw,9.5px);line-height:1.8;letter-spacing:0;color:var(--text-mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ t.heroCreds }}</div>
           </div>
@@ -531,9 +531,9 @@ not the other way around. </span></span><br data-dc-tpl="63"><span data-dc-tpl="
         <p data-dc-tpl="65" style="margin-top: 24px; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: var(--text-soft); max-width: 560px;"><span class="sc-interp">Hands-on AI architect since 1996. With a proven method — Cognitive Orchestration™ — I move leaders and their teams from AI anxiety to AI in production, at scale. Let’s build something that lasts.</span></p>
         <div data-dc-tpl="66" style="display: flex; gap: 14px; margin-top: 24px; align-items: stretch;">
           <span data-dc-tpl="67" style="width: 3px; background: var(--accent); border-radius: 2px; flex: 0 0 auto;"></span>
-          <div data-dc-tpl="68">
+          <div data-dc-tpl="68" style="min-width: 0px;">
             <p data-dc-tpl="69" style="font-family: var(--font-display); font-size: clamp(16px, 1.4vw, 20px); line-height: 1.35; letter-spacing: -0.015em; color: var(--text); text-wrap: pretty;"><span class="sc-interp">Angie — France’s first large-scale conversational AI, 2012 — long before conversational AI became mainstream.</span></p>
-            <div data-dc-tpl="70" class="grx-creds" style="margin-top: 11px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: clamp(9px, 0.76vw, 9.5px); line-height: 1.8; letter-spacing: 0px; color: var(--text-mute); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><span class="sc-interp">NASA Applied AI Award · United Nations — AI for Good · Stanford · MIT · Order of Merit of Wallonia</span></div>
+            <div data-dc-tpl="70" class="grx-creds" style="margin-top: 11px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: clamp(9px, 0.76vw, 9.5px); line-height: 1.8; letter-spacing: 0px; color: var(--text-mute); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><span class="sc-interp">NASA AI Award · United Nations · World Economic Forum · Stanford · MIT · Order of Merit of Wallonia</span></div>
           </div>
         </div>
         <div data-dc-tpl="71" style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px;">
@@ -921,7 +921,7 @@ class Component extends DCLogic {
         nav_vision: 'Vision', nav_transfo: 'AI Transformation', nav_advisory: 'Advisory & Execution', nav_lab: 'AI Lab', nav_why: 'My Story', nav_ethics: 'Ethics', nav_speaking: 'Talks', nav_writing: 'Publications', nav_method: 'Method', nav_cta: 'Freedom.AI', workKicker: 'Work with me · via Freedom.AI', workTitle: 'Ready to put AI to work?', workBody: 'Start a collaboration through Freedom.AI — my Applied AI lab & advisory, where my team and I design, prototype and operationalize frontier Generative AI into production-grade systems. We work end-to-end across cloud, on-premise, edge and fully local: advanced LLM orchestration, conversational platforms, tool-using AI, knowledge graphs, grounded reasoning and operational AI workflows. We validate what truly works under real constraints — then turn it into repeatable methods and playbooks.', workCta: 'Start a collaboration via Freedom.AI',
         eyebrow: 'AI — on humanity’s side',
         heroProof: 'Angie — France’s first large-scale conversational AI, 2012 — long before conversational AI became mainstream.',
-        heroCreds: 'NASA Applied AI Award · United Nations — AI for Good · Stanford · MIT · Order of Merit of Wallonia',
+        heroCreds: 'NASA AI Award · United Nations · World Economic Forum · Stanford · MIT · Order of Merit of Wallonia',
         heroPre: 'AI should ', heroEm: 'serve people', heroPost: ' —\nnot the other way around. ', heroLast: 'I’ve spent 30 years proving it.',
         heroSub: 'Hands-on AI architect since 1996. With a proven method — Cognitive Orchestration™ — I move leaders and their teams from AI anxiety to AI in production, at scale. Let’s build something that lasts.',
         whyKicker: 'My why', whySign: '— Gregory',
@@ -949,7 +949,7 @@ class Component extends DCLogic {
         nav_vision: 'Vision', nav_transfo: 'Transformation IA', nav_advisory: 'Conseil & Exécution', nav_lab: 'AI Lab', nav_why: 'Mon Parcours', nav_ethics: 'Éthique', nav_speaking: 'Conférences', nav_writing: 'Publications', nav_method: 'Méthode', nav_cta: 'Freedom.AI', workKicker: 'Travailler avec moi · via Freedom.AI', workTitle: "Prêt à mettre l'IA au travail ?", workBody: "Démarrons une collaboration via Freedom.AI — mon lab & cabinet de conseil en IA appliquée, où mon équipe et moi concevons, prototypons et industrialisons l'IA générative de pointe en systèmes prêts pour la production. Nous travaillons de bout en bout : cloud, on-premise, edge et entièrement local — orchestration LLM avancée, plateformes conversationnelles, IA à outils, graphes de connaissances, raisonnement ancré et workflows IA opérationnels. Nous validons ce qui marche réellement sous contraintes réelles, puis le transformons en méthodes et playbooks réutilisables.", workCta: 'Démarrer une collaboration via Freedom.AI',
         eyebrow: "L'IA, du côté de l'humain",
         heroProof: "Angie — la première IA conversationnelle à grande échelle de France, 2012 — bien avant que l’IA conversationnelle ne devienne mainstream.",
-        heroCreds: 'NASA Applied AI Award · Nations Unies — AI for Good · Stanford · MIT · Ordre du Mérite wallon',
+        heroCreds: 'NASA AI Award · Nations Unies · World Economic Forum · Stanford · MIT · Ordre du Mérite wallon',
         heroPre: "L'IA ", heroEm: "au service de l'humain", heroPost: '', heroLast: " — jamais l'inverse.\nTrente ans que je le démontre.",
         heroSub: "Architecte IA de terrain depuis 1996. Avec une méthode éprouvée — Cognitive Orchestration™ — je fais passer dirigeants et équipes de l'anxiété de l'IA à l'IA en production, à grande échelle. Construisons quelque chose qui dure.",
         whyKicker: 'Mon pourquoi', whySign: '— Gregory',

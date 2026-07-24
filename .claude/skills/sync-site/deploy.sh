@@ -18,7 +18,7 @@ REPO="$(cd "$SKILL_DIR/../../.." && pwd)"
 cd "$REPO"
 
 HOME_SRC="Gregory Renard - Home v2.dc.html"
-SUBPAGES="AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Method Press Publications Why AI-for-Good-2026"
+SUBPAGES="AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Method Press Publications Why AI-for-Good-2026 WEF-Digital-Safety-2026"
 
 [ -f "$HOME_SRC" ] || { echo "ERROR: '$HOME_SRC' not found — run extract-pulled.py first."; exit 1; }
 
@@ -43,6 +43,9 @@ python3 "$SKILL_DIR/seo-clean-urls.py"
 
 echo "==> 4b/6 mobile hero-wrap fix (let hero titles wrap < 900px instead of shrinking)"
 python3 "$SKILL_DIR/hero-wrap-fix.py"
+
+echo "==> 4c/6 WEF gallery: .png refs -> .jpg (repo stores optimized JPEGs; Design references .png)"
+sed -i '' 's|\(assets/wef_digital_safety_sf/[A-Za-z0-9_-]*\)\.png|\1.jpg|g' *.dc.html index.html
 
 echo "==> 5/6  rename *.dc.html -> *.html (+ drop redundant home source)"
 for f in $SUBPAGES; do [ -f "$f.dc.html" ] && mv "$f.dc.html" "$f.html"; done

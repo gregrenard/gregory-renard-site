@@ -7,11 +7,11 @@ SKILL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO="$(cd "$SKILL_DIR/../../.." && pwd)"
 cd "$REPO"
 
-SUBPAGES="AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Method Press Publications Why AI-for-Good-2026"
+SUBPAGES="AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Method Press Publications Why AI-for-Good-2026 WEF-Digital-Safety-2026"
 # Full content pages carry the static SEO head; these 3 are intentional redirect
 # stubs (AI-Lab/Advisory-Execution -> freedom.ai, AI-Transformation -> /Method)
 # with only <title> + a meta refresh, so they're excluded from the og:title check.
-CONTENT="Contact Ethics Keynote-Speaker Method Press Publications Why AI-for-Good-2026"
+CONTENT="Contact Ethics Keynote-Speaker Method Press Publications Why AI-for-Good-2026 WEF-Digital-Safety-2026"
 fail=0
 
 echo "--- (a) extension gone + no accidental .// ---"
@@ -43,7 +43,7 @@ for n in $SUBPAGES; do
 done
 
 echo "--- (e) every local asset reference resolves ---"
-for t in $(grep -rhoE "assets/[A-Za-z0-9%@_.-]+\.(png|jpg|jpeg|webp|gif|svg|mp4|pdf)" *.html 2>/dev/null | sort -u); do
+for t in $(grep -rhoE "assets/[A-Za-z0-9%@_./-]+\.(png|jpg|jpeg|webp|gif|svg|mp4|pdf)" *.html 2>/dev/null | sort -u); do
   [ -f "$t" ] && echo "  ok: $t" || { echo "  MISS: $t"; fail=1; }
 done
 
