@@ -70,6 +70,7 @@
     .grx-hero-sec{padding:46px 22px 32px !important}
     .grx-hero-a,.grx-intro,.grx-ethics{grid-template-columns:1fr !important}
     .grx-hero-img{max-width:100% !important;justify-self:stretch !important}
+    .grx-ctas{flex-wrap:wrap !important}
     .grx-clients{grid-template-columns:repeat(2,1fr) !important}
     .grx-testi{grid-template-columns:1fr !important}
     .grx-hero-c{grid-template-columns:1fr !important;min-height:0 !important}
@@ -194,6 +195,7 @@
     .grx-hero-sec{padding:46px 22px 32px !important}
     .grx-hero-a,.grx-intro,.grx-ethics{grid-template-columns:1fr !important}
     .grx-hero-img{max-width:100% !important;justify-self:stretch !important}
+    .grx-ctas{flex-wrap:wrap !important}
     .grx-clients{grid-template-columns:repeat(2,1fr) !important}
     .grx-testi{grid-template-columns:1fr !important}
     .grx-hero-c{grid-template-columns:1fr !important;min-height:0 !important}
@@ -297,11 +299,11 @@
         </div>
         <p style="margin-top:16px;font-size:clamp(15px,1.3vw,17.5px);line-height:1.55;color:var(--text-soft);max-width:560px">{{ t.heroSub }}</p>
         <p class="grx-deep" style="margin-top:9px;font-size:clamp(11px,1.05vw,14px);line-height:1.55;color:var(--text-mute);max-width:none;white-space:nowrap">{{ t.heroDeep }}</p>
-        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:22px">
-          <a href="Contact" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:var(--btn-fg);background:var(--btn-bg);padding:14px 24px;border-radius:3px;box-shadow:0 10px 30px var(--btn-shadow)" style-hover="background:var(--btn-bg-hover);transform:translateY(-1px)">{{ t.ctaPrimary }} →</a>
-          <a href="Method" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:var(--text);border:1px solid rgba(var(--line-rgb),0.22);padding:14px 24px;border-radius:3px" style-hover="border-color:var(--text);background:rgba(var(--line-rgb),0.04)">{{ t.ctaSecondary }}</a>
-          <a href="Why" style="display:inline-flex;align-items:center;gap:7px;align-self:center;font-size:15px;font-weight:600;color:var(--text-soft);border-bottom:1px solid transparent;padding-bottom:1px" style-hover="color:var(--accent);border-color:var(--accent)">{{ t.ctaStory }} →</a>
-          <a href="Method#essays" style="display:inline-flex;align-items:center;gap:7px;align-self:center;font-size:15px;font-weight:600;color:var(--text-soft);border-bottom:1px solid transparent;padding-bottom:1px" style-hover="color:var(--accent);border-color:var(--accent)">{{ t.ctaEssays }} →</a>
+        <div class="grx-ctas" style="display:flex;flex-wrap:nowrap;gap:12px;margin-top:22px;align-items:center">
+          <a href="Contact" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;white-space:nowrap;color:var(--btn-fg);background:var(--btn-bg);padding:13px 20px;border-radius:3px;box-shadow:0 10px 30px var(--btn-shadow)" style-hover="background:var(--btn-bg-hover);transform:translateY(-1px)">{{ t.ctaPrimary }} →</a>
+          <a href="Method" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;white-space:nowrap;color:var(--text);border:1px solid rgba(var(--line-rgb),0.22);padding:13px 20px;border-radius:3px" style-hover="border-color:var(--text);background:rgba(var(--line-rgb),0.04)">{{ t.ctaSecondary }}</a>
+          <a href="Why" style="display:inline-flex;align-items:center;gap:6px;align-self:center;font-size:14px;font-weight:600;white-space:nowrap;color:var(--text-soft);border-bottom:1px solid transparent;padding-bottom:1px" style-hover="color:var(--accent);border-color:var(--accent)">{{ t.ctaStory }} →</a>
+          <a href="Method#essays" style="display:inline-flex;align-items:center;gap:6px;align-self:center;font-size:14px;font-weight:600;white-space:nowrap;color:var(--text-soft);border-bottom:1px solid transparent;padding-bottom:1px" style-hover="color:var(--accent);border-color:var(--accent)">{{ t.ctaEssays }} →</a>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:14px 18px;margin-top:20px;align-items:center">
           <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-faint);letter-spacing:0.06em">{{ t.findMe }}</span>
@@ -595,11 +597,11 @@ that </span><span data-dc-tpl="61" style="color: var(--accent); font-style: ital
         </div>
         <p data-dc-tpl="67" style="margin-top: 16px; font-size: clamp(15px, 1.3vw, 17.5px); line-height: 1.55; color: var(--text-soft); max-width: 560px;"><span class="sc-interp">Hands-on AI architect since 1996. With a proven method — Cognitive Orchestration™ — I move leaders and their teams from AI anxiety to AI in production, at scale. Let’s build something that lasts.</span></p>
         <p data-dc-tpl="68" class="grx-deep" style="margin-top: 9px; font-size: clamp(11px, 1.05vw, 14px); line-height: 1.55; color: var(--text-mute); max-width: none; white-space: nowrap;"><span class="sc-interp">And I never left the code: I still architect, build and ship these systems myself — hands on the keyboard.</span></p>
-        <div data-dc-tpl="69" style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 22px;">
-          <a data-dc-tpl="70" href="Contact" class="scp1" style="display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 15px; color: var(--btn-fg); background: var(--btn-bg); padding: 14px 24px; border-radius: 3px; box-shadow: 0 10px 30px var(--btn-shadow);"><span class="sc-interp">Let's talk</span> →</a>
-          <a data-dc-tpl="71" href="Method" class="scp2" style="display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 15px; color: var(--text); border: 1px solid rgba(var(--line-rgb),0.22); padding: 14px 24px; border-radius: 3px;"><span class="sc-interp">See the method</span></a>
-          <a data-dc-tpl="72" href="Why" class="scp3" style="display: inline-flex; align-items: center; gap: 7px; align-self: center; font-size: 15px; font-weight: 600; color: var(--text-soft); border-bottom: 1px solid transparent; padding-bottom: 1px;"><span class="sc-interp">Read my story</span> →</a>
-          <a data-dc-tpl="73" href="Method#essays" class="scp3" style="display: inline-flex; align-items: center; gap: 7px; align-self: center; font-size: 15px; font-weight: 600; color: var(--text-soft); border-bottom: 1px solid transparent; padding-bottom: 1px;"><span class="sc-interp">Read my essays</span> →</a>
+        <div data-dc-tpl="69" class="grx-ctas" style="display: flex; flex-wrap: nowrap; gap: 12px; margin-top: 22px; align-items: center;">
+          <a data-dc-tpl="70" href="Contact" class="scp1" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14px; white-space: nowrap; color: var(--btn-fg); background: var(--btn-bg); padding: 13px 20px; border-radius: 3px; box-shadow: 0 10px 30px var(--btn-shadow);"><span class="sc-interp">Let's talk</span> →</a>
+          <a data-dc-tpl="71" href="Method" class="scp2" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14px; white-space: nowrap; color: var(--text); border: 1px solid rgba(var(--line-rgb),0.22); padding: 13px 20px; border-radius: 3px;"><span class="sc-interp">See the method</span></a>
+          <a data-dc-tpl="72" href="Why" class="scp3" style="display: inline-flex; align-items: center; gap: 6px; align-self: center; font-size: 14px; font-weight: 600; white-space: nowrap; color: var(--text-soft); border-bottom: 1px solid transparent; padding-bottom: 1px;"><span class="sc-interp">Read my story</span> →</a>
+          <a data-dc-tpl="73" href="Method#essays" class="scp3" style="display: inline-flex; align-items: center; gap: 6px; align-self: center; font-size: 14px; font-weight: 600; white-space: nowrap; color: var(--text-soft); border-bottom: 1px solid transparent; padding-bottom: 1px;"><span class="sc-interp">Read my essays</span> →</a>
         </div>
         <div data-dc-tpl="74" style="display: flex; flex-wrap: wrap; gap: 14px 18px; margin-top: 20px; align-items: center;">
           <span data-dc-tpl="75" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: var(--text-faint); letter-spacing: 0.06em;"><span class="sc-interp">FIND ME</span></span>
