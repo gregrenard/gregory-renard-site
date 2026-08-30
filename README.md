@@ -17,7 +17,8 @@ in the sync scripts.
 
 ## Updating the site
 
-Run the `/sync-site` skill (`.claude/skills/sync-site/`). It pulls the pages from Claude
+Run the `/sync-site` skill (`.claude/skills/sync-site/`). The page list lives in one place —
+`.claude/skills/sync-site/pages.json`. The skill pulls the pages from Claude
 Design, re-applies every deploy transform, verifies the result, and pushes. See
 `.claude/skills/sync-site/SKILL.md` for the full pipeline and its ordering constraints.
 

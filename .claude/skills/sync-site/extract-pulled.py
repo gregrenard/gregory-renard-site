@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-extract-pulled.py — write the 14 Claude Design pages to disk, byte-exact.
+extract-pulled.py — write the Claude Design pages listed in pages.json to disk, byte-exact.
 
 Reads the current session transcript (JSONL) and reconstructs each page from the
 DesignSync get_file results — handling BOTH inline results and large results that
@@ -15,15 +15,10 @@ If no transcript is given, auto-discovers the most recently modified *.jsonl und
 """
 import os, sys, json, glob, re
 
+from manifest import design_pages  # single source of truth: pages.json
+
 REPO = os.getcwd()
-PAGES = [
-    "Gregory Renard - Home v2.dc.html", "Method.dc.html",
-    "AI-Transformation.dc.html", "AI-Lab.dc.html", "Advisory-Execution.dc.html",
-    "Contact.dc.html", "Ethics.dc.html", "Keynote-Speaker.dc.html",
-    "Press.dc.html", "Publications.dc.html", "Why.dc.html",
-    "AI-for-Good-2026.dc.html", "WEF-Digital-Safety-2026.dc.html",
-    "AI-for-Humanity-2018.dc.html",
-]
+PAGES = design_pages()
 
 
 def find_jsonl():

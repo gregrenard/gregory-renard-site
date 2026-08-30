@@ -1,0 +1,38 @@
+{
+  "_comment": [
+    "Single source of truth for the site's page list. Read by extract-pulled.py,",
+    "deploy.sh, verify.sh and prerender.py via manifest.py — do NOT re-hardcode a",
+    "page list in any of them.",
+    "",
+    "Adding a page: add ONE entry here, then add its URL to sitemap.xml and a line",
+    "to llms.txt. verify.sh gate (i) fails until those two match this file.",
+    "",
+    "role: home    -> the Design home; deployed as index.html (generated artifact)",
+    "     content  -> a real page: gets static SEO head, pre-render, sitemap, llms.txt",
+    "     stub     -> redirect-only page: no pre-render, no sitemap, no llms.txt entry"
+  ],
+  "site": "https://gregory-renard.com",
+  "pages": [
+    { "design": "Gregory Renard - Home v2.dc.html", "slug": "index",                 "role": "home"    },
+    { "design": "Method.dc.html",                   "slug": "Method",                "role": "content" },
+    { "design": "Why.dc.html",                      "slug": "Why",                   "role": "content" },
+    { "design": "Keynote-Speaker.dc.html",          "slug": "Keynote-Speaker",       "role": "content" },
+    { "design": "AI-for-Good-2026.dc.html",         "slug": "AI-for-Good-2026",      "role": "content" },
+    { "design": "WEF-Digital-Safety-2026.dc.html",  "slug": "WEF-Digital-Safety-2026","role": "content" },
+    { "design": "AI-for-Humanity-2018.dc.html",     "slug": "AI-for-Humanity-2018",  "role": "content" },
+    { "design": "Ethics.dc.html",                   "slug": "Ethics",                "role": "content" },
+    { "design": "Publications.dc.html",             "slug": "Publications",          "role": "content" },
+    { "design": "Press.dc.html",                    "slug": "Press",                 "role": "content" },
+    { "design": "Contact.dc.html",                  "slug": "Contact",               "role": "content" },
+
+    { "design": "AI-Transformation.dc.html",  "slug": "AI-Transformation",  "role": "stub",
+      "redirect": "/Method",              "indexed": true,
+      "note": "superseded by Method; kept indexed with canonical -> /Method" },
+    { "design": "AI-Lab.dc.html",             "slug": "AI-Lab",             "role": "stub",
+      "redirect": "https://www.freedom.ai/#offerings", "indexed": false,
+      "note": "moved to Freedom.AI" },
+    { "design": "Advisory-Execution.dc.html", "slug": "Advisory-Execution", "role": "stub",
+      "redirect": "https://www.freedom.ai/#offerings", "indexed": false,
+      "note": "moved to Freedom.AI" }
+  ]
+}

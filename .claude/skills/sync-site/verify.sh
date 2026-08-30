@@ -7,11 +7,13 @@ SKILL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO="$(cd "$SKILL_DIR/../../.." && pwd)"
 cd "$REPO"
 
-SUBPAGES="AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Method Press Publications Why AI-for-Good-2026 WEF-Digital-Safety-2026 AI-for-Humanity-2018"
-# Full content pages carry the static SEO head; these 3 are intentional redirect
-# stubs (AI-Lab/Advisory-Execution -> freedom.ai, AI-Transformation -> /Method)
-# with only <title> + a meta refresh, so they're excluded from the og:title check.
-CONTENT="Contact Ethics Keynote-Speaker Method Press Publications Why AI-for-Good-2026 WEF-Digital-Safety-2026 AI-for-Humanity-2018"
+# Page lists come from pages.json via manifest.py — never re-hardcode them here.
+# CONTENT = the real pages, which carry the static SEO head. STUBS are intentional
+# redirect-only pages (AI-Lab/Advisory-Execution -> freedom.ai, AI-Transformation ->
+# /Method) with only <title> + a meta refresh, so they skip the og:title check.
+SUBPAGES="$(python3 "$SKILL_DIR/manifest.py" subpages | tr '\n' ' ')"
+CONTENT="$(python3 "$SKILL_DIR/manifest.py" content  | tr '\n' ' ')"
+STUBS="$(python3   "$SKILL_DIR/manifest.py" stubs    | tr '\n' ' ')"
 fail=0
 
 echo "--- (a) extension gone + no accidental .// ---"
@@ -30,7 +32,7 @@ for f in index.html $(for n in $CONTENT; do echo "$n.html"; done); do
 done
 [ $cfail -eq 0 ] && echo "  ok: all content pages have <title> + og:title in <head>"
 echo "--- (c2) redirect stubs carry a refresh + canonical ---"
-for n in AI-Lab AI-Transformation Advisory-Execution; do
+for n in $STUBS; do
   [ -f "$n.html" ] || continue
   if grep -q 'http-equiv="refresh"' "$n.html" && grep -q 'rel="canonical"' "$n.html"; then echo "  ok: $n redirect stub"; else echo "  WARN: $n missing refresh/canonical"; fi
 done
@@ -79,33 +81,40 @@ print("  ok:", f)
 PY
 done
 
-echo "--- (i) llms.txt page list matches sitemap.xml (both directions) ---"
-python3 - <<'PY2' || fail=1
+echo "--- (i) pages.json == sitemap.xml == llms.txt (three-way, both directions) ---"
+python3 - "$SKILL_DIR" <<'PY2' || fail=1
 import re, sys
-SITE = "https://gregory-renard.com"
+sys.path.insert(0, sys.argv[1])
+from manifest import sitemap_urls, SITE
 
 def norm(u):
     u = u.split("#")[0].split("?")[0].rstrip("/")
     return u if u else SITE          # home: "" and "/" both normalise to SITE
 
-sm = {norm(m) for m in re.findall(r"<loc>([^<]+)</loc>", open("sitemap.xml", encoding="utf-8").read())}
+want = {norm(u) for u in sitemap_urls()}          # pages.json = the reference
+
+sm = {norm(m) for m in re.findall(r"<loc>([^<]+)</loc>",
+                                  open("sitemap.xml", encoding="utf-8").read())}
 
 txt = open("llms.txt", encoding="utf-8").read()
-# only the "## Pages" section, and only on-site links (the "Elsewhere" / "Retired URLs"
-# sections legitimately point elsewhere, so they must not trigger a diff)
+# only the "## Pages" section, and only on-site links — the "Elsewhere" and
+# "Retired URLs" sections legitimately point elsewhere and must not trigger a diff
 m = re.search(r"^## Pages\s*$(.*?)(?=^## |\Z)", txt, re.S | re.M)
 if not m:
     print("  BAD: llms.txt has no '## Pages' section"); sys.exit(1)
 ll = {norm(u) for u in re.findall(r"\]\((https://gregory-renard\.com[^)]*)\)", m.group(1))}
 
-missing = sorted(sm - ll)      # in sitemap, absent from llms.txt
-extra   = sorted(ll - sm)      # advertised to AI crawlers but not a canonical page
-for u in missing: print("  BAD: in sitemap.xml but missing from llms.txt: " + u)
-for u in extra:   print("  BAD: in llms.txt but not in sitemap.xml (dead/stub?): " + u)
-if missing or extra:
-    print("  -> a page was added/retired in Design: update llms.txt (editorial, by hand) + sitemap.xml")
+bad = 0
+for label, got in (("sitemap.xml", sm), ("llms.txt", ll)):
+    for u in sorted(want - got):
+        print("  BAD: in pages.json but missing from %s: %s" % (label, u)); bad = 1
+    for u in sorted(got - want):
+        print("  BAD: in %s but not a content page in pages.json (retired/stub?): %s" % (label, u)); bad = 1
+if bad:
+    print("  -> a page was added or retired in Design: update pages.json first, then")
+    print("     sitemap.xml and llms.txt (llms.txt prose is editorial — write it by hand)")
     sys.exit(1)
-print("  ok: llms.txt lists exactly the %d sitemap URLs" % len(sm))
+print("  ok: pages.json, sitemap.xml and llms.txt agree on the same %d URLs" % len(want))
 PY2
 
 echo

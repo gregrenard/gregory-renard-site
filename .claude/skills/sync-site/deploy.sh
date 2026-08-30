@@ -17,8 +17,10 @@ SKILL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO="$(cd "$SKILL_DIR/../../.." && pwd)"
 cd "$REPO"
 
-HOME_SRC="Gregory Renard - Home v2.dc.html"
-SUBPAGES="AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Method Press Publications Why AI-for-Good-2026 WEF-Digital-Safety-2026 AI-for-Humanity-2018"
+# Page lists come from pages.json via manifest.py — never re-hardcode them here.
+# HOME_SRC is read as a whole line: the Design home filename contains spaces.
+HOME_SRC="$(python3 "$SKILL_DIR/manifest.py" home-design)"
+SUBPAGES="$(python3 "$SKILL_DIR/manifest.py" subpages | tr '\n' ' ')"
 
 [ -f "$HOME_SRC" ] || { echo "ERROR: '$HOME_SRC' not found — run extract-pulled.py first."; exit 1; }
 

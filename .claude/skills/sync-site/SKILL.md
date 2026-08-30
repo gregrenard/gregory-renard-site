@@ -9,7 +9,7 @@ Pull the latest **text** content from the user's Claude Design project, **re-app
 
 ## Automated flow (do this — 3 scripts + the DesignSync pulls)
 Once the user confirms editing is **finished**:
-1. **Detect structure changes:** `DesignSync list_files` → confirm the 14 page filenames are unchanged. A renamed/added/removed page changes a URL (SEO + redirect impact) — handle that before continuing.
+1. **Detect structure changes:** `DesignSync list_files` → confirm the page filenames match `pages.json` (`python3 .claude/skills/sync-site/manifest.py design`). A renamed/added/removed page changes a URL (SEO + redirect impact) — update `pages.json` first, then `sitemap.xml` + `llms.txt`; verify's gate (i) fails until all three agree.
 2. **Pull pages:** `DesignSync get_file` for each of the 14 root pages (full resync) or just the edited ones. Pull first so results flush to the transcript.
 3. **Write them byte-exact:** `python3 .claude/skills/sync-site/extract-pulled.py`  (reads the transcript: inline + persisted .txt, freshest wins).
 4. **Transform + verify in one shot:** `bash .claude/skills/sync-site/deploy.sh`  (full pipeline → then `verify.sh`).
@@ -28,7 +28,7 @@ Everything below is the reference for what those scripts do.
 ## Syncable files (TEXT only)
 Root-level files that map 1:1 to the repo root and pull via DesignSync `get_file`:
 
-- The 14 pages: `AI-Lab.dc.html`, `AI-Transformation.dc.html`, `Advisory-Execution.dc.html` (these 3 are redirect stubs), `Contact.dc.html`, `Ethics.dc.html`, `Gregory Renard - Home v2.dc.html` (the home — renamed in the v3 redesign), `Keynote-Speaker.dc.html`, `Method.dc.html`, `Press.dc.html`, `Publications.dc.html`, `Why.dc.html`, `AI-for-Good-2026.dc.html`, `WEF-Digital-Safety-2026.dc.html`, `AI-for-Humanity-2018.dc.html`
+- **The pages — listed in `pages.json`, the single source of truth.** Query it rather than re-typing a list: `manifest.py design` (Design filenames to pull), `home-design`, `subpages`, `content`, `stubs`, `prerender`, `sitemap-urls`. 14 pages today: the home (`Gregory Renard - Home v2.dc.html`), 10 content pages, and 3 redirect stubs (`AI-Lab`, `AI-Transformation`, `Advisory-Execution`).
 - `support.js`, `sitemap.xml`, `robots.txt`, `llms.txt`
 - NOTE: do NOT pull Design's `index.html` (it's a redirect stub). In the repo, `index.html` is a **generated deploy artifact** — see "Deploy-only transforms" below.
 
@@ -48,6 +48,30 @@ Root-level files that map 1:1 to the repo root and pull via DesignSync `get_file
    attribution trailer, per the user's global rule), then **ask for the go before pushing**
    (`git push` is outward-facing: draft-first applies). On go: `git push origin main`.
 9. Report files updated + confirm push. Remind the user GitHub Pages redeploys in ~1 min, and to **open `/` in a browser to confirm rendering** (curl proves bytes served, not that the dc-runtime rendered — check console for `[dc-runtime] … failed`). Restate any asset still needing manual upload.
+
+## The page manifest (`pages.json`)
+
+`extract-pulled.py`, `deploy.sh`, `verify.sh` and `prerender.py` all read their page
+lists from **`pages.json`** through `manifest.py`. Before this existed, the same list was
+hardcoded in four scripts plus `sitemap.xml` and `llms.txt` — six places that had to agree
+and none that checked the others. That is exactly how the v3 drift survived five weeks:
+`llms.txt` still advertised three retired stubs and omitted `/Method`.
+
+Each entry has a `design` filename, a deployed `slug`, and a `role`:
+
+| role | deployed as | static SEO head | pre-render | sitemap + llms.txt |
+|---|---|---|---|---|
+| `home` | `index.html` (generated) | yes | yes | yes (as `/`) |
+| `content` | `<slug>.html` | yes | yes | yes |
+| `stub` | `<slug>.html` | title + refresh only | no | **no** |
+
+**Adding a page in Claude Design → one entry in `pages.json`**, then its URL in
+`sitemap.xml` and a line in `llms.txt`. Gate (i) fails until the three agree. `llms.txt`
+prose stays hand-written — a generator would produce weaker copy than the editorial text.
+
+⚠️ **Never re-hardcode a page list in a script.** Bash callers must read `manifest.py`
+output line-by-line (`| tr '\n' ' '` for slug lists, plain `$(...)` for `home-design`) —
+the home's Design filename contains spaces and word-splitting would break it.
 
 ## Deploy-only transforms (what Claude Design can't do)
 Claude Design's `index.html` is a redirect and its pages link to the home as `Gregory%20Renard%20-%20Home%20v2.dc.html` (a redirect + an ugly `%20` URL). For a clean root URL, a working contact form and static SEO, we maintain the deploy-only edits below **in the repo**; they must be re-applied every time pages are pulled, because a fresh pull reverts them. `deploy.sh` is the executable reference — if this list and `deploy.sh` ever disagree, `deploy.sh` wins:
@@ -103,6 +127,8 @@ for t in $(grep -rhoE "assets/[A-Za-z0-9%@_.-]+\.(png|jpg|jpeg|webp|gif|svg|mp4|
   [ -f "$t" ] && echo "OK $t" || echo "MISS $t"
 done
 ```
+Gate **(i)** additionally diffs `pages.json` against `sitemap.xml` and `llms.txt` in both directions, so a page added or retired in Design cannot ship half-wired.
+
 A MISS in (e) = an asset the user added in Design; fetch the binary (step 5) or flag it. Template `{{ … }}` placeholders are NOT broken links (bound at runtime from the JS arrays).
 
 ## Assets (all resolved — keep present in `assets/`)
