@@ -9,12 +9,12 @@ Pull the latest **text** content from the user's Claude Design project, **re-app
 
 ## Automated flow (do this — 3 scripts + the DesignSync pulls)
 Once the user confirms editing is **finished**:
-1. **Detect structure changes:** `DesignSync list_files` → confirm the 10 page filenames are unchanged. A renamed/added/removed page changes a URL (SEO + redirect impact) — handle that before continuing.
-2. **Pull pages:** `DesignSync get_file` for each of the 10 root pages (full resync) or just the edited ones. Pull first so results flush to the transcript.
+1. **Detect structure changes:** `DesignSync list_files` → confirm the 14 page filenames are unchanged. A renamed/added/removed page changes a URL (SEO + redirect impact) — handle that before continuing.
+2. **Pull pages:** `DesignSync get_file` for each of the 14 root pages (full resync) or just the edited ones. Pull first so results flush to the transcript.
 3. **Write them byte-exact:** `python3 .claude/skills/sync-site/extract-pulled.py`  (reads the transcript: inline + persisted .txt, freshest wins).
 4. **Transform + verify in one shot:** `bash .claude/skills/sync-site/deploy.sh`  (full pipeline → then `verify.sh`).
    - If verify flags a **MISSING asset** (image changed/added in Design, ≤256 KiB): `DesignSync get_file assets/<file>` → `python3 .claude/skills/sync-site/pull-asset.py assets/<file>` → re-run `bash .claude/skills/sync-site/verify.sh`. (>256 KiB → ask the user to send the file.)
-5. **Review + ship:** `git diff -U0 -- '*.html'` to eyeball the real content delta, then `git add -A && git commit && git push origin main`. Remind the user to open `/` in a browser to confirm the dc-runtime renders.
+5. **Review + ship:** `git diff -U0 -- '*.html'` to eyeball the real content delta, then `git add -A && git commit` (English message, no Claude attribution). **Stop there and ask for the go — `git push` is outward-facing, draft-first applies.** On go: `git push origin main`, then remind the user to open `/` in a browser to confirm the dc-runtime renders.
    - ⚠️ **Push auth:** this repo MUST be pushed with the **`gregrenard`** gh account (the `gh` CLI also has `gregoryrenard-ai`, which gets a 403). If push is denied: `gh auth switch --user gregrenard` then `git -c credential.helper= -c credential.helper='!gh auth git-credential' push origin main`. See memory `github-account-for-push`.
 
 Everything below is the reference for what those scripts do.
@@ -44,25 +44,23 @@ Root-level files that map 1:1 to the repo root and pull via DesignSync `get_file
 5. **Binary assets** (images/video changed in Design): try `get_file` — if it returns `isBase64:true` and `truncated:false`, base64-decode and write to `assets/`. If `truncated` (file >256 KiB), it CANNOT be pulled — keep the previous working ref for that spot (don't commit a broken ref) and ask the user to upload the file manually.
 6. **Verify** internal links AND asset existence — see "Verify".
 7. If nothing changed at all, stop and tell the user "no changes to push".
-8. Otherwise `git add -A`, commit (message listing what changed), end the message with:
-   ```
-   Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
-   ```
-   then `git push origin main`.
+8. Otherwise `git add -A`, commit (message in English, listing what changed — NO Claude
+   attribution trailer, per the user's global rule), then **ask for the go before pushing**
+   (`git push` is outward-facing: draft-first applies). On go: `git push origin main`.
 9. Report files updated + confirm push. Remind the user GitHub Pages redeploys in ~1 min, and to **open `/` in a browser to confirm rendering** (curl proves bytes served, not that the dc-runtime rendered — check console for `[dc-runtime] … failed`). Restate any asset still needing manual upload.
 
 ## Deploy-only transforms (what Claude Design can't do)
-Claude Design's `index.html` is a redirect and its pages link to the home as `Gregory%20Renard%20-%20Home.dc.html` (a redirect + an ugly `%20` URL). For a clean root URL we maintain two deploy-only edits **in the repo** that must be re-applied every time pages are pulled, because a fresh pull reverts them:
+Claude Design's `index.html` is a redirect and its pages link to the home as `Gregory%20Renard%20-%20Home%20v2.dc.html` (a redirect + an ugly `%20` URL). For a clean root URL, a working contact form and static SEO, we maintain the deploy-only edits below **in the repo**; they must be re-applied every time pages are pulled, because a fresh pull reverts them. `deploy.sh` is the executable reference — if this list and `deploy.sh` ever disagree, `deploy.sh` wins:
 
 1. **Clean root:** make `index.html` a direct copy of the home page (no redirect):
    ```bash
-   cp "Gregory Renard - Home.dc.html" index.html
+   cp "Gregory Renard - Home v2.dc.html" index.html
    ```
    (Verified safe: `support.js`'s `boot()` adopts the inline `<x-dc>` block, and the pages have no sibling-component references — only `<a href>` links — so rendering doesn't depend on the filename.)
 2. **Rewrite the home link to `./`** across every page (both the `href="…"` form and the `url: '…'` form inside the `<script data-dc-script>` JS arrays). Quote-anchored so it can't produce `.//`:
    ```bash
-   sed -i '' 's|"Gregory%20Renard%20-%20Home\.dc\.html"|"./"|g' *.dc.html index.html
-   sed -i '' "s|'Gregory%20Renard%20-%20Home\.dc\.html'|'./'|g" *.dc.html index.html
+   sed -i '' 's|"Gregory%20Renard%20-%20Home%20v2\.dc\.html"|"./"|g' *.dc.html index.html
+   sed -i '' "s|'Gregory%20Renard%20-%20Home%20v2\.dc\.html'|'./'|g" *.dc.html index.html
    ```
 3. **Wire the Contact form to the Google Sheet endpoint.** Claude Design's "Let's Build" form does nothing on submit (just shows "Message received") — re-apply the idempotent patch that POSTs it to the Apps Script Web App:
    ```bash
@@ -77,12 +75,12 @@ Claude Design's `index.html` is a redirect and its pages link to the home as `Gr
    Strips the `.dc.html` extension from all links/canonical/og:url, copies each page's `<helmet>` into the real `<head>` (so non-JS crawlers + social/AI scrapers get title/description/canonical/og/twitter/JSON-LD), and adds `lang="en"`. Idempotent.
 5. **Rename to extensionless `.html`** + drop the redundant home source:
    ```bash
-   for f in AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Press Publications Why; do mv "$f.dc.html" "$f.html"; done
-   rm -f "Gregory Renard - Home.dc.html"   # index.html is the deployed home
+   for f in AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Method Press Publications Why AI-for-Good-2026 WEF-Digital-Safety-2026 AI-for-Humanity-2018; do mv "$f.dc.html" "$f.html"; done
+   rm -f "Gregory Renard - Home v2.dc.html"   # index.html is the deployed home
    ```
    GitHub Pages serves `X.html` at `/X` (verified live — `/AI-Transformation` → 200). `index.html` stays the root. Bump `sitemap.xml`'s `<lastmod>` to today (it already lists the extensionless URLs).
 
-**Pipeline order (critical):** cp Home→index → home-link `./` → `patch-contact-form.py` → `seo-clean-urls.py` → rename `*.dc.html`→`*.html` (+ rm Home) → bump sitemap. The contact-form patch must run while the file is still `Contact.dc.html`; the SEO/clean-URL transform must run before the rename.
+**Pipeline order (critical):** cp Home→index → home-link `./` → `patch-contact-form.py` → `enrich-seo.py` → `seo-clean-urls.py` → `hero-wrap-fix.py` → gallery `.png`→`.jpg` → rename `*.dc.html`→`*.html` (+ rm Home) → bump sitemap → `prerender.py`. The contact-form patch must run while the file is still `Contact.dc.html`; `enrich-seo.py` must run BEFORE `seo-clean-urls.py` so the enriched tags land in the static `<head>`; the SEO/clean-URL transform must run before the rename; `prerender.py` runs LAST, on the final `*.html` set.
 
 ## Verify ("tout nickel")
 After the transforms, confirm no broken internal links AND no missing assets:
@@ -97,7 +95,7 @@ grep -c '<x-dc>' index.html                 # expect 1
 # (c) static SEO present: each page has <title> + og:title inside <head>
 for f in *.html; do h=$(awk 'BEGIN{p=1}/<body/{p=0}{if(p)print}' "$f"); echo "$h" | grep -q "<title>" && echo "$h" | grep -q "og:title" && echo "OK seo-head $f" || echo "MISS seo-head $f"; done
 # (d) every internal page link (extensionless) resolves to a .html file
-for n in AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Press Publications Why; do
+for n in AI-Lab AI-Transformation Advisory-Execution Contact Ethics Keynote-Speaker Method Press Publications Why AI-for-Good-2026 WEF-Digital-Safety-2026 AI-for-Humanity-2018; do
   grep -qhoE "href=\"$n\"|url: '$n'" *.html && { [ -f "$n.html" ] && echo "OK link $n" || echo "MISS $n.html"; }
 done
 # (e) every local asset reference resolves
@@ -134,5 +132,5 @@ These live only in the repo (Claude Design doesn't know about them). A sync pull
 - ⚠️ **macOS case-insensitivity trap:** never create a flat redirect stub whose name collides case-insensitively with a real page (e.g. `why.html` would overwrite `Why.html` on APFS). Only slugs with NO capitalized twin are safe as flat files (`services`, `keynotes-speaker`); all case-only old slugs (`/why`, `/contact`, …) are handled by `404.html`'s JS redirect instead.
 
 ## Notes
-- Filenames with spaces (`Gregory Renard - Home.dc.html`) are fine for git, sed globs, and DesignSync — pass them verbatim.
+- Filenames with spaces (`Gregory Renard - Home v2.dc.html`) are fine for git, sed globs, and DesignSync — pass them verbatim.
 - Don't re-fetch files outside the user's scope; it wastes time and context.

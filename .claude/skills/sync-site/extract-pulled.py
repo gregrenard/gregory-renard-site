@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-extract-pulled.py — write the 10 Claude Design pages to disk, byte-exact.
+extract-pulled.py — write the 14 Claude Design pages to disk, byte-exact.
 
 Reads the current session transcript (JSONL) and reconstructs each page from the
 DesignSync get_file results — handling BOTH inline results and large results that

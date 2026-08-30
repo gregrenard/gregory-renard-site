@@ -79,6 +79,35 @@ print("  ok:", f)
 PY
 done
 
+echo "--- (i) llms.txt page list matches sitemap.xml (both directions) ---"
+python3 - <<'PY2' || fail=1
+import re, sys
+SITE = "https://gregory-renard.com"
+
+def norm(u):
+    u = u.split("#")[0].split("?")[0].rstrip("/")
+    return u if u else SITE          # home: "" and "/" both normalise to SITE
+
+sm = {norm(m) for m in re.findall(r"<loc>([^<]+)</loc>", open("sitemap.xml", encoding="utf-8").read())}
+
+txt = open("llms.txt", encoding="utf-8").read()
+# only the "## Pages" section, and only on-site links (the "Elsewhere" / "Retired URLs"
+# sections legitimately point elsewhere, so they must not trigger a diff)
+m = re.search(r"^## Pages\s*$(.*?)(?=^## |\Z)", txt, re.S | re.M)
+if not m:
+    print("  BAD: llms.txt has no '## Pages' section"); sys.exit(1)
+ll = {norm(u) for u in re.findall(r"\]\((https://gregory-renard\.com[^)]*)\)", m.group(1))}
+
+missing = sorted(sm - ll)      # in sitemap, absent from llms.txt
+extra   = sorted(ll - sm)      # advertised to AI crawlers but not a canonical page
+for u in missing: print("  BAD: in sitemap.xml but missing from llms.txt: " + u)
+for u in extra:   print("  BAD: in llms.txt but not in sitemap.xml (dead/stub?): " + u)
+if missing or extra:
+    print("  -> a page was added/retired in Design: update llms.txt (editorial, by hand) + sitemap.xml")
+    sys.exit(1)
+print("  ok: llms.txt lists exactly the %d sitemap URLs" % len(sm))
+PY2
+
 echo
 [ $fail -eq 0 ] && echo "VERIFY: all checks passed ✅" || echo "VERIFY: FAILURES above ❌"
 exit $fail

@@ -5,22 +5,20 @@
 ## Who he is
 
 - Field AI architect with 30+ years of experience across conversational AI, knowledge graphs, NLP, LLMs and agentic systems.
-- Creator of "Angie", an early French conversational assistant ("the French Siri").
+- Founder of xBrain (2011) and creator of "Angie", France's first large-scale conversational assistant, launched at the 2012 Microsoft TechDays.
 - Recipient of the 2022 NASA FDL AI Merit Award (Space & Earth Science) and member of the programme's AI Technical Committee since 2016.
-- Recipient of the 2025 Walloon Merit distinction (Belgium).
-- Co-initiator of the AI4Humanity public-policy effort (2018).
+- Officer of the Order of Merit of Wallonia (2025, Belgium).
+- Co-initiator of the AI4Humanity campaign behind France's Villani mission (2018); contributed to the France IA national strategy and the EU High-Level Expert Group on AI, and co-authored the Holberton-Turing Oath on AI ethics.
 - Founder of Freedom.AI, an applied AI lab building production-grade GenAI across cloud, on-premise and edge.
 
 ## Method
 
-Gregory Renard's "Applied AI" approach is a proven three-phase method that takes organizations from strategy to production at scale — no hype, no endless proofs-of-concept — turning AI ambition into measurable operational impact for large enterprises.
+Gregory Renard's Cognitive Orchestration™ approach is a proven three-phase Applied AI method that takes organizations from strategy to production at scale — no hype, no endless proofs-of-concept — turning AI ambition into measurable operational impact for large enterprises.
 
 ## Pages
 
 - [Home / Vision](https://gregory-renard.com/): AI as the execution layer of modern organizations — overview, biography and recognitions.
-- [AI Transformation](https://gregory-renard.com/AI-Transformation): From AI ambition to operational reality — the three-phase Applied AI method.
-- [Advisory & Execution](https://gregory-renard.com/Advisory-Execution): Advisory and hands-on execution for leaders and boards architecting AI-native organizations.
-- [AI Lab](https://gregory-renard.com/AI-Lab): Inside Freedom.AI — prototyping and shipping cutting-edge GenAI to production.
+- [Method](https://gregory-renard.com/Method): From AI ambition to operational reality — a proven three-phase Applied AI method that takes enterprises from idea to production at scale.
 - [Why](https://gregory-renard.com/Why): Who is Gregory Renard — career timeline, vision and values.
 - [Keynote Speaker](https://gregory-renard.com/Keynote-Speaker): AI keynotes for executive decision-makers, with topics and references.
 - [Ethics](https://gregory-renard.com/Ethics): A human-centered, responsible approach to artificial intelligence.
@@ -30,6 +28,14 @@ Gregory Renard's "Applied AI" approach is a proven three-phase method that takes
 - [AI for Good 2026](https://gregory-renard.com/AI-for-Good-2026): Recap of Gregory Renard's UN/ITU AI for Good Global Summit talk with Dr. Mathilde Cerioli — toward a safety label for the AI tools children use (like a TV age rating), with photos, the slide deck, and the AiA Safety Builder.
 - [WEF Digital Safety 2026](https://gregory-renard.com/WEF-Digital-Safety-2026): Recap of Gregory Renard's participation as invited expert at the World Economic Forum's Global Coalition for Digital Safety workshop (San Francisco, 23 July 2026) — shaping the "Best Practices for Child-Safe AI Systems" white paper.
 - [AI for Humanity 2018](https://gregory-renard.com/AI-for-Humanity-2018): Recap of the Élysée Palace dinner with President Emmanuel Macron on the eve of France's national AI strategy (28 March 2018) — Gregory Renard as one of the three co-initiators of AI4Humanity, at a table with Yann LeCun, Sam Altman, Demis Hassabis and Fei-Fei Li.
+
+## Retired URLs
+
+These paths still return HTTP 200 but are redirect stubs with no content of their own —
+do not cite them as sources:
+
+- `/AI-Transformation` → superseded by [Method](https://gregory-renard.com/Method).
+- `/AI-Lab` and `/Advisory-Execution` → moved to [Freedom.AI](https://www.freedom.ai/).
 
 ## Elsewhere
 
