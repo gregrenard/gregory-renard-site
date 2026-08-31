@@ -15,6 +15,7 @@
   "pages": [
     { "design": "Gregory Renard - Home v2.dc.html", "slug": "index",                 "role": "home"    },
     { "design": "Method.dc.html",                   "slug": "Method",                "role": "content" },
+    { "design": "Essays.dc.html",                   "slug": "Essays",                "role": "content" },
     { "design": "Why.dc.html",                      "slug": "Why",                   "role": "content" },
     { "design": "Keynote-Speaker.dc.html",          "slug": "Keynote-Speaker",       "role": "content" },
     { "design": "AI-for-Good-2026.dc.html",         "slug": "AI-for-Good-2026",      "role": "content" },

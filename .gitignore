@@ -32,3 +32,7 @@ node_modules/
 
 # Dossiers de travail locaux (non déployés : changelogs, notes, brouillons)
 .works/
+
+# Python bytecode from the sync scripts
+__pycache__/
+*.pyc

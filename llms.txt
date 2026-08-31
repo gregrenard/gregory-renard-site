@@ -19,6 +19,7 @@ Gregory Renard's Cognitive Orchestration™ approach is a proven three-phase App
 
 - [Home / Vision](https://gregory-renard.com/): AI as the execution layer of modern organizations — overview, biography and recognitions.
 - [Method](https://gregory-renard.com/Method): From AI ambition to operational reality — a proven three-phase Applied AI method that takes enterprises from idea to production at scale.
+- [Essays](https://gregory-renard.com/Essays): "The Technological Capital" — two essays on work in the age of AI (Part 1, Feb 2024: historical perspectives and the concept of technological capital; Part 2, Mar 2026: which civilization do we want to build). Available in English and French, with a 6-minute video walkthrough and an audio version.
 - [Why](https://gregory-renard.com/Why): Who is Gregory Renard — career timeline, vision and values.
 - [Keynote Speaker](https://gregory-renard.com/Keynote-Speaker): AI keynotes for executive decision-makers, with topics and references.
 - [Ethics](https://gregory-renard.com/Ethics): A human-centered, responsible approach to artificial intelligence.

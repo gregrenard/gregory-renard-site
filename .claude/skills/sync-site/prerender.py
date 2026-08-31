@@ -77,8 +77,10 @@ def extract_dc_root_inner(html):
 
 
 def strip_prior(s):
-    s = re.sub(r'<style id="dc-prerender-css">.*?</style>', "", s, flags=re.S)
-    s = re.sub(re.escape(MARK_A) + ".*?" + re.escape(MARK_B), "", s, flags=re.S)
+    """Remove a previous mirror AND the newline each injection added, so a page
+    does not accumulate two blank lines on every sync (it did until 2026-08-30)."""
+    s = re.sub(r'\n?<style id="dc-prerender-css">.*?</style>', "", s, flags=re.S)
+    s = re.sub(re.escape(MARK_A) + ".*?" + re.escape(MARK_B) + r"\n?", "", s, flags=re.S)
     return s
 
 
