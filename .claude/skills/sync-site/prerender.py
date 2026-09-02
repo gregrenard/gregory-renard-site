@@ -26,7 +26,9 @@ render via JS). Idempotent: strips any prior injection before re-injecting.
 
 Usage:  python3 .claude/skills/sync-site/prerender.py   (from repo root)
 """
-import os, re, sys, time, socket, subprocess, signal
+import os, re, sys, time, subprocess, threading
+from functools import partial
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
 REPO = os.getcwd()
 # 8 full content pages (skip the 3 redirect stubs: AI-Lab/AI-Transformation/Advisory-Execution)
@@ -38,6 +40,29 @@ CHROME = os.environ.get("CHROME") or "/Applications/Google Chrome.app/Contents/M
 SWAP_CSS = "x-dc{display:none}#dc-root:not(:empty)~#dc-prerender{display:none}"
 STYLE = '<style id="dc-prerender-css">' + SWAP_CSS + "</style>"
 MARK_A, MARK_B = "<!--dc-prerender-start-->", "<!--dc-prerender-end-->"
+MEDIA_EXT = (".mp4", ".webm", ".mov", ".m4v", ".ogv")
+
+
+class Handler(SimpleHTTPRequestHandler):
+    """Serve the repo over loopback, but refuse heavy media.
+
+    Chrome's --virtual-time-budget does not advance while a media element is
+    still loading, so <video preload="metadata"> pointing at the 18 MB
+    assets/redefining-work-ai.mp4 (Essays + Method) stalled the render past the
+    45 s timeout — Essays failed on five consecutive syncs and then began
+    failing standalone too. What we capture is the resolved DOM, and the
+    <video> markup is byte-identical whether or not its metadata loaded, so
+    404-ing the file costs nothing and makes every render deterministic.
+    """
+
+    def send_head(self):
+        if self.path.split("?")[0].lower().endswith(MEDIA_EXT):
+            self.send_error(404, "media blocked during pre-render")
+            return None
+        return super().send_head()
+
+    def log_message(self, *args):
+        pass
 
 
 def render(url):
@@ -89,10 +114,9 @@ def main():
         print("WARN: Chrome not found at %r — skipping pre-render (pages still render via JS)." % CHROME)
         return 0
 
-    s = socket.socket(); s.bind(("127.0.0.1", 0)); port = s.getsockname()[1]; s.close()
-    srv = subprocess.Popen([sys.executable, "-m", "http.server", "--bind", "127.0.0.1", str(port)],
-                           cwd=REPO, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    time.sleep(1.0)
+    httpd = ThreadingHTTPServer(("127.0.0.1", 0), partial(Handler, directory=REPO))
+    port = httpd.server_address[1]
+    threading.Thread(target=httpd.serve_forever, daemon=True).start()
 
     done, skipped = 0, []
     try:
@@ -123,11 +147,8 @@ def main():
             done += 1
             print("prerender: %-22s (+%d bytes mirror, 0 placeholders)" % (page, len(inner)))
     finally:
-        srv.terminate()
-        try:
-            srv.wait(timeout=5)
-        except Exception:
-            srv.kill()
+        httpd.shutdown()
+        httpd.server_close()
 
     print("\nprerendered %d/%d pages." % (done, len(PAGES)))
     if skipped:
