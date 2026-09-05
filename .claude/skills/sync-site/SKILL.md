@@ -7,14 +7,15 @@ description: Sync the gregory-renard.com site from Claude Design to GitHub so th
 
 Pull the latest **text** content from the user's Claude Design project, **re-apply the deploy-only transforms** Claude Design can't do (clean root URL), verify all internal links, then push to GitHub. GitHub Pages redeploys the live site automatically (~1 min).
 
-## Automated flow (do this — 3 scripts + the DesignSync pulls)
+## Automated flow (do this — 4 scripts + the DesignSync pulls)
 Once the user confirms editing is **finished**:
 1. **Detect structure changes:** `DesignSync list_files` → confirm the page filenames match `pages.json` (`python3 .claude/skills/sync-site/manifest.py design`). A renamed/added/removed page changes a URL (SEO + redirect impact) — update `pages.json` first, then `sitemap.xml` + `llms.txt`; verify's gate (i) fails until all three agree.
-2. **Pull pages:** `DesignSync get_file` for each of the 14 root pages (full resync) or just the edited ones. Pull first so results flush to the transcript.
+2. **Pull pages:** `DesignSync get_file` for each of the 15 root pages (full resync) or just the edited ones. Pull first so results flush to the transcript.
 3. **Write them byte-exact:** `python3 .claude/skills/sync-site/extract-pulled.py`  (reads the transcript: inline + persisted .txt, freshest wins).
 4. **Transform + verify in one shot:** `bash .claude/skills/sync-site/deploy.sh`  (full pipeline → then `verify.sh`).
    - If verify flags a **MISSING asset** (image changed/added in Design, ≤256 KiB): `DesignSync get_file assets/<file>` → `python3 .claude/skills/sync-site/pull-asset.py assets/<file>` → re-run `bash .claude/skills/sync-site/verify.sh`. (>256 KiB → ask the user to send the file.)
-5. **Review + ship:** `git diff -U0 -- '*.html'` to eyeball the real content delta, then `git add -A && git commit` (English message, no Claude attribution). **Stop there and ask for the go — `git push` is outward-facing, draft-first applies.** On go: `git push origin main`, then remind the user to open `/` in a browser to confirm the dc-runtime renders.
+4b. **Refresh the proof-reading copies:** `python3 .claude/skills/sync-site/extract-contents.py` → rewrites `.works/contents/{en,fr}/<slug>.txt` (one text file per URL, EN + FR, for Gregory's reviewer). Must run AFTER `deploy.sh`. `.works/` is gitignored, so it never enters the commit.
+5. **Review + ship:** `git diff -U0 -- '*.html'` to eyeball the real content delta, then `git add -A && git commit` (English message, no Claude attribution), then **`git push origin main` — do NOT stop to ask.** Gregory stated on 2026-09-01 that "mets à jour le site" covers the push: this is his own site, he is the sole author, and a static Pages deploy is trivially revertable. The authorization removes the question, not the verification — still gate the push on `verify.sh` 9/9 and a reviewed diff. (Scoped to THIS repo; Slack/mail/Jira and shared repos stay draft-first.) After pushing, remind the user to open `/` in a browser to confirm the dc-runtime renders.
    - ⚠️ **Push auth:** this repo MUST be pushed with the **`gregrenard`** gh account (the `gh` CLI also has `gregoryrenard-ai`, which gets a 403). If push is denied: `gh auth switch --user gregrenard` then `git -c credential.helper= -c credential.helper='!gh auth git-credential' push origin main`. See memory `github-account-for-push`.
 
 Everything below is the reference for what those scripts do.
@@ -28,7 +29,7 @@ Everything below is the reference for what those scripts do.
 ## Syncable files (TEXT only)
 Root-level files that map 1:1 to the repo root and pull via DesignSync `get_file`:
 
-- **The pages — listed in `pages.json`, the single source of truth.** Query it rather than re-typing a list: `manifest.py design` (Design filenames to pull), `home-design`, `subpages`, `content`, `stubs`, `prerender`, `sitemap-urls`. 14 pages today: the home (`Gregory Renard - Home v2.dc.html`), 10 content pages, and 3 redirect stubs (`AI-Lab`, `AI-Transformation`, `Advisory-Execution`).
+- **The pages — listed in `pages.json`, the single source of truth.** Query it rather than re-typing a list: `manifest.py design` (Design filenames to pull), `home-design`, `subpages`, `content`, `stubs`, `prerender`, `sitemap-urls`. 15 pages today: the home (`Gregory Renard - Home v2.dc.html`), 11 content pages, and 3 redirect stubs (`AI-Lab`, `AI-Transformation`, `Advisory-Execution`).
 - `support.js`, `sitemap.xml`, `robots.txt`, `llms.txt`
 - NOTE: do NOT pull Design's `index.html` (it's a redirect stub). In the repo, `index.html` is a **generated deploy artifact** — see "Deploy-only transforms" below.
 
@@ -43,11 +44,17 @@ Root-level files that map 1:1 to the repo root and pull via DesignSync `get_file
 4. **Reconcile:** overwrite the local pages with the pulled versions, then **re-apply the deploy-only transforms** (clean root + home-link → `./`) — see next section. `git diff` is then the source of truth for what really changed.
 5. **Binary assets** (images/video changed in Design): try `get_file` — if it returns `isBase64:true` and `truncated:false`, base64-decode and write to `assets/`. If `truncated` (file >256 KiB), it CANNOT be pulled — keep the previous working ref for that spot (don't commit a broken ref) and ask the user to upload the file manually.
 6. **Verify** internal links AND asset existence — see "Verify".
-7. If nothing changed at all, stop and tell the user "no changes to push".
-8. Otherwise `git add -A`, commit (message in English, listing what changed — NO Claude
-   attribution trailer, per the user's global rule), then **ask for the go before pushing**
-   (`git push` is outward-facing: draft-first applies). On go: `git push origin main`.
-9. Report files updated + confirm push. Remind the user GitHub Pages redeploys in ~1 min, and to **open `/` in a browser to confirm rendering** (curl proves bytes served, not that the dc-runtime rendered — check console for `[dc-runtime] … failed`). Restate any asset still needing manual upload.
+7. **Refresh the proof-reading copies:** `python3 .claude/skills/sync-site/extract-contents.py`
+   rewrites `.works/contents/{en,fr}/<slug>.txt` — one plain-text file per URL, EN + FR, for
+   Gregory's reviewer. Run it AFTER `deploy.sh` (EN is read from the pre-render mirror each
+   page carries; FR is re-rendered from a throwaway `lang:'fr'` sibling). `.works/` is
+   gitignored, so this never enters a commit — but skipping it leaves the reviewer's copies
+   describing the previous version of the site.
+8. If nothing changed at all, stop and tell the user "no changes to push".
+9. Otherwise `git add -A`, commit (message in English, listing what changed — NO Claude
+   attribution trailer, per the user's global rule), then `git push origin main`. No approval
+   step: see the automated flow, item 5.
+10. Report files updated + confirm push. Remind the user GitHub Pages redeploys in ~1 min, and to **open `/` in a browser to confirm rendering** (curl proves bytes served, not that the dc-runtime rendered — check console for `[dc-runtime] … failed`). Restate any asset still needing manual upload.
 
 ## The page manifest (`pages.json`)
 
