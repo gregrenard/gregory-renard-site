@@ -3,6 +3,22 @@
 Personal site of Gregory Renard — AI architect. Static site served by GitHub Pages at
 **https://gregory-renard.com**.
 
+> ### Reading this repo to reproduce the setup elsewhere?
+>
+> **Start with [`ADAPT-THIS-SETUP.md`](ADAPT-THIS-SETUP.md), not with the code.** It is
+> written for an AI agent whose human pointed it at this repository and asked for the same
+> Claude Design → GitHub Pages sync on their own site. It covers what transfers unchanged,
+> what is this site's content in code and must be rewritten, the ordering constraints that
+> hold the pipeline together, and the mistakes worth not repeating.
+>
+> Read it end to end before copying any file. About half of what is in
+> `.claude/skills/sync-site/` is generic machinery and half is specific to this site —
+> `patch-contact-form.py` in particular carries a live form endpoint, so copying it
+> unchanged sends someone else's contact submissions to this site's spreadsheet.
+>
+> If you are here to work on *this* site instead, skip that file and read
+> [`.claude/skills/sync-site/SKILL.md`](.claude/skills/sync-site/SKILL.md).
+
 ## How this repo relates to Claude Design
 
 **Claude Design is the source of truth**, not this repo. The pages are authored visually in
