@@ -7,12 +7,19 @@ so this must be re-applied after every /sync-site pull. Idempotent and robust:
 it replaces whatever `submit` is present (Design-original OR a prior wired
 version) and inserts the honeypot input only if missing. Run from repo root.
 
+Also prefills the form from the URL fragment (#first=&last=&email=&message=) so the
+"Ask your AI about Gregory" conversation can hand a drafted message to the visitor, who
+reviews it and presses Send themselves (nothing is submitted by the link). The fragment
+never reaches a server and is wiped from the address bar after load.
+
+Usage: python3 patch-contact-form.py [file]   (default: Contact.dc.html)
+
 Pairs with a server-side check in the Apps Script doPost:
     if (e.parameter.company_site) { return ...{ok:true}...; }   // honeypot -> ignore
 """
 import sys
 
-P = "Contact.dc.html"
+P = sys.argv[1] if len(sys.argv) > 1 else "Contact.dc.html"
 # Google Apps Script Web App (doPost appends a row; honeypot rejects bots).
 EP = "https://script.google.com/macros/s/AKfycbzBYfeq7nwrDsd9ZSwAmr_KSrgl8TDz3Hau1GD3YNcF17-AKDKpfR5tga3HJHBCXGVi/exec"
 
@@ -51,5 +58,20 @@ if 'id="grx-hp"' not in s:
         sys.exit(1)
     s = s.replace(ANCHOR, HP_INPUT + ANCHOR, 1)
 
+# 3) Prefill from the URL fragment (idempotent, marker: grx-prefill)
+STATE_OLD = "  state = { lang: 'en', firstName: '', lastName: '', email: '', message: '', sent: false, showError: false };"
+STATE_NEW = (
+    "  state = (() => { /* grx-prefill */ var p = {}; "
+    "try { p = Object.fromEntries(new URLSearchParams((location.hash || '').replace(/^#/, ''))); } catch (e) {} "
+    "var c = function (k, n) { return String(p[k] || '').slice(0, n); }; "
+    "if (location.hash) { setTimeout(function () { try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {} }, 1500); } "
+    "return { lang: 'en', firstName: c('first', 80), lastName: c('last', 80), email: c('email', 120), message: c('message', 2000), sent: false, showError: false }; })();"
+)
+if "grx-prefill" not in s:
+    if STATE_OLD not in s:
+        print("contact form: !! state line not found — re-inspect Contact.dc.html", file=sys.stderr)
+        sys.exit(1)
+    s = s.replace(STATE_OLD, STATE_NEW, 1)
+
 open(P, "w", encoding="utf-8").write(s)
-print("contact form: wired to Google Sheet + honeypot in place")
+print("contact form: wired to Google Sheet + honeypot + URL-fragment prefill in place")

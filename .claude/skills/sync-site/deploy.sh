@@ -50,6 +50,9 @@ echo "==> 4c/6 photo galleries: .png refs -> .jpg (repo stores optimized JPEGs; 
 sed -i '' 's|\(assets/wef_digital_safety_sf/[A-Za-z0-9_-]*\)\.png|\1.jpg|g' *.dc.html index.html
 sed -i '' 's|\(assets/ai4humanity_elysee/[A-Za-z0-9_-]*\)\.png|\1.jpg|g' *.dc.html index.html
 
+echo "==> 4d/6 'Ask your AI about Gregory' widget (home only for now; links to ask-gregory.md)"
+python3 "$SKILL_DIR/add-ask-widget.py" index.html
+
 echo "==> 5/6  rename *.dc.html -> *.html (+ drop redundant home source)"
 for f in $SUBPAGES; do [ -f "$f.dc.html" ] && mv "$f.dc.html" "$f.html"; done
 rm -f "$HOME_SRC"

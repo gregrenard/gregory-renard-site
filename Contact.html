@@ -449,7 +449,7 @@
   </footer></div></div></div><!--dc-prerender-end-->
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { lang: 'en', firstName: '', lastName: '', email: '', message: '', sent: false, showError: false };
+  state = (() => { /* grx-prefill */ var p = {}; try { p = Object.fromEntries(new URLSearchParams((location.hash || '').replace(/^#/, ''))); } catch (e) {} var c = function (k, n) { return String(p[k] || '').slice(0, n); }; if (location.hash) { setTimeout(function () { try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {} }, 1500); } return { lang: 'en', firstName: c('first', 80), lastName: c('last', 80), email: c('email', 120), message: c('message', 2000), sent: false, showError: false }; })();
   componentDidMount() { try { const l = localStorage.getItem('grx_lang'); if (l) this.setState({ lang: l }); try { document.documentElement.lang = l || 'en'; } catch (e) {} } catch (e) {} }
   setLang(l) { try { localStorage.setItem('grx_lang', l); } catch (e) {} this.setState({ lang: l }); }
 
