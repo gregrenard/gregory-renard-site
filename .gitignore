@@ -36,3 +36,7 @@ node_modules/
 # Python bytecode from the sync scripts
 __pycache__/
 *.pyc
+
+# Local-only: the reusable "Ask your AI" skill and its friend-facing page stay out of the repository
+.claude/skills/ask-your-ai/
+ASK-YOUR-AI.md
