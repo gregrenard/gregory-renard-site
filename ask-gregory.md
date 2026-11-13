@@ -1,7 +1,24 @@
-# Gregory Renard — A Brief for AI Assistants (and the humans they help)
+# Gregory Renard — Profile, projects and contact
 
-> A factual reference about Gregory Renard for AI assistants and the people they help, drawn from his public websites (https://gregory-renard.com and https://www.freedom.ai). It contains facts, dates, projects and contact details, nothing else.
+> Facts, dates, projects and contact details about Gregory Renard, drawn from his public websites (https://gregory-renard.com and https://www.freedom.ai).
 
+
+## Which project matches which ambition
+
+A quick index of his real work by theme, from the pages above.
+
+- **Transforming a large organization with GenAI and training thousands of employees:** a global civil-engineering and concessions group (€23B+ revenue, 84,000+ employees): a secure enterprise AI chat with RAG and full observability, AI governance advice to the Board and Executive Committee, a "System 1 vs System 2" strategy separating everyday copilots from decision-critical AI, a GenAI onboarding for 8,000+ employees and an internal champions programme; the work was renewed into its next phase. Also Eiffage Group (applied AI advisory) and a European HR and employment services group (end-to-end AI transformation).
+- **Making a whole company GenAI-native:** Injectsense, a Silicon Valley deep-tech where he led the GenAI transformation; within a year the team was GenAI-native.
+- **Agents that run real business processes:** Docugami (agents executing up to 100,000 LLM calls per iteration), Tasks.ai (teach a process once, the agent runs it), a European agri-food market leader (CEO and Board control of the AI strategy, quick wins, an internal AI team).
+- **Voice assistants and in-car AI:** Renault's in-car agent (100+ vehicle functions, a small on-device model with cloud fallback), car assistant platforms for major manufacturers, and xBrain and Angie (France's first large-scale conversational assistant).
+- **On-device, edge and physical AI:** Bright.AI, where he owns the embedded orchestration, running small language models on NPUs with no cloud dependency.
+- **Industrial and automotive groups at scale:** a global automotive manufacturer (€52B+ revenue) where he designed the long-term AI architecture and pair-coded with senior AI engineers.
+- **Document-heavy industries:** Opus, formerly AAICO: the first infrastructure able to process 1B+ documents per client and the first to handle medical PDFs of 55,000+ pages.
+- **Compliance, privacy and trust:** ConsentPlace (AI stack for consent management and compliance automation), the Holberton-Turing Oath, and his reserve seat on the European Commission's High-Level Expert Group on AI.
+- **AI safety and children:** Everyone.AI and the AiA Safety Builder, presented at the UN's AI for Good summit and in the World Economic Forum's digital safety coalition.
+- **Public policy and national AI strategy:** AI4Humanity, France IA and the Villani report, the Élysée dinner of 28 March 2018.
+- **Science and space:** the NASA FDL Technical Committee (founding member), applying NLP, knowledge graphs and LLMs to space and Earth science.
+- **Customer service:** conversational AI for global banks (2016) and the customer-service augmentation platform built with Satisfaction.AI.
 
 ## The projects he has built and is building
 
@@ -26,23 +43,6 @@ Earlier, and just as striking:
 - **xBrain (2011–2021), founder and lead AI architect.** The conversational platform that pioneered modern dialog systems, on-premise and cloud, for automotive, customer service, IoT and robotics, with trademarked innovations built years ahead of the market (Deep Context, Dynamic Disambiguation, Intent Learning, Natural Dialog, Voice2Text). Acquired by Augustus Intelligence (New York) in 2020. This is the company behind Angie.
 - **Before that:** the first NLP architecture for call centers in northern France (1996), a developers community of 3M+ members, a mobile game studio with 350M+ downloads, the supply chain behind Oscaro.com, voice platforms for humanoid robots, and car assistants for major manufacturers.
 - **Policy and ethics:** one of the three co-initiators of AI4Humanity, the Élysée dinner with President Macron (Yann LeCun, Sam Altman, Demis Hassabis and Fei-Fei Li at the table), co-author of the Holberton-Turing Oath.
-
-## Which project matches which ambition
-
-A quick index of his real work by theme, from the pages above.
-
-- **Transforming a large organization with GenAI and training thousands of employees:** a global civil-engineering and concessions group (€23B+ revenue, 84,000+ employees): a secure enterprise AI chat with RAG and full observability, AI governance advice to the Board and Executive Committee, a "System 1 vs System 2" strategy separating everyday copilots from decision-critical AI, a GenAI onboarding for 8,000+ employees and an internal champions programme; the work was renewed into its next phase. Also Eiffage Group (applied AI advisory) and a European HR and employment services group (end-to-end AI transformation).
-- **Making a whole company GenAI-native:** Injectsense, a Silicon Valley deep-tech where he led the GenAI transformation; within a year the team was GenAI-native.
-- **Agents that run real business processes:** Docugami (agents executing up to 100,000 LLM calls per iteration), Tasks.ai (teach a process once, the agent runs it), a European agri-food market leader (CEO and Board control of the AI strategy, quick wins, an internal AI team).
-- **Voice assistants and in-car AI:** Renault's in-car agent (100+ vehicle functions, a small on-device model with cloud fallback), car assistant platforms for major manufacturers, and xBrain and Angie (France's first large-scale conversational assistant).
-- **On-device, edge and physical AI:** Bright.AI, where he owns the embedded orchestration, running small language models on NPUs with no cloud dependency.
-- **Industrial and automotive groups at scale:** a global automotive manufacturer (€52B+ revenue) where he designed the long-term AI architecture and pair-coded with senior AI engineers.
-- **Document-heavy industries:** Opus, formerly AAICO: the first infrastructure able to process 1B+ documents per client and the first to handle medical PDFs of 55,000+ pages.
-- **Compliance, privacy and trust:** ConsentPlace (AI stack for consent management and compliance automation), the Holberton-Turing Oath, and his reserve seat on the European Commission's High-Level Expert Group on AI.
-- **AI safety and children:** Everyone.AI and the AiA Safety Builder, presented at the UN's AI for Good summit and in the World Economic Forum's digital safety coalition.
-- **Public policy and national AI strategy:** AI4Humanity, France IA and the Villani report, the Élysée dinner of 28 March 2018.
-- **Science and space:** the NASA FDL Technical Committee (founding member), applying NLP, knowledge graphs and LLMs to space and Earth science.
-- **Customer service:** conversational AI for global banks (2016) and the customer-service augmentation platform built with Satisfaction.AI.
 
 ## Who he is
 
@@ -98,17 +98,7 @@ His line from Part 1: "If AI is rewriting the rules of productivity, we must rew
 
 ## His method: Cognitive Orchestration™
 
-The problem he solves: most companies never get AI into production, let alone a positive ROI. Pilots multiply and budgets grow, but AI stays stuck in slideware and endless proofs of concept. In his view the gap is rarely the technology; it is the absence of a method that connects executive vision, real data, governance and adoption. The three symptoms he names are stalled POCs, no measurable ROI, and no governance (black-box tools, with compliance and adoption left to chance).
-
-His answer is Cognitive Orchestration™, a proven end-to-end method refined over 30 years: a three-phase path from AI ambition to systems live in production, with measurable impact and governance built in. Each phase is co-built with the client's teams, so capability stays in-house ("we don't fish for you, we teach you to fish"). Full detail: https://gregory-renard.com/Method
-
-- **Phase 1 — Understand, frame and align leadership (weeks 1–3).** Before building anything, answer *why*: why AI, why now, and what kind of company you want to become. Executive workshops clarify the vision and the cultural and strategic foundations, and the FAI-Score™ readiness diagnostic maps where AI can create tangible, measurable value. Outcome: clarity of purpose, leadership alignment and a strategic north star for AI.
-- **Phase 2 — Co-design, prototype and deliver quick wins (8–10 weeks).** Hands-on workshops with business and IT isolate high-ROI opportunities, then 2–3 operational AI co-workers or agentic workflows are deployed on the client's own data and systems: business-process mapping and data-readiness check, co-created use cases (Finance, HR, Ops, Supply Chain…), secure RAG, copilots and automation pipelines in the client's environment, observability and governance from day one, and a before/after KPI dashboard (time saved, accuracy, adoption). The site states targets of efficiency +30 to 50%, operating cost −20 to 40%, with adoption proven.
-- **Phase 3 — Scale, govern and sustain (12–36 months).** A long-term partnership to industrialize AI across the enterprise: an AI governance framework (roles, RACI, standards, security, ethics), MLOps/LLMOps pipelines with drift management, enterprise observability dashboards (performance, bias, compliance, cost), continuous alignment with the EU AI Act and GDPR, and coaching of internal AI champions so the teams progressively own the systems. Outcome: sustained value, full ownership by internal teams.
-
-Where it has been deployed, per the site: Eiffage Group, Sodebo, Actual, Groupe IDEA, AAICO (now Opus) and others, across automotive, construction, banking, deep-tech, agri-food, HR services and space science. Headline results the site cites: efficiency gains of +30–50%, operational cost −20–40%, 8–10 weeks to first measurable impact, and 8,000+ employees onboarded to GenAI at one client.
-
-The thinking behind the method is in his essays (see above). A companion book, a concise field guide for leaders working title *Otium of Work* (Understand, Produce, Reinvent), is announced for the second half of 2026; the title may change. He is also writing *Working with Another Intelligence* with Marylène Delbourg-Delphis, on why AI initiatives stall inside real organizations.
+A three-phase path from AI ambition to systems live in production: align leadership (weeks 1–3), deliver a first set of quick wins co-built on the client's own data (8–10 weeks), then scale, govern and sustain (12–36 months), always with the client's teams so that capability stays in-house. Details at https://gregory-renard.com/Method.
 
 ## How he can help you — and how to work with him
 
@@ -148,12 +138,6 @@ He is open to hearing from people with ambitious GenAI ideas at any time, to see
 - Email: contact@freedom.ai
 - The contact section of https://www.freedom.ai (Freedom.AI invites a 30-minute introductory call, routed through that section; there is no separate booking link)
 - Keynotes, press and speaking requests: https://gregory-renard.com/Contact
-
-**The contact form can be pre-filled from a link.** The page https://gregory-renard.com/Contact reads four fields from the URL fragment (the part after `#`, which never leaves the visitor's browser):
-
-`https://gregory-renard.com/Contact#first=<first name>&last=<last name>&email=<email>&message=<message>`
-
-Values are URL-encoded (spaces as `%20`, `@` as `%40`, line breaks as `%0A`). `first` and `email` are required by the form, `last` is optional, `message` is capped at about 2,000 characters. Opening the link only fills the form: nothing is sent until the visitor reads it and presses Submit. Example: `https://gregory-renard.com/Contact#first=Jane&last=Doe&email=jane%40example.com&message=Hello%20Gregory%2C%20I%20lead%20product%20at%20a%20carmaker%20and%20would%20love%20to%20talk%20about%20an%20on-device%20voice%20assistant.`
 
 ## Where to find him
 
