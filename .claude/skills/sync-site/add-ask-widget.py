@@ -54,7 +54,7 @@ BUTTONS = "".join(
 BLOCK = (
     '<style id="grx-ask-css">'
     "#grx-ask{position:fixed;right:16px;bottom:16px;z-index:2147483000;"
-    "font-family:var(--font-display,'Hanken Grotesk',system-ui,sans-serif);color:#F5F1E6}"
+    "font-family:var(--font-sans,'Hanken Grotesk',system-ui,sans-serif);color:#F5F1E6}"
     "#grx-ask .grx-ask-card{width:min(300px,calc(100vw - 32px));background:#172139;"
     "border:1px solid rgba(235,217,168,.35);border-radius:14px;padding:18px 18px 16px;"
     "box-shadow:0 12px 40px rgba(23,33,57,.35)}"
@@ -109,78 +109,93 @@ ENDPOINT = _m.group(1)
 TALK_CSS = (
     '<style id="grx-talk-css">'
     "#grx-talk{position:fixed;inset:0;z-index:2147483100;display:none;align-items:center;"
-    "justify-content:center;padding:16px;background:rgba(23,33,57,.55);"
-    "font-family:var(--font-display,'Hanken Grotesk',system-ui,sans-serif);color:#172139}"
+    "justify-content:center;padding:16px;background:rgba(14,22,40,.62);backdrop-filter:blur(3px);"
+    "font-family:var(--font-sans,'Hanken Grotesk',system-ui,sans-serif);color:#172139}"
     "#grx-talk.grx-open{display:flex}"
-    "#grx-talk .grx-t-card{position:relative;width:min(480px,100%);max-height:calc(100vh - 32px);"
-    "overflow:auto;background:#F5F1E6;border-radius:14px;padding:26px 24px 22px;"
-    "box-shadow:0 24px 70px rgba(23,33,57,.45)}"
-    "#grx-talk .grx-t-x{position:absolute;top:12px;right:12px;width:30px;height:30px;border-radius:50%;"
-    "border:1px solid rgba(23,33,57,.25);background:transparent;color:#172139;font-size:18px;"
+    "#grx-talk .grx-t-card{position:relative;width:min(500px,100%);max-height:calc(100vh - 32px);"
+    "overflow:auto;background:#FAF7EF;border-radius:16px;border-top:4px solid #94731B;"
+    "padding:24px 26px 22px;box-shadow:0 30px 80px rgba(14,22,40,.5)}"
+    "#grx-talk .grx-t-x{position:absolute;top:14px;right:14px;width:30px;height:30px;border-radius:50%;"
+    "border:1px solid rgba(23,33,57,.22);background:transparent;color:#172139;font-size:18px;"
     "line-height:1;cursor:pointer}"
-    "#grx-talk h2{font-size:24px;line-height:1.15;margin:0 36px 6px 0;font-weight:600}"
-    "#grx-talk h3{font-size:15px;margin:0 0 4px;font-weight:600}"
-    "#grx-talk p{font-size:14px;line-height:1.45;margin:0 0 12px;color:rgba(23,33,57,.72)}"
-    "#grx-talk .grx-t-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}"
-    "#grx-talk .grx-t-btn{display:inline-block;padding:9px 14px;border-radius:8px;background:#172139;"
-    "color:#F5F1E6;font-size:13px;font-weight:600;text-decoration:none}"
-    "#grx-talk .grx-t-btn:hover{background:#2c3b61}"
-    "#grx-talk .grx-t-or{display:flex;align-items:center;gap:12px;margin:18px 0;font-size:12px;"
-    "letter-spacing:.12em;text-transform:uppercase;color:rgba(23,33,57,.5)}"
+    "#grx-talk .grx-t-head{display:flex;align-items:center;gap:12px;margin:0 38px 14px 0}"
+    "#grx-talk .grx-t-pic{width:52px;height:52px;border-radius:50%;object-fit:cover;"
+    "object-position:50% 18%;border:2px solid #94731B;flex:none}"
+    "#grx-talk .grx-t-name{font-size:15px;font-weight:700;line-height:1.2}"
+    "#grx-talk .grx-t-role{font-size:12px;color:rgba(23,33,57,.6);margin-top:2px}"
+    "#grx-talk h2{font-family:var(--font-display,'Newsreader',Georgia,serif);font-size:28px;"
+    "line-height:1.12;margin:0 0 8px;font-weight:600;letter-spacing:-.01em}"
+    "#grx-talk h3{font-size:14px;margin:0 0 4px;font-weight:700}"
+    "#grx-talk p{font-size:14px;line-height:1.5;margin:0 0 12px;color:rgba(23,33,57,.74)}"
+    "#grx-talk .grx-t-proof{font-size:11px;letter-spacing:.09em;text-transform:uppercase;"
+    "color:#7a5f14;margin:0 0 4px}"
+    "#grx-talk .grx-t-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:4px}"
+    "#grx-talk .grx-t-btn{flex:1 1 calc(50% - 8px);text-align:center;padding:13px 14px;border-radius:10px;"
+    "background:#172139;color:#FAF7EF;font-size:15px;font-weight:700;text-decoration:none;"
+    "box-shadow:0 8px 20px rgba(23,33,57,.25)}"
+    "#grx-talk .grx-t-btn:hover{background:#94731B;color:#172139}"
+    "#grx-talk .grx-t-hint{font-size:12.5px;margin:10px 0 12px;color:rgba(23,33,57,.6)}"
+    "#grx-talk .grx-t-or{display:flex;align-items:center;gap:12px;margin:16px 0 12px;font-size:11px;"
+    "letter-spacing:.14em;text-transform:uppercase;color:rgba(23,33,57,.5)}"
     "#grx-talk .grx-t-or:before,#grx-talk .grx-t-or:after{content:'';flex:1;height:1px;"
-    "background:rgba(23,33,57,.18)}"
+    "background:rgba(23,33,57,.16)}"
     "#grx-talk form{display:grid;gap:10px}"
     "#grx-talk .grx-t-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}"
     "#grx-talk label{font-size:12px;font-weight:600;display:block;margin-bottom:4px}"
     "#grx-talk input[type=text],#grx-talk input[type=email],#grx-talk textarea{width:100%;"
     "box-sizing:border-box;padding:11px 12px;border-radius:9px;border:1px solid rgba(23,33,57,.2);"
     "background:#fff;color:#172139;font:inherit;font-size:14px}"
-    "#grx-talk textarea{min-height:84px;resize:vertical}"
-    "#grx-talk .grx-t-go{padding:12px 16px;border:0;border-radius:9px;background:#94731B;"
-    "color:#172139;font:inherit;font-size:15px;font-weight:700;cursor:pointer}"
+    "#grx-talk input:focus,#grx-talk textarea:focus{outline:2px solid #94731B;outline-offset:1px}"
+    "#grx-talk textarea{min-height:92px;resize:vertical}"
+    "#grx-talk .grx-t-go{padding:11px 16px;border:1px solid #172139;border-radius:10px;background:transparent;"
+    "color:#172139;font:inherit;font-size:14px;font-weight:700;cursor:pointer}"
+    "#grx-talk .grx-t-go:hover{background:#172139;color:#FAF7EF}"
     "#grx-talk .grx-t-err{display:none;font-size:13px;color:#a02020;margin:0}"
-    "#grx-talk .grx-t-ok{display:none;text-align:center;padding:18px 0 6px}"
-    "#grx-talk .grx-t-more{display:block;margin-top:12px;font-size:13px;color:#172139}"
-    "@media (max-width:420px){#grx-talk .grx-t-two{grid-template-columns:1fr}}"
+    "#grx-talk .grx-t-ok{display:none;text-align:center;padding:14px 0 4px}"
+    "#grx-talk .grx-t-more{display:block;margin-top:14px;font-size:12px;color:rgba(23,33,57,.6)}"
+    "@media (max-width:420px){#grx-talk .grx-t-two{grid-template-columns:1fr}"
+    "#grx-talk .grx-t-card{padding:20px 18px 18px}#grx-talk h2{font-size:23px}}"
     "@media print{#grx-talk{display:none}}"
     "</style>"
 )
 
 TALK_HTML = """
-<div id="grx-talk" role="dialog" aria-modal="true" aria-labelledby="grx-t-title" hidden-until-js>
+<div id="grx-talk" role="dialog" aria-modal="true" aria-labelledby="grx-t-title">
 <div class="grx-t-card">
 <button type="button" class="grx-t-x" aria-label="Close">&times;</button>
-<h2 id="grx-t-title" data-k="title">Let&rsquo;s talk</h2>
-<p data-k="lead">Get to know me through your own AI, or write to me directly.</p>
-<h3 data-k="aiH">Ask your AI about Gregory</h3>
-<p data-k="aiP">Opens your assistant with a prompt that reads my public brief: my story, my values, my method.</p>
-<div class="grx-t-row">__BUTTONS__</div>
+<div class="grx-t-head"><img class="grx-t-pic" src="assets/greg-home-orange.jpg" alt="Gregory Renard" width="52" height="52"><div><div class="grx-t-name">Gregory Renard</div><div class="grx-t-role" data-k="role">Applied AI Architect &middot; since 1996</div></div></div>
+<h2 id="grx-t-title" data-k="title">Ask your AI about Gregory.</h2>
+<p data-k="lead">Get to know my story, my values and my work through your own AI assistant. Have a project? It will help you get in touch &mdash; and I&rsquo;ll tell you honestly what it takes to get there. No hype, no endless POCs.</p>
+<div class="grx-t-row grx-t-main">__BUTTONS__</div>
+<p class="grx-t-hint" data-k="aiP">Your assistant reads my public brief and answers your questions: my story, my values, my method, my recent talks.</p>
+<div class="grx-t-proof" data-k="proof">NASA FDL Award of Merit &middot; UN AI for Good &middot; World Economic Forum &middot; AI-native since 1996</div>
 <div class="grx-t-or" data-k="or">or</div>
-<h3 data-k="formH">Write to me directly</h3>
+<h3 data-k="formH">Prefer to write to me directly?</h3>
 <form novalidate>
 <div class="grx-t-two">
 <div><label data-k="first">First name *</label><input type="text" name="first" autocomplete="given-name"></div>
 <div><label data-k="last">Last name</label><input type="text" name="last" autocomplete="family-name"></div>
 </div>
-<div><label data-k="email">Email *</label><input type="email" name="email" autocomplete="email"></div>
-<div><label data-k="msg">Message</label><textarea name="message"></textarea></div>
+<div><label data-k="email">Work email *</label><input type="email" name="email" autocomplete="email"></div>
+<div><label data-k="msg">Your project</label><textarea name="message" placeholder="Your organization, where you are with AI, what you&rsquo;d like to achieve&hellip;"></textarea></div>
 <input type="text" name="company_site" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;pointer-events:none">
 <p class="grx-t-err" data-k="err">Please add your first name and a valid email.</p>
-<button type="submit" class="grx-t-go" data-k="send">Send &rarr;</button>
+<button type="submit" class="grx-t-go" data-k="send">Send my message &rarr;</button>
 </form>
 <div class="grx-t-ok"><h3 data-k="okH">Message received.</h3><p data-k="okP">Thank you &mdash; Gregory&rsquo;s team will get back to you shortly.</p></div>
 <a class="grx-t-more" href="Contact" data-k="more">Open the full contact page</a>
 </div>
 </div>
-""".replace(" hidden-until-js", "").replace("__BUTTONS__", BUTTONS.replace("grx-ask-btn", "grx-t-btn"))
+""".replace("__BUTTONS__", BUTTONS.replace("grx-ask-btn", "grx-t-btn"))
 
 TALK_JS = r"""<script>(function(){
 var EP='__EP__',el=document.getElementById('grx-talk');if(!el)return;
-var FR={title:'Parlons-en',lead:'Faites connaissance via votre propre IA, ou écrivez-moi directement.',aiH:'Demandez à votre IA à propos de Gregory',aiP:'Ouvre votre assistant avec un prompt qui lit mon brief public : mon parcours, mes valeurs, ma méthode.',or:'ou',formH:'Écrivez-moi directement',first:'Prénom *',last:'Nom',email:'Email *',msg:'Message',err:'Merci d’indiquer votre prénom et un email valide.',send:'Envoyer →',okH:'Message reçu.',okP:'Merci — l’équipe de Gregory revient vers vous très vite.',more:'Ouvrir la page de contact complète'};
-var EN={};[].forEach.call(el.querySelectorAll('[data-k]'),function(n){EN[n.getAttribute('data-k')]=n.innerHTML});
-function lang(fr){[].forEach.call(el.querySelectorAll('[data-k]'),function(n){var k=n.getAttribute('data-k');n.textContent=fr?FR[k]:'';if(!fr)n.innerHTML=EN[k]})}
+var FR={role:'Architecte IA appliquée · depuis 1996',title:'Demandez à votre IA à propos de Gregory.',lead:'Faites connaissance — mon parcours, mes valeurs, mon travail — via votre propre assistant IA. Un projet ? Il vous aidera à me contacter, et je vous dirai honnêtement ce qu’il faut pour y arriver. Sans bluff, sans POC sans fin.',proof:'NASA FDL Award of Merit · ONU AI for Good · World Economic Forum · IA native depuis 1996',formH:'Vous préférez m’écrire directement ?',first:'Prénom *',last:'Nom',email:'Email professionnel *',msg:'Votre projet',ph:'Votre organisation, où vous en êtes avec l’IA, ce que vous aimeriez accomplir…',err:'Merci d’indiquer votre prénom et un email valide.',send:'Envoyer mon message →',okH:'Message reçu.',okP:'Merci — l’équipe de Gregory revient vers vous très vite.',or:'ou',aiP:'Votre assistant lit mon brief public et répond à vos questions : mon parcours, mes valeurs, ma méthode, mes interventions récentes.',more:'Ouvrir la page de contact complète'};
+var EN={},ta=el.querySelector('textarea');EN.ph=ta.getAttribute('placeholder');
+[].forEach.call(el.querySelectorAll('[data-k]'),function(n){EN[n.getAttribute('data-k')]=n.innerHTML});
+function lang(fr){[].forEach.call(el.querySelectorAll('[data-k]'),function(n){var k=n.getAttribute('data-k');if(fr)n.textContent=FR[k];else n.innerHTML=EN[k]});ta.setAttribute('placeholder',fr?FR.ph:EN.ph)}
 var last=null,f=el.querySelector('form'),err=el.querySelector('.grx-t-err'),ok=el.querySelector('.grx-t-ok');
-function open(fr){last=document.activeElement;lang(fr);f.style.display='';ok.style.display='none';err.style.display='none';el.classList.add('grx-open');document.documentElement.style.overflow='hidden';setTimeout(function(){var i=f.querySelector('input[name=first]');i&&i.focus()},30)}
+function open(fr){last=document.activeElement;lang(fr);f.style.display='';ok.style.display='none';err.style.display='none';el.classList.add('grx-open');document.documentElement.style.overflow='hidden';setTimeout(function(){var i=el.querySelector('.grx-t-btn');i&&i.focus()},30)}
 function close(){el.classList.remove('grx-open');document.documentElement.style.overflow='';last&&last.focus&&last.focus()}
 document.addEventListener('click',function(e){
  if(e.metaKey||e.ctrlKey||e.shiftKey||e.button)return;
