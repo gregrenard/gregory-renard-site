@@ -9,17 +9,24 @@ tells it to read https://gregory-renard.com/ask-gregory.md and answer from it. N
 no API key, no cost: the visitor's AI does the talking, ask-gregory.md is the source of
 truth. Modelled on the widget at bright.ai.
 
-PROTOTYPE: not yet wired into deploy.sh. The ?q= prefill links are unofficial and can
+Also injects the "Let's talk" modal (marker id="grx-talk"): clicking a "Let's talk" /
+"Parlons-en" button that links to Contact opens a popup with the same four AI links
+and the contact form itself (same Apps Script endpoint and honeypot as Contact, read
+from patch-contact-form.py so the URL lives in one place). Without JS the button still
+navigates to /Contact. The corner widget goes on index.html only; the modal goes on
+every file passed in.
+
+Wired into deploy.sh (step 5b, after the rename). The ?q= prefill links are unofficial and can
 change; Google AI mode is used for Gemini because Gemini itself has no prefill link.
 
 Idempotent (guarded by the id="grx-ask" marker). Collapsed/expanded state is remembered
 in localStorage; first visit is expanded on desktop (>900px) and collapsed on mobile.
 
 Usage:
-  python3 add-ask-widget.py                 # default: index.html
-  python3 add-ask-widget.py index.html Why.html
+  python3 add-ask-widget.py                          # default: index.html
+  python3 add-ask-widget.py index.html Why.html Ethics.html
 """
-import os, sys, urllib.parse
+import os, re, sys, urllib.parse
 
 BRIEF = "https://gregory-renard.com/ask-gregory.md"
 PROMPT = (
@@ -91,6 +98,111 @@ BLOCK = (
 )
 
 
+
+# ---- "Let's talk" modal ---------------------------------------------------------------
+HERE = os.path.dirname(os.path.abspath(__file__))
+_m = re.search(r'^EP = "([^"]+)"', open(os.path.join(HERE, "patch-contact-form.py"), encoding="utf-8").read(), re.M)
+if not _m:
+    sys.exit("add-ask-widget: could not read EP from patch-contact-form.py")
+ENDPOINT = _m.group(1)
+
+TALK_CSS = (
+    '<style id="grx-talk-css">'
+    "#grx-talk{position:fixed;inset:0;z-index:2147483100;display:none;align-items:center;"
+    "justify-content:center;padding:16px;background:rgba(23,33,57,.55);"
+    "font-family:var(--font-display,'Hanken Grotesk',system-ui,sans-serif);color:#172139}"
+    "#grx-talk.grx-open{display:flex}"
+    "#grx-talk .grx-t-card{position:relative;width:min(480px,100%);max-height:calc(100vh - 32px);"
+    "overflow:auto;background:#F5F1E6;border-radius:14px;padding:26px 24px 22px;"
+    "box-shadow:0 24px 70px rgba(23,33,57,.45)}"
+    "#grx-talk .grx-t-x{position:absolute;top:12px;right:12px;width:30px;height:30px;border-radius:50%;"
+    "border:1px solid rgba(23,33,57,.25);background:transparent;color:#172139;font-size:18px;"
+    "line-height:1;cursor:pointer}"
+    "#grx-talk h2{font-size:24px;line-height:1.15;margin:0 36px 6px 0;font-weight:600}"
+    "#grx-talk h3{font-size:15px;margin:0 0 4px;font-weight:600}"
+    "#grx-talk p{font-size:14px;line-height:1.45;margin:0 0 12px;color:rgba(23,33,57,.72)}"
+    "#grx-talk .grx-t-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}"
+    "#grx-talk .grx-t-btn{display:inline-block;padding:9px 14px;border-radius:8px;background:#172139;"
+    "color:#F5F1E6;font-size:13px;font-weight:600;text-decoration:none}"
+    "#grx-talk .grx-t-btn:hover{background:#2c3b61}"
+    "#grx-talk .grx-t-or{display:flex;align-items:center;gap:12px;margin:18px 0;font-size:12px;"
+    "letter-spacing:.12em;text-transform:uppercase;color:rgba(23,33,57,.5)}"
+    "#grx-talk .grx-t-or:before,#grx-talk .grx-t-or:after{content:'';flex:1;height:1px;"
+    "background:rgba(23,33,57,.18)}"
+    "#grx-talk form{display:grid;gap:10px}"
+    "#grx-talk .grx-t-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}"
+    "#grx-talk label{font-size:12px;font-weight:600;display:block;margin-bottom:4px}"
+    "#grx-talk input[type=text],#grx-talk input[type=email],#grx-talk textarea{width:100%;"
+    "box-sizing:border-box;padding:11px 12px;border-radius:9px;border:1px solid rgba(23,33,57,.2);"
+    "background:#fff;color:#172139;font:inherit;font-size:14px}"
+    "#grx-talk textarea{min-height:84px;resize:vertical}"
+    "#grx-talk .grx-t-go{padding:12px 16px;border:0;border-radius:9px;background:#94731B;"
+    "color:#172139;font:inherit;font-size:15px;font-weight:700;cursor:pointer}"
+    "#grx-talk .grx-t-err{display:none;font-size:13px;color:#a02020;margin:0}"
+    "#grx-talk .grx-t-ok{display:none;text-align:center;padding:18px 0 6px}"
+    "#grx-talk .grx-t-more{display:block;margin-top:12px;font-size:13px;color:#172139}"
+    "@media (max-width:420px){#grx-talk .grx-t-two{grid-template-columns:1fr}}"
+    "@media print{#grx-talk{display:none}}"
+    "</style>"
+)
+
+TALK_HTML = """
+<div id="grx-talk" role="dialog" aria-modal="true" aria-labelledby="grx-t-title" hidden-until-js>
+<div class="grx-t-card">
+<button type="button" class="grx-t-x" aria-label="Close">&times;</button>
+<h2 id="grx-t-title" data-k="title">Let&rsquo;s talk</h2>
+<p data-k="lead">Get to know me through your own AI, or write to me directly.</p>
+<h3 data-k="aiH">Ask your AI about Gregory</h3>
+<p data-k="aiP">Opens your assistant with a prompt that reads my public brief: my story, my values, my method.</p>
+<div class="grx-t-row">__BUTTONS__</div>
+<div class="grx-t-or" data-k="or">or</div>
+<h3 data-k="formH">Write to me directly</h3>
+<form novalidate>
+<div class="grx-t-two">
+<div><label data-k="first">First name *</label><input type="text" name="first" autocomplete="given-name"></div>
+<div><label data-k="last">Last name</label><input type="text" name="last" autocomplete="family-name"></div>
+</div>
+<div><label data-k="email">Email *</label><input type="email" name="email" autocomplete="email"></div>
+<div><label data-k="msg">Message</label><textarea name="message"></textarea></div>
+<input type="text" name="company_site" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;pointer-events:none">
+<p class="grx-t-err" data-k="err">Please add your first name and a valid email.</p>
+<button type="submit" class="grx-t-go" data-k="send">Send &rarr;</button>
+</form>
+<div class="grx-t-ok"><h3 data-k="okH">Message received.</h3><p data-k="okP">Thank you &mdash; Gregory&rsquo;s team will get back to you shortly.</p></div>
+<a class="grx-t-more" href="Contact" data-k="more">Open the full contact page</a>
+</div>
+</div>
+""".replace(" hidden-until-js", "").replace("__BUTTONS__", BUTTONS.replace("grx-ask-btn", "grx-t-btn"))
+
+TALK_JS = r"""<script>(function(){
+var EP='__EP__',el=document.getElementById('grx-talk');if(!el)return;
+var FR={title:'Parlons-en',lead:'Faites connaissance via votre propre IA, ou écrivez-moi directement.',aiH:'Demandez à votre IA à propos de Gregory',aiP:'Ouvre votre assistant avec un prompt qui lit mon brief public : mon parcours, mes valeurs, ma méthode.',or:'ou',formH:'Écrivez-moi directement',first:'Prénom *',last:'Nom',email:'Email *',msg:'Message',err:'Merci d’indiquer votre prénom et un email valide.',send:'Envoyer →',okH:'Message reçu.',okP:'Merci — l’équipe de Gregory revient vers vous très vite.',more:'Ouvrir la page de contact complète'};
+var EN={};[].forEach.call(el.querySelectorAll('[data-k]'),function(n){EN[n.getAttribute('data-k')]=n.innerHTML});
+function lang(fr){[].forEach.call(el.querySelectorAll('[data-k]'),function(n){var k=n.getAttribute('data-k');n.textContent=fr?FR[k]:'';if(!fr)n.innerHTML=EN[k]})}
+var last=null,f=el.querySelector('form'),err=el.querySelector('.grx-t-err'),ok=el.querySelector('.grx-t-ok');
+function open(fr){last=document.activeElement;lang(fr);f.style.display='';ok.style.display='none';err.style.display='none';el.classList.add('grx-open');document.documentElement.style.overflow='hidden';setTimeout(function(){var i=f.querySelector('input[name=first]');i&&i.focus()},30)}
+function close(){el.classList.remove('grx-open');document.documentElement.style.overflow='';last&&last.focus&&last.focus()}
+document.addEventListener('click',function(e){
+ if(e.metaKey||e.ctrlKey||e.shiftKey||e.button)return;
+ var a=e.target.closest&&e.target.closest('a');if(!a||el.contains(a))return;
+ var h=a.getAttribute('href')||'';if(!/(^|\/)Contact(\.html)?$/.test(h.split('#')[0].split('?')[0]))return;
+ var t=(a.textContent||'').trim();if(!/^(let.?s talk|parlons-en)/i.test(t))return;
+ e.preventDefault();open(/^parlons/i.test(t));
+},true);
+el.addEventListener('click',function(e){if(e.target===el||e.target.closest('.grx-t-x'))close()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&el.classList.contains('grx-open'))close()});
+f.addEventListener('submit',function(e){
+ e.preventDefault();var d=new FormData(f),first=(d.get('first')||'').trim(),em=(d.get('email')||'').trim();
+ if(!first||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){err.style.display='block';return}
+ err.style.display='none';
+ try{if(!d.get('company_site'))fetch(EP,{method:'POST',mode:'no-cors',body:new URLSearchParams({firstName:first,lastName:(d.get('last')||'').trim(),email:em,message:(d.get('message')||'').trim(),company_site:''})})}catch(x){}
+ f.style.display='none';ok.style.display='block';
+});
+})();</script>"""
+
+TALK_BLOCK = TALK_CSS + TALK_HTML + TALK_JS.replace("__EP__", ENDPOINT)
+
+
 def main():
     files = sys.argv[1:] or ["index.html"]
     n = 0
@@ -98,12 +210,19 @@ def main():
         if not os.path.exists(f):
             continue
         s = open(f, encoding="utf-8").read()
-        if 'id="grx-ask"' in s or "</body>" not in s:
+        if "</body>" not in s:
             continue
-        s = s.replace("</body>", BLOCK + "\n</body>", 1)
+        add = ""
+        if os.path.basename(f) == "index.html" and 'id="grx-ask"' not in s:
+            add += BLOCK
+        if 'id="grx-talk"' not in s:
+            add += TALK_BLOCK
+        if not add:
+            continue
+        s = s.replace("</body>", add + "\n</body>", 1)
         open(f, "w", encoding="utf-8", newline="").write(s)
         n += 1
-        print("  ask widget:", f)
+        print("  ask widget/modal:", f)
     print("ask-widget: %d file(s) patched" % n)
 
 
