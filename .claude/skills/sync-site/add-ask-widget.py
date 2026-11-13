@@ -9,11 +9,12 @@ asks it to read https://gregory-renard.com/ask-gregory.md and use it as its guid
 no API key, no cost: the visitor's AI does the talking, ask-gregory.md is the source of
 truth. Modelled on the widget at bright.ai.
 
-Also injects the "Let's talk" modal (marker id="grx-talk"): clicking a "Let's talk" /
-"Parlons-en" button that links to Contact opens a popup with the same four AI links
+Also injects the "Let's talk" modal (marker id="grx-talk"): clicking ANY link to Contact
+("Let's talk", "Contact Gregory", "Book Gregory", ...) opens a popup with the same four AI links
 and the contact form itself (same Apps Script endpoint and honeypot as Contact, read
 from patch-contact-form.py so the URL lives in one place). Without JS the button still
-navigates to /Contact. Both the corner widget and the modal go on every file passed in
+navigates to /Contact. On the Contact page itself the links behave normally. The popup's language
+comes from the site's own FR/EN toggle. Both the corner widget and the modal go on every file passed in
 (deploy.sh passes every deployed content page).
 
 Wired into deploy.sh (step 5b, after the rename). The ?q= prefill links are unofficial and can
@@ -127,9 +128,10 @@ BLOCK = (
     "el.classList.toggle('grx-collapsed',s?s==='collapsed':window.innerWidth<=900);"
     "el.querySelector('.grx-ask-min').addEventListener('click',function(){set(true)});"
     "el.querySelector('.grx-ask-pill').addEventListener('click',function(){set(false)});"
-    "function isFr(){var as=document.querySelectorAll('a'),fr=0,en=0;for(var i=0;i<as.length;i++){var x=as[i];if(!x.offsetParent)continue;var t=(x.textContent||'').trim();if(/^parlons-en/i.test(t))fr=1;else if(/^let.?s talk/i.test(t))en=1}return fr?true:en?false:/^fr/i.test(navigator.language||'')}"
+    "function isFr(){var bs=document.querySelectorAll('button'),i,t;for(i=0;i<bs.length;i++){if(!bs[i].offsetParent)continue;t=(bs[i].textContent||'').trim();if(t==='EN')return true;if(t==='FR')return false}return /^fr/i.test(document.documentElement.lang||navigator.language||'')}"
     "var hint=el.querySelector('.grx-ask-hint');"
-    "function sync(){var f=isFr();hint.textContent=f?'Claude et ChatGPT s’ouvrent avec le prompt prêt : appuyez simplement sur Entrée.':'Claude and ChatGPT open with the prompt ready: just press Enter.'}"
+    "var ti=el.querySelector('.grx-ask-title'),tx=el.querySelector('.grx-ask-text'),pl=el.querySelector('.grx-ask-pill'),EN0=[ti.textContent,tx.innerHTML,pl.textContent];"
+    "function sync(){var f=isFr();hint.textContent=f?'Claude et ChatGPT s’ouvrent avec le prompt prêt : appuyez simplement sur Entrée.':'Claude and ChatGPT open with the prompt ready: just press Enter.';ti.textContent=f?'Demandez à votre IA à propos de Gregory':EN0[0];if(f)tx.textContent='Découvrez mon parcours, mon travail, mes interventions récentes et ce qui me porte — dans une conversation avec votre propre assistant IA.';else tx.innerHTML=EN0[1];pl.textContent=f?'Demandez à votre IA à propos de Gregory':EN0[2]}"
     "sync();el.addEventListener('mouseenter',sync);"
     "el.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.grx-ask-btn');if(a)a.href=a.getAttribute(isFr()?'data-fr':'data-en')},true);"
     "})();</script>"
@@ -235,12 +237,13 @@ function lang(fr){[].forEach.call(el.querySelectorAll('[data-k]'),function(n){va
 var last=null,f=el.querySelector('form'),err=el.querySelector('.grx-t-err'),ok=el.querySelector('.grx-t-ok');
 function open(fr){last=document.activeElement;lang(fr);f.style.display='';ok.style.display='none';err.style.display='none';el.classList.add('grx-open');document.documentElement.style.overflow='hidden';setTimeout(function(){var i=el.querySelector('.grx-t-btn');i&&i.focus()},30)}
 function close(){el.classList.remove('grx-open');document.documentElement.style.overflow='';last&&last.focus&&last.focus()}
+function isFr(){var bs=document.querySelectorAll('button'),i,t;for(i=0;i<bs.length;i++){if(!bs[i].offsetParent)continue;t=(bs[i].textContent||'').trim();if(t==='EN')return true;if(t==='FR')return false}return /^fr/i.test(document.documentElement.lang||navigator.language||'')}
 document.addEventListener('click',function(e){
  if(e.metaKey||e.ctrlKey||e.shiftKey||e.button)return;
+ if(/(^|\/)Contact(\.html)?$/.test(location.pathname))return;
  var a=e.target.closest&&e.target.closest('a');if(!a||el.contains(a))return;
  var h=a.getAttribute('href')||'';if(!/(^|\/)Contact(\.html)?$/.test(h.split('#')[0].split('?')[0]))return;
- var t=(a.textContent||'').trim();if(!/^(let.?s talk|parlons-en)/i.test(t))return;
- e.preventDefault();open(/^parlons/i.test(t));
+ e.preventDefault();open(isFr());
 },true);
 el.addEventListener('click',function(e){if(e.target===el||e.target.closest('.grx-t-x'))close()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&el.classList.contains('grx-open'))close()});
