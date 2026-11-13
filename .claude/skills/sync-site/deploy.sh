@@ -54,8 +54,9 @@ echo "==> 5/6  rename *.dc.html -> *.html (+ drop redundant home source)"
 for f in $SUBPAGES; do [ -f "$f.dc.html" ] && mv "$f.dc.html" "$f.html"; done
 rm -f "$HOME_SRC"
 
-echo "==> 5b/6 'Ask your AI' widget (home) + \"Let's talk\" modal (home, Why, Ethics) -> ask-gregory.md + contact form"
-python3 "$SKILL_DIR/add-ask-widget.py" index.html Why.html Ethics.html
+echo "==> 5b/6 'Ask your AI' widget + \"Let's talk\" modal on every deployed content page (-> ask-gregory.md + contact form)"
+ASK_PAGES="$(python3 "$SKILL_DIR/manifest.py" prerender | tr '\n' ' ')"
+python3 "$SKILL_DIR/add-ask-widget.py" $ASK_PAGES
 
 echo "==> 6/6  bump sitemap <lastmod> to today"
 TODAY="$(date +%F)"

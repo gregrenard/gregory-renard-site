@@ -13,8 +13,8 @@ Also injects the "Let's talk" modal (marker id="grx-talk"): clicking a "Let's ta
 "Parlons-en" button that links to Contact opens a popup with the same four AI links
 and the contact form itself (same Apps Script endpoint and honeypot as Contact, read
 from patch-contact-form.py so the URL lives in one place). Without JS the button still
-navigates to /Contact. The corner widget goes on index.html only; the modal goes on
-every file passed in.
+navigates to /Contact. Both the corner widget and the modal go on every file passed in
+(deploy.sh passes every deployed content page).
 
 Wired into deploy.sh (step 5b, after the rename). The ?q= prefill links are unofficial and can
 change; Google AI mode is used for Gemini because Gemini itself has no prefill link.
@@ -24,7 +24,7 @@ in localStorage; first visit is expanded on desktop (>900px) and collapsed on mo
 
 Usage:
   python3 add-ask-widget.py                          # default: index.html
-  python3 add-ask-widget.py index.html Why.html Ethics.html
+  python3 add-ask-widget.py index.html Why.html Ethics.html   # any pages
 """
 import os, re, sys, urllib.parse
 
@@ -266,7 +266,7 @@ def main():
         if "</body>" not in s:
             continue
         add = ""
-        if os.path.basename(f) == "index.html" and 'id="grx-ask"' not in s:
+        if 'id="grx-ask"' not in s:
             add += BLOCK
         if 'id="grx-talk"' not in s:
             add += TALK_BLOCK

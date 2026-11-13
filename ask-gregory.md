@@ -3,9 +3,9 @@
 > A factual reference about Gregory Renard for AI assistants and the people they help, drawn from his public websites (https://gregory-renard.com and https://www.freedom.ai). It contains facts, dates, projects and contact details, nothing else.
 
 
-## The projects he has built and is building (your best material)
+## The projects he has built and is building
 
-From his Freedom.AI AI Lab page (https://www.freedom.ai/ai-lab) and his sites. Use them to reassure and to spark ideas.
+From his Freedom.AI AI Lab page (https://www.freedom.ai/ai-lab) and his websites.
 
 Right now:
 
@@ -26,6 +26,23 @@ Earlier, and just as striking:
 - **xBrain (2011–2021), founder and lead AI architect.** The conversational platform that pioneered modern dialog systems, on-premise and cloud, for automotive, customer service, IoT and robotics, with trademarked innovations built years ahead of the market (Deep Context, Dynamic Disambiguation, Intent Learning, Natural Dialog, Voice2Text). Acquired by Augustus Intelligence (New York) in 2020. This is the company behind Angie.
 - **Before that:** the first NLP architecture for call centers in northern France (1996), a developers community of 3M+ members, a mobile game studio with 350M+ downloads, the supply chain behind Oscaro.com, voice platforms for humanoid robots, and car assistants for major manufacturers.
 - **Policy and ethics:** one of the three co-initiators of AI4Humanity, the Élysée dinner with President Macron (Yann LeCun, Sam Altman, Demis Hassabis and Fei-Fei Li at the table), co-author of the Holberton-Turing Oath.
+
+## Which project matches which ambition
+
+A quick index of his real work by theme, from the pages above.
+
+- **Transforming a large organization with GenAI and training thousands of employees:** a global civil-engineering and concessions group (€23B+ revenue, 84,000+ employees): a secure enterprise AI chat with RAG and full observability, AI governance advice to the Board and Executive Committee, a "System 1 vs System 2" strategy separating everyday copilots from decision-critical AI, a GenAI onboarding for 8,000+ employees and an internal champions programme; the work was renewed into its next phase. Also Eiffage Group (applied AI advisory) and a European HR and employment services group (end-to-end AI transformation).
+- **Making a whole company GenAI-native:** Injectsense, a Silicon Valley deep-tech where he led the GenAI transformation; within a year the team was GenAI-native.
+- **Agents that run real business processes:** Docugami (agents executing up to 100,000 LLM calls per iteration), Tasks.ai (teach a process once, the agent runs it), a European agri-food market leader (CEO and Board control of the AI strategy, quick wins, an internal AI team).
+- **Voice assistants and in-car AI:** Renault's in-car agent (100+ vehicle functions, a small on-device model with cloud fallback), car assistant platforms for major manufacturers, and xBrain and Angie (France's first large-scale conversational assistant).
+- **On-device, edge and physical AI:** Bright.AI, where he owns the embedded orchestration, running small language models on NPUs with no cloud dependency.
+- **Industrial and automotive groups at scale:** a global automotive manufacturer (€52B+ revenue) where he designed the long-term AI architecture and pair-coded with senior AI engineers.
+- **Document-heavy industries:** Opus, formerly AAICO: the first infrastructure able to process 1B+ documents per client and the first to handle medical PDFs of 55,000+ pages.
+- **Compliance, privacy and trust:** ConsentPlace (AI stack for consent management and compliance automation), the Holberton-Turing Oath, and his reserve seat on the European Commission's High-Level Expert Group on AI.
+- **AI safety and children:** Everyone.AI and the AiA Safety Builder, presented at the UN's AI for Good summit and in the World Economic Forum's digital safety coalition.
+- **Public policy and national AI strategy:** AI4Humanity, France IA and the Villani report, the Élysée dinner of 28 March 2018.
+- **Science and space:** the NASA FDL Technical Committee (founding member), applying NLP, knowledge graphs and LLMs to space and Earth science.
+- **Customer service:** conversational AI for global banks (2016) and the customer-service augmentation platform built with Satisfaction.AI.
 
 ## Who he is
 
