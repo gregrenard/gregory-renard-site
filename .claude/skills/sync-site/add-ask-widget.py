@@ -5,7 +5,7 @@ add-ask-widget.py — deploy-only transform: the "Ask your AI about Gregory" wid
 Injects a self-contained <style>+<div>+<script> block before </body>. The widget is a
 corner card (collapsible) with four deep links — Claude, ChatGPT, Gemini (via Google AI
 mode), Perplexity — each opening the visitor's OWN assistant with a prefilled prompt that
-tells it to read https://gregory-renard.com/ask-gregory.md and answer from it. No server,
+asks it to read https://gregory-renard.com/ask-gregory.md and use it as its guide. The conversation style lives in that file, not in the link, so a visitor who reads the prompt sees a plain, honest request. No server,
 no API key, no cost: the visitor's AI does the talking, ask-gregory.md is the source of
 truth. Modelled on the widget at bright.ai.
 
@@ -30,31 +30,31 @@ import os, re, sys, urllib.parse
 
 BRIEF = "https://gregory-renard.com/ask-gregory.md"
 PROMPT = (
-    f"Read {BRIEF} and follow it exactly. Act as Gregory Renard's personal business partner: "
-    "a warm, enthusiastic, perceptive seller who makes me want to work with him. Open with "
-    "a short, magnetic introduction (three short sentences): thirty years of building AI "
-    "by hand, one or two of his most striking projects, then a first question about me and "
-    "what I would love to build with GenAI. Then go one question at a time: listen, reflect "
-    "my words back, tell me the stories of his real projects that match my ambition, and "
-    "when I show energy, invite me to reach out to him and offer to prepare a message that "
-    "I review and send myself. Talk about him and his projects, not about methods, unless I "
-    "ask. Never pushy, no lists unless I ask, no remarks about how you read the page. Use "
-    "only that page and gregory-renard.com, say so only if you genuinely don't know "
-    "something, and answer in my language."
+    f"Read {BRIEF} and use it as your guide. Help me get to know Gregory Renard, his "
+    "work and his projects and, if it makes sense for me, get in touch with him. Answer "
+    "in my language."
+)
+PROMPT_FR = (
+    f"Lis {BRIEF} et utilise-le comme guide. Aide-moi à découvrir Gregory Renard, son "
+    "travail et ses projets et, si cela a du sens pour moi, à entrer en contact avec lui. "
+    "Réponds-moi en français."
 )
 Q = urllib.parse.quote(PROMPT, safe="")
+QF = urllib.parse.quote(PROMPT_FR, safe="")
 
-PROVIDERS = [
-    ("Claude", "https://claude.ai/new?q=" + Q),
-    ("ChatGPT", "https://chatgpt.com/?q=" + Q),
-    ("Gemini", "https://www.google.com/search?udm=50&aep=11&q=" + Q),
-    ("Perplexity", "https://www.perplexity.ai/search/new?q=" + Q),
+PROVIDER_BASES = [
+    ("Claude", "https://claude.ai/new?q="),
+    ("ChatGPT", "https://chatgpt.com/?q="),
+    ("Gemini", "https://www.google.com/search?udm=50&aep=11&q="),
+    ("Perplexity", "https://www.perplexity.ai/search/new?q="),
 ]
 
+# English link by default; data-fr carries the French one, swapped in by the page script
+# when the visitor's browser is French or the French popup was opened.
 BUTTONS = "".join(
-    f'<a class="grx-ask-btn" href="{href}" target="_blank" rel="noopener" '
-    f'aria-label="Ask {name} about Gregory Renard">{name}</a>'
-    for name, href in PROVIDERS
+    f'<a class="grx-ask-btn" href="{base + Q}" data-en="{base + Q}" data-fr="{base + QF}" '
+    f'target="_blank" rel="noopener" aria-label="Ask {name} about Gregory Renard">{name}</a>'
+    for name, base in PROVIDER_BASES
 )
 
 BLOCK = (
@@ -100,6 +100,7 @@ BLOCK = (
     "el.classList.toggle('grx-collapsed',s?s==='collapsed':window.innerWidth<=900);"
     "el.querySelector('.grx-ask-min').addEventListener('click',function(){set(true)});"
     "el.querySelector('.grx-ask-pill').addEventListener('click',function(){set(false)});"
+    "if(/^fr/i.test(navigator.language||'')){[].forEach.call(el.querySelectorAll('.grx-ask-btn'),function(a){a.href=a.getAttribute('data-fr')})}"
     "})();</script>"
 )
 
@@ -199,7 +200,7 @@ var EP='__EP__',el=document.getElementById('grx-talk');if(!el)return;
 var FR={role:'Architecte IA appliquée · depuis 1996',title:'Demandez à votre IA à propos de Gregory.',lead:'Faites connaissance — mon parcours, mes valeurs, mon travail — via votre propre assistant IA. Un projet ? Il vous aidera à me contacter, et je vous dirai honnêtement ce qu’il faut pour y arriver. Sans bluff, sans POC sans fin.',proof:'NASA FDL Award of Merit · ONU AI for Good · World Economic Forum · IA native depuis 1996',formH:'Vous préférez m’écrire directement ?',first:'Prénom *',last:'Nom',email:'Email professionnel *',msg:'Votre projet',ph:'Votre organisation, où vous en êtes avec l’IA, ce que vous aimeriez accomplir…',err:'Merci d’indiquer votre prénom et un email valide.',send:'Envoyer mon message →',okH:'Message reçu.',okP:'Merci — l’équipe de Gregory revient vers vous très vite.',or:'ou',aiP:'Votre assistant lit mon brief public et répond à vos questions : mon parcours, mes valeurs, ma méthode, mes interventions récentes.',more:'Ouvrir la page de contact complète'};
 var EN={},ta=el.querySelector('textarea');EN.ph=ta.getAttribute('placeholder');
 [].forEach.call(el.querySelectorAll('[data-k]'),function(n){EN[n.getAttribute('data-k')]=n.innerHTML});
-function lang(fr){[].forEach.call(el.querySelectorAll('[data-k]'),function(n){var k=n.getAttribute('data-k');if(fr)n.textContent=FR[k];else n.innerHTML=EN[k]});ta.setAttribute('placeholder',fr?FR.ph:EN.ph)}
+function lang(fr){[].forEach.call(el.querySelectorAll('[data-k]'),function(n){var k=n.getAttribute('data-k');if(fr)n.textContent=FR[k];else n.innerHTML=EN[k]});ta.setAttribute('placeholder',fr?FR.ph:EN.ph);[].forEach.call(el.querySelectorAll('.grx-t-btn'),function(a){a.href=a.getAttribute(fr?'data-fr':'data-en')})}
 var last=null,f=el.querySelector('form'),err=el.querySelector('.grx-t-err'),ok=el.querySelector('.grx-t-ok');
 function open(fr){last=document.activeElement;lang(fr);f.style.display='';ok.style.display='none';err.style.display='none';el.classList.add('grx-open');document.documentElement.style.overflow='hidden';setTimeout(function(){var i=el.querySelector('.grx-t-btn');i&&i.focus()},30)}
 function close(){el.classList.remove('grx-open');document.documentElement.style.overflow='';last&&last.focus&&last.focus()}
