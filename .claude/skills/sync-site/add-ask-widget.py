@@ -147,50 +147,94 @@ PROVIDER_BASES = [
     ("Perplexity", "https://www.perplexity.ai/search/new?q="),
 ]
 
+# Official brand marks (Simple Icons, see ask-icons/README.md), inlined with fill=currentColor so
+# they follow the button colours. Files: ask-icons/<name>.svg (24x24 viewBox, single path).
+def _icon(fname):
+    svg = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "ask-icons", fname + ".svg"),
+               encoding="utf-8").read()
+    paths = re.findall(r'<path d="([^"]+)"', svg)
+    return ('<svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">'
+            + "".join('<path d="%s"/>' % d for d in paths) + "</svg>")
+
+ICONS = {n: _icon(f) for n, f in [("Claude", "claude"), ("ChatGPT", "chatgpt"),
+                                  ("Gemini", "gemini"), ("Perplexity", "perplexity")]}
+
 # English link by default; data-fr carries the French one, swapped in by the page script
-# when the visitor's browser is French or the French popup was opened.
-BUTTONS = "".join(
-    f'<a class="grx-ask-btn" href="{base + Q}" data-en="{base + Q}" data-fr="{base + QF}" '
-    f'target="_blank" rel="noopener" aria-label="Ask {name} about Gregory Renard">{name}</a>'
-    for name, base in PROVIDER_BASES
-)
+# according to the site's own FR/EN toggle.
+def _btn(name, base, cls, inner):
+    return (f'<a class="{cls}" data-name="{name}" href="{base + Q}" data-en="{base + Q}" '
+            f'data-fr="{base + QF}" target="_blank" rel="noopener" '
+            f'aria-label="Ask {name} about Gregory Renard" title="{name}">{inner}</a>')
+
+BUTTONS = "".join(_btn(n, b, "grx-ask-btn", ICONS[n]) for n, b in PROVIDER_BASES)
+MODAL_BUTTONS = "".join(_btn(n, b, "grx-t-btn", ICONS[n] + "<span>" + n + "</span>") for n, b in PROVIDER_BASES)
+
+PORTRAIT = "assets/greg-home-orange.jpg"
 
 BLOCK = (
     '<style id="grx-ask-css">'
-    "#grx-ask{position:fixed;right:16px;bottom:16px;z-index:2147483000;"
-    "font-family:var(--font-sans,'Hanken Grotesk',system-ui,sans-serif);color:#F5F1E6}"
-    "#grx-ask .grx-ask-card{width:min(300px,calc(100vw - 32px));background:#172139;"
-    "border:1px solid rgba(235,217,168,.35);border-radius:14px;padding:18px 18px 16px;"
-    "box-shadow:0 12px 40px rgba(23,33,57,.35)}"
-    "#grx-ask .grx-ask-title{font-size:20px;line-height:1.2;font-weight:600;margin:0 28px 8px 0}"
-    "#grx-ask .grx-ask-text{font-size:14px;line-height:1.45;margin:0 0 14px;"
-    "color:rgba(245,241,230,.78)}"
-    "#grx-ask .grx-ask-row{display:flex;flex-wrap:wrap;gap:8px}"
-    "#grx-ask .grx-ask-hint{font-size:12px;line-height:1.4;margin:10px 0 0;color:rgba(245,241,230,.6)}"
-    "#grx-ask .grx-ask-btn{display:inline-block;padding:8px 12px;border-radius:8px;"
-    "background:#F5F1E6;color:#172139;font-size:13px;font-weight:600;text-decoration:none}"
-    "#grx-ask .grx-ask-btn:hover{background:#EBD9A8}"
-    "#grx-ask .grx-ask-min{position:absolute;top:10px;right:10px;width:26px;height:26px;"
-    "border-radius:50%;border:1px solid rgba(235,217,168,.45);background:transparent;"
-    "color:#F5F1E6;font-size:16px;line-height:1;cursor:pointer}"
-    "#grx-ask .grx-ask-pill{display:none;align-items:center;gap:8px;cursor:pointer;"
-    "background:#172139;color:#F5F1E6;border:1px solid rgba(235,217,168,.45);"
-    "border-radius:999px;padding:10px 16px;font:inherit;font-size:14px;font-weight:600;"
-    "box-shadow:0 8px 28px rgba(23,33,57,.3)}"
+    "#grx-ask{position:fixed;right:20px;bottom:20px;z-index:2147483000;"
+    "font-family:var(--font-sans,'Hanken Grotesk',system-ui,sans-serif);color:#172139}"
+    "#grx-ask .grx-ask-card{position:relative;width:min(340px,calc(100vw - 32px));background:#FAF7EF;"
+    "border-radius:16px;border-top:4px solid #94731B;padding:22px 24px 20px;"
+    "box-shadow:0 26px 64px rgba(14,22,40,.38),0 0 0 1px rgba(23,33,57,.06);"
+    "animation:grx-in .55s cubic-bezier(.2,.7,.2,1) both}"
+    "@keyframes grx-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}"
+    "@media (prefers-reduced-motion:reduce){#grx-ask .grx-ask-card{animation:none}}"
+    "#grx-ask .grx-ask-who{display:flex;align-items:center;gap:13px;margin:0 40px 14px 0}"
+    "#grx-ask .grx-ask-pic{width:54px;height:54px;border-radius:50%;object-fit:cover;"
+    "object-position:50% 18%;border:2px solid #94731B;flex:none;background:#e9e2cf}"
+    "#grx-ask .grx-ask-name{font-size:15px;font-weight:700;line-height:1.2}"
+    "#grx-ask .grx-ask-role{font-size:12px;color:rgba(23,33,57,.6);margin-top:3px}"
+    "#grx-ask .grx-ask-title{font-family:var(--font-display,'Newsreader',Georgia,serif);"
+    "font-size:26px;line-height:1.1;font-weight:600;letter-spacing:-.01em;margin:0 0 9px;color:#172139}"
+    "#grx-ask .grx-ask-text{font-size:14px;line-height:1.55;margin:0 0 18px;color:rgba(23,33,57,.72)}"
+    "#grx-ask .grx-ask-row{display:flex;justify-content:center;gap:12px}"
+    "#grx-ask .grx-ask-btn{position:relative;display:flex;align-items:center;justify-content:center;"
+    "width:56px;height:56px;border-radius:12px;background:#172139;color:#FAF7EF;text-decoration:none;"
+    "box-shadow:0 8px 20px rgba(23,33,57,.22);transition:transform .2s ease,background .2s ease,color .2s ease}"
+    "#grx-ask .grx-ask-btn svg{width:26px;height:26px}"
+    "#grx-ask .grx-ask-btn:hover,#grx-ask .grx-ask-btn:focus-visible{background:#94731B;color:#FAF7EF;"
+    "transform:translateY(-3px);outline:none}"
+    "#grx-ask .grx-ask-btn:after{content:attr(data-name);position:absolute;bottom:calc(100% + 10px);"
+    "left:50%;transform:translate(-50%,4px);padding:5px 10px;border-radius:6px;background:#172139;"
+    "color:#FAF7EF;font-size:11.5px;font-weight:600;white-space:nowrap;opacity:0;pointer-events:none;"
+    "transition:opacity .18s ease,transform .18s ease}"
+    "#grx-ask .grx-ask-btn:hover:after,#grx-ask .grx-ask-btn:focus-visible:after{opacity:1;transform:translate(-50%,0)}"
+    "#grx-ask .grx-ask-hint{font-size:12px;line-height:1.5;margin:14px 0 0;color:rgba(23,33,57,.55)}"
+    "#grx-ask .grx-ask-min{position:absolute;top:14px;right:14px;width:34px;height:34px;"
+    "border-radius:50%;border:1px solid rgba(23,33,57,.22);background:#FAF7EF;"
+    "color:#172139;font-size:19px;line-height:1;cursor:pointer;transition:border-color .2s,background .2s}"
+    "#grx-ask .grx-ask-min:hover{border-color:#94731B;background:#f3ecd9}"
+    "#grx-ask .grx-ask-pill{display:none;align-items:center;gap:11px;cursor:pointer;"
+    "background:#FAF7EF;color:#172139;border:0;border-radius:999px;padding:7px 20px 7px 7px;"
+    "font:inherit;font-size:14px;font-weight:700;"
+    "box-shadow:0 16px 38px rgba(14,22,40,.34),0 0 0 1px rgba(148,115,27,.45);"
+    "transition:transform .2s ease}"
+    "#grx-ask .grx-ask-pill:hover{transform:translateY(-2px)}"
+    "#grx-ask .grx-ask-pill img{width:38px;height:38px;border-radius:50%;object-fit:cover;"
+    "object-position:50% 18%;border:2px solid #94731B}"
     "#grx-ask.grx-collapsed .grx-ask-card{display:none}"
     "#grx-ask.grx-collapsed .grx-ask-pill{display:inline-flex}"
+    "@media (max-width:560px){#grx-ask{right:12px;bottom:12px}"
+    "#grx-ask .grx-ask-card{padding:18px 18px 16px}#grx-ask .grx-ask-title{font-size:23px}"
+    "#grx-ask .grx-ask-btn{width:calc((100% - 30px)/4);height:54px}}"
     "@media print{#grx-ask{display:none}}"
     "</style>"
     '<div id="grx-ask" role="complementary" aria-label="Ask your AI about Gregory Renard">'
     '<div class="grx-ask-card">'
     '<button type="button" class="grx-ask-min" aria-label="Minimize">&minus;</button>'
+    '<div class="grx-ask-who"><img class="grx-ask-pic" src="' + PORTRAIT + '" alt="Gregory Renard" width="54" height="54">'
+    '<div><div class="grx-ask-name">Gregory Renard</div>'
+    '<div class="grx-ask-role">Applied AI Architect &middot; since 1996</div></div></div>'
     '<p class="grx-ask-title">Ask your AI about Gregory</p>'
-    '<p class="grx-ask-text">Explore my story, my work, my recent talks and what I stand '
-    "for &mdash; in a conversation with your own AI assistant.</p>"
-    f'<div class="grx-ask-row">{BUTTONS}</div>'
+    '<p class="grx-ask-text">Explore my story, my projects and what I stand for, and how '
+    "we can work together, through your own AI assistant.</p>"
+    '<div class="grx-ask-row">' + BUTTONS + "</div>"
     '<p class="grx-ask-hint"></p>'
     "</div>"
-    '<button type="button" class="grx-ask-pill">Ask your AI about Gregory</button>'
+    '<button type="button" class="grx-ask-pill"><img src="' + PORTRAIT + '" alt="" width="36" height="36">'
+    "<span>Ask your AI about Gregory</span></button>"
     "</div>"
     "<script>(function(){"
     "var el=document.getElementById('grx-ask'),K='grx-ask-state',s=null;"
@@ -201,15 +245,20 @@ BLOCK = (
     "el.querySelector('.grx-ask-min').addEventListener('click',function(){set(true)});"
     "el.querySelector('.grx-ask-pill').addEventListener('click',function(){set(false)});"
     "function isFr(){var bs=document.querySelectorAll('button'),i,t;for(i=0;i<bs.length;i++){if(!bs[i].offsetParent)continue;t=(bs[i].textContent||'').trim();if(t==='EN')return true;if(t==='FR')return false}return /^fr/i.test(document.documentElement.lang||navigator.language||'')}"
-    "var hint=el.querySelector('.grx-ask-hint');"
-    "var ti=el.querySelector('.grx-ask-title'),tx=el.querySelector('.grx-ask-text'),pl=el.querySelector('.grx-ask-pill'),EN0=[ti.textContent,tx.innerHTML,pl.textContent];"
-    "function sync(){var f=isFr();hint.textContent=f?'Claude et ChatGPT s’ouvrent avec le prompt prêt : appuyez simplement sur Entrée.':'Claude and ChatGPT open with the prompt ready: just press Enter.';ti.textContent=f?'Demandez à votre IA à propos de Gregory':EN0[0];if(f)tx.textContent='Découvrez mon parcours, mon travail, mes interventions récentes et ce qui me porte — dans une conversation avec votre propre assistant IA.';else tx.innerHTML=EN0[1];pl.textContent=f?'Demandez à votre IA à propos de Gregory':EN0[2]}"
-    "sync();el.addEventListener('mouseenter',sync);"
+    "var hint=el.querySelector('.grx-ask-hint'),ti=el.querySelector('.grx-ask-title'),tx=el.querySelector('.grx-ask-text'),"
+    "ro=el.querySelector('.grx-ask-role'),ps=el.querySelector('.grx-ask-pill span'),"
+    "EN0=[ti.textContent,tx.textContent,ro.innerHTML,ps.textContent];"
+    "function sync(){var f=isFr();"
+    "hint.textContent=f?'Claude et ChatGPT s’ouvrent avec le prompt prêt : appuyez simplement sur Entrée.':'Claude and ChatGPT open with the prompt ready: just press Enter.';"
+    "ti.textContent=f?'Demandez à votre IA à propos de Gregory':EN0[0];"
+    "tx.textContent=f?'Découvrez mon parcours, mes projets et ce qui me porte, et explorez comment nous pouvons collaborer ensemble, à travers votre propre assistant IA.':EN0[1];"
+    "ro.innerHTML=f?'Architecte IA appliquée · depuis 1996':EN0[2];"
+    "ps.textContent=f?'Demandez à votre IA à propos de Gregory':EN0[3]}"
+    "sync();el.addEventListener('mouseenter',sync);setTimeout(sync,700);setTimeout(sync,2000);"
+    "document.addEventListener('click',function(){setTimeout(sync,200)});"
     "el.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.grx-ask-btn');if(a)a.href=a.getAttribute(isFr()?'data-fr':'data-en')},true);"
     "})();</script>"
 )
-
-
 
 # ---- "Let's talk" modal ---------------------------------------------------------------
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -245,9 +294,10 @@ TALK_CSS = (
     "#grx-talk .grx-t-proof{font-size:11px;letter-spacing:.09em;text-transform:uppercase;"
     "color:#7a5f14;margin:0 0 4px}"
     "#grx-talk .grx-t-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:4px}"
-    "#grx-talk .grx-t-btn{flex:1 1 calc(50% - 8px);text-align:center;padding:13px 14px;border-radius:10px;"
+    "#grx-talk .grx-t-btn{flex:1 1 calc(50% - 8px);display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 14px;border-radius:10px;"
     "background:#172139;color:#FAF7EF;font-size:15px;font-weight:700;text-decoration:none;"
     "box-shadow:0 8px 20px rgba(23,33,57,.25)}"
+    "#grx-talk .grx-t-btn svg{width:20px;height:20px;flex:none}"
     "#grx-talk .grx-t-btn:hover{background:#94731B;color:#172139}"
     "#grx-talk .grx-t-hint{font-size:12.5px;margin:10px 0 12px;color:rgba(23,33,57,.6)}"
     "#grx-talk .grx-t-or{display:flex;align-items:center;gap:12px;margin:16px 0 12px;font-size:11px;"
@@ -311,7 +361,7 @@ TALK_HTML = """
 </div>
 </div>
 </div>
-""".replace("__BUTTONS__", BUTTONS.replace("grx-ask-btn", "grx-t-btn"))
+""".replace("__BUTTONS__", MODAL_BUTTONS)
 
 TALK_JS = r"""<script>(function(){
 var EP='__EP__',el=document.getElementById('grx-talk');if(!el)return;
